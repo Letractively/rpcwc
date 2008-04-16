@@ -88,7 +88,7 @@
                 &nbsp;
             </td>
             <td valign="top">
-                <p>
+                <p style="padding-top:1em;">
                     <img src="~/images/upcoming.gif" width="190" height="162" alt="Upcoming Events"
                         runat="server" /></p>
                 <p style="text-align: center;">
