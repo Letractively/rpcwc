@@ -32,7 +32,7 @@
       <siteMapNode url="~/prayer.aspx" title="Prayer Requests"  description="" />
       <siteMapNode url="http://www.chopministry.net/" title="Community Houses of Prayer"  description="" />
       <siteMapNode url="~/epguide.aspx" title="Ephesians Prayer Guide"  description="" />
-      <siteMapNode url="~/weeklyprayer.aspx" title="Weekly Prayer List"  description="" />
+      <siteMapNode url="~/members/weeklyprayer.aspx" title="Weekly Prayer List"  description="" />
     </siteMapNode>
   </siteMapNode>
 </siteMap>
