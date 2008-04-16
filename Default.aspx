@@ -46,22 +46,22 @@
         <tr>
             <td width="190" valign="top">
                 <p>
-                    <a href="~/letterpastor.aspx" runat="server">
-                        <img src="~/images/content_tl.gif" width="190" height="162" border="0" alt="Visitor Informatio"
+                    <a href="~/ministryplan.aspx" runat="server">
+                        <img src="~/images/content_tl.gif" width="190" height="162" border="0" alt="RPC Ministry Plan"
                             runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a href="letterpastor.aspx" runat="server">Visitor Information</a></strong></p>
+                    <strong><a href="ministryplan.aspx" runat="server">RPC Ministry Plan</a></strong></p>
             </td>
             <td width="10">
                 &nbsp;
             </td>
             <td width="190" valign="top">
                 <p>
-                    <a href="~/the_good_news.pdf" runat="server">
+                    <a href="godsgoodnews.aspx" runat="server">
                         <img src="~/images/ggn.gif" width="190" height="162" border="0" alt="The Message of Life"
                             runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a href="the_good_news.pdf" runat="server">The Message of Life</a></strong></p>
+                    <strong><a href="godsgoodnews.aspx" runat="server">The Message of Life</a></strong></p>
             </td>
         </tr>
         <tr>
