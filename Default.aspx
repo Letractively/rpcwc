@@ -46,11 +46,11 @@
         <tr>
             <td width="190" valign="top">
                 <p>
-                    <a href="~/ministryplan.aspx" runat="server">
-                        <img src="~/images/content_tl.gif" width="190" height="162" border="0" alt="RPC Ministry Plan"
+                    <a href="~/letterpastor.aspx" runat="server">
+                        <img src="~/images/content_tl.gif" width="190" height="162" border="0" alt="Visitor Information"
                             runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a href="ministryplan.aspx" runat="server">RPC Ministry Plan</a></strong></p>
+                    <strong><a href="letterpastor.aspx" runat="server">Visitor Information</a></strong></p>
             </td>
             <td width="10">
                 &nbsp;
