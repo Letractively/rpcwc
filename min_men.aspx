@@ -39,4 +39,6 @@
             </td>
         </tr>
     </table>
+    
+    <p>Men's Retreat <a href="min_men_retreatdevo.aspx" runat="server">Devotions on Sexual Purity</a></p>
 </asp:Content>
