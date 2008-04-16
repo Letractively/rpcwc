@@ -35,7 +35,7 @@
             <td>
                 <a href="~/images/blackrock2L.jpg" class="thickbox" runat="server">
                     <img src="~/images/blackrock2.gif" alt="" runat="server" width="100" height="67"
-                        border="0" /></a><a href="images/photo_g1_002.gif" onclick="return popup(this, 'notes')"></a>
+                        border="0" /></a>
             </td>
         </tr>
     </table>
