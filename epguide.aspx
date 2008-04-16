@@ -4,18 +4,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h4>
         Ephesians Prayer Guide</h4>
-    <h5 style="text-align: left;">
-        Using Paul's letter to the Ephesians<a href="#_ftn1" name="_ftnref1" title="" id="A1"><sup>V</sup></a></h5>
-    <h5 style="text-align: left;">
-        by Stanley D. Gale</h5>
+    <h3>
+        Using Paul's letter to the Ephesians</h3>
+    <h3>
+        by Stanley D. Gale</h3>
+    <br />
     Now to him who is able to do immeasurably more than all we ask or imagine, according
     to his power that is at work within us, to him be glory in the church and in Christ
     Jesus throughout all generations, for ever and ever!&nbsp; Amen.<div style="text-align: right">
         Ephesians 3:20-21</div>
-    <br clear="all" />
-<div style="padding-left:2em;">
-    
-    <ul>
+    <br />
+    <ul style="padding-left:1em;">
         <li><strong><em>Ephesians 1:3-6&nbsp; </em></strong><em>Praise be to the God and Father
             of our Lord Jesus Christ, who has blessed us in the heavenly realms with every spiritual
             blessing in Christ. For he chose us in him before the creation of the world to be
@@ -112,11 +111,6 @@
                 <li>pray that we will live more a life of power than of defeat and doubt</li>
             </ul>
         </li>
-    </ul>
-    <em>
-        <br clear="all" />
-    </em>
-    <ul>
         <li><strong><em>Ephesians 4:1-3&nbsp; </em></strong><em>I urge you to live a life worthy
             of the calling you have received. Be completely humble and gentle; be patient, bearing
             with one another in love. Make every effort to keep the unity of the Spirit through
@@ -169,8 +163,6 @@
                     and to confess and repent of our sin, seeking to change</li>
             </ul>
         </li>
-    </ul>
-    <ul>
         <li><strong><em>Ephesians 5:3&nbsp; </em></strong><em>But among you there must not be
             even a hint of sexual immorality, or of any kind of impurity, or of greed, because
             these are improper for God&rsquo;s holy people. </em>
@@ -239,5 +231,4 @@
                 &copy; 1984 by International Bible Society.</p>
         </div>
     </div>
-</div>    
 </asp:Content>
