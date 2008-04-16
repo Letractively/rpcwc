@@ -44,6 +44,7 @@
             class="thickbox">^</a> The question that confronts us, though, is: "How could
         we refuse such a great salvation and turn our back on such a loving God?"
     </p>
+    <div style="text-align:right;"><a href="~/nextstep.aspx" runat="server">What happens next?</a></div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Picture" runat="server">
     <asp:Image ID="Image2" ImageUrl="~/images/goodnews/respond.gif" Width="100" runat="server" />
