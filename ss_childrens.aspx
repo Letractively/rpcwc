@@ -36,7 +36,7 @@
         and abilities of the toddler age group. Lesson are taken from the David C. Cooke
         curriculum which is activity based as toddlers need to march, clap, dance, sing,
         and jump up and down as Mrs. Brown and her downstairs class can attest. It is encouraging
-        when one hears the report a that child constantly sings the songs from class at
+        when one hears the report that a child constantly sings the songs from class at
         home during the week. It is mandatory to have fun while studying the Bible in this
         class.</p>
 </asp:Content>
