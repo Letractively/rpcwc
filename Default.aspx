@@ -47,7 +47,7 @@
             <td width="190" valign="top">
                 <p>
                     <a href="~/letterpastor.aspx" runat="server">
-                        <img src="~/images/content_tl.gif" width="190" height="162" border="0" alt="Visitor Information"
+                        <img src="~/images/welcome.gif" width="190" height="162" border="0" alt="Visitor Information"
                             runat="server" /></a></p>
                 <p style="text-align: center;">
                     <strong><a href="letterpastor.aspx" runat="server">Visitor Information</a></strong></p>
