@@ -33,8 +33,9 @@ window.onload = externalLinks;
 <div><a href="http://www.reformed.org/documents/wcf_with_proofs/" rel="External">Westminster Confession of Faith</a></div>
 <div><a href="http://opc.org/lc.html" rel="External">Westminster Larger Catechism</a></div>
 <div><a href="http://www.reformed.org/documents/wsc/" rel="External">Westminster Shorter Catechism</a></div>
-<div><a href="http://www.wts.edu/" rel="External">Westminster Theological Seminary</a> (bookstore)</div>
-<div><a href="http://www.wtsbooks.com/" rel="External">WTS Books</a></div>
+<div><a href="http://www.wts.edu/" rel="External">Westminster Theological Seminary</a></div>
+<div><a href="http://www.wtsbooks.com/" rel="External">WTS Books</a> (bookstore)</div>
+<div><a href="http://www.wts.edu/resources/media.html?paramType=audio" rel="External">Westminster Theological Seminary Media</a></div>
 <div><a href="http://www.worldmag.com/" rel="External">World Magazine</a></div>
 <div><a href="http://www.harvestusa.org/" rel="External">Harvest USA</a> (help in sexual purity)</div>
 <div><a href="http://www.pca-mna.org/fiftydaysofprayer.php" rel="External">PCA &rsquo;50 days of Prayer&rsquo;</a></div>
