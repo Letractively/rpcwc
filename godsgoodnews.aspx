@@ -23,18 +23,19 @@
         </tr>
         <tr>
             <td>
+                <img id="Img5" src="images/goodnews/respond.gif" width="100" runat="server" alt="R__" />
+            </td>
+            </td>
+            <td>
                 <img id="Img2" src="images/goodnews/obligation.gif" width="100" runat="server" alt="Obligation" />
             </td>
             <td>
-                <img id="Img4" src="images/goodnews/restoration.gif" width="100" runat="server" alt="Restoration" />
-            </td>
-            <td>
-                <img id="Img5" src="images/goodnews/respond.gif" width="100" runat="server" alt="R__" />
-            </td>
+                <img id="Img4" src="images/goodnews/reconciliation.gif" width="100" runat="server"
+                    alt="Reconciliation" />
         </tr>
     </table>
     <br />
-    <div style="text-align:right">
+    <div style="text-align: right">
         <a href="creation.aspx" runat="server">Click to read about God's Good News</a>
     </div>
 </asp:Content>
