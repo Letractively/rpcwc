@@ -5,12 +5,12 @@
 </script>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="navbar" runat="server">
-    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <a href="alienation.aspx" runat="server"><asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <a href="initiation.aspx" runat="server"><asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <a href="reconciliation.aspx" runat="server"><asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <a href="obligation.aspx" runat="server"><asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <a href="respond.aspx" runat="server"><asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_d_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="alienation.aspx" runat="server"><asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_d_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="initiation.aspx" runat="server"><asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_d_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="reconciliation.aspx" runat="server"><asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_d_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="obligation.aspx" runat="server"><asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_d_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="respond.aspx" runat="server"><asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_d_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="title" runat="server">
     <h3>

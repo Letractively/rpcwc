@@ -5,12 +5,12 @@
 </script>
 
 <asp:Content ContentPlaceHolderID="navbar" runat="server">
-    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
-    <asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
-    <asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
-    <asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
-    <asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
+    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_b_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_l_50.gif" ImageAlign="Middle" Height="50" runat="server" />
+    <asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_l_50.gif" ImageAlign="Middle" Height="50" runat="server" />
+    <asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_l_50.gif" ImageAlign="Middle" Height="50" runat="server" />
+    <asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_l_50.gif" ImageAlign="Middle" Height="50" runat="server" />
+    <asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_l_50.gif" ImageAlign="Middle" Height="50" runat="server" />
 </asp:Content>
 <asp:Content ContentPlaceHolderID="title" runat="server">
     <h4>
