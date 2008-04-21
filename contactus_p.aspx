@@ -1,7 +1,10 @@
-<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+<%@ Page Language="C#" AutoEventWireup="true"
+    Title="Reformed Presbyterian Church — Contact Us" %>
+<html>
+<head>
+<title>Reformed Presbyterian Church &mdash; Contact Us</title>
+</head>
+<body onload="window.print()">
     <h4>
         Reformed Presbyterian Church of West Chester, PA</h4>
     <h4>
@@ -16,4 +19,5 @@
     <br />
     Church Office Email<br />
     rpc_office@juno.com<br />
-</asp:Content>
+</body>
+</html>
