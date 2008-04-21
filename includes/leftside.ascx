@@ -3,11 +3,17 @@
 <script type="text/C#" runat="server">
     public void SetExternalLinks(Object source, DataListItemEventArgs eventArgs)
     {
-        if (eventArgs.Item.ItemType == ListItemType.Item ||
-            eventArgs.Item.ItemType == ListItemType.AlternatingItem)
+        try
         {
-            if (((SiteMapNode)eventArgs.Item.DataItem).Url.Contains("brochure.pdf"))
-                ((HyperLink)eventArgs.Item.FindControl("Link")).Target = "_blank";
+            if (eventArgs.Item.ItemType == ListItemType.Item ||
+                eventArgs.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                if (((SiteMapNode)eventArgs.Item.DataItem).Url.Contains("brochure.pdf"))
+                    ((HyperLink)eventArgs.Item.FindControl("Link")).Target = "_blank";
+            }
+        }
+        catch (Exception)
+        {
         }
     }
 </script>
