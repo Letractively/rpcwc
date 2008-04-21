@@ -7,7 +7,7 @@
       <siteMapNode url="bulletin.aspx" title="Church Bulletins" />
       <siteMapNode url="stewardship.aspx" title="Stewardship" />
       <siteMapNode url="websites.aspx" title="Useful Links" />
-      <siteMapNode url="members/directory.aspx" title="Directory" />
+      <siteMapNode url="members/directory.aspx" title="RPC Directory" />
       <siteMapNode url="publications.aspx" title="Publications" />
       <siteMapNode url="bulletinboard.aspx" title="Bulletin Board" />
     </siteMapNode>
