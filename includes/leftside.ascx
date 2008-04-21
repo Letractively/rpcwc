@@ -1,23 +1,36 @@
 ﻿<%@ Control Language="C#" ClassName="leftside" %>
+
+<script type="text/C#" runat="server">
+    public void SetExternalLinks(Object source, DataListItemEventArgs eventArgs)
+    {
+        if (eventArgs.Item.ItemType == ListItemType.Item ||
+            eventArgs.Item.ItemType == ListItemType.AlternatingItem)
+        {
+            if (((SiteMapNode)eventArgs.Item.DataItem).Url.Contains("brochure.pdf"))
+                ((HyperLink)eventArgs.Item.FindControl("Link")).Target = "_blank";
+        }
+    }
+</script>
+
 <asp:SiteMapDataSource ID="SiteMapSourceWelcome" runat="server" StartingNodeUrl="~/welcome.aspx"
     ShowStartingNode="false" />
 <asp:SiteMapDataSource ID="SiteMapSourceAboutUs" runat="server" StartingNodeUrl="~/aboutussection.aspx"
     ShowStartingNode="false" />
 <h2>
     Welcome</h2>
-<asp:DataList ID="DataList1" DataSourceID="SiteMapSourceWelcome" runat="server" Width="100%">
+<asp:DataList ID="DataList1" DataSourceID="SiteMapSourceWelcome" OnItemCreated="SetExternalLinks" runat="server" Width="100%">
     <ItemTemplate>
-        <a href='<%# Eval("Url") %>' runat="server">
-            <%# Eval("Title") %></a>
+        <asp:HyperLink NavigateUrl='<%# Eval("Url") %>' ID="Link" runat="server">
+            <%# Eval("Title") %></asp:HyperLink>
     </ItemTemplate>
 </asp:DataList>
 <br />
 <h2>
     About Us</h2>
-<asp:DataList ID="DataList2" DataSourceID="SiteMapSourceAboutUs" runat="server" Width="100%">
+<asp:DataList ID="DataList2" DataSourceID="SiteMapSourceAboutUs" on OnItemCreated="SetExternalLinks" runat="server" Width="100%">
     <ItemTemplate>
-        <a href='<%# Eval("Url") %>' runat="server">
-            <%# Eval("Title") %></a>
+        <asp:HyperLink NavigateUrl='<%# Eval("Url") %>' ID="Link" runat="server">
+            <%# Eval("Title") %></asp:HyperLink>
     </ItemTemplate>
 </asp:DataList>
 <br />

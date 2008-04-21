@@ -1,10 +1,22 @@
 ﻿<%@ Control Language="C#" ClassName="rightside" %>
 
+<script type="text/C#" runat="server">
+    public void SetExternalLinks(Object source, DataListItemEventArgs eventArgs)
+    {
+        if (eventArgs.Item.ItemType == ListItemType.Item ||
+            eventArgs.Item.ItemType == ListItemType.AlternatingItem)
+        {
+            if (((SiteMapNode)eventArgs.Item.DataItem).Url.Equals("http://www.gnpcb.org/esv/devotions"))
+                ((HyperLink)eventArgs.Item.FindControl("Link")).Target = "_blank";
+        }
+    }
+</script>
+
 <h2>
     Church Resources</h2>
-    <asp:DataList DataSourceID="SiteMapSource" runat="server" Width="100%">
+    <asp:DataList ID="ResourceMenuControl" DataSourceID="SiteMapSource" OnItemCreated="SetExternalLinks" runat="server" Width="100%">
         <ItemTemplate>
-            <a href='<%# Eval("Url") %>'><%# Eval("Title") %></a>
+            <asp:HyperLink id="Link" NavigateUrl='<%# Eval("Url") %>' runat="server"><%# Eval("Title") %></asp:HyperLink>
         </ItemTemplate>
     </asp:DataList>
 <asp:SiteMapDataSource ID="SiteMapSource" runat="server" StartingNodeUrl="~/resources.aspx" ShowStartingNode="false" />
