@@ -16,7 +16,7 @@
         <br />
         Dwayne Edwards
         <br />
-        Glenn Seegar</p>
+        Glenn Seeger</p>
     <h3>
         DEACONS</h3>
     <p>
