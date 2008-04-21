@@ -89,7 +89,7 @@
             title="Romans 3:26" style="text-decoration: none;" class="thickbox">^</a>
     </p>
     <p>
-        <a id="A1" href="restoration.aspx" runat="server">The only way God could reconcile sinners
+        <a id="A1" href="reconciliation.aspx" runat="server">The only way God could reconcile sinners
             to himself was…</a></p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Picture" runat="server">
