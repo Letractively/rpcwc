@@ -1,7 +1,8 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
     CodeFile="Default.aspx.cs" Inherits="_Default" Title="Reformed Presbyterian Church" %>
-<%@ Register TagName="AlertMarquee" TagPrefix="rpc" Src="~/includes/marqueealert.ascx" %>    
-    
+
+<%@ Register TagName="AlertMarquee" TagPrefix="rpc" Src="~/includes/marqueealert.ascx" %>
+
 <script type="text/C#" runat="server">
     protected void SetBold(object sender, DayRenderEventArgs eventArgs)
     {
@@ -42,7 +43,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <rpc:AlertMarquee runat="server" />
-    <table style="width:390;border:0px;margin:auto;">
+    <table style="width: 390; border: 0px; margin: auto;">
         <tr>
             <td width="190" valign="top">
                 <p>
@@ -66,13 +67,11 @@
         </tr>
         <tr>
             <td valign="top">
-                <p style="padding-bottom:0em;" >
-                    <asp:Calendar ID="SmallCalendarControl" DayNameFormat="Shortest" 
-                        BorderColor="#CCCCFF" BorderWidth="1px"
-                        Font-Names="Verdana" Font-Size="8pt" ForeColor="#336699"
-                        Height="162px" Width="190px" ShowGridLines="True"
-                        OnDayRender="SetBold" OnVisibleMonthChanged="VisibleMonthChanged" OnSelectionChanged="DisplayCalendar"
-                        runat="server">
+                <p style="padding-bottom: 0em;">
+                    <asp:Calendar ID="SmallCalendarControl" DayNameFormat="Shortest" BorderColor="#CCCCFF"
+                        BorderWidth="1px" Font-Names="Verdana" Font-Size="8pt" ForeColor="#336699" Height="162px"
+                        Width="190px" ShowGridLines="True" OnDayRender="SetBold" OnVisibleMonthChanged="VisibleMonthChanged"
+                        OnSelectionChanged="DisplayCalendar" runat="server">
                         <SelectedDayStyle BackColor="#B7D87D" ForeColor="White" Font-Bold="True" />
                         <SelectorStyle BackColor="#FFFFFF" ForeColor="#B7D87D" />
                         <OtherMonthDayStyle ForeColor="#6699CC" />
@@ -81,7 +80,7 @@
                         <TitleStyle BackColor="#446A7D" Font-Bold="False" Font-Size="9pt" ForeColor="#FFFFFF" />
                     </asp:Calendar>
                 </p>
-                <p style="padding-top:1em; text-align: center;">
+                <p style="padding-top: 1em; text-align: center;">
                     <strong><a href="~/calendar.aspx" runat="server">Church Calendar</a></strong></p>
             </td>
             <td>
@@ -89,8 +88,9 @@
             </td>
             <td valign="top">
                 <p>
-                    <img src="~/images/upcoming.gif" width="190" height="162" alt="Upcoming Events"
-                        runat="server" /></p>
+                    <a id="A1" href="~/upcomingevents.aspx" runat="server">
+                        <img src="~/images/upcoming.gif" width="190" height="162" alt="Upcoming Events" border="0"
+                            runat="server" /></a></p>
                 <p style="text-align: center;">
                     <strong><a href="~/upcomingevents.aspx" runat="server">Upcoming Events</a></strong></p>
             </td>
