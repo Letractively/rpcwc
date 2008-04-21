@@ -17,6 +17,43 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+<h4>Men’s Retreat at Black Rock&mdash;March 7&ndash;9, 2008</h4>
+<h3>Personal Devotions&mdash;&ldquo;Godly Leadership&rdquo;</h3>
+<p>
+Character does matter.  At least in God’s eyes, it matters.  To speak of leadership without character is like drinking sour milk for nourishment.   The nutrients may be there but getting people to drink it is another story.</p>
+
+<p>Our God places great emphasis on character in his qualification for leaders.  The writer of Hebrews calls upon God’s people to:</p>
+
+    <blockquote>
+        Remember your leaders, those who spoke to you the word of God. Consider the outcome of their way of life, and imitate their faith. </blockquote>
+    <div style="text-align: right;">
+        Hebrews 13:7</div>
+    <br />
+
+<p>You lead by example, something to be imitated as you follow Christ. 
+You illustrate faith that knows and serves and seeks Jesus Christ by your life.
+ Of the three components of communication&mdash;logos (content: what you say), pathos
+ (conviction: how you say it) and ethos (character: who you are)&mdash;the greatest of
+ these for authenticity and effectiveness is ethos.  Think about a dad drawing
+ deeply on a cigarette instructing his young son not to smoke.  Scan the
+ qualifications for ordained office in 1 Timothy 3 and Titus 1 and you’ll find
+ them heavily weighted to issues of character.  </p>
+
+<p>Character matters; it matters to God in whose service you are as a servant leader.  Jesus Christ is your exemplar, your standard for servant leadership.  </p>
+
+<p>Do you desire to be used of the Lord as a leader in your home, in the church, in the lives of those around you?  Listen to God’s qualification of character:</p>
+    <blockquote>
+        Now in a great house there are not only vessels of gold and silver but also of wood and clay, some for honorable use, some for dishonorable. Therefore, if anyone cleanses himself from what is dishonorable, he will be a vessel for honorable use, set apart as holy, useful to the master of the house, ready for every good work. So flee youthful passions and pursue righteousness, faith, love, and peace, along with those who call on the Lord from a pure heart.</blockquote>
+    <div style="text-align: right;">
+        2 Timothy 2:20&ndash;22</div>
+    <br />
+    
+<p>One key character quality for you as a leader is purity.  A major assault on purity by our enemy the devil in this day is pornography, in all its shades of darkness.   Begin each morning of the retreat using Psalm 139:23&ndash;24 as your prayer in working through the following article in communion with God.</p>
+<p>Saturday, March 8th	&ldquo;The Pornographer’s Prayer,&rdquo; pages 2-4</p>
+<p>Sunday, March 9th  	&ldquo;The Pornographer’s Prayer,&rdquo; pages 5-8</p>
+
+<hr />
+
     <h4>
         The Psalms in Spiritual Warfare</h4>
     <h3>
@@ -50,7 +87,7 @@
         as these, all enabling us to stand firm in Christ or, having succumbed, to find
         firm footing again in Him. God makes clear his will for us as his adopted sons:
     </p>
-    <blockquote>
+    <blockquote">
         For this is the will of God, your sanctification: that you abstain from sexual immorality;
         that each one of you know how to control his own body in holiness and honor, not
         in the passion of lust like the Gentiles who do not know God; &hellip; For God has not
