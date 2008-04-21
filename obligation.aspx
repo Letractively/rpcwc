@@ -1,9 +1,17 @@
-<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church — Obligation" %>
+<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church &mdash; Obligation" %>
 
 <script runat="server">
 
 </script>
 
+<asp:Content ID="Content5" ContentPlaceHolderID="navbar" runat="server">
+    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="alienation.aspx" runat="server"><asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="initiation.aspx" runat="server"><asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="reconciliation.aspx" runat="server"><asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="obligation.aspx" runat="server"><asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
+</asp:Content>
 <asp:Content ContentPlaceHolderID="title" runat="server">
     <h4>
         Obligation</h4>
@@ -52,7 +60,7 @@
             We are to repent and believe on the Lord Jesus Christ. This is what the Bible calls
             "<span style="font-style: italic;">faith</span>." Such faith (1) knows the facts
             (about sin and where salvation is found), (2) admits they are true, and (3) places
-            sole trust and confidence in God's provision for sinners—Jesus Christ.<a href="scripture.ashx?ref=Romans+1:16-17;+Romans+4:23-25;+Romans+10:9-10&height=300&width=300"
+            sole trust and confidence in God's provision for sinners&mdash;Jesus Christ.<a href="scripture.ashx?ref=Romans+1:16-17;+Romans+4:23-25;+Romans+10:9-10&height=300&width=300"
                 title="Romans 1:16-17; Romans 4:23-25; Romans 10:9-10" style="text-decoration: none;"
                 class="thickbox">^</a> Faith is not wishful thinking, but complete <span style="font-style: italic;">
                     trust</span> in an unseen (that is, spiritual) reality.<a href="scripture.ashx?ref=Hebrews+11:1;+1+Peter+1:3-9&height=300&width=300"
@@ -67,7 +75,7 @@
             commit our way to him, seeking him and serving him in all our ways<a href="scripture.ashx?ref=Proverbs+3:5-7&height=300&width=300"
                 title="Proverbs 3:5-7" style="text-decoration: none;" class="thickbox">^</a>
             because we are his<a href="scripture.ashx?ref=1+Corinthians+6:19-20&height=300&width=300"
-                title="1 Corinthians 6:19-20" style="text-decoration: none;" class="thickbox">^</a>—not
+                title="1 Corinthians 6:19-20" style="text-decoration: none;" class="thickbox">^</a>&mdash;not
             that we either earn our acceptance by God or add to the work of Christ. But if God
             has given us new life to hear the voice of the Shepherd,<a href="scripture.ashx?ref=John+10:25-28&height=300&width=300"
                 title="John 10:25-28" style="text-decoration: none;" class="thickbox">^</a>

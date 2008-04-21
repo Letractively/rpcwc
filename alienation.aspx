@@ -1,9 +1,17 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church — Alienation" %>
+<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church &mdash; Alienation" %>
 
 <script runat="server">
 
 </script>
 
+<asp:Content ID="Content4" ContentPlaceHolderID="navbar" runat="server">
+    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="alienation.aspx" runat="server"><asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
+    <asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
+    <asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
+    <asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
+</asp:Content>
 <asp:Content ContentPlaceHolderID="title" runat="server">
     <h4>
         Alienation</h4>
@@ -28,7 +36,7 @@
         hidden his face from you.<a href="scripture.ashx?ref=Isaiah+59:2&height=300&width=300"
             title="Isaiah 59:2" style="text-decoration: none;" class="thickbox">^</a></blockquote>
     <p>
-        This broken relationship with God has left all of us lacking and looking— lacking
+        This broken relationship with God has left all of us lacking and looking&mdash; lacking
         in the joy and meaning of lives lived with God and looking for some way to fill
         that void. The image of God in us is now deformed and defaced.</p>
     <div style="padding-left: 1em;">
@@ -39,7 +47,7 @@
                 separation from God by sin. Of course, voids seek to be filled; they <span style="font-style: italic;">
                     motivate</span> us to fill them.<a href="scripture.ashx?ref=Isaiah+55:1-2&height=300&width=300"
                         title="Isaiah 55:1-2" style="text-decoration: none;" class="thickbox">^</a>
-                And so we try to find satisfaction in all sorts of things—career, material possessions,
+                And so we try to find satisfaction in all sorts of things&mdash;career, material possessions,
                 money, educational degrees, appearance, athletics, religious practices and involvement,
                 and the list goes on.</li>
             <li>We are <span style="font-style: italic;">helpless</span> to deal with this sin that
@@ -90,7 +98,7 @@
             title="Romans 6:16" style="text-decoration: none;" class="thickbox">^</a> us.
         (What's sin all about? See <a id="A1" href="faqsin.aspx" runat="server">sin FAQs</a>)</p>
     <p>
-        <a id="A2" href="initiation.aspx" runat="server">But God…</a></p>
+        <a id="A2" href="initiation.aspx" runat="server">But God&hellip;</a></p>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="Picture" runat="server">
     <asp:Image ID="Image1" ImageUrl="~/images/goodnews/alienation.gif" Width="100" runat="server" />

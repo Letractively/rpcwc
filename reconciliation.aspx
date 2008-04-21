@@ -1,9 +1,17 @@
-<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church — Reconciliation" %>
+<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church &mdash; Reconciliation" %>
 
 <script runat="server">
 
 </script>
 
+<asp:Content ID="Content5" ContentPlaceHolderID="navbar" runat="server">
+    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="alienation.aspx" runat="server"><asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="initiation.aspx" runat="server"><asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="reconciliation.aspx" runat="server"><asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
+    <asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_g_sm.gif" ImageAlign="Middle" Height="50" runat="server" />
+</asp:Content>
 <asp:Content ContentPlaceHolderID="title" runat="server">
     <h4>
         Reconciliation</h4>

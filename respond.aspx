@@ -4,6 +4,14 @@
 
 </script>
 
+<asp:Content ID="Content2" ContentPlaceHolderID="navbar" runat="server">
+    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="alienation.aspx" runat="server"><asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="initiation.aspx" runat="server"><asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="reconciliation.aspx" runat="server"><asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="obligation.aspx" runat="server"><asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="respond.aspx" runat="server"><asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+</asp:Content>
 <asp:Content ContentPlaceHolderID="title" runat="server">
     <h3>
         God lays before us one of two responses to his mercy and love.</h3>
@@ -18,19 +26,19 @@
         so, review what you have read above, and express to God in prayer your understanding,
         your repentance and your trust in his Son.</p>
     <p>
-        Tell God in your own words that you…</p>
+        Tell God in your own words that you&hellip;</p>
     <ul style="list-style-type: none; padding-left: 1em;">
-        <li>…admit you are a sinner in rebellion against him</li>
-        <li>…rightfully deserve only his justice and condemnation for your sins</li>
-        <li>…understand what he has done through the perfect life, the sacrificial death and
+        <li>&hellip;admit you are a sinner in rebellion against him</li>
+        <li>&hellip;rightfully deserve only his justice and condemnation for your sins</li>
+        <li>&hellip;understand what he has done through the perfect life, the sacrificial death and
             the victorious resurrection of his Son, Jesus Christ</li>
-        <li>…see the beauty of his incredible mercy, amazing grace and glorious love</li>
-        <li>…turn from your sinful rebellion out of a genuine sorrow for your sin because it
+        <li>&hellip;see the beauty of his incredible mercy, amazing grace and glorious love</li>
+        <li>&hellip;turn from your sinful rebellion out of a genuine sorrow for your sin because it
             dishonors and displeases God</li>
-        <li>…place your complete trust, not in who you are or what you did, could do or could
+        <li>&hellip;place your complete trust, not in who you are or what you did, could do or could
             ever do, but entirely and exclusively in Jesus Christ and what he did in the place
             of sinners</li>
-        <li>…desire from this day forward by God's grace to follow Jesus as his disciple—loving,
+        <li>&hellip;desire from this day forward by God's grace to follow Jesus as his disciple&mdash;loving,
             serving, and obeying him in all of your life</li>
     </ul>
     <br />

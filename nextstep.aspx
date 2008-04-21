@@ -1,9 +1,17 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church — Creation" %>
+<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church &mdash; Creation" %>
 
 <script runat="server">
 
 </script>
 
+<asp:Content ID="Content2" ContentPlaceHolderID="navbar" runat="server">
+    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="alienation.aspx" runat="server"><asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="initiation.aspx" runat="server"><asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="reconciliation.aspx" runat="server"><asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="obligation.aspx" runat="server"><asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+    <a href="respond.aspx" runat="server"><asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_sm.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
+</asp:Content>
 <asp:Content ID="TextContent" ContentPlaceHolderID="text" runat="Server">
     <div style="float:left;width: 27%; padding-right: 1em;">
         <div style="border: solid 1px black; background-color: #92B18A; color: White; ">
@@ -21,7 +29,7 @@
         grow in your new relationship with him.</p>
     <br style="clear:both; padding:0em" />
     <ul>
-        <li>Gather with God’s people for worship<a href="scripture.ashx?ref=John+4:23&height=300&width=300"
+        <li>Gather with God's people for worship<a href="scripture.ashx?ref=John+4:23&height=300&width=300"
             title="John 4:23" style="text-decoration: none;" class="thickbox">^</a> and fellowship.<a
                 href="scripture.ashx?ref=Hebrews+10:23-25&height=300&width=300" title="Hebrews 10:23-25"
                 style="text-decoration: none;" class="thickbox">^</a></li>
@@ -39,14 +47,14 @@
     </ul>
     <p>
         If you are not at the point of turning to Jesus Christ in faith and repentance,
-        continue to study God’s Word, the Bible, asking him for his wisdom and help for
+        continue to study God's Word, the Bible, asking him for his wisdom and help for
         you to understand this most wonderful and urgent of messages that you might know
         the joy of your sins forgiven and the peace of a personal relationship with the
         living God as your Father in heaven.</p>
     <p>
         The Gospel of John is a great book of the Bible to learn about this life that God
         offers in Jesus. You might read a chapter a day, asking God to show you the beauty
-        of his gift of life. Listen to God’s promise from John’s Gospel:</p>
+        of his gift of life. Listen to God's promise from John's Gospel:</p>
     <blockquote>
         Now Jesus did many other signs in the presence of the disciples, which are not written
         in this book; but these are written so that you may believe that Jesus is the Christ,
