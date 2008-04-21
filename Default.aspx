@@ -66,7 +66,7 @@
         </tr>
         <tr>
             <td valign="top">
-                <p>
+                <p style="padding-bottom:0em;" >
                     <asp:Calendar ID="SmallCalendarControl" DayNameFormat="Shortest" 
                         BorderColor="#CCCCFF" BorderWidth="1px"
                         Font-Names="Verdana" Font-Size="8pt" ForeColor="#336699"
@@ -81,14 +81,14 @@
                         <TitleStyle BackColor="#446A7D" Font-Bold="False" Font-Size="9pt" ForeColor="#FFFFFF" />
                     </asp:Calendar>
                 </p>
-                <p style="text-align: center;">
+                <p style="padding-top:1em; text-align: center;">
                     <strong><a href="~/calendar.aspx" runat="server">Church Calendar</a></strong></p>
             </td>
             <td>
                 &nbsp;
             </td>
             <td valign="top">
-                <p style="padding-top:1em;">
+                <p>
                     <img src="~/images/upcoming.gif" width="190" height="162" alt="Upcoming Events"
                         runat="server" /></p>
                 <p style="text-align: center;">
