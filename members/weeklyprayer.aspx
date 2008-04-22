@@ -6,16 +6,13 @@
     {
         if (eventArgs.Row.RowType == DataControlRowType.DataRow)
         {
-            DateTime date = (DateTime)((System.Data.DataRowView)eventArgs.Row.DataItem).Row.ItemArray[2];
+            Object x = ((System.Data.DataRowView)eventArgs.Row.DataItem).Row.ItemArray[5];
 
-            if (date.CompareTo(DateTime.Now.AddDays(-7)) >= 0)
+            if (x.GetType() == typeof(DBNull))
+                return;
+            if (x.GetType() == typeof(Boolean) && (Boolean) x)
                 eventArgs.Row.Font.Bold = true;
         }
-    }
-
-    protected void setParams(Object sender, SqlDataSourceSelectingEventArgs e)
-    {
-        e.Command.Parameters["@startDate"].Value = DateTime.Now.AddDays(-14);
     }
 </script>
 
@@ -28,10 +25,9 @@
     <h4>
         RPC Praise &amp; Prayer</h4>
     <asp:SqlDataSource ID="PrayerDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RPC %>"
-        SelectCommand="getPrayerList" SelectCommandType="StoredProcedure" OnSelecting="setParams">
+        SelectCommand="getPrayerListActive" SelectCommandType="StoredProcedure">
         <SelectParameters>
             <asp:Parameter Name="channelId" DefaultValue="6" />
-            <asp:Parameter Name="startDate" />
         </SelectParameters>
     </asp:SqlDataSource>
     <p>

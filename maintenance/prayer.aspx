@@ -1,33 +1,29 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Event Calendar Maintenance Page" %>
+    Title="Weekly Prayer List Maintenance Page" %>
     
 <script type="text/C#" runat="server">
     protected void setBold(Object source, GridViewRowEventArgs eventArgs)
     {
         if (eventArgs.Row.RowType == DataControlRowType.DataRow)
         {
-            DateTime date = (DateTime)((System.Data.DataRowView)eventArgs.Row.DataItem).Row.ItemArray[2];
+            Object x = ((System.Data.DataRowView)eventArgs.Row.DataItem).Row.ItemArray[5];
 
-            if (date.CompareTo(DateTime.Now.AddDays(-7)) >= 0)
+            if (x.GetType() == typeof(DBNull))
+                return;
+            if (x.GetType() == typeof(Boolean) && (Boolean)x)
                 eventArgs.Row.Font.Bold = true;
         }
-    }
-
-    protected void setParams(Object sender, SqlDataSourceSelectingEventArgs e)
-    {
-        e.Command.Parameters["@startDate"].Value = DateTime.Now.AddDays(-14);
     }
 </script>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     
     <asp:SqlDataSource ID="PrayerDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RPC %>"
-        SelectCommand="getPrayerList" SelectCommandType="StoredProcedure" OnSelecting="setParams"
+        SelectCommand="getPrayerListActive" SelectCommandType="StoredProcedure"
         UpdateCommand="updatePrayerRequest" UpdateCommandType="StoredProcedure"
         InsertCommand="createPrayerRequest" InsertCommandType="StoredProcedure">
         <SelectParameters>
             <asp:Parameter Name="channelId" DefaultValue="6" />
-            <asp:Parameter Name="startDate" />
         </SelectParameters>
         <UpdateParameters>
             <asp:Parameter Name="item_id" />
@@ -65,6 +61,8 @@
                     </InsertItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="title" HeaderText="Title" SortExpression="title" Visible="false" />
+                <asp:CheckBoxField DataField="active" HeaderText="Active" SortExpression="active" />
+                <asp:CheckBoxField DataField="new" HeaderText="New"  SortExpression="new" />
             </Fields>
         </asp:DetailsView>
     </table>
