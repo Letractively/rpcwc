@@ -67,7 +67,7 @@
             <b>Title</b>:
             <asp:Label ID="titleLabel" runat="server" Text='<%# Bind("title") %>' />
             <br />
-            <b>Sermon Tex</b>t:
+            <b>Sermon Text</b>:
             <asp:Label ID="sermonTextReferenceLabel" runat="server" 
                 Text='<%# Bind("sermonTextReference") %>' />
             <br />
