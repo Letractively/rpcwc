@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" %>
+<%@ Master Language="C#" %>
 
 <%@ Register TagName="topleftbox" TagPrefix="include" Src="~/includes/topleftbox.ascx" %>
 <%@ Register TagName="leftside" TagPrefix="include" Src="~/includes/leftside.ascx" %>
@@ -27,7 +27,7 @@
     <script type="text/javascript" src="scripts/jquery.js"></script>
     <script type="text/javascript" src="scripts/thickbox.js"></script>
 
-    <!-- The following are for site traffic analysis -->
+<!-- The following are for site traffic analysis -->
 
     <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
