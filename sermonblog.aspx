@@ -1,20 +1,10 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — Sermon Blog" %>
+    Title="Reformed Presbyterian Church &mdash; Sermon Blog" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <br />
 
     <script runat="server">
-        protected void BlogRowCreated(Object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                BlogCommentsSqlDataSource.SelectParameters["item_id"].DefaultValue = BlogGridView.DataKeys[0].Value.ToString();
-                blogid.Value = BlogGridView.DataKeys[0].Value.ToString();
-                //man.Value = BlogGridView.DataKeys[0].Value.ToString();
-                //BlogCommentsSqlDataSource.SelectParameters.UpdateValues(Context, (Control)sender);
-            }
-        }
 
         protected void SubmitComments(Object sender, EventArgs e)
         {
@@ -24,14 +14,18 @@
     </script>
 
     <asp:SqlDataSource ID="BlogSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RPC %>"
-        SelectCommand="getSermonBlog" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+        SelectCommand="getSermonBlogPkWhere" SelectCommandType="StoredProcedure">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="item_id" QueryStringField="item_id" Type="Int16" />
+        </SelectParameters>
+    </asp:SqlDataSource>
         
 
     <asp:SqlDataSource ID="BlogCommentsSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RPC %>"
         SelectCommand="getSermonBlogCommentsPKWhere" SelectCommandType="StoredProcedure"
         InsertCommand="insertSermonBlogComments" InsertCommandType="StoredProcedure">
         <SelectParameters>
-            <asp:Parameter Name="item_id" Type="Int16" />
+            <asp:QueryStringParameter Name="item_id" QueryStringField="item_id" Type="Int16" />
         </SelectParameters>
         <InsertParameters>
             <asp:ControlParameter ControlID="blogid" PropertyName="Value" Name="id" Type="Int16" />
@@ -41,7 +35,7 @@
         </InsertParameters>
     </asp:SqlDataSource>
     <asp:GridView ID="BlogGridView" runat="server" DataSourceID="BlogSqlDataSource" AllowPaging="True"
-        AutoGenerateColumns="False" OnRowCreated="BlogRowCreated" DataKeyNames="id"
+        AutoGenerateColumns="False" DataKeyNames="id"
         PageSize="1" ShowHeader="False" CellPadding="4" GridLines="None" Width="100%" >
         <PagerSettings NextPageText="Older" PreviousPageText="Newer" Mode="NextPrevious" />
         <Columns>
@@ -96,7 +90,7 @@
         <span style="font-weight: bold">Leave a comment</span><br /><br />
         <asp:HiddenField ID="blogid" runat="server" />
         <asp:TextBox ID="Name" runat="server" /> <asp:Label ID="Label1" AssociatedControlID="Name" Text="Name (required)" runat="server" /><br /><br />
-        <asp:TextBox ID="Email" runat="server" /> <asp:Label ID="Label2" AssociatedControlID="Email" Text="Email (required — will not be published)" runat="server" /><br /><br />
+        <asp:TextBox ID="Email" runat="server" /> <asp:Label ID="Label2" AssociatedControlID="Email" Text="Email (required &mdash; will not be published)" runat="server" /><br /><br />
         <asp:TextBox ID="CommentText" Rows="10" Columns="50" TextMode="MultiLine" runat="server" /><br /><br />
         <asp:Button ID="Button1" Text="Submit Comment" OnCommand="SubmitComments" runat="server" />
         </div>
