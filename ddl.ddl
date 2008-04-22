@@ -138,6 +138,25 @@ ON str.item_id = i.item_id
 WHERE     (i.channel_id = 1)
 ORDER BY i.pubDate DESC
 
+ALTER PROCEDURE getSermonBlogPKWhere
+@item_id smallint,
+AS
+SELECT     i.item_id id, i.title, i.author, i.link, i.pubDate, id.description, text_reference + ' — ' sermonTextReference, COALESCE (ic_1.comment_count, 0) AS commentCount
+FROM         item AS i LEFT OUTER JOIN
+                      item_description AS id ON i.item_id = id.item_id LEFT OUTER JOIN
+                          (SELECT     item_id, COUNT(*) AS comment_count
+                            FROM          item_comment AS ic
+                            GROUP BY item_id) AS ic_1 ON ic_1.item_id = i.item_id
+LEFT OUTER JOIN sermon_text_reference  str
+ON str.item_id = i.item_id
+WHERE     (i.channel_id = 1)
+AND
+	i.item_id = @item_id
+ORDER BY i.pubDate DESC
+
+
+
+
 CREATE PROCEDURE getSermonBlogForMaintenance AS SELECT i.item_id id, i.title title, i.author author, i.pubDate pubDate, id.description description, i.link link, STR.text_reference sermonTextReference FROM item AS i LEFT OUTER JOIN item_description AS id ON i.item_id = id.item_id LEFT OUTER JOIN sermon_text_reference AS STR ON i.item_id = STR.item_id WHERE (i.channel_id = 1) ORDER BY pubDate DESC
 
 CREATE PROCEDURE insertSermonBlog
@@ -149,6 +168,9 @@ AS
  INSERT INTO ITEM (CHANNEL_ID, TITLE, AUTHOR, PUBDATE, LAST_UPD_TMS) VALUES (1, @title, 'Dr. Stanley D. Gale', @pubDate, CONVERT( TIMESTAMP, GETDATE())); DECLARE @id smallint;
 SELECT @id = MAX(item_ID) FROM ITEM WHERE CHANNEL_ID = 1;
 INSERT INTO ITEM_DESCRIPTION (ITEM_ID, DESCRIPTION) VALUES (@id, @description); INSERT INTO SERMON_TEXT_REFERENCE (ITEM_ID, text_reference) values(@id, @sermonText);
+INSERT INTO ITEM_ENCLOSURE
+(ITEM_ID, URL, SIZE, TYPE)
+VALUES (@itemid, @link, @size, @type)
 
 ALTER PROCEDURE updateSermonBlog
 @id smallint,
@@ -157,6 +179,12 @@ ALTER PROCEDURE updateSermonBlog
 @description TEXT,
  @sermonTextReference varchar(2000)
 AS
+IF (SELECT COUNT(*) FROM ITEM_DESCRIPTION WHERE ITEM_ID = @id) = 0
+BEGIN
+INSERT INTO ITEM_ENCLOSURE
+(ITEM_ID, URL, SIZE, TYPE)
+VALUES (@itemid, @link, @size, @type)
+END
 IF (SELECT COUNT(*) FROM ITEM_DESCRIPTION WHERE ITEM_ID = @id) > 0
 BEGIN
 UPDATE ITEM
@@ -361,7 +389,7 @@ INSERT INTO ITEM
 
 DECLARE @itemid smallint;
 
-SELECT @itemid = MAX(ITEM_ID) FROM ITEM WHERE CHANNEL_ID = 4;
+SELECT @itemid = MAX(ITEM_ID) FROM ITEM WHERE CHANNEL_ID = 1;
 
 INSERT INTO SERMON_TEXT_REFERENCE
 (ITEM_ID, TEXT_REFERENCE) VALUES (@itemid, @reference)
@@ -377,7 +405,7 @@ SELECT     item.item_id id, item.title, item_enclosure.url, item_enclosure.size,
 FROM         item LEFT OUTER JOIN
                       sermon_text_reference ON item.item_id = sermon_text_reference.item_id
 		      LEFT OUTER JOIN item_enclosure on item.item_id = item_enclosure.item_id
-WHERE     (item.channel_id = 4)
+WHERE     (item.channel_id = 1)
 
 
 
@@ -458,3 +486,37 @@ AS
 DELETE FROM ITEM_DESCRIPTION WHERE ITEM_ID = @item_id
 
 DELETE FROM ITEM WHERE ITEM_ID = @item_id
+
+CREATE PROCEDURE updatePrayerRequest
+@item_id smallint,
+@pubDate smalldatetime,
+@author varchar(2000),
+@description text,
+@active bit,
+@new bit
+AS
+UPDATE ITEM
+SET pubDate = @pubDate,
+author = @author,
+active = @active,
+new = @new
+WHERE ITEM_ID = @item_id
+UPDATE ITEM_DESCRIPTION
+SET DESCRIPTION = @description
+WHERE ITEM_ID = @item_id
+
+ALTER PROCEDURE createPrayerRequest
+@channelId tinyint,
+@pubDate smalldatetime,
+@author varchar(2000),
+@description text,
+@active bit,
+@new bit
+AS
+INSERT INTO ITEM (channel_id, pubDate, author, title, active, new)
+VALUES (@channelId, @pubDate, @author, ' ', @active, @new)
+DECLARE @item_id smallint;
+SELECT @item_id = MAX(item_ID) FROM ITEM WHERE CHANNEL_ID = @channelId;
+INSERT INTO ITEM_DESCRIPTION
+(item_id, DESCRIPTION)
+VALUES (@item_id, @description)

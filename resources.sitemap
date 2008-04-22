@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
     <siteMapNode url="resources.aspx" title="Church Resources">
-      <siteMapNode url="sermonblog.aspx" title="Sermon Blog" />
       <siteMapNode url="sermon.aspx" title="Sermons" />
       <siteMapNode url="http://www.gnpcb.org/esv/devotions" title="Daily Devotions" />
       <siteMapNode url="bulletin.aspx" title="Church Bulletins" />
