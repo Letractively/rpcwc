@@ -42,7 +42,7 @@
             <asp:TemplateField>
                 <ItemTemplate>
                     <h4>
-                        <%# Eval("sermonTextReference") %><%# Eval("Title")%></h4>
+                        <a href="sermons/<%# Convert.ToDateTime(Eval("pubDate")).ToString("yyyy.MM.dd")%>.mp3"><%# Eval("sermonTextReference") %><%# Eval("Title")%></a></h4>
                     <p>
                         <%# Eval("description")%></p>
                     <div class="blogtagline">
