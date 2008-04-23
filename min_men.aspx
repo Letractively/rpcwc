@@ -39,11 +39,11 @@
             </td>
         </tr>
     </table>
+    <p>
+        Men's Retreat <a href="min_men_retreatdevo.aspx" runat="server">Devotions on Sexual
+            Purity</a></p>
     <br />
     <p>
         <b><a href="min_men_retreat09.aspx">Next Men's Retreat</a></b> October 16&ndash;19,
         2009 at <a href="http://www.hcbible.org" target="_blank">Harvey Cedars Bible Conference</a></p>
-    <p>
-        Men's Retreat <a href="min_men_retreatdevo.aspx" runat="server">Devotions on Sexual
-            Purity</a></p>
 </asp:Content>
