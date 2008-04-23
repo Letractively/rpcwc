@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
- Title="Reformed Presbyterian Church — Useful Links" %>
+ Title="Reformed Presbyterian Church &mdash; Useful Links" %>
  
 <asp:Content ContentPlaceHolderID="HeadContent" runat="server">
 <script type="text/javascript">
@@ -29,7 +29,7 @@ window.onload = externalLinks;
 <div><a href="http://www.myparuchia.com/" rel="External">Fellowship of Ailbe</a> (spiritual renewal)</div>
 <div><a href="http://www.ligonier.org/" rel="External">Ligonier Ministry</a> (ministry of R. C. Sproul)</div>
 <div><a href="http://www.pcanet.org/" rel="External">Presbyterian Church in America</a> (denomination)</div>
-<div><a href="http://www.w2git.edu/" rel="External">West Chester</a> (local community information)</div>
+<div><a href="http://www.west-chester.com/" rel="External">West Chester</a> (local community information)</div>
 <div><a href="http://www.reformed.org/documents/wcf_with_proofs/" rel="External">Westminster Confession of Faith</a></div>
 <div><a href="http://opc.org/lc.html" rel="External">Westminster Larger Catechism</a></div>
 <div><a href="http://www.reformed.org/documents/wsc/" rel="External">Westminster Shorter Catechism</a></div>
