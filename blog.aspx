@@ -1,5 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — Sermon Blog" %>
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
+    Title="Reformed Presbyterian Church &mdash; Sermon Blog" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <br />
@@ -48,7 +48,7 @@
             <asp:TemplateField>
                 <ItemTemplate>
                     <h4>
-                        <%# Eval("sermonTextReference") %><%# Eval("Title")%></h4>
+                        <a href="sermons/<%# Convert.ToDateTime(Eval("pubDate")).ToString("yyyy.MM.dd")%>.mp3"><%# Eval("sermonTextReference") %><%# Eval("Title")%></a></h4>
                     <p>
                         <%# Eval("description")%></p>
                     <div class="blogtagline">
@@ -96,7 +96,7 @@
         <span style="font-weight: bold">Leave a comment</span><br /><br />
         <asp:HiddenField ID="blogid" runat="server" />
         <asp:TextBox ID="Name" runat="server" /> <asp:Label AssociatedControlID="Name" Text="Name (required)" runat="server" /><br /><br />
-        <asp:TextBox ID="Email" runat="server" /> <asp:Label AssociatedControlID="Email" Text="Email (required — will not be published)" runat="server" /><br /><br />
+        <asp:TextBox ID="Email" runat="server" /> <asp:Label AssociatedControlID="Email" Text="Email (required &mdash; will not be published)" runat="server" /><br /><br />
         <asp:TextBox ID="CommentText" Rows="10" Columns="50" TextMode="MultiLine" runat="server" /><br /><br />
         <asp:Button Text="Submit Comment" OnCommand="SubmitComments" runat="server" />
         </div>
