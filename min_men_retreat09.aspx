@@ -8,6 +8,7 @@
     <h3>
         October 16&ndash;19, 2009 at <a href="http://www.hcbible.org" target="_blank">Harvey
             Cedars Bible Conference</a></h3>
+    <br />
     <blockquote style="text-align: center">
         I desire that in every place the men should pray.</blockquote>
     <div style="text-align: right">
