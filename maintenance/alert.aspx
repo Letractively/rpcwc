@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Untitled Page" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Alert / News Maintenance" %>
 
 <script runat="server">
     public void SetParams(object source, SqlDataSourceCommandEventArgs eventArgs)
