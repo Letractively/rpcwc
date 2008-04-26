@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Reformed Presbyterian Church — David and Eleanor Fiol" %>
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Reformed Presbyterian Church &mdash; David and Eleanor Fiol" %>
 
 <script runat="server">
 

@@ -1,5 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — Contact Us" %>
+    Title="Reformed Presbyterian Church &mdash; Contact Us" %>
 <html>
 <head>
 <title>Reformed Presbyterian Church &mdash; Contact Us</title>

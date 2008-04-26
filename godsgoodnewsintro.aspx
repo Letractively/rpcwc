@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church &mdash; God's Good News" %>
+<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church &mdash; God's Good News" %>
 
 <script runat="server">
 
@@ -15,16 +15,16 @@
     </div>
     <br />
     <p>
-        That’s a quote from Augustine, Bishop of Hippo (A. D. 401) in his book, Confessions.
+        That's a quote from Augustine, Bishop of Hippo (A. D. 401) in his book, Confessions.
         He hits on something basic to us as human beings. God created us for relationship
         with Himself and we are restless without Him.
     </p>
     <p>
-    That relationship is what the Bible talks about. It’s a subject that reaches to
+    That relationship is what the Bible talks about. It's a subject that reaches to
     the very core of life. It addresses the issue of the restlessness, discontentment,
-    loneliness, out-of-whackness, ill-at-easeness, wondering-what-it’s-all-aboutness
+    loneliness, out-of-whackness, ill-at-easeness, wondering-what-it's-all-aboutness
     we all face in life.</p>
-    <p>We invite you to click below to start your exploration of God’s
+    <p>We invite you to click below to start your exploration of God's
     message of life. You might even offer a prayer, asking God to help you think through
     these things. The Bible passages from which these thoughts are drawn can be seen
     by clicking on the symbols throughout the text.</p>

@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — Upcoming Events" %>
+    Title="Reformed Presbyterian Church &mdash; Upcoming Events" %>
 
 <script type="text/C#" runat="server">
     protected void SetParams(Object source, SqlDataSourceSelectingEventArgs eventArgs)

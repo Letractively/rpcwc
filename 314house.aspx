@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — 314 Ministry House" %>
+    Title="Reformed Presbyterian Church &mdash; 314 Ministry House" %>
     
 <asp:Content ID="Content2" ContentPlaceHolderID="HeadContent" runat="server">
 <script type="text/javascript">

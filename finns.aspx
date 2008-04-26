@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Reformed Presbyterian Church — Bruce and Debbie Finn" %>
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Reformed Presbyterian Church &mdash; Bruce and Debbie Finn" %>
 
 <script runat="server">
 

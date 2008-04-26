@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Reformed Presbyterian Church — Easter Sundae Outing Photo Gallery" %>
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Reformed Presbyterian Church &mdash; Easter Sundae Outing Photo Gallery" %>
 
 <script runat="server">
 

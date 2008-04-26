@@ -1,10 +1,10 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — Ministry Plan" %>
+    Title="Reformed Presbyterian Church &mdash; Ministry Plan" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <p>
-        <a href="images/life_in_christ.GIF">
-            <img src="images/life_in_christ.GIF" width="171" height="300" border="0" alt="Finding life in Christ, Bringing life to others" /></a></p>
+        <a href="~/images/life_in_christ_lg.gif" class="thickbox" runat="server">
+            <img src="~/images/life_in_christ_sm.gif" runat="server" width="172" height="300" border="0" alt="Finding life in Christ, Bringing life to others" /></a></p>
     <h3>
         Reformed Presbyterian Church Ministry Plan</h3>
     <p>

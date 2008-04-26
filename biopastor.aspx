@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — Biography of Pastor Stan Gale" %>
+    Title="Reformed Presbyterian Church &mdash; Biography of Pastor Stan Gale" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <p>

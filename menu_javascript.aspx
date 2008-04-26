@@ -45,7 +45,7 @@ var menu5=new Array()
 menu5[0]='<a href="prayer.aspx">Prayer Requests</a>'
 menu5[1]='<a href="http://www.chopministry.net/" target="_blank">CHOP</a>'
 menu5[2]='<a href="epguide.aspx">Ephesians Prayer Guide</a>'
-menu5[3]='<a href="weeklyprayer.aspx">Weekly Prayer List</a>'
+menu5[3]='<a href="weeklyprayer.aspsx">Weekly Prayer List</a>'
 
 //Contents for menu 6
 var menu6=new Array()

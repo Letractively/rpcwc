@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — Baptism" %>
+    Title="Reformed Presbyterian Church &mdash; Baptism" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h3>
@@ -21,9 +21,9 @@
         There were two sacraments established by God related specifically to the covenant:
         a sacrament of initiation and a sacrament of continuation. The sacrament of initiation
         under the old covenant was circumcision and under the new covenant is water baptism.
-        The sacrament of continuation was the Passover under the old and the Lord’s Supper
+        The sacrament of continuation was the Passover under the old and the Lord's Supper
         under the new. These covenant signs and seals have always been part of the expression
-        of God’s covenant relationship.</p>
+        of God's covenant relationship.</p>
     <strong>To what does baptism point?</strong>
     <p>
         Baptism is a sign of God's promises of eternal life and blessing found in Jesus
@@ -31,7 +31,7 @@
         pointed to in a person's baptism is his or her personal faith in Christ. It is said
         to be "an outward sign of an inward change." In this view the person's (subjective)
         faith is at issue. But, in the context of God's covenant, the issue is something
-        objective—God's promise. So, baptism, as was circumcision, is actually an outward
+        objective&mdash;God's promise. So, baptism, as was circumcision, is actually an outward
         sign expressing the reality of God's promise.</p>
     <strong>Who is to receive the sign of covenant initiation?</strong>
     <p>
@@ -43,7 +43,7 @@
         God has always dealt with families and so the children of at least one believing
         parent are regarded differently from the children of unbelieving households. This
         sign was a pointed reminder of the need for the same cleansing from sin for the
-        child that the parent had already received by virtue of faith in God’s Savior. In
+        child that the parent had already received by virtue of faith in God's Savior. In
         Acts 2, Peter applies the same promises to new covenant believers as were given
         to old covenant believers in Genesis, both regarding families.</p>
     <strong>Does the sign save the child or indicate the baby is saved?</strong>
@@ -80,8 +80,8 @@
         of the coming of the Spirit in the new covenant.</p>
     <strong>Selected Bible passages for study</strong>
     <p>
-<a href="scripture.ashx?ref=Gen+17:9-12&height=300&width=300" title="Genesis 17:9–12" class="thickbox">Gen. 17:9-12</a>;
-<a href="scripture.ashx?ref=Ex+12:47-48&height=300&width=300" title="Exodus 12:47–48" class="thickbox">Ex. 12:47-48</a>;
+<a href="scripture.ashx?ref=Gen+17:9-12&height=300&width=300" title="Genesis 17:9&ndash;12" class="thickbox">Gen. 17:9-12</a>;
+<a href="scripture.ashx?ref=Ex+12:47-48&height=300&width=300" title="Exodus 12:47&ndash;48" class="thickbox">Ex. 12:47-48</a>;
 <a href="scripture.ashx?ref=Mt.+28:19&height=300&width=300" title="Matthew. 28:19" class="thickbox">Mt. 28:19</a>;
 <a href="scripture.ashx?ref=Acts+2:38-39&height=300&width=300" title="Acts 2:38-39" class="thickbox">Acts 2:38-39</a>;
 <a href="scripture.ashx?ref=Acts+16:31-34&height=300&width=300" title="Acts 16:31-34" class="thickbox">Acts 16:31-34</a>;

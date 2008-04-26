@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — Regular Activities" %>
+    Title="Reformed Presbyterian Church &mdash; Regular Activities" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h3>
@@ -10,7 +10,7 @@
         service features preaching from the Bible, both Old and New Testaments, private
         and corporate prayer, and theologically sound music reflecting covenantal diversity
         across generations. We pursue worship that is God-directed, Christ-centered and
-        Spirit-enabled. The Lord’s Supper is ordinarily observed the first Sunday of each
+        Spirit-enabled. The Lord's Supper is ordinarily observed the first Sunday of each
         month.</p>
     <p>
         <a href="~/worship.aspx" runat="server">Worship at RPC Study Paper</a></p>

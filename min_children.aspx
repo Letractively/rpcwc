@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — Children's Ministries" %>
+    Title="Reformed Presbyterian Church &mdash; Children's Ministries" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="HeadContent" runat="server">
     <style type="text/css">
@@ -19,10 +19,10 @@
     <h3>
         Sunday Bible School (SBS)</h3>
     <p>
-        Sundays, 9:30 a.m. – 10:30 a.m., Sept. – June</p>
+        Sundays, 9:30 a.m. &ndash; 10:30 a.m., Sept. &ndash; June</p>
     <ul>
         <li>SBS is the main discipleship venue for teaching of RPC children</li>
-        <li>Current classes: age 2-kindergarten (Bible Story Hour), grades 1–5, grades 6–12
+        <li>Current classes: age 2-kindergarten (Bible Story Hour), grades 1&ndash;5, grades 6&ndash;12
             (Note: classes will be generated according to student need and teacher availability)</li>
         <li>Requires 1 teacher per class. Could also team-teach.</li>
         <li>Curriculum: David C. Cook, GCP, CMI</li>
@@ -36,10 +36,10 @@
     <h3>
         Children's Church (CC)</h3>
     <p>
-        Sundays, 11:30 a.m. – Noon, Sept. – June</p>
+        Sundays, 11:30 a.m. &ndash; Noon, Sept. &ndash; June</p>
     <ul>
         <li>for children 2 years old through 5th grade </li>
-        <li>Children ages 2–4 will meet separately for the entire service for supervised play
+        <li>Children ages 2&ndash;4 will meet separately for the entire service for supervised play
             time, a Bible lesson and activities. Children age 5 through 5th grade will worship
             with their families and be dismissed at the sermon for teaching and crafts. Once
             a month this older group will meet in the balcony area for instruction in worship
@@ -51,7 +51,7 @@
         <li>Note: will allow for sense of larger covenant community of adults and children in
             corporate worship, and will provide for more meaningful ministry to both children
             and adults as separate at sermon</li>
-        <li>Requires 1 director and 1 helper for each group (2–3, 4–2nd grade). Directors and
+        <li>Requires 1 director and 1 helper for each group (2&ndash;3, 4&ndash;2nd grade). Directors and
             helpers will make a 1 month commitment</li>
         <li>A recording of the sermon would be made immediately and given to those nursery or
             CC workers missing worship to nurture them through the Word.</li>
@@ -103,7 +103,7 @@
     <h3>
         Leadership</h3>
     <ul>
-        <li>Form Children's Ministries Team (CMT, 4–5 members) to oversee, provide central direction
+        <li>Form Children's Ministries Team (CMT, 4&ndash;5 members) to oversee, provide central direction
             and scheduling, led by a Children's Ministry Director (CMD).</li>
     </ul>
     <h3>

@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — Cluster Group Overview" %>
+    Title="Reformed Presbyterian Church &mdash; Cluster Group Overview" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h4>
@@ -23,7 +23,7 @@
     believers is essential to personal spiritual growth, protection and development
     (see <a href="scripture.ashx?ref=Heb+3:12-14&width=300&height=300" title="Hebrews 3:12-14"
         class="thickbox">Heb. 3:12-14</a> &amp; <a href="scripture.ashx?ref=Heb+10:23-25&width=300&height=300"
-            title="Hebrews 10:23–25" class="thickbox">Heb. 10:23-25</a>).
+            title="Hebrews 10:23&ndash;25" class="thickbox">Heb. 10:23-25</a>).
     <h3>
         What happens in a Cluster?</h3>
     Cluster meetings follow the format for the early church laid out in <a href="scripture.ashx?ref=Acts+2:42&width=300&height=300"
@@ -67,7 +67,7 @@
         to grow in love for God, for one another and for neighbor. These small groups provide
         for the protection (<a href="scripture.ashx?ref=Heb.+3:12-14&width=300&height=300"
             title="Heb. 3:12-14" class="thickbox">Heb. 3:12-14</a>) and direction (<a href="scripture.ashx?ref=Heb+10:23-25&width=300&height=300"
-                title="Hebrews 10:23–25" class="thickbox">Heb. 10:23-25</a>) of the sheep,
+                title="Hebrews 10:23&ndash;25" class="thickbox">Heb. 10:23-25</a>) of the sheep,
         as mandated in <a href="scripture.ashx?ref=Acts+20:28-32&width=300&height=300" title="Acts 20:28-32"
             class="thickbox">Acts 20:28-32</a>. Mercy-mindedness will be cultivated in caring
         for one another in the group and for others outside the group, both inside and outside

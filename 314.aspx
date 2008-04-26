@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church — 314 Ministry House Pastoral Letter" %>
+    Title="Reformed Presbyterian Church &mdash; 314 Ministry House Pastoral Letter" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h4>

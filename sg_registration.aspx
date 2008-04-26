@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
- Title="Reformed Presbyterian Church — Cluster Group Registration" %>
+ Title="Reformed Presbyterian Church &mdash; Cluster Group Registration" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 <h4>RPC Cluster Registration Form</h4>
