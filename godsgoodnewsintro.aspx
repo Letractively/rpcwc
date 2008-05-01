@@ -8,8 +8,8 @@
     <div style="width: 35%; padding-right: 1em; margin-left: auto; margin-right: auto">
         <div style="border: solid 1px black; background-color: #92B18A; color: White;">
             <div style="font-style: italic; padding: 1em;">
-                “O Lord, you awaken us to delight in your praise, for you made us for yourself,
-                and our heart is restless, until it rests in you.”
+                &ldquo;O Lord, you awaken us to delight in your praise, for you made us for yourself,
+                and our heart is restless, until it rests in you.&rdquo;
             </div>
         </div>
     </div>
