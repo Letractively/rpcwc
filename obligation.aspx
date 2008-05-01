@@ -16,7 +16,7 @@
     <h4>
         Obligation</h4>
     <h3>
-        God calls us to restore to him on His terms.</h3>
+        God calls us to return to him on His terms.</h3>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="text" runat="Server">
     <p>
