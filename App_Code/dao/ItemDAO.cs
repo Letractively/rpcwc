@@ -21,7 +21,8 @@ public class ItemDAO
     private static String basefindSql = "SELECT TITLE, LINK, AUTHOR, DESCRIPTION, PUBDATE, TEXT_REFERENCE, URL, SIZE, TYPE FROM item INNER JOIN ITEM_ENCLOSURE on item.item_id = ITEM_ENCLOSURE.item_id LEFT OUTER JOIN ITEM_DESCRIPTION on item.item_id = item_description.item_id LEFT OUTER JOIN SERMON_TEXT_REFERENCE on item.item_id = SERMON_TEXT_REFERENCE.item_id ";
     private static String basefindRSSSql = "SELECT TITLE, LINK, AUTHOR, DESCRIPTION, PUBDATE FROM item LEFT OUTER JOIN ITEM_DESCRIPTION on item.item_id = item_description.item_id ";
     private static String wherePKSql = "WHERE item.channel_id = @channelId ";
-    private static String whereActiveSql = "AND ACTIVE = 1"; 
+    private static String whereActiveSql = "AND ACTIVE = 1 ";
+    private static String orderByPrayerSql = "ORDER BY NEW DESC, LAST_UPD_TMS DESC ";
     public static DateTimeFormatInfo dateTimeFormatInfo = DateTimeFormatInfo.CurrentInfo;
     private static String baseUrl = "http://www.rpcwc.org/";
 
@@ -57,7 +58,7 @@ public class ItemDAO
     public IList findItemsPrayerRSS(int channelId)
     {
         connection.Open();
-        SqlCommand itemCommand = new SqlCommand(basefindRSSSql + wherePKSql + whereActiveSql, connection);
+        SqlCommand itemCommand = new SqlCommand(basefindRSSSql + wherePKSql + whereActiveSql + orderByPrayerSql, connection);
         itemCommand.Parameters.AddWithValue("channelId", channelId);
 
         SqlDataReader dataReader = itemCommand.ExecuteReader();
