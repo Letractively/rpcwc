@@ -1,8 +1,8 @@
-<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Reformed Presbyterian Church &mdash; High and Martine Wessel" %>
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Reformed Presbyterian Church &mdash; Hugh and Martine Wessel" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <p>
-        <a href="~/missions.aspx">Return to Missions</a></p>
+        <a href="~/missions.aspx" runat="server">Return to Missions</a></p>
     <h4>
         Hugh and Martine Wessel</h4>
     <p>
