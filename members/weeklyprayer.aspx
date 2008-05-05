@@ -6,7 +6,7 @@
     {
         if (eventArgs.Row.RowType == DataControlRowType.DataRow)
         {
-            Object x = ((System.Data.DataRowView)eventArgs.Row.DataItem).Row.ItemArray[5];
+            Object x = ((System.Data.DataRowView)eventArgs.Row.DataItem).Row.ItemArray[3];
 
             if (x.GetType() == typeof(DBNull))
                 return;
@@ -17,7 +17,7 @@
 </script>
 
 <asp:Content ContentPlaceHolderID="HeadContent" runat="server">
-	<link id="Link1" rel="alternate" type="application/rss+xml" title="RPC Sermon Audio" href="prayer.xml" runat="server" />
+	<link id="Link1" rel="alternate" type="application/rss+xml" title="RPC Sermon Audio" href="../prayer.xml" runat="server" />
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -25,7 +25,7 @@
     <h4>
         RPC Praise &amp; Prayer</h4>
     <asp:SqlDataSource ID="PrayerDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RPC %>"
-        SelectCommand="getPrayerListActive" SelectCommandType="StoredProcedure">
+        SelectCommand="findPrayersActive" SelectCommandType="StoredProcedure">
         <SelectParameters>
             <asp:Parameter Name="channelId" DefaultValue="6" />
         </SelectParameters>
@@ -34,7 +34,7 @@
         "<em>I am the vine, you are the branches. If a man remains in me and I in him, he will
             bear much fruit; apart from me you can do nothing.</em>" John 15:5</p>
     <asp:GridView ID="PrayerGridView" DataSourceID="PrayerDataSource" AutoGenerateColumns="false"
-        OnRowCreated="setBold" runat="server" ShowHeader="False" CellPadding="1">
+        OnRowCreated="setBold" runat="server" ShowHeader="False" CellPadding="1" >
         <Columns>
             <asp:BoundField DataField="item_id" Visible="false" />
             <asp:BoundField DataField="author">
