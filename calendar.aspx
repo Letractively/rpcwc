@@ -1,5 +1,5 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="~/calendar.aspx.cs" Inherits="SmallCalendar" Title="Reformed Prebsyterian Church &mdash; Special Events Calendar"
+    CodeFile="~/calendar.aspx.cs" Inherits="SmallCalendar" Title="Reformed Presbyterian Church &mdash; Special Events Calendar"
     EnableViewState="true" EnableSessionState="True" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
