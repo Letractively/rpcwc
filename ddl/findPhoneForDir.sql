@@ -1,0 +1,8 @@
+CREATE PROCEDURE
+findPhoneForDir
+@entryId smallint
+AS
+SELECT     PHONE, PHONE_TYPE, ENTRY_ID
+FROM         PHONE
+WHERE     (PERSON_ENTRY_ID IS NULL)
+AND ENTRY_ID = @entryId
