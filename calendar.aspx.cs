@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
 using System.Web.UI.WebControls;
+using System.Web.UI;
 
 public partial class SmallCalendar : System.Web.UI.Page
 {
-    private IList dates;
+    private IDictionary dates;
 
     protected void UpdateDescription(object sender, EventArgs eventArgs)
     {        
@@ -21,6 +22,8 @@ public partial class SmallCalendar : System.Web.UI.Page
         {
             eventArgs.Day.IsSelectable = true;
             eventArgs.Cell.Font.Bold = true;
+            ((LiteralControl)eventArgs.Cell.Controls[0]).Text = (String)dates[eventArgs.Day.Date];
+            eventArgs.Cell.ToolTip = (String) dates[eventArgs.Day.Date];
         }
         else
         {

@@ -15,9 +15,10 @@ using System.Collections;
 /// </summary>
 public class CalendarDAO
 {
-    private static int EVENT_CALENDAR_CHANNEL_ID = 3;
+    private static int SPECIAL_EVENT_CALENDAR_CHANNEL_ID = 3;
+    private static int REGULAR_EVENT_CALENDAR_CHANNEL_ID = 8;
     private static string eventCalendarCommandString = "SELECT pubDate, title, description FROM CALENDAR WHERE pubDate BETWEEN @startDate AND @endDate";
-    private static string eventCalendarDatesCommandString = "SELECT i.pubDate FROM item i WHERE i.pubDate BETWEEN @startDate AND @endDate AND i.channel_id = @channelId";
+    private static string eventCalendarDatesCommandString = "SELECT i.pubDate, i.title FROM item i WHERE i.pubDate BETWEEN @startDate AND @endDate AND i.channel_id = @channelIdSpecial OR i.channel_id = @channelIdRegular";
     private static SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["RPC"].ConnectionString);
 
     public static EventCalendar getEvents(int year, int month)
@@ -29,7 +30,8 @@ public class CalendarDAO
         SqlCommand eventCommand = new SqlCommand(eventCalendarCommandString, connection);
         eventCommand.Parameters.AddWithValue("startDate", new DateTime(year, month, 1));
         eventCommand.Parameters.AddWithValue("endDate", new DateTime(year, month, 1).AddMonths(1).AddMinutes(-1));
-        eventCommand.Parameters.AddWithValue("channelId", EVENT_CALENDAR_CHANNEL_ID);
+        eventCommand.Parameters.AddWithValue("channelIdSpecial", SPECIAL_EVENT_CALENDAR_CHANNEL_ID);
+        eventCommand.Parameters.AddWithValue("channelIdRegular", REGULAR_EVENT_CALENDAR_CHANNEL_ID);
 
         SqlDataReader dataReader = eventCommand.ExecuteReader();
         while (dataReader.Read())
@@ -54,7 +56,8 @@ public class CalendarDAO
         SqlCommand eventCommand = new SqlCommand(eventCalendarCommandString, connection);
         eventCommand.Parameters.AddWithValue("startDate", date.Date);
         eventCommand.Parameters.AddWithValue("endDate", date.Date.AddDays(1).AddMinutes(-1));
-        eventCommand.Parameters.AddWithValue("channelId", EVENT_CALENDAR_CHANNEL_ID);
+        eventCommand.Parameters.AddWithValue("channelIdSpecial", SPECIAL_EVENT_CALENDAR_CHANNEL_ID);
+        eventCommand.Parameters.AddWithValue("channelIdRegular", REGULAR_EVENT_CALENDAR_CHANNEL_ID);
 
         SqlDataReader dataReader = eventCommand.ExecuteReader();
         WebControl div = new WebControl(HtmlTextWriterTag.Div);
@@ -86,21 +89,26 @@ public class CalendarDAO
         return h4;
     }
 
-    public static IList findDatesByMonth(int year, int month)
+    public static IDictionary findDatesByMonth(int year, int month)
     {
-        IList dates = new ArrayList();
-        
+        IDictionary dates = new Hashtable();
+
         connection.Open();
         //commandString
         SqlCommand eventCommand = new SqlCommand(eventCalendarDatesCommandString, connection);
         eventCommand.Parameters.AddWithValue("startDate", new DateTime(year, month, 1).AddDays(-7));
         eventCommand.Parameters.AddWithValue("endDate", new DateTime(year, month, 1).AddMonths(1).AddDays(7));
-        eventCommand.Parameters.AddWithValue("channelId", EVENT_CALENDAR_CHANNEL_ID);
+        eventCommand.Parameters.AddWithValue("channelIdSpecial", SPECIAL_EVENT_CALENDAR_CHANNEL_ID);
+        eventCommand.Parameters.AddWithValue("channelIdRegular", REGULAR_EVENT_CALENDAR_CHANNEL_ID);
 
         SqlDataReader dataReader = eventCommand.ExecuteReader();
         while (dataReader.Read())
         {
-            dates.Add(dataReader.GetDateTime(0).Date);
+            DateTime dateToAdd = dataReader.GetDateTime(0).Date;
+            if (!dates.Contains(dateToAdd))
+                dates.Add(dateToAdd, dataReader.GetString(1));
+            else
+                dates[dateToAdd] += "\n" + dataReader.GetString(1);
         }
 
         dataReader.Close();

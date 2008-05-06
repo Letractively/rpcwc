@@ -12,10 +12,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h4>
         Upcoming Events</h4>
-    <asp:SqlDataSource ID="EventsDataSource" SelectCommand="SELECT pubDate, title, description FROM CALENDAR WHERE pubDate BETWEEN @startDate AND @endDate ORDER BY pubDate"
-        SelectCommandType="Text" ConnectionString="<%$ ConnectionStrings:RPC %>" OnSelecting="SetParams"
+    <asp:SqlDataSource ID="EventsDataSource" SelectCommand="findSpecialEventsFuture"
+        SelectCommandType="StoredProcedure" ConnectionString="<%$ ConnectionStrings:RPC %>" OnSelecting="SetParams"
         runat="server">
         <SelectParameters>
+            <asp:Parameter Name="channelId" DefaultValue="3" />
             <asp:Parameter Name="startDate" Type="DateTime" />
             <asp:Parameter Name="endDate" Type="DateTime" />
         </SelectParameters>

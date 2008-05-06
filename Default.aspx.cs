@@ -11,5 +11,5 @@ using System.Collections;
 
 public partial class _Default : System.Web.UI.Page
 {
-    protected IList dates;
+    protected IDictionary dates;
 }
