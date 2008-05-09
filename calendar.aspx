@@ -9,7 +9,7 @@
                 <asp:Calendar ID="SmallCalendarControl" runat="server" BorderColor="#CCCCFF" BorderWidth="1px"
                     DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#336699"
                     Height="200px" ShowGridLines="True" Width="220px" OnPreRender="UpdateDescription"
-                    OnDayRender="SetBold" OnVisibleMonthChanged="VisibleMonthChanged" >
+                    OnDayRender="SetBold" OnSelectionChanged="SelectionChanged" OnVisibleMonthChanged="VisibleMonthChanged" >
                     <SelectedDayStyle BackColor="#B7D87D" ForeColor="White" Font-Bold="True" />
                     <SelectorStyle BackColor="#FFFFFF" ForeColor="#B7D87D" />
                     <OtherMonthDayStyle ForeColor="#6699CC" />
