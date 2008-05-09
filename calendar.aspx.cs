@@ -8,7 +8,8 @@ public partial class SmallCalendar : System.Web.UI.Page
     private IDictionary dates;
 
     protected void UpdateDescription(object sender, EventArgs eventArgs)
-    {        
+    {
+        SmallCalendarControl.VisibleDate = SmallCalendarControl.SelectedDate;
         if (SmallCalendarControl.SelectedDate.Date != null && SmallCalendarControl.SelectedDate.Ticks != 0)// && getEventCalendarEntry(eventCalendar, SmallCalendarControl.SelectedDate.Date) != null)
         {
             WebControl eventControl = CalendarManager.findEvent(SmallCalendarControl.SelectedDate.Date);
