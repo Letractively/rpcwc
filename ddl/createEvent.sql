@@ -2,10 +2,11 @@ CREATE PROCEDURE createEvent
 @channelId tinyint,
 @title varchar(2000),
 @pubDate smalldatetime,
-@description text
+@description text,
+@allDayEvent bit
 AS
 INSERT INTO ITEM
-(CHANNEL_ID, TITLE, AUTHOR, PUBDATE) VALUES (@channelId, @title, '', @pubDate)
+(CHANNEL_ID, TITLE, AUTHOR, PUBDATE, ALL_DAY_EVENT) VALUES (@channelId, @title, '', @pubDate, @allDayEvent)
 
 DECLARE @itemid smallint;
 

@@ -22,12 +22,14 @@
             <asp:Parameter Name="pubDate" Type="DateTime" />
             <asp:Parameter Name="channelId" />
             <asp:Parameter Name="description" />
+            <asp:Parameter Name="allDayEvent" />
         </UpdateParameters>
         <InsertParameters>
             <asp:Parameter Name="channelId" DefaultValue="3" />
             <asp:Parameter Name="title" />
             <asp:Parameter Name="pubDate" Type="DateTime" />
             <asp:Parameter Name="description" />
+            <asp:Parameter Name="allDayEvent" />
         </InsertParameters>
     </asp:SqlDataSource> 
     <table>
@@ -69,7 +71,7 @@
                         </asp:DropDownList>
                     </InsertItemTemplate>
                 </asp:TemplateField>
-                <asp:CheckBoxField DataField="allDayEvent" HeaderText="All Day Event" ReadOnly="true" />
+                <asp:CheckBoxField DataField="allDayEvent" HeaderText="All Day Event" />
             </Fields>
         </asp:DetailsView>
     </table>
