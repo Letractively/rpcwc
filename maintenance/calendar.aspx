@@ -69,7 +69,7 @@
                         </asp:DropDownList>
                     </InsertItemTemplate>
                 </asp:TemplateField>
-                <asp:CheckBoxField DataField="allDayEvent" HeaderText="All Day Event" />
+                <asp:CheckBoxField DataField="allDayEvent" HeaderText="All Day Event" ReadOnly="true" />
             </Fields>
         </asp:DetailsView>
     </table>
