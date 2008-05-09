@@ -17,7 +17,7 @@ public class CalendarDAO
 {
     private static int SPECIAL_EVENT_CALENDAR_CHANNEL_ID = 3;
     private static int REGULAR_EVENT_CALENDAR_CHANNEL_ID = 8;
-    private static string eventCalendarCommandString = "SELECT i.pubDate, i.title, id.description FROM item i INNER JOIN item_description id on i.item_id = id.item_id WHERE i.pubDate BETWEEN @startDate AND @endDate AND (i.channel_id = @channelIdSpecial OR i.channel_id = @channelIdRegular)";
+    private static string eventCalendarCommandString = "SELECT i.pubDate, i.title, id.description, i.all_day_event FROM item i INNER JOIN item_description id on i.item_id = id.item_id WHERE i.pubDate BETWEEN @startDate AND @endDate AND (i.channel_id = @channelIdSpecial OR i.channel_id = @channelIdRegular)";
     private static string eventCalendarDatesCommandString = "SELECT i.pubDate, i.title FROM item i WHERE i.pubDate BETWEEN @startDate AND @endDate AND i.channel_id = @channelIdSpecial OR i.channel_id = @channelIdRegular";
     private static SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["RPC"].ConnectionString);
 
@@ -70,6 +70,8 @@ public class CalendarDAO
             oneEvent.title = dataReader.GetString(1);
             if (!dataReader.IsDBNull(2))
                 oneEvent.description = dataReader.GetString(2);
+            if (!dataReader.IsDBNull(3))
+                oneEvent.allDayEvent = dataReader.GetBoolean(3);
             div.Controls.Add(new EventControl(oneEvent));
             //addToDate(eventCalendar, oneEvent.date.Date, new EventControl(oneEvent));
         }

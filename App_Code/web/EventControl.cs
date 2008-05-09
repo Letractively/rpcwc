@@ -16,13 +16,16 @@ public class EventControl : WebControl
     public EventControl(Event calendarEvent)
         : base(HtmlTextWriterTag.Div)
 	{
-        WebControl timeHeader = new WebControl(HtmlTextWriterTag.H3);
-        Label timeLabel = new Label();
-        timeLabel.Text = calendarEvent.date.ToShortTimeString();
-        timeHeader.Controls.Add(timeLabel);
-        this.Controls.Add(timeHeader);
+        if (!calendarEvent.allDayEvent)
+        {
+            WebControl timeHeader = new WebControl(HtmlTextWriterTag.H3);
+            Label timeLabel = new Label();
+            timeLabel.Text = calendarEvent.date.ToShortTimeString();
+            timeHeader.Controls.Add(timeLabel);
+            this.Controls.Add(timeHeader);
 
-        this.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
+            this.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
+        }
         
         Label titleLabel = new Label();
         titleLabel.Text = calendarEvent.title;

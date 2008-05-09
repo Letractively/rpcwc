@@ -11,11 +11,12 @@ using System.Web.UI.WebControls.WebParts;
 /// <summary>
 /// Summary description for Event
 /// </summary>
-public class Event
+public class Event : RPCVO
 {
     private DateTime _date;
     private String _title;
     private String _description;
+    private bool _allDayEvent;
 
 	public Event()
 	{
@@ -56,5 +57,17 @@ public class Event
         {
             _description = value;
         }
+    }
+    public bool allDayEvent
+    {
+        get
+        {
+            return _allDayEvent;
+        }
+        set
+        {
+            _allDayEvent = value;
+        }
+
     }
 }
