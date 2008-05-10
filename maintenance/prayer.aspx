@@ -2,6 +2,11 @@
     Title="Weekly Prayer List Maintenance Page" %>
     
 <script type="text/C#" runat="server">
+    public void SetTimeParam(object source, SqlDataSourceCommandEventArgs eventArgs)
+    {
+        eventArgs.Command.Parameters["@pubDate"].Value = DateTime.Now;
+    }
+    
     protected void setBold(Object source, GridViewRowEventArgs eventArgs)
     {
         if (eventArgs.Row.RowType == DataControlRowType.DataRow)
@@ -20,8 +25,8 @@
     
     <asp:SqlDataSource ID="PrayerDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RPC %>"
         SelectCommand="getPrayerListActive" SelectCommandType="StoredProcedure"
-        UpdateCommand="updatePrayerRequest" UpdateCommandType="StoredProcedure"
-        InsertCommand="createPrayerRequest" InsertCommandType="StoredProcedure">
+        UpdateCommand="updatePrayerRequest" UpdateCommandType="StoredProcedure" OnUpdating="SetTimeParam"
+        InsertCommand="createPrayerRequest" InsertCommandType="StoredProcedure" OnInserting="SetTimeParam">
         <SelectParameters>
             <asp:Parameter Name="channelId" DefaultValue="6" />
         </SelectParameters>
@@ -44,8 +49,7 @@
             AutoGenerateEditButton="True" DataKeyNames="item_id" AllowPaging="True" PagerSettings-Mode="NumericFirstLast">
             <PagerSettings Mode="NumericFirstLast"></PagerSettings>
             <Fields>
-                <asp:BoundField DataField="item_id" HeaderText="ID" SortExpression="item_id" Visible="false" />
-                <asp:BoundField DataField="pubDate" HeaderText="Date" SortExpression="pubDate" DataFormatString="{0:MM/dd/yyyy}" />
+                <asp:BoundField DataField="item_id" HeaderText="ID" SortExpression="item_id" ReadOnly="true" InsertVisible="false" Visible="true" />
                 <asp:BoundField DataField="author" HeaderText="Author" SortExpression="author" />
                 <asp:TemplateField HeaderText="Description" SortExpression="description">
                     <ItemTemplate>
