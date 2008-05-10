@@ -8,6 +8,7 @@ CREATE PROCEDURE updatePrayerRequest
 AS
 UPDATE ITEM
 SET pubDate = @pubDate,
+title = @author,
 author = @author,
 active = @active,
 new = @new
