@@ -1,5 +1,6 @@
 <%@ Master Language="C#" %>
 
+<%@ Register TagName="top" TagPrefix="include" Src="~/includes/top.ascx" %>
 <%@ Register TagName="topleftbox" TagPrefix="include" Src="~/includes/topleftbox.ascx" %>
 <%@ Register TagName="leftside" TagPrefix="include" Src="~/includes/leftside.ascx" %>
 <%@ Register TagName="mainmenu" TagPrefix="include" Src="~/includes/mainmenu.ascx" %>
@@ -46,6 +47,9 @@ pageTracker._trackPageview();
 </head>
 <body>
     <form runat="server">
+    <div id="top">
+        <include:top ID="Top1" runat="server" />
+    </div>
     <div id="page-container">
         <div style="padding-bottom: 10px; background: #6D8A98;">
         </div>

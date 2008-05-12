@@ -18,5 +18,6 @@ CodeFile="user.aspx.cs" Inherits="maintenance_access_user"
             </asp:CompleteWizardStep>
         </WizardSteps>
     </asp:CreateUserWizard>
-    <asp:ListBox ID="UserList" OnInit="getAllUsers" runat="server" />
+    <asp:ListBox ID="UserList" OnInit="getAllUsers" OnSelectedIndexChanged="UserSelected" runat="server" />
+    <asp:ChangePassword ID="ChangePassword" runat="server" />
 </asp:Content>
