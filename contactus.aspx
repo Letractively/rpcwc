@@ -25,7 +25,7 @@
             </td>
             <td valign="top">
                 <div style="text-align:right">
-                    <img src="~/images/cellphone.gif" width="300" height="200" alt="" /></div>
+                    <img src="~/images/cellphone.gif" width="300" height="200" alt="" runat="server" /></div>
             </td>
         </tr>
     </table>
