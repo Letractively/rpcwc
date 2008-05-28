@@ -7,69 +7,31 @@
     <p>
         <em>Note: Due to privacy concerns, contact, email and address information will not be
             displayed on this page. Please contact the church office for the information.</em></p>
-    <h3>
-        Nursery Helpers Needed:
-    </h3>
-    <table width="450" border="1">
-        <tr>
-            <td valign="top">
-                <strong>Dates </strong>
-            </td>
-            <td valign="top">
-                <strong>9:30 a.m. SBS Nursery</strong>
-            </td>
-            <td valign="top">
-                <strong>11:00 a.m. Worship Nursery</strong>
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">
-                May 11
-            </td>
-            <td valign="top">
-                ok
-            </td>
-            <td valign="top">
-                Need one more person
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">
-                June 22
-            </td>
-            <td valign="top">
-                Need one person
-            </td>
-            <td valign="top">
-                Need one more person
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">
-                June 29
-            </td>
-            <td valign="top">
-                ok
-            </td>
-            <td valign="top">
-                Need one more person
-            </td>
-        </tr>
-    </table>
-    <br />
-    <h3>
-        Special Events</h3>
     <p>
-        <strong>Children’s Ministry Team News</strong> &mdash; CMT would like to invite
-        children of all ages to go to the <span style="text-decoration: underline;">Wentworth
-            Nursing Home</span> on Sunday, <b>May 18th at 2:00 p.m.</b> Please sign up on
-        the sign up sheet in the coat room. More info to follow.
+        <strong>Covenant Keepers</strong> is a monthly dinner and study to provide instruction
+        and support for parents of children 0&ndash;12 years of age in raising their children
+        within God's covenant framework. Emphasis is on God's wisdom contained in His Word,
+        and on a Christ-centeredness and Christ-reliance for both parents and children in
+        helping parents to keep their baptismal vows to raise their children in the nurture
+        and admonition of the Lord. Two weeks from now, the Covenant Keepers will meet on
+        <strong>Friday, May 30th</strong>, for a May/June combination meeting to be held
+        at Sian Sumner's home at <strong>6 p.m.</strong> Please indicate to Sian if you
+        plan to attend. <span style="text-decoration: underline">If interested in learning more,</span>
+        please indicate this on the tear-off section of the bulletin or see Pastor Gale.
     </p>
     <p>
-        <strong>RPC Supper Clubs </strong>normally meet the second Sunday of the month in
-        homes. Next Sunday, May 11th (Mother’s Day) is the next time Supper Clubs will meet.
-        If you are not part of a Supper Club and would like to be, speak with Linda Gale
-        or put a note on the bulletin tear-off section and drop it in the offering plate.
+        <strong>Next Sunday &mdash; June 1st&mdash;The Lord's Supper will be celebrated. Who
+            may participate in the Lord’s Supper?</strong>
+        <ul>
+            You may participate if:
+            <li>You have received the sign of water baptism, initiating you into God’s covenant
+                community.</li>
+            <li>You have professed personal faith in Jesus Christ to save you from the penalty of
+                your sin and make you right with God.</li>
+            <li>Your profession of faith is not just your own opinion, but has been affirmed and
+                validated by the leaders of Christ's church.</li>
+            <li>You have dealt with any sin against God and against brother or sister in the Lord.</li>
+        </ul>
     </p>
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="HeadContent">
