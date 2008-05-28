@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Web.UI.WebControls;
+using Spring.Context;
+using Spring.Context.Support;
 
 /// <summary>
 /// Summary description for CalendarManager
@@ -11,26 +13,22 @@ public class CalendarManager
 
 	public CalendarManager()
 	{
-        calendarDAO = new CalendarDAO();
-		//
-		// TODO: Add constructor logic here
-		//
 	}
 
-    public static EventCalendar findEventsByMonth(int year, int month)
+    public EventCalendar findEventsByMonth(int year, int month)
     {
-        return CalendarDAO.getEvents(year, month);
+        return calendarDAO.getEvents(year, month);
         //return generateEventsForMonth(year, month);
     }
 
-    public static IDictionary findDatesByMonth(int year, int month)
+    public IDictionary findDatesByMonth(int year, int month)
     {
-        return CalendarDAO.findDatesByMonth(year, month);
+        return calendarDAO.findDatesByMonth(year, month);
     }
 
-    public static WebControl findEvent(DateTime date)
+    public WebControl findEvent(DateTime date)
     {
-        return CalendarDAO.findEvent(date);
+        return calendarDAO.findEvent(date);
     }
 
     private Event generateEvent(

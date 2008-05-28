@@ -1,11 +1,20 @@
 using System;
 using System.Collections;
-using System.Web.UI.WebControls;
 using System.Web.UI;
+using System.Web.UI.WebControls;
+using Spring.Context;
+using Spring.Context.Support;
 
 public partial class SmallCalendar : System.Web.UI.Page
 {
     private IDictionary dates;
+    private CalendarManager _calendarManager;
+
+    public SmallCalendar()
+    {
+        IApplicationContext context = ContextRegistry.GetContext();
+        calendarManager = (CalendarManager)context.GetObject("CalendarManager");
+    }
 
     protected void SelectionChanged(object sender, EventArgs eventArgs)
     {
@@ -16,7 +25,7 @@ public partial class SmallCalendar : System.Web.UI.Page
     {
         if (SmallCalendarControl.SelectedDate.Date != null && SmallCalendarControl.SelectedDate.Ticks != 0)// && getEventCalendarEntry(eventCalendar, SmallCalendarControl.SelectedDate.Date) != null)
         {
-            WebControl eventControl = CalendarManager.findEvent(SmallCalendarControl.SelectedDate.Date);
+            WebControl eventControl = calendarManager.findEvent(SmallCalendarControl.SelectedDate.Date);
             EventInfo.Controls.Add(eventControl);
         }
     }
@@ -42,7 +51,7 @@ public partial class SmallCalendar : System.Web.UI.Page
 
     protected void VisibleMonthChanged(object sender, MonthChangedEventArgs eventArgs)
     {
-        dates = CalendarManager.findDatesByMonth(eventArgs.NewDate.Year, eventArgs.NewDate.Month);
+        dates = calendarManager.findDatesByMonth(eventArgs.NewDate.Year, eventArgs.NewDate.Month);
     }
 
     protected void Page_Load(object sender, EventArgs eventArgs)
@@ -57,16 +66,28 @@ public partial class SmallCalendar : System.Web.UI.Page
 
         if (SmallCalendarControl.VisibleDate.Ticks == 0)
         {
-            dates = CalendarManager.findDatesByMonth(DateTime.Today.Year, DateTime.Today.Month);
+            dates = calendarManager.findDatesByMonth(DateTime.Today.Year, DateTime.Today.Month);
         }
         else
         {
-            dates = CalendarManager.findDatesByMonth(SmallCalendarControl.VisibleDate.Year, SmallCalendarControl.VisibleDate.Month);
+            dates = calendarManager.findDatesByMonth(SmallCalendarControl.VisibleDate.Year, SmallCalendarControl.VisibleDate.Month);
         }
     }  
 
     private ArrayList getEventCalendarEntry(EventCalendar eventCalendar, DateTime date)
     {
         return (ArrayList) eventCalendar.events[date];
+    }
+
+    public CalendarManager calendarManager
+    {
+        get
+        {
+            return _calendarManager;
+        }
+        set
+        {
+            _calendarManager = value;
+        }
     }
 }

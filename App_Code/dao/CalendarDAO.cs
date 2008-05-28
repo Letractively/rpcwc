@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Data;
-using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Data.SqlClient;
 using System.Collections;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using Spring.Data.Common;
+using Spring.Data.Core;
+using Spring.Data.Objects;
 
 /// <summary>
 /// Summary description for CalendarDAO
@@ -17,73 +16,140 @@ public class CalendarDAO
 {
     private static int SPECIAL_EVENT_CALENDAR_CHANNEL_ID = 3;
     private static int REGULAR_EVENT_CALENDAR_CHANNEL_ID = 8;
-    private static string eventCalendarCommandString = "SELECT i.pubDate, i.title, id.description, i.all_day_event FROM item i INNER JOIN item_description id on i.item_id = id.item_id WHERE i.pubDate BETWEEN @startDate AND @endDate AND (i.channel_id = @channelIdSpecial OR i.channel_id = @channelIdRegular)";
-    private static string eventCalendarDatesCommandString = "SELECT i.pubDate, i.title FROM item i WHERE i.pubDate BETWEEN @startDate AND @endDate AND i.channel_id = @channelIdSpecial OR i.channel_id = @channelIdRegular";
-    private static SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["RPC"].ConnectionString);
+    private string _eventCalendarCommandString;
+    private string _eventCalendarDatesCommandString;
+    //private SqlConnection _connection;
+    private IDbCommand _eventCommand;
+    private IDbCommand _eventDatesCommand;
+    private IDbConnection _dbConnection;
+    private IDbProvider _dbProvider;
+    private AdoTemplate _adoTemplate;
+    private EventCalendarFindQuery eventCalendarFindQuery;
+    private EventFindQuery eventFindQuery;
 
-    public static EventCalendar getEvents(int year, int month)
+    public CalendarDAO()
     {
-        EventCalendar eventCalendar = new EventCalendar();
-        eventCalendar.events = new Hashtable();
-        connection.Open();
-        //commandString
-        SqlCommand eventCommand = new SqlCommand(eventCalendarCommandString, connection);
-        eventCommand.Parameters.AddWithValue("startDate", new DateTime(year, month, 1));
-        eventCommand.Parameters.AddWithValue("endDate", new DateTime(year, month, 1).AddMonths(1).AddMinutes(-1));
-        eventCommand.Parameters.AddWithValue("channelIdSpecial", SPECIAL_EVENT_CALENDAR_CHANNEL_ID);
-        eventCommand.Parameters.AddWithValue("channelIdRegular", REGULAR_EVENT_CALENDAR_CHANNEL_ID);
+        //connection = new SqlConnection(ConfigurationManager.ConnectionStrings["RPC"].ConnectionString);
+        //dbProvider = DbProviderFactory.GetDbProvider("System.Data.SqlClient");
+        dbConnection = DbProviderFactory.GetDbProvider("System.Data.SqlClient").CreateConnection();
+        dbConnection.ConnectionString = ConfigurationManager.ConnectionStrings["RPC"].ConnectionString;
+        eventCommand = dbConnection.CreateCommand();
+        eventDatesCommand = dbConnection.CreateCommand();
+    }
 
-        SqlDataReader dataReader = eventCommand.ExecuteReader();
-        while (dataReader.Read())
+    public class EventFindQuery : MappingAdoQuery
+    {
+        public EventFindQuery(IDbProvider dbProvider, String sql)
+            : base(dbProvider, sql)
+        {
+            CommandType = CommandType.Text;
+            DeclaredParameters = new DbParameters(dbProvider);
+            DeclaredParameters.Add("startDate", SqlDbType.SmallDateTime);
+            DeclaredParameters.Add("endDate", SqlDbType.SmallDateTime);
+            DeclaredParameters.Add("channelIdSpecial", SqlDbType.TinyInt);
+            DeclaredParameters.Add("channelIdRegular", SqlDbType.TinyInt);
+            Compile();
+        }
+
+        protected override object MapRow(IDataReader reader, int num)
         {
             Event oneEvent = new Event();
-            oneEvent.date = dataReader.GetDateTime(0);
-            oneEvent.title = dataReader.GetString(1);
-            if (!dataReader.IsDBNull(2))
-                oneEvent.description = dataReader.GetString(2);
+            oneEvent.date = reader.GetDateTime(0);
+            oneEvent.title = reader.GetString(1);
+            if (!reader.IsDBNull(2))
+                oneEvent.description = reader.GetString(2);
+            if (!reader.IsDBNull(3))
+                oneEvent.allDayEvent = reader.GetBoolean(3);
+
+            return oneEvent;
+        }
+    }
+
+    public class EventCalendarFindQuery : MappingAdoQuery
+    {
+        public EventCalendarFindQuery(IDbProvider dbProvider, String sql)
+            : base(dbProvider, sql)
+        {
+            CommandType = CommandType.Text;
+            DeclaredParameters = new DbParameters(dbProvider);
+            DeclaredParameters.Add("startDate", SqlDbType.SmallDateTime);
+            DeclaredParameters.Add("endDate", SqlDbType.SmallDateTime);
+            DeclaredParameters.Add("channelIdSpecial", SqlDbType.TinyInt);
+            DeclaredParameters.Add("channelIdRegular", SqlDbType.TinyInt);
+            Compile();
+        }
+
+        protected override object MapRow(IDataReader reader, int num)
+        {
+            Event oneEvent = new Event();
+            oneEvent.date = reader.GetDateTime(0);
+            oneEvent.title = reader.GetString(1);
+            if (!reader.IsDBNull(2))
+                oneEvent.description = reader.GetString(2);
+
+            return oneEvent;
+        }
+    }
+
+
+
+    public EventCalendar getEvents(int year, int month)
+    {
+        IDictionary parameterMap = new Hashtable(4);
+        parameterMap.Add("@startDate", new DateTime(year, month, 1));
+        parameterMap.Add("@endDate", new DateTime(year, month, 1).AddMonths(1).AddMinutes(-1));
+        parameterMap.Add("@channelIdSpecial", SPECIAL_EVENT_CALENDAR_CHANNEL_ID);
+        parameterMap.Add("@channelIdRegular", REGULAR_EVENT_CALENDAR_CHANNEL_ID);
+
+        EventCalendar eventCalendar = new EventCalendar();
+        eventCalendar.events = new Hashtable();
+
+        IList events = getEventCalendarFindQuery().QueryByNamedParam(parameterMap);
+
+        foreach (Event oneEvent in events)
+        {
             addToDate(eventCalendar, oneEvent.date.Date, new EventControl(oneEvent));
         }
 
-        dataReader.Close();
-        //String scripture = (String)scriptureCommand.ExecuteScalar();
-        connection.Close();
         return eventCalendar;
     }
 
-    public static WebControl findEvent(DateTime date)
+    public WebControl findEvent(DateTime date)
     {
-        connection.Open();
-        //commandString
-        SqlCommand eventCommand = new SqlCommand(eventCalendarCommandString, connection);
-        eventCommand.Parameters.AddWithValue("startDate", date.Date);
-        eventCommand.Parameters.AddWithValue("endDate", date.Date.AddDays(1).AddMinutes(-1));
-        eventCommand.Parameters.AddWithValue("channelIdSpecial", SPECIAL_EVENT_CALENDAR_CHANNEL_ID);
-        eventCommand.Parameters.AddWithValue("channelIdRegular", REGULAR_EVENT_CALENDAR_CHANNEL_ID);
+        IDictionary parameterMap = new Hashtable(4);
+        parameterMap.Add("@startDate", date.Date);
+        parameterMap.Add("@endDate", date.Date.AddDays(1).AddMinutes(-1));
+        parameterMap.Add("@channelIdSpecial", SPECIAL_EVENT_CALENDAR_CHANNEL_ID);
+        parameterMap.Add("@channelIdRegular", REGULAR_EVENT_CALENDAR_CHANNEL_ID);
 
-        SqlDataReader dataReader = eventCommand.ExecuteReader();
         WebControl div = new WebControl(HtmlTextWriterTag.Div);
         div.Controls.Add(getDateHeader(date));
-        while (dataReader.Read())
+
+        IList events = getEventFindQuery().QueryByNamedParam(parameterMap);
+
+        foreach (Event oneEvent in events)
         {
-            Event oneEvent = new Event();
-            oneEvent.date = dataReader.GetDateTime(0);
-            oneEvent.title = dataReader.GetString(1);
-            if (!dataReader.IsDBNull(2))
-                oneEvent.description = dataReader.GetString(2);
-            if (!dataReader.IsDBNull(3))
-                oneEvent.allDayEvent = dataReader.GetBoolean(3);
             div.Controls.Add(new EventControl(oneEvent));
-            //addToDate(eventCalendar, oneEvent.date.Date, new EventControl(oneEvent));
         }
 
-        dataReader.Close();
-        //String scripture = (String)scriptureCommand.ExecuteScalar();
-        
-        connection.Close();
         return div;
     }
 
-    private static Control getDateHeader(DateTime date)
+    private EventCalendarFindQuery getEventCalendarFindQuery()
+    {
+        if (eventCalendarFindQuery == null)
+            eventCalendarFindQuery = new EventCalendarFindQuery(dbProvider, eventCalendarCommandString);
+        return eventCalendarFindQuery;
+    }
+
+    private EventFindQuery getEventFindQuery()
+    {
+        if (eventFindQuery == null)
+            eventFindQuery = new EventFindQuery(dbProvider, eventCalendarCommandString);
+        return eventFindQuery;
+    }
+
+    private Control getDateHeader(DateTime date)
     {
         WebControl h4 = new WebControl(HtmlTextWriterTag.H4);
         Label label = new Label();
@@ -93,19 +159,19 @@ public class CalendarDAO
         return h4;
     }
 
-    public static IDictionary findDatesByMonth(int year, int month)
+    public IDictionary findDatesByMonth(int year, int month)
     {
         IDictionary dates = new Hashtable();
+        dbConnection.Open();
+        eventDatesCommand.CommandText = eventCalendarDatesCommandString;
 
-        connection.Open();
-        //commandString
-        SqlCommand eventCommand = new SqlCommand(eventCalendarDatesCommandString, connection);
-        eventCommand.Parameters.AddWithValue("startDate", new DateTime(year, month, 1).AddDays(-7));
-        eventCommand.Parameters.AddWithValue("endDate", new DateTime(year, month, 1).AddMonths(1).AddDays(7));
-        eventCommand.Parameters.AddWithValue("channelIdSpecial", SPECIAL_EVENT_CALENDAR_CHANNEL_ID);
-        eventCommand.Parameters.AddWithValue("channelIdRegular", REGULAR_EVENT_CALENDAR_CHANNEL_ID);
+        eventDatesCommand.Parameters.Clear();
+        eventDatesCommand.Parameters.Add(new SqlParameter("startDate", new DateTime(year, month, 1).AddDays(-7)));
+        eventDatesCommand.Parameters.Add(new SqlParameter("endDate", new DateTime(year, month, 1).AddMonths(1).AddDays(7)));
+        eventDatesCommand.Parameters.Add(new SqlParameter("channelIdSpecial", SPECIAL_EVENT_CALENDAR_CHANNEL_ID));
+        eventDatesCommand.Parameters.Add(new SqlParameter("channelIdRegular", REGULAR_EVENT_CALENDAR_CHANNEL_ID));
 
-        SqlDataReader dataReader = eventCommand.ExecuteReader();
+        IDataReader dataReader = eventDatesCommand.ExecuteReader();
         while (dataReader.Read())
         {
             DateTime dateToAdd = dataReader.GetDateTime(0).Date;
@@ -116,7 +182,7 @@ public class CalendarDAO
         }
 
         dataReader.Close();
-        connection.Close();
+        dbConnection.Close();
         return dates;
     }
 
@@ -126,5 +192,89 @@ public class CalendarDAO
             eventCalendar.events[date] = new ArrayList();
 
         ((ArrayList)eventCalendar.events[date]).Add(scheduledEvent);
+    }
+
+    public IDbCommand eventCommand
+    {
+        get
+        {
+            return _eventCommand;
+        }
+        set
+        {
+            _eventCommand = value;
+        }
+    }
+
+    public IDbCommand eventDatesCommand
+    {
+        get
+        {
+            return _eventDatesCommand;
+        }
+        set
+        {
+            _eventDatesCommand = value;
+        }
+    }
+
+    public string eventCalendarCommandString
+    {
+        get
+        {
+            return _eventCalendarCommandString;
+        }
+        set
+        {
+            _eventCalendarCommandString = value;
+        }
+    }
+
+    public string eventCalendarDatesCommandString
+    {
+        get
+        {
+            return _eventCalendarDatesCommandString;
+        }
+        set
+        {
+            _eventCalendarDatesCommandString = value;
+        }
+    }
+
+    public IDbConnection dbConnection
+    {
+        get
+        {
+            return _dbConnection;
+        }
+        set
+        {
+            _dbConnection = value;
+        }
+    }
+
+    public IDbProvider dbProvider
+    {
+        get
+        {
+            return _dbProvider;
+        }
+        set
+        {
+            _dbProvider = value;
+        }
+    }
+
+    public AdoTemplate adoTemplate
+    {
+        get
+        {
+            return _adoTemplate;
+        }
+        set
+        {
+            _adoTemplate = value;
+        }
     }
 }

@@ -10,6 +10,8 @@ using System.Web.UI.WebControls.WebParts;
 using System.Data.SqlClient;
 using System.Collections;
 using System.Globalization;
+using Spring.Context.Support;
+using Spring.Context;
 
 /// <summary>
 /// Summary description for ItemDAO
@@ -121,10 +123,8 @@ public class ItemDAO
     }
 
 	public ItemDAO()
-	{
-        esvServiceDAO = new ESVServiceDAO();
-		//
-		// TODO: Add constructor logic here
-		//
+    {
+        IApplicationContext context = ContextRegistry.GetContext();
+        esvServiceDAO = (ESVServiceDAO)context.GetObject("esvServiceDAO");
 	}
 }

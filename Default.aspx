@@ -2,6 +2,8 @@
     CodeFile="Default.aspx.cs" Inherits="_Default" Title="Reformed Presbyterian Church" %>
 
 <%@ Register TagName="AlertMarquee" TagPrefix="rpc" Src="~/includes/marqueealert.ascx" %>
+<%@ Import Namespace="Spring.Context" %>
+<%@ Import Namespace="Spring.Context.Support" %>
 
 <script type="text/C#" runat="server">
     protected void SetBold(object sender, DayRenderEventArgs eventArgs)
@@ -19,18 +21,18 @@
 
     protected void VisibleMonthChanged(object sender, MonthChangedEventArgs eventArgs)
     {
-        dates = CalendarManager.findDatesByMonth(eventArgs.NewDate.Year, eventArgs.NewDate.Month);
+        dates = calendarManager.findDatesByMonth(eventArgs.NewDate.Year, eventArgs.NewDate.Month);
     }
 
     protected void Page_Load(object sender, EventArgs eventArgs)
-    {
+    {        
         if (SmallCalendarControl.VisibleDate.Ticks == 0)
         {
-            dates = CalendarManager.findDatesByMonth(DateTime.Today.Year, DateTime.Today.Month);
+            dates = calendarManager.findDatesByMonth(DateTime.Today.Year, DateTime.Today.Month);
         }
         else
         {
-            dates = CalendarManager.findDatesByMonth(SmallCalendarControl.VisibleDate.Year, SmallCalendarControl.VisibleDate.Month);
+            dates = calendarManager.findDatesByMonth(SmallCalendarControl.VisibleDate.Year, SmallCalendarControl.VisibleDate.Month);
         }
     }
 
