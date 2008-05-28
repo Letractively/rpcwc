@@ -16,6 +16,17 @@
         {
         }
     }
+
+    public delegate void MarkAsRead(Int16 num);
+    
+    public void ItemDataBound(Object source, RepeaterItemEventArgs eventArgs)
+    {
+        Object itemId = DataBinder.Eval(eventArgs.Item.DataItem, "item_id");
+        RecommendedReadingsDAO recommendedReadingsDAO = new RecommendedReadingsDAO();
+        MarkAsRead markAsRead;
+        markAsRead = new MarkAsRead(recommendedReadingsDAO.MarkAsRead);
+        markAsRead.BeginInvoke((Int16) itemId, null, null);
+    }
 </script>
 
 <h2>
@@ -26,10 +37,19 @@
         </ItemTemplate>
     </asp:DataList>
 <asp:SiteMapDataSource ID="SiteMapSource" runat="server" StartingNodeUrl="~/resources.aspx" ShowStartingNode="false" />
+<asp:SqlDataSource ID="RecommendedReadingDataSource" ConnectionString="<%$ ConnectionStrings:RPC %>"
+ SelectCommand="findRecommendedReading" SelectCommandType="StoredProcedure" runat="server">
+    <SelectParameters>
+        <asp:Parameter Name="channelId" DefaultValue="9" />
+    </SelectParameters>
+</asp:SqlDataSource>
 <br />
 <h2>
     Recommended Reading</h2>
 <br />
-<a href="http://www.wtsbooks.com/product-exec/product_id/5190/nm/Prayer_of_Jehoshaphat_Seeing_Beyond_Life_s_Storms_Paperback_">
-    <img src="~/images/jehoshaphat.jpg" alt="" width="80" height="120" runat="server" /></a>
+<asp:Repeater ID="Repeater1" OnItemDataBound="ItemDataBound" DataSourceID="RecommendedReadingDataSource" runat="server">
+<ItemTemplate>
+<a href="<%# DataBinder.Eval(Container.DataItem, "link")%>"><img src="<%# DataBinder.Eval(Container.DataItem, "url")%>" alt="<%# DataBinder.Eval(Container.DataItem, "title")%>" /></a>
+</ItemTemplate>
+</asp:Repeater>
 <br />
