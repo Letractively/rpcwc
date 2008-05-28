@@ -32,11 +32,13 @@ public class EventControl : WebControl
         titleLabel.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
         this.Controls.Add(titleLabel);
 
-        this.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
-        
-        Label descriptionLabel = new Label();
-        descriptionLabel.Text = calendarEvent.description;
-        this.Controls.Add(descriptionLabel);
+        if (calendarEvent.description != null)
+        {
+            this.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
+            Label descriptionLabel = new Label();
+            descriptionLabel.Text = calendarEvent.description;
+            this.Controls.Add(descriptionLabel);
+        }
 
         this.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
         this.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
