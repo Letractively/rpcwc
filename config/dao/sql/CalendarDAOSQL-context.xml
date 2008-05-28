@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <object id="CalendarDAOSQL" type="CalendarDAO">
+    <property name="dbProvider" ref="DbProvider" />
+    <property name="eventCalendarCommandString">
+      <value><![CDATA[SELECT i.pubDate, i.title, id.description, i.all_day_event FROM item i INNER JOIN item_description id on i.item_id = id.item_id WHERE i.pubDate BETWEEN @startDate AND @endDate AND (i.channel_id = @channelIdSpecial OR i.channel_id = @channelIdRegular)]]></value>
+    </property>
+    <property name="eventCalendarDatesCommandString">
+      <value><![CDATA[SELECT i.pubDate, i.title FROM item i WHERE i.pubDate BETWEEN @startDate AND @endDate AND i.channel_id = @channelIdSpecial OR i.channel_id = @channelIdRegular]]></value>
+    </property>
+  </object>
+</objects>

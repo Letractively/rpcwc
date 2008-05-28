@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+  <import resource="sql/CalendarDAOSQL-context.xml" />
+  <alias name="CalendarDAOSQL" alias="CalendarDAO" />
+  <db:provider id="DbProvider"
+               provider="System.Data.SqlClient"
+               connectionString="Data Source=beeserver9.bee.net;Initial Catalog=rpcwc;Persist Security Info=True;User ID=rpcwc;Password=xrpcwcx"/>
+</objects>

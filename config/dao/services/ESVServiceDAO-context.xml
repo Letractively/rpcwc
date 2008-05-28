@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <object name="ESVServiceDAO" type="ESVServiceDAO">
+    <property name="includeContentType" value="false" />
+    <property name="includePassageReferences" value="true" />
+    <property name="includeFirstverseNumbers" value="false" />
+    <property name="includeVerseNumbers" value="false" />
+    <property name="includeFootnotes" value="false" />
+    <property name="includeFootnoteLinks" value="false" />
+    <property name="includeHeadings" value="false" />
+    <property name="includeSubheadings" value="false" />
+    <property name="includePassageHorizontalLines" value="false" />
+    <property name="includeHeadingHorizontalLines" value="false" />
+    <property name="outputFormat" value="plain-text" />
+    <property name="key" value="IP" />
+  </object>
+</objects>
