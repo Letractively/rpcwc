@@ -4,7 +4,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <table style="width: 100%;">
-        <tr>
+        <tr runat="server">
             <td style="vertical-align: top">
                 <asp:Calendar ID="SmallCalendarControl" runat="server" BorderColor="#CCCCFF" BorderWidth="1px"
                     DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#336699"
