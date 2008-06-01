@@ -29,8 +29,8 @@
         VBSDataSource.InsertParameters.Add("emercontact", emercontact.Text);
         VBSDataSource.InsertParameters.Add("emerphone", emerphone.Text);
         VBSDataSource.InsertParameters.Add("invitedby", invitedby.Text);
-        VBSDataSource.InsertParameters.Add("regattendrpc", regattendrpc.Checked.ToString());
-        VBSDataSource.InsertParameters.Add("regattendchurch", regattendchurch.Checked.ToString());
+        VBSDataSource.InsertParameters.Add("regattendrpc", TypeCode.Boolean, regattendrpc.Checked.ToString());
+        VBSDataSource.InsertParameters.Add("regattendchurch", TypeCode.Boolean, regattendchurch.Checked.ToString());
         VBSDataSource.Insert();
     }
 
@@ -78,10 +78,13 @@
         </div>
         <div id="content_combined" style="width: 100%">
             <div id="main_content">
+                <h4>
+                    Reformed Presbyterian Church
+                </h4>
                 <h3>
-                    Vacation Bible School Registration form
-                </h3>
-                <asp:Table Width="100%" runat="server">  
+                    Vacation Bible School Registration form</h3>
+                <br />
+                <asp:Table Width="100%" runat="server">
                     <asp:TableRow runat="server">
                         <asp:TableCell runat="server">
                             1)
@@ -183,7 +186,7 @@
                             <asp:TextBox ID="child3tshirtsize" Columns="3" runat="server" />
                         </asp:TableCell>
                     </asp:TableRow>
-                </asp:table>
+                </asp:Table>
                 <asp:Table runat="server" Width="100%">
                     <asp:TableRow runat="server">
                         <asp:TableCell runat="server">
@@ -265,7 +268,8 @@
                         </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
-                <asp:LinkButton OnCommand="Submit" Text="Submit" runat="server" />
+                <br />
+                <asp:Button OnCommand="Submit" Text="Submit" runat="server" />
                 <asp:Panel ID="MessageText" Visible="false" runat="server">
                     <div style="text-align: center;">
                         <asp:Label ForeColor="Red" runat="server">Registration Complete</asp:Label>
