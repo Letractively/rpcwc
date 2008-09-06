@@ -15,7 +15,8 @@
         Man, Jesus Cares for His Disciples in a Storm, Jesus Meets a Samaritan Woman, Jesus
         Heals the Centurion's Servant, Jesus Answers a Lawyer's Question. Kids can expect
         guest "visits" from Biblical characters from these stories. The age range is kids
-        from age 3 to 5th grade. We will be providing nursery for kids under 3 who attend.</p>
+        from age 3 to 5th grade. We will be providing nursery with similar activities for
+        kids under 3 who attend.</p>
     <p>
         Free snacks, fun games, crafts and activities daily.</p>
     <asp:HyperLink NavigateUrl="vbsregistration.aspx" Text="Click Here" Target="_blank"

@@ -7,7 +7,8 @@
             Small Group Study Forms</p>
     </h4>
     <p>
-        The current study is the book of Joshua, which will be followed by a study of Paul's
-        letter to the Ephesians. Click <a href="http://www.newlifeglenside.com/files/wbs/Joshua_and_Ephesians._Living_the_Promises.pdf"
-            target="_blank">here</a> to view a PDF of the Joshua and Ephesians study.</p>
+        The two suggested offerings this year are The Gospel of Mark (using the <a target="_blank"
+            href="http://www.newlifeglenside.com/files/wbs/Mark1-24.pdf">New Life study guide</a>)
+        or the book <a href="http://www.wtsbooks.com/product-exec/product_id/5457/nm/In_Christ_Alone_Reflections_on_the_Heart_of_the_Gospel_Hardcover"
+            target="_blank">In Christ Alone by Sinclair Ferguson</a>
 </asp:Content>

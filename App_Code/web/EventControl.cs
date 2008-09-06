@@ -11,39 +11,13 @@ using System.Web.UI.WebControls.WebParts;
 /// <summary>
 /// Summary description for EventControl
 /// </summary>
-public class EventControl : WebControl
+namespace rpcwc.web
 {
-    public EventControl(Event calendarEvent)
-        : base(HtmlTextWriterTag.Div)
-	{
-        if (!calendarEvent.allDayEvent)
+    public class EventControl : WebControl
+    {
+        public EventControl()
+            : base(HtmlTextWriterTag.Div)
         {
-            WebControl timeHeader = new WebControl(HtmlTextWriterTag.H3);
-            Label timeLabel = new Label();
-            timeLabel.Text = calendarEvent.date.ToShortTimeString();
-            timeHeader.Controls.Add(timeLabel);
-            this.Controls.Add(timeHeader);
-
-            this.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
         }
-        
-        Label titleLabel = new Label();
-        titleLabel.Text = calendarEvent.title;
-        titleLabel.Style.Add(HtmlTextWriterStyle.FontWeight, "bold");
-        this.Controls.Add(titleLabel);
-
-        if (calendarEvent.description != null)
-        {
-            this.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
-            Label descriptionLabel = new Label();
-            descriptionLabel.Text = calendarEvent.description;
-            this.Controls.Add(descriptionLabel);
-        }
-
-        this.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
-        this.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+    }
 }

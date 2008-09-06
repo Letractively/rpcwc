@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Configuration;
-using System.Data;
-using System.Web;
-using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
 
 public partial class maintenance_sermon : System.Web.UI.Page
 {
@@ -17,7 +10,7 @@ public partial class maintenance_sermon : System.Web.UI.Page
         {
             String filename = System.IO.Path.GetFileName(FileControl.PostedFile.FileName);
             filename = DatePicker.SelectedDate.ToString("yyyy.MM.dd") + ".mp3";
-            String saveLocation = Server.MapPath("../sermons") + "\\" + filename;
+            String saveLocation = Server.MapPath("../../sermons") + "\\" + filename;
             try
             {
                 FileControl.PostedFile.SaveAs(saveLocation);

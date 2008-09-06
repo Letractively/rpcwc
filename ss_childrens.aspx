@@ -6,7 +6,7 @@
         Childrens Classes</h4>
     <p>
         <strong>Middle&ndash;High School</strong><br />
-        Ray and Autumn Rishty
+        Shawn and Meg Carafa
     </p>
     <p>
         Every Sunday morning children from Junior and senior high ages meet together to
@@ -30,7 +30,7 @@
     <p>
         <strong>Bible Story Hour </strong>
         <br />
-        Joel &amp; Margie Comanda</p>
+        Joel Comanda and Terese Judkins</p>
     <p>
         In the Children's Bible Story Hour we study the Bible with an eye towards the needs
         and abilities of the toddler age group. Lesson are taken from the David C. Cooke

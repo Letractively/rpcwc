@@ -18,13 +18,18 @@
         </tr>
         <tr>
             <td width="175" valign="top">
-                Adults&mdash;&lsquo;Freedom of the Will&rsquo;
+                Adults&mdash;&lsquo;RPC Orientation&rsquo;
             </td>
             <td width="112" valign="top">
-                Sanctuary
+                Pastor's Office
             </td>
-            <td width="172" valign="top">
-                Dwayne Edwards, Jason Cuzzolina
+        </tr>
+        <tr>
+            <td width="175" valign="top">
+                Adults&mdash;&lsquo;Shepherding a Child’s Heart&rsquo;
+            </td>
+            <td width="112" valign="top">
+                Fellowship Hall
             </td>
         </tr>
         <tr>
@@ -32,10 +37,10 @@
                 Age 2&ndash;Kindergarten
             </td>
             <td valign="top">
-                Upper level
+                 1st floor classroom behind Bathroom.  (Old Teen Sunday School room)
             </td>
             <td valign="top">
-                Joel &amp; Margie Comanda
+                Joel Comanda and Terese Judkins
             </td>
         </tr>
         <tr>
@@ -43,7 +48,7 @@
                 Grades 1&ndash;5
             </td>
             <td valign="top">
-                Lower Level
+                Ministry House, 2nd Floor, front west classroom
             </td>
             <td valign="top">
                 Mrs. Linda Gale
@@ -54,10 +59,10 @@
                 Middle&ndash;High School
             </td>
             <td valign="top">
-                Main Level
+                Ministry House, 3rd floor, Attic
             </td>
             <td valign="top">
-                Ray &amp; Autumn Rishty
+                 Shawn &amp; Meg Carafa
             </td>
         </tr>
     </table>

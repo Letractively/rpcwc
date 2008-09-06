@@ -67,11 +67,11 @@
         to grow in love for God, for one another and for neighbor. These small groups provide
         for the protection (<a href="scripture.ashx?ref=Heb.+3:12-14&width=300&height=300"
             title="Heb. 3:12-14" class="thickbox">Heb. 3:12-14</a>) and direction (<a href="scripture.ashx?ref=Heb+10:23-25&width=300&height=300"
-                title="Hebrews 10:23&ndash;25" class="thickbox">Heb. 10:23-25</a>) of the sheep,
-        as mandated in <a href="scripture.ashx?ref=Acts+20:28-32&width=300&height=300" title="Acts 20:28-32"
-            class="thickbox">Acts 20:28-32</a>. Mercy-mindedness will be cultivated in caring
-        for one another in the group and for others outside the group, both inside and outside
-        the church, believers and unbelievers.</p>
+                title="Hebrews 10:23&ndash;25" class="thickbox">Heb. 10:23-25</a>) of the
+        sheep, as mandated in <a href="scripture.ashx?ref=Acts+20:28-32&width=300&height=300"
+            title="Acts 20:28-32" class="thickbox">Acts 20:28-32</a>. Mercy-mindedness will
+        be cultivated in caring for one another in the group and for others outside the
+        group, both inside and outside the church, believers and unbelievers.</p>
     <p>
         Clusters are also one means by which elders can carry out their God-ordained shepherding
         role through direct, personal involvement in the groups and by ensuring the sheep
@@ -104,6 +104,10 @@
         (RPC brochure, sharing in service, shepherding, etc.). Various factors such as geographical
         location or expressed preferences (e.g., time/day availability, age, geography,
         inclusion of children) will be taken into consideration in new Cluster formation.</p>
+    <p>
+        <b>Note: </b>Beginning September 2008, each Cluster will be self-forming, will decide
+        its own meeting schedule, and will decide its own curriculum from offerings suggested
+        or approved by the Session.</p>
     <p>
         <strong>Make-up</strong>: There is great benefit to variety in small group involvement
         with one another, such as variety of age or spiritual maturity. The older can be

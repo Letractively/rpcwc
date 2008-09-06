@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" ClassName="rightside" %>
+﻿<%@ Control Language="C#" ClassName="rightside" CodeFile="rightside.ascx.cs" Inherits="RightSide" %>
 
 <script type="text/C#" runat="server">
     public void SetExternalLinks(Object source, DataListItemEventArgs eventArgs)
@@ -22,7 +22,6 @@
     public void ItemDataBound(Object source, RepeaterItemEventArgs eventArgs)
     {
         Object itemId = DataBinder.Eval(eventArgs.Item.DataItem, "item_id");
-        RecommendedReadingsDAO recommendedReadingsDAO = new RecommendedReadingsDAO();
         MarkAsRead markAsRead;
         markAsRead = new MarkAsRead(recommendedReadingsDAO.MarkAsRead);
         markAsRead.BeginInvoke((Int16) itemId, null, null);

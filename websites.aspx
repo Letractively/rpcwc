@@ -39,5 +39,6 @@ window.onload = externalLinks;
 <div><a href="http://www.worldmag.com/" rel="External">World Magazine</a></div>
 <div><a href="http://www.harvestusa.org/" rel="External">Harvest USA</a> (help in sexual purity)</div>
 <div><a href="http://www.pca-mna.org/fiftydaysofprayer.php" rel="External">PCA &rsquo;50 days of Prayer&rsquo;</a></div>
-
+<div><a href="http://preview.gospelcom.net/index.html" rel="External">Preview Online</a> (Movie Reviews)</div>
+<div><a href="http://www.pluggedinonline.com/" rel="External">Plugged In</a> (Movie Reviews)</div>
 </asp:Content>

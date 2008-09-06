@@ -30,4 +30,17 @@ public partial class maintenance_access_user : System.Web.UI.Page
             UserList.Items.Add(user.UserName);
         }
     }
+
+    protected void UserSelected(Object source, EventArgs eventArgs)
+    {
+        String userName = UserList.SelectedValue;
+        /*
+        MembershipUserCollection users = Membership.FindUsersByName(userName);
+        if (users.Count == 0)
+            return;
+
+        MembershipUser user = (MembershipUser)users.GetEnumerator().Current;
+        */
+        ChangePassword.UserName = userName;
+    }
 }

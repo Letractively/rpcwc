@@ -1,36 +1,31 @@
-using System;
-using System.Data;
-using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using System.Collections;
+using rpcwc.bo;
 using Spring.Context;
 using Spring.Context.Support;
 
-public partial class _Default : System.Web.UI.Page
+namespace rpcwc.web
 {
-    protected IDictionary dates;
-    private CalendarManager _calendarManager;
-
-    public _Default()
+    public partial class _Default : System.Web.UI.Page
     {
-        IApplicationContext context = ContextRegistry.GetContext();
-        calendarManager = (CalendarManager)context.GetObject("CalendarManager");
-    }
+        protected IDictionary dates;
+        private CalendarManager _calendarManager;
 
-    public CalendarManager calendarManager
-    {
-        get
+        public _Default()
         {
-            return _calendarManager;
+            //IApplicationContext context = ContextRegistry.GetContext();
+            //calendarManager = (CalendarManager)context.GetObject("CalendarManager");
         }
-        set
+
+        public CalendarManager calendarManager
         {
-            _calendarManager = value;
+            get
+            {
+                return _calendarManager;
+            }
+            set
+            {
+                _calendarManager = value;
+            }
         }
     }
 }

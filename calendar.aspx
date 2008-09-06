@@ -1,7 +1,13 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="~/calendar.aspx.cs" Inherits="SmallCalendar" Title="Reformed Presbyterian Church &mdash; Special Events Calendar"
+    CodeFile="~/calendar.aspx.cs" Inherits="rpcwc.web.SmallCalendar" Title="Reformed Presbyterian Church &mdash; Special Events Calendar"
     EnableViewState="true" EnableSessionState="True" %>
 
+<asp:Content ContentPlaceHolderID="HeadContent" runat="server">
+    <link rel="alternate" type="application/calendar" 
+      title="Reformed Presbyterian Church &mdash; Upcoming Events" 
+      href="calendar.ics"
+      runat="server" />
+</asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <table style="width: 100%;">
         <tr runat="server">

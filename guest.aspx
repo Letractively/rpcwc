@@ -1,20 +1,12 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church &mdash; Guest Registration" %>
+    CodeFile="~/guest.aspx.cs" Inherits="rpcwc.web.Guest" Title="Reformed Presbyterian Church &mdash; Guest Registration" %>
 
 <%@ Import Namespace="System.Net.Mail" %>
 
 <script type="text/C#" runat="server">
     public void Submit(Object source, EventArgs eventArgs)
     {
-        MailMessage objEmail = new MailMessage();
-        objEmail.To.Add(new MailAddress("raymond.rishty@gmail.com"));
-        try
-        {
-            objEmail.From = new MailAddress( Request.Form["Email"]);
-        }
-        catch { }
-        /*objEmail.Cc = txtCc.Text;*/
-        objEmail.Subject = "Guest Registration";
+        String ccEmail = Request.Form["Email"];
         StringBuilder body = new StringBuilder();
         body.Append("Name: ");
         body.Append(Request.Form["Name"]);
@@ -61,40 +53,17 @@
         body.Append("Warm and loving church: ");
         body.Append(Request.Form["love"]);
         body.Append("\n");
-        body.Append("Interested in evangelism: ");
+        body.Append("Evangelistic: ");
         body.Append(Request.Form["evangelism"]);
         body.Append("\n");
         body.Append("Other: ");
         body.Append(Request.Form["othertext"]);
         body.Append("\n");
         body.Append("Comments and Prayer: ");
-        body.Append(Request.Form["commentprayer"]);
+        body.Append(Request.Form["commentsprayer"]);
         body.Append("\n");
-        objEmail.Body = body.ToString();
-        objEmail.Subject = "Reformed Presbyterian Church Guest Registration";
-        
-
-        //send form to 
-
-        //$recipient = "rpcwc@ccil.org\n"; 
-        //$subject = "Reformed Presbyterian Church Guest Registration"; 
-        //$mailheaders = "From: $_POST[email]\n";   
-
-        //txtComments.Text;
-        //objEmail.Priority = MailPriority.High;
-
-        try
-        {
-            Response.Write(objEmail.Body);
-            SmtpClient client = new SmtpClient();
-            client.Send(objEmail);
-            //SmtpMail.Send(objEmail);
-            Response.Redirect("guestresponse.aspx");
-        }
-        catch (Exception exc)
-        {
-            Response.Write("Send failure: " + exc.ToString());
-        }
+        emailSender.sendEmail(ccEmail, "Reformed Presbyterian Church Guest Registration", body.ToString());
+        Response.Redirect("guestresponse.aspx");
     }
 </script>
 
@@ -150,7 +119,7 @@
                 </label>
             </asp:TableCell>
             <asp:TableCell runat="server">
-                <asp:TextBox id="email" runat="server" />
+                <input name="email" type="text"  id="email" />
             </asp:TableCell>
         </asp:TableRow>
     </table>

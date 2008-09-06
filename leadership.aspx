@@ -14,7 +14,7 @@
     <p>
         Robert Carlson
         <br />
-        Dwayne Edwards
+        Dwayne Edwards (leave of absence)
         <br />
         Glenn Seeger</p>
     <h3>
@@ -24,13 +24,14 @@
         <br />
         Shawn Carafa
         <br />
-        Joel Comanda
-        <br />
-        Mark McCaffrey
-        <br />
         Joseph Myshko
         <br />
         Andrew Root
         <br />
         Jeremy Verrillo</p>
+    <br />
+    <br />
+    <p>
+        Click <a href="leadershiptraining.aspx" runat="server">here</a> to view information
+        on RPC Leadership Development</p>
 </asp:Content>

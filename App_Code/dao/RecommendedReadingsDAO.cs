@@ -5,25 +5,10 @@ using System.Data.SqlClient;
 /// <summary>
 /// Summary description for RecommendedReadingsDAO
 /// </summary>
-public class RecommendedReadingsDAO
+namespace rpcwc.dao
 {
-    private static string markReadingAsReadCommandString = "UPDATE ITEM SET ALL_DAY_EVENT = NULL WHERE ITEM_ID = @itemId";
-    private static SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["RPC"].ConnectionString);
-
-	public RecommendedReadingsDAO()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
-
-    public void MarkAsRead(Int16 itemId)
+    public interface RecommendedReadingsDAO
     {
-        connection.Open();
-        SqlCommand markReadingAsReadCommand = new SqlCommand(markReadingAsReadCommandString, connection);
-        markReadingAsReadCommand.Parameters.AddWithValue("itemId", itemId);
-        markReadingAsReadCommand.ExecuteNonQuery();
-        connection.Close();
-
+        void MarkAsRead(Int16 itemId);
     }
 }

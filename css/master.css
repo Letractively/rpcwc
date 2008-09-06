@@ -22,6 +22,12 @@ ul
     padding-bottom: 1em;
 }
 
+ol
+{
+    padding-left: 3em;
+    padding-bottom: 1em;
+}
+
 #div_image
 {
     padding: 0px;

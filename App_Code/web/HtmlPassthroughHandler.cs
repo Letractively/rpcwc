@@ -13,29 +13,32 @@ using System.IO;
 /// <summary>
 /// Summary description for HtmlRedirectHandler
 /// </summary>
-public class HtmlPassthroughHandler : IHttpHandler
-{    
-    #region IHttpHandler Members
-
-    public bool IsReusable
+namespace rpcwc.web
+{
+    public class HtmlPassthroughHandler : IHttpHandler
     {
-        get { return true; }
-    }
+        #region IHttpHandler Members
 
-    public void ProcessRequest(HttpContext context)
-    {
-        if (File.Exists(context.Server.MapPath(context.Request.AppRelativeCurrentExecutionFilePath)))
+        public bool IsReusable
         {
-            context.Response.Buffer = true;
-            context.Response.Clear();
-            context.Response.Status = "200 OK";
-            context.Response.WriteFile(context.Request.AppRelativeCurrentExecutionFilePath);
+            get { return true; }
         }
-        else
-        {
-            context.Response.Status = "404 Not Found";
-        }
-    }
 
-    #endregion
+        public void ProcessRequest(HttpContext context)
+        {
+            if (File.Exists(context.Server.MapPath(context.Request.AppRelativeCurrentExecutionFilePath)))
+            {
+                context.Response.Buffer = true;
+                context.Response.Clear();
+                context.Response.Status = "200 OK";
+                context.Response.WriteFile(context.Request.AppRelativeCurrentExecutionFilePath);
+            }
+            else
+            {
+                context.Response.Status = "404 Not Found";
+            }
+        }
+
+        #endregion
+    }
 }

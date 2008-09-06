@@ -1,46 +1,49 @@
-﻿using System;
-using System.Data;
-using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.IO;
-using System.Xml;
-using System.Collections;
+﻿using System.Web;
+using Spring.Context;
+using Spring.Context.Support;
+using rpcwc.bo;
 
 
 /// <summary>
 /// Summary description for PodcastHttpHandler
 /// </summary>
-public class PodcastHttpHandler : IHttpHandler
+namespace rpcwc.web
 {
-    private PodcastManager podcastManager;
-
-    public PodcastHttpHandler()
+    public class PodcastHttpHandler : IHttpHandler
     {
-        podcastManager = new PodcastManager();
-        //
-        // TODO: Add constructor logic here
-        //
+        private PodcastManager _podcastManager;
+
+        public PodcastHttpHandler()
+        {
+        }
+
+        #region IHttpHandler Members
+
+        public bool IsReusable
+        {
+            get { return true; }
+        }
+
+        public void ProcessRequest(HttpContext context)
+        {
+            context.Response.ContentType = "text/xml";
+
+            context.Response.Write(podcastManager.getFeed(4));
+
+        }
+
+        #endregion
+
+        public PodcastManager podcastManager
+        {
+            get
+            {
+                return _podcastManager;
+            }
+            set
+            {
+                _podcastManager = value;
+            }
+        }
     }
-
-    #region IHttpHandler Members
-
-    public bool IsReusable
-    {
-        get { return true; }
-    }
-
-    public void ProcessRequest(HttpContext context)
-    {
-        context.Response.ContentType = "text/xml";
-        
-        context.Response.Write(podcastManager.getFeed(4));
-
-    }
-
-    #endregion
 }

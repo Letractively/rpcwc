@@ -33,17 +33,20 @@
     <p>
         "<em>I am the vine, you are the branches. If a man remains in me and I in him, he will
             bear much fruit; apart from me you can do nothing.</em>" John 15:5</p>
-    <asp:GridView ID="PrayerGridView" DataSourceID="PrayerDataSource" AutoGenerateColumns="false"
-        OnRowCreated="setBold" runat="server" ShowHeader="False" CellPadding="1" >
+    <asp:GridView ID="PrayerGridView" DataSourceID="PrayerDataSource" AutoGenerateColumns="False"
+        
+        OnRowCreated="setBold" BorderStyle="None" Width="100%" runat="server" GridLines="None">
         <Columns>
-            <asp:BoundField DataField="item_id" Visible="false" />
-            <asp:BoundField DataField="author">
-                <ItemStyle Width="25%"></ItemStyle>
-            </asp:BoundField>
-            <asp:BoundField DataField="description">
-                <ItemStyle Width="75%"></ItemStyle>
-            </asp:BoundField>
-            <asp:BoundField Visible="false" DataField="pubDate" />
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <div style="text-align: right; border-bottom: solid 1px #ccc">
+                        <h3 style="float: right">
+                            <%# Eval("author")%></h3>&nbsp;</div>
+                    <br clear="all" />
+                    <p style="text-align:justify">
+                        <%# Eval("description")%></p>
+                </ItemTemplate>
+            </asp:TemplateField>
         </Columns>
     </asp:GridView>
 </asp:Content>

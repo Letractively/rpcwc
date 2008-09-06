@@ -12,41 +12,44 @@ using System.Collections;
 /// <summary>
 /// Summary description for EventCalendar
 /// </summary>
-public class EventCalendar
+namespace rpcwc.vo
 {
-    //private IList _events;
-    private IDictionary _events;
-
-    public EventCalendar()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
-
-
-    public IDictionary events
+    public class EventCalendar
     {
-        get
-        {
-            return _events;
-        }
-        set
-        {
-            _events = value;
-        }
-    }
+        //private IList _events;
+        private IDictionary _events;
 
-    /*
+        public EventCalendar()
+        {
+            //
+            // TODO: Add constructor logic here
+            //
+        }
 
-    public IList events
-    {
-        get {
-            return _events;
+
+        public IDictionary events
+        {
+            get
+            {
+                return _events;
+            }
+            set
+            {
+                _events = value;
+            }
         }
-        set {
-            _events = value;
+
+        /*
+
+        public IList events
+        {
+            get {
+                return _events;
+            }
+            set {
+                _events = value;
+            }
         }
+         * */
     }
-     * */
 }

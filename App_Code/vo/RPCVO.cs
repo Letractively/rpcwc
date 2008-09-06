@@ -11,12 +11,23 @@ using System.Web.UI.WebControls.WebParts;
 /// <summary>
 /// Summary description for RPCVO
 /// </summary>
-public class RPCVO
+namespace rpcwc.vo
 {
-    private int _id;
+    public class RPCVO
+    {
+        private int _id;
+        private bool _active;
 
-    public int id {
-        get {return _id;}
-        set { _id = value; }
+        public int id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
+        public bool active
+        {
+            get { return _active; }
+            set { _active = value; }
+        }
     }
 }

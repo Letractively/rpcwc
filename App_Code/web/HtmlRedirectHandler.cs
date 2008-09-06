@@ -13,52 +13,57 @@ using System.IO;
 /// <summary>
 /// Summary description for HtmlRedirectHandler
 /// </summary>
-public class HtmlRedirectHandler : IHttpHandler
+namespace rpcwc.web
 {
-    private static string redirectCommandString = "findRedirect";
-    private static SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["RPC"].ConnectionString);
-
-    private static String findNewPage(String oldPage)
+    public class HtmlRedirectHandler : IHttpHandler
     {
-        String newPage = "";
-        connection.Open();
-        SqlCommand redirectCommand = new SqlCommand(redirectCommandString, connection);
-        redirectCommand.CommandType = CommandType.StoredProcedure;
-        redirectCommand.Parameters.AddWithValue("oldPage", oldPage);
+        private static string redirectCommandString = "findRedirect";
+        private static SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["RPC"].ConnectionString);
 
-        SqlDataReader dataReader = redirectCommand.ExecuteReader();
-        if (dataReader.Read())
+        private static String findNewPage(String oldPage)
         {
-            newPage = dataReader.GetString(0);
+            String newPage = "";
+            connection.Open();
+            SqlCommand redirectCommand = new SqlCommand(redirectCommandString, connection);
+            redirectCommand.CommandType = CommandType.StoredProcedure;
+            redirectCommand.Parameters.AddWithValue("oldPage", oldPage);
+
+            SqlDataReader dataReader = redirectCommand.ExecuteReader();
+            if (dataReader.Read())
+            {
+                newPage = dataReader.GetString(0);
+            }
+
+            dataReader.Close();
+            connection.Close();
+
+            return newPage;
         }
 
-        dataReader.Close();
-        connection.Close();
+        #region IHttpHandler Members
 
-        return newPage;
-    }
-    
-    #region IHttpHandler Members
-
-    public bool IsReusable
-    {
-        get { return true; }
-    }
-
-    public void ProcessRequest(HttpContext context)
-    {
-        String oldPage = context.Request.AppRelativeCurrentExecutionFilePath;
-
-        String newPage = findNewPage(oldPage);
-
-        if (!newPage.Equals(""))
+        public bool IsReusable
         {
-            context.Response.Status = "301 Moved Permanently";
-            context.Response.AddHeader("Location", newPage);
-        } else {
-            context.Response.Status = "404 Not Found";
+            get { return true; }
         }
-    }
 
-    #endregion
+        public void ProcessRequest(HttpContext context)
+        {
+            String oldPage = context.Request.AppRelativeCurrentExecutionFilePath;
+
+            String newPage = findNewPage(oldPage);
+
+            if (!newPage.Equals(""))
+            {
+                context.Response.Status = "301 Moved Permanently";
+                context.Response.AddHeader("Location", newPage);
+            }
+            else
+            {
+                context.Response.Status = "404 Not Found";
+            }
+        }
+
+        #endregion
+    }
 }

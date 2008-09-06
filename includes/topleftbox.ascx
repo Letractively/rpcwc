@@ -6,7 +6,7 @@ West Chester, PA 19380<br />
 <br />
 <br />
 <br />
-<input type="text" id="query" size="15" />
+<input type="text" id="query" size="15" onkeypress='if (window.event.keyCode == 13) {searchControl.execute(document.getElementById("query").value); return false;}; '/>
 <span onclick='javascript:searchControl.execute(document.getElementById("query").value);'
     style="cursor: pointer;">Search</span>
 

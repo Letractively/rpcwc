@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <p>
-        <a href="missions.php">Return to Missions</a></p>
+        <a href="~/missions.aspx" runat="server">Return to Missions</a></p>
     <h4>
         Lois Ooms</h4>
     <p>
@@ -35,53 +35,52 @@
     </p>
     <hr />
     <h4>
-        Praise and Prayers Items Lois J. Ooms March 2008</h4>
+        Praise and Prayers Items Lois J. Ooms July 2008</h4>
     <p>
-        We are all very thankful that things have been a bit more quiet in Kenya the last
-        couple of weeks. Kofi Annan has facilitated an agreement between the 2 leaders for
-        power sharing. However, E mails from both missionaries and Kenyan friends, say things
-        are still very tense. In Africa it is not unusual for these kinds of 'agreements'
-        to hit major snags as details are worked out. So we need to continue to pray much
-        for peace and wisdom. The majority of Kenyans want peace to
-        enable them to get on with their normal lives.
-    </p>
+        Thank the Lord that I have been able to get 5 lessons in a rough draft; I'm not
+        sure how many lessons there will be as some will be combined and a few new ones
+        added, but it could be around 40 - 50; so I have a ways to go. Pray that I will
+        be able to continue making progress.</p>
     <p>
-        Pray for the church in Kenya that it may see the challenge and respond to the many
-        needs of thousands of internally displaced people. Pray also that it may be an agent
-        for healing and reconciliation as many churches will have members from both sides
-        of the conflict. Josephine and her team of facilitators have mapped out a schedule
-        of 4 training seminars, one micro finance training and one to specifically train
-        a few more program leaders in adult education to begin the process of their joining
-        the team as facilitators for the basic training. This is very encouraging that they
-        have gotten this far in the midst of unrest in the country.
-    </p>
+        The facilitators in Kenya postponed their plan to work on lessons until sometime
+        in July. Pray that they may be able to meet and have good ideas.</p>
     <p>
-        I am very thankful that I found a condo in a nice area and was able to move in on
-        Feb. 19. I'm also very thankful for the help, encouragement and advice from many
-        in my home church. Now I sit in the middle of boxes, footlockers, and suitcases.
-        It is a slow process to unpack.
-    </p>
+        The week of July 14 I will be doing a couple of workshops in North Carolina for
+        missionaries on motivating the hopeless and also avoiding dependency among the poor;
+        the 2 topics are very closely related.</p>
     <p>
-        In between unpacking and settling into my condo, I have answered many E mails from
-        missionary friends and Kenyan colleagues&mdash;often needing encouragement in the
-        midst of the unrest.</p>
+        Pray for plans to do a couple of workshops on the Cherokee reservation in N. Carolina
+        the week of July 27.</p>
     <p>
-        I am amazed at how several of the facilitators and program leaders have taken the
-        various principles of development and been able to adapt them to the current conflicts
-        and bring peace in their local communities. Pray that the boundaries of their influence
-        as ministers of reconciliation and healing will extend to other surrounding communities
-        now that things are a bit more settled.</p>
+        Thank you for your prayers for wisdom about plans to travel to Africa. Several opportunities
+        are coming together in Feb. and March next year to lead a seminar in Kenya for refugees
+        of a creative access country, and another in Madagascar, followed by a meeting of
+        mission leaders in S. Africa.</p>
     <p>
-        Pray for new contacts in D.R. Congo, Zimbabwe, and N. Africa and for wisdom about
-        if and when an on site visit may be necessary.</p>
+        Pray particularly for those organizing the seminar in Madagascar as this could have
+        a far reaching impact in that country as people from several churches and groups
+        will meet together. If this one goes well, that could encourage people in neighboring
+        countries to also organize themselves.</p>
     <p>
-        Thank the Lord for a very good missions conference in Greenville S.C. It was a joy
-        to meet fellow missionary colleagues, and also become acquainted with many folks
-        who are interested in and praying for the work in Kenya. Of course my 'African blood'
-        liked the upper 60 temperatures rather than the snow and cold of Chicago. At a couple
-        meetings in Atlanta Georgia with Mission to the World leaders, we began discussing
-        ideas for how I might get involved in discussions with others who are struggling
-        with sustainability / dependency issues.</p>
+        In between these things I will visit a couple programs in Kenya and also a few friends
+        and attend a conference with people from many creative access countries in Africa.</p>
+    <p>
+        Plans are also moving forward to lead a transformational development seminar for
+        women on the Cree reserve in Alberta and work editing some of the lessons with a
+        colleague who works in Kenya, and will be on home assignment in Calgary.</p>
+    <p>
+        Continue to pray for the young lady working in an unreached area of Tanzania. A
+        recent E mail was very encouraging as she shared some of her own reflections on
+        what is happening and also told of some opportunities to encourage other young people
+        also beginning their mission work.</p>
+    <p>
+        I am trying to put together plans to visit another supporting church in Grand Rapids,
+        as well as follow up good discussions I had with leaders of the International Development
+        Department at Calvin College, and meet with a group struggling with dependency issues
+        in an orphanage in Malawi.</p>
+    <p>
+        I hope to be able to visit some supporting churches in the Philadelphia and Washington
+        D.C. area in October. Pray that plans of various churches etc. will fit well together.</p>
     <hr />
     <h4>
         Update on Lois Ooms</h4>

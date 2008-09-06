@@ -1,66 +1,88 @@
 ﻿using System;
-using System.Data;
-using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
 using System.Collections;
 using System.IO;
 using System.Xml;
+using rpcwc.dao;
+using rpcwc.vo;
 
 /// <summary>
 /// Summary description for RSSManager
 /// </summary>
-public class RSSManager
+namespace rpcwc.bo
 {
-    private ChannelDAO channelDAO;
-    private ItemDAO itemDAO;
-
-    public RSSManager()
-	{
-        channelDAO = new ChannelDAO();
-        itemDAO = new ItemDAO();
-		//
-		// TODO: Add constructor logic here
-		//
-	}
-
-    public String getFeed(int channelId)
+    public class RSSManager
     {
-        Channel channel = channelDAO.findChannel(channelId);
+        private ChannelDAO _channelDAO;
+        private ItemDAO _itemDAO;
 
-        MemoryStream ms = new MemoryStream();
-        XmlTextWriter w = new XmlTextWriter(ms, System.Text.Encoding.UTF8);
-        w.Formatting = Formatting.Indented;
-
-        w.WriteStartDocument();
-        w.WriteStartElement("rss");
-        //w.WriteAttributeString("xmlns", "itunes", null, itunesXmlns);
-        w.WriteAttributeString("version", "2.0");
-
-        w.WriteStartElement("channel");
-        channel.toRSSXml(w);
-
-        IList items = itemDAO.findItemsRSS(channelId);
-
-        foreach (Item item in items)
+        public RSSManager()
         {
-            item.toRSSXML(w);
+            //channelDAO = new ChannelDAO();
+            //IApplicationContext context = ContextRegistry.GetContext();
+            //itemDAO = (ItemDAO)context.GetObject("ItemDAO");
+            //
+            // TODO: Add constructor logic here
+            //
         }
 
-        w.WriteEndElement(); //channel
+        public String getFeed(int channelId)
+        {
+            Channel channel = channelDAO.findChannel(channelId);
 
-        w.WriteEndElement(); //rss
-        w.WriteEndDocument();
-        w.Flush();
+            MemoryStream ms = new MemoryStream();
+            XmlTextWriter w = new XmlTextWriter(ms, System.Text.Encoding.UTF8);
+            w.Formatting = Formatting.Indented;
 
-        ms.Position = 0;
+            w.WriteStartDocument();
+            w.WriteStartElement("rss");
+            //w.WriteAttributeString("xmlns", "itunes", null, itunesXmlns);
+            w.WriteAttributeString("version", "2.0");
 
-        StreamReader sr = new StreamReader(ms);
+            w.WriteStartElement("channel");
+            channel.toRSSXml(w);
 
-        return sr.ReadToEnd();
+            IList items = itemDAO.findItemsRSS(channelId);
+
+            foreach (Item item in items)
+            {
+                item.toRSSXML(w);
+            }
+
+            w.WriteEndElement(); //channel
+
+            w.WriteEndElement(); //rss
+            w.WriteEndDocument();
+            w.Flush();
+
+            ms.Position = 0;
+
+            StreamReader sr = new StreamReader(ms);
+
+            return sr.ReadToEnd();
+        }
+
+        public ChannelDAO channelDAO
+        {
+            get
+            {
+                return _channelDAO;
+            }
+            set
+            {
+                _channelDAO = value;
+            }
+        }
+
+        public ItemDAO itemDAO
+        {
+            get
+            {
+                return _itemDAO;
+            }
+            set
+            {
+                _itemDAO = value;
+            }
+        }
     }
 }

@@ -4,76 +4,54 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h4>
         Bulletin Board</h4>
-        <h3>50 Days of Prayer</h3>
-        <p>Dear Saints in the Lord,</p>
-
-<p>Today is the National Day of Prayer.  I encourage you to spend time in prayer for our nation, and particularly for the church to be salt and light and influence for Christ in our nation.</p>
-
-<p>Today also begins 50 Days of Prayer for our denomination, the Presbyterian Church in America.  I ask that you download the devotional to your desktop (<a href="http://www.pca-mna.org/fiftydaysofprayer.php">www.pca-mna.org/fiftydaysofprayer.php</a>) and spend each day reading the devotion and praying.
- Be sure to read Mike's Ross' Introduction. I think you'll find it thought-provoking.  And be sure to pray and not just read the devotional. After all, it is 50 days of PRAYER.
- As we've seen in our series through the book of Ephesians and we will see particularly this Sunday as we look at the benediction for Christ's church, we must be faithful and urgent in prayer.</p>
-
-<p>In the name of Him who intercedes for us.</p>
-<p>Pastor Gale</p>
     <h3>
-        Westminster Theological Seminary&mdash;Full time position available</h3>
+        You can help increase CCWS Medical's Income by $1,600 and it won't cost you anything!
+    </h3>
     <p>
-        Philadelphia Campus (Glenside, PA)
+        Honest! I know it sounds too good to be true but you can honestly help Chester County
+        Women's Services increase our income by $1,600 each month at no expense to you!!</p>
+    <p>
+        Do you know of anyone looking for an apartment in West Chester? Can you help us
+        spread the word? We need this monthly income to help us make our monthly mortgage
+        payments!</p>
+    <p>
+        Our West Chester office has two available apartments for rent and we are struggling
+        to find tenants. Both apartments are located in the beautiful historic district
+        within the borough of West Chester. Within a short walking distance you are at West
+        Chester University, various restaurants, shopping, parks, public transportation,
+        and more! The 100 year old building offers the charm of yesteryear and the convenience
+        of today! Here are the details for each apartment:</p>
+    <p>
+        Second Floor Rear Apartment: This studio apartment has been recently renovated and
+        includes a walk in closet and a separate brand new kitchen! Included in the rent
+        price is heat, electric, hot and cold water and trash removal. We all know parking
+        is a problem in West Chester...guess what? This apartment includes a parking space!!
+        All for just $725 per month!!</p>
+    <p>
+        Second Floor Front Apartment: This one bedroom apartment offers space that makes
+        it possible for two people to share. Included in the price is heat, hot and cold
+        water, and trash removal. Again...parking is included in the rent price of just
+        $875 per month!!
     </p>
     <p>
-        Job Title: Administrative Assistant to Academic Affairs</p>
+        This is a smoke free/ pet free building that includes hardwood floors! If you know
+        anyone that is looking for a great location to live...have them contact us right
+        away. First come, first serve.... You just might be the person that either needs
+        or knows someone that needs one of these apartments! You can bless the ministry
+        of CCWS and we can bless tenants with these two apartments. Please spread the word!
+        We need these two apartments filled ASAP!!!</p>
     <p>
-        Start Date: June 16, 2008</p>
-    <p>
-        Job Summary: This position will serve three functions:</p>
-    <ol style="padding-left: 3em;padding-bottom: 1em;">
-        <li>to work in administrative support of the Office of Academic Affairs,</li>
-        <li>to provide support for the Faculty through the recording and preserving of minutes
-            and by facilitating faculty administrative projects, and</li>
-        <li>to maintain the Academic Affairs section on the Westminster website. This position
-            will require a large degree of flexibility, as responsibilities will vary according
-            to season and evolution over time. The goal of serving Westminster’s students should
-            always be a primary focus in this position.</li></ol>
-    <p>
-        Qualifications:
+        Blessings,<br />
+        Karen R. Pennell<br />
+        Chief Executive Officer<br />
+        CCWS Medical<br />
+        1028 E. Lincoln Hwy., Coatesville PA 19320<br />
+        27 S. Church St., West Chester PA 19382<br />
+        (610) 593-6331 Direct<br />
+        (610) 357-0962 Mobile<br />
+        (610) 383-0930 Office<br />
+        <a href="http://www.ccwsmedicalinfo.org/">www.ccwsmedicalinfo.org</a><br />
+        <a href="http://www.ccwsmedical.org/">www.ccwsmedical.org</a><br />
+        karen@ccwsmedical.org<br />
     </p>
-    <ul>
-        <li>willingness to be flexible in changing circumstances, the ability to multitask,
-            and the capacity to work independently when necessary.</li>
-        <li>Excellent oral, written, organization, and communication skills.</li>
-        <li>Proficiency in Microsoft Office, and knowledge of data processing.</li>
-        <li>Some college education (preferred).</li>
-        <li>Three to five years’ office experience (preferred).</li>
-    </ul>
-    <p>
-        A complete job description is available upon request. Westminster offers generous
-        health and retirement benefits.
-    </p>
-    <p>
-        <b>Interested parties please email cover letter and resume to:</b></p>
-    <p style="padding-left:2em;">
-        <b>Karin Deussing</b><br />
-        <b>Director of Human Resources</b><br />
-        <a href="mailto:kdeussing@wts.edu" target="_blank"><b><u>kdeussing@wts.edu</u></b></a></p>
-    <h3>
-        Chester County Womens Services</h3>
-    <p>
-        In need of the following items:</p>
-    <ul>
-        <li>Baby toiletries- bath, lotion, powder </li>
-        <li>Diaper creams and ointments </li>
-        <li>Baby bottles </li>
-        <li>Onesies (newborn through 9 months) </li>
-        <li>Bibs </li>
-        <li>Boy clothing (newborn through 18 months) </li>
-        <li>Receiving blankets</li>
-    </ul>
-    <p>
-        <u>Two women are graduating from our parenting class and each will need a crib and mattress</u>
-        to put their new little baby in. All cribs and mattresses must be new due to insurance
-        liability regulations. You can provide a crib and mattress by either purchasing
-        the set and bringing it to our Coatesville location or by providing the funds for
-        a new set and we'll purchase the set for you (approximate cost is $200 per set).</p>
-    <p>
-        Contact CCWS for details: 610-918-7088</p>
 </asp:Content>

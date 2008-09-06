@@ -1,5 +1,5 @@
-<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="Default.aspx.cs" Inherits="_Default" Title="Reformed Presbyterian Church" %>
+<%@ Page Language="C#" AutoEventWireup="true"
+    CodeFile="Default.aspx.cs" Inherits="rpcwc.web._Default" Title="Reformed Presbyterian Church" %>
 
 <%@ Register TagName="AlertMarquee" TagPrefix="rpc" Src="~/includes/marqueealert.ascx" %>
 <%@ Import Namespace="Spring.Context" %>

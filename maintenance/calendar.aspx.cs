@@ -5,9 +5,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Spring.Context;
 using Spring.Context.Support;
+using rpcwc.bo;
 
 public partial class maintenance_calendar : Page
 {
+ /*   
     private IDictionary dates;
     private CalendarManager _calendarManager;
 
@@ -29,14 +31,7 @@ public partial class maintenance_calendar : Page
     void editButton_Command(object sender, CommandEventArgs e)
     {
         Server.Transfer(String.Format("{0}?selectedDate={1}&itemId={2}", "calendarEdit.aspx", SmallCalendarControl.SelectedDate.ToShortDateString(), (String)e.CommandArgument));
-        /*EventInfo.Controls.Clear();
-        Label label = new Label();
-        label.Text = (String)e.CommandArgument;
-        EventInfo.Controls.Add(label);
-        Event oneEvent = calendarManager.findEventDetails(int.Parse((String)e.CommandArgument));
-        Label label2 = new Label();
-        label2.Text = oneEvent.id.ToString();
-        EventInfo.Controls.Add(label2);*/
+
         
 
     }
@@ -122,4 +117,5 @@ public partial class maintenance_calendar : Page
             _calendarManager = value;
         }
     }
+  * */
 }

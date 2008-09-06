@@ -1,18 +1,14 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church &mdash; Church Bulletin" %>
+    Title="Reformed Presbyterian Church &mdash; Church Bulletin"
+    CodeFile="~/bulletin.aspx.cs" Inherits="rpcwc.web.Bulletin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h4>
         Church Bulletins</h4>
     <p>
         Click on a date to view a PDF file that contains the church bulletin for that Sunday.</p>
-    <asp:SqlDataSource ID="BulletinDataSource" ConnectionString="<%$ ConnectionStrings:RPC %>"
-        runat="server" SelectCommand="SELECT pubDate FROM item WHERE (channel_id = @channelId) ORDER BY pubDate Desc"
-        SelectCommandType="Text">
-        <SelectParameters>
-            <asp:Parameter Name="channelId" DefaultValue="7" />
-        </SelectParameters>
-    </asp:SqlDataSource>
+    <asp:ObjectDataSource ID="BulletinDataSource" TypeName="rpcwc.bo.BulletinManager" SelectMethod="findRecentBulletinsActive"
+        EnableCaching="true" OnObjectCreating="SetObjectDataSourceInstance" runat="server" />
     <asp:DataList DataSourceID="BulletinDataSource" runat="server">
         <ItemTemplate>
             <p>

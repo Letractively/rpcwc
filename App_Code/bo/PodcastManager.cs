@@ -10,58 +10,87 @@ using System.Web.UI.WebControls.WebParts;
 using System.Collections;
 using System.IO;
 using System.Xml;
+using rpcwc.dao;
+using rpcwc.vo;
 
 /// <summary>
 /// Summary description for PodcastManager
 /// </summary>
-public class PodcastManager
+namespace rpcwc.bo
 {
-    private ChannelDAO channelDAO;
-    private ItemDAO itemDAO;
-    private static String itunesXmlns = "http://www.itunes.com/DTDs/Podcast-1.0.dtd";
-
-	public PodcastManager()
-	{
-        channelDAO = new ChannelDAO();
-        itemDAO = new ItemDAO();
-		//
-		// TODO: Add constructor logic here
-		//
-	}
-
-    public String getFeed(int channelId)
+    public class PodcastManager
     {
-        Channel channel = channelDAO.findChannel(channelId);
+        private ChannelDAO _channelDAO;
+        private ItemDAO _itemDAO;
+        private static String itunesXmlns = "http://www.itunes.com/DTDs/Podcast-1.0.dtd";
 
-        MemoryStream ms = new MemoryStream();
-        XmlTextWriter w = new XmlTextWriter(ms, System.Text.Encoding.UTF8);
-        w.Formatting = Formatting.Indented;
-
-        w.WriteStartDocument();
-        w.WriteStartElement("rss");
-        w.WriteAttributeString("xmlns", "itunes", null, itunesXmlns);
-        w.WriteAttributeString("version", "2.0");
-
-        w.WriteStartElement("channel");
-        channel.toItunesXml(w);
-
-        IList items = itemDAO.findItemsPodcast(channelId);
-
-        foreach (Item item in items)
+        public PodcastManager()
         {
-            item.toItunesXML(w);
+            //channelDAO = new ChannelDAO();
+            //itemDAO = new ItemDAO();
+            //
+            // TODO: Add constructor logic here
+            //
         }
 
-        w.WriteEndElement(); //channel
+        public String getFeed(int channelId)
+        {
+            Channel channel = channelDAO.findChannel(channelId);
 
-        w.WriteEndElement(); //rss
-        w.WriteEndDocument();
-        w.Flush();
+            MemoryStream ms = new MemoryStream();
+            XmlTextWriter w = new XmlTextWriter(ms, System.Text.Encoding.UTF8);
+            w.Formatting = Formatting.Indented;
 
-        ms.Position = 0;
+            w.WriteStartDocument();
+            w.WriteStartElement("rss");
+            w.WriteAttributeString("xmlns", "itunes", null, itunesXmlns);
+            w.WriteAttributeString("version", "2.0");
 
-        StreamReader sr = new StreamReader(ms);
+            w.WriteStartElement("channel");
+            channel.toItunesXml(w);
 
-        return sr.ReadToEnd();
+            IList items = itemDAO.findItemsPodcast(channelId);
+
+            foreach (Item item in items)
+            {
+                item.toItunesXML(w);
+            }
+
+            w.WriteEndElement(); //channel
+
+            w.WriteEndElement(); //rss
+            w.WriteEndDocument();
+            w.Flush();
+
+            ms.Position = 0;
+
+            StreamReader sr = new StreamReader(ms);
+
+            return sr.ReadToEnd();
+        }
+
+        public ChannelDAO channelDAO
+        {
+            get
+            {
+                return _channelDAO;
+            }
+            set
+            {
+                _channelDAO = value;
+            }
+        }
+
+        public ItemDAO itemDAO
+        {
+            get
+            {
+                return _itemDAO;
+            }
+            set
+            {
+                _itemDAO = value;
+            }
+        }
     }
 }

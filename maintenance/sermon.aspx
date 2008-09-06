@@ -21,7 +21,6 @@ CodeFile="sermon.aspx.cs" Inherits="maintenance_sermon" Title="Sermon Audio Main
     <asp:Label ID="SermonTitleLabel1" AssociatedControlID="SermonTitle" Text="Title: " runat="server" /><asp:TextBox ID="SermonTitle" runat="server" /><br /><br />
     <asp:Label ID="ScriptureReferenceLabel1" AssociatedControlID="ScriptureReference" Text="Scripture Reference: " runat="server" /><asp:TextBox ID="ScriptureReference" runat="server" /><br /><br />
     <asp:Label ID="FileControlLabel" AssociatedControlID="FileControl" Text="File: " runat="server" /><asp:FileUpload ID="FileControl" runat="server" /><br /><br />
-    <asp:Button ID="SubmitButton" OnClick="Submit" UseSubmitBehavior="true" runat="server" />
     
     <div id="status" runat="server" />
 
