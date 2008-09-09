@@ -65,6 +65,10 @@
         location or expressed preferences (e.g., time/day availability, age, geography,
         inclusion of children) will be taken into consideration in new Cluster formation.</p>
     <p>
+        <i>Note:</i> Beginning September 2008, each Cluster will be self-forming, will decide
+        its own meeting schedule, and will decide its own curriculum from offerings suggested
+        or approved by the Session.</p>
+    <p>
         <strong>Make-up</strong>: There is great benefit to variety in small group involvement
         with one another, such as variety of age or spiritual maturity. The older can be
         a blessing to the younger and vise versa. However, there is also benefit in being
