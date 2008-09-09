@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <object name="CalendarDAOGData" type="rpcwc.dao.gdata.CalendarDAOGData" >
+    <property name="specialEventsURL" value="http://www.google.com/calendar/feeds/rpcwc.org_jtbs85nmq7s3do26b1q172rn04%40group.calendar.google.com/private/full" />
+    <property name="regularEventsURL" value="http://www.google.com/calendar/feeds/rpcwc.org_q7d82pvk7t3m9u2uqjumatm7j8%40group.calendar.google.com/private/full" />
+  </object>
+</objects>

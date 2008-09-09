@@ -9,6 +9,7 @@
   <import resource="sql/ItemDAOSQL-context.xml" />
   <import resource="sql/RecommendedReadingsDAOSQL-context.xml" />
   <alias name="CalendarDAOGData" alias="CalendarDAO" />
+
   <alias name="ChannelDAOSQL" alias="ChannelDAO" />
   <alias name="DirectoryDAOSQL" alias="DirectoryDAO" />
   <alias name="ItemDAOSQL" alias="ItemDAO" />

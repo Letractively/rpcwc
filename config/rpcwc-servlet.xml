@@ -8,6 +8,7 @@
     <property name="rssManager" ref="RSSManager" />
   </object>
   <object id="podcast" type="rpcwc.web.PodcastHttpHandler">
+
     <property name="podcastManager" ref="PodcastManager" />
   </object>
   <object name="calendar" type="rpcwc.web.EventCalendarICalHttpHandler">
@@ -17,6 +18,7 @@
   </object>
   <object name="basePage" abstract="true">
     <property name="MasterPageFile" value="~/MasterPage.master"/>
+
   </object>
   <object type="~/Default.aspx" parent="basePage">
     <property name="calendarManager" ref="CalendarManager" />
@@ -26,6 +28,7 @@
   </object>
   <object type="~/bulletin.aspx" parent="basePage">
     <property name="bulletinManager" ref="BulletinManager" />
+
   </object>
   <object type="~/calendar.aspx" parent="basePage">
     <property name="calendarManager" ref="CalendarManager" />
@@ -35,6 +38,7 @@
   </object>
   <object type="~/guest.aspx" parent="basePage">
     <property name="emailSender" ref="EmailSender" />
+
   </object>
   <object type="~/sg_registration.aspx" parent="basePage">
     <property name="emailSender" ref="EmailSender" />
@@ -44,6 +48,7 @@
   </object>
   <object type="~/members/directory.aspx" parent="basePage">
     <property name="directoryDAO" ref="DirectoryDAO" />
+
   </object>
   <object type="~/maintenance/calendar.aspx" parent="basePage" />
   <object id="EmailSender" type="rpcwc.web.email.EmailSender">
@@ -53,6 +58,7 @@
     <property name="fromEmail" value="mailbot@rpcwc.org" />
     <property name="password" value="emailbot" />
     <property name="smtpClientPort" value="587" />
+
     <property name="smtpClientHost" value="smtp.gmail.com" />
   </object>
 </objects>

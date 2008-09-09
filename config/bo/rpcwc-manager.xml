@@ -8,6 +8,7 @@
     <property name="itemDAO" ref="ItemDAO" />
     <property name="channelDAO" ref="ChannelDAO" />
   </object>
+
   <object id="RSSManager" type="rpcwc.bo.RSSManager">
     <property name="itemDAO" ref="ItemDAO" />
     <property name="channelDAO" ref="ChannelDAO" />
@@ -17,6 +18,7 @@
   </object>
   <object id="NewsAndNotesManager" type="rpcwc.bo.NewsAndNotesManager">
     <property name="itemDAO" ref="ItemDAO" />
+
   </object>
   <object id="BulletinManager" type="rpcwc.bo.BulletinManager">
     <property name="itemDAO" ref="ItemDAO" />
