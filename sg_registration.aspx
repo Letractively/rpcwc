@@ -6,7 +6,7 @@
     <h4>
         2008 RPC Cluster Group Registration</h4>
     <p>
-        In June leaders in the Cluster Group ministry met to evaluate the value and workings
+        In June, leaders in the Cluster Group ministry met to evaluate the value and workings
         of this small group ministry of RPC.&nbsp; The uniform consensus indicated that
         Clusters are integral in <b>individual spiritual formation</b>, in <b>building community</b>
         and in <b>assimilation</b> of those new to RPC.&nbsp;
@@ -18,10 +18,6 @@
         offerings this year are The Gospel of Mark (using the New Life study guide) or the
         book <i>In Christ Alone</i> by Sinclair Ferguson.</p>
     <p>
-        More information on these materials as well as a more detailed description of the
-        RPC Cluster ministry will be posted under ‘Small Groups’ on the church website (www.rpcwc.org).
-    </p>
-    <p>
         <span>Clusters resume meeting the week of September 21<sup>st</sup>.&nbsp; There are
             <b>three options</b> for involvement.<o:p></o:p></span></p>
     <ol>
@@ -30,7 +26,7 @@
         <li>If you were not part of a Cluster last year but would like to join an existing group,
             contact that Cluster leader.</li>
         <li>If you were not in a Cluster last year but would like to be part of a newly formed
-            group, complete the information below and give it to Pastor Gale.</li>
+            group, complete the information below.</li>
     </ol>
     <table>
         <asp:TableRow ID="TableRow1" runat="server">

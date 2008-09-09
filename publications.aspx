@@ -5,11 +5,16 @@
     <h4>
         Publications</h4>
     <p>
-        <a href="~/100DaysofPsalmsforPrayer.pdf" target="_blank" runat="server">100 Days of Psalms for Prayer</a></p>
+        <a href="~/100DaysofPsalmsforPrayer.pdf" target="_blank" runat="server">100 Days of
+            Psalms for Prayer</a></p>
     <p>
         <a href="~/baptism.aspx" runat="server">Covenant Baptism</a></p>
     <p>
-        <a href="~/EphesiansPrayerGuide.pdf" target="_blank" runat="server">Ephesians Prayer Guide</a></p>
+        <a href="~/EphesiansPrayerGuide.pdf" target="_blank" runat="server">Ephesians Prayer
+            Guide</a></p>
     <p>
         <a href="~/worship.aspx" runat="server">Worship at RPC Study Paper</a></p>
+    <p>
+        <a href="http://www.breakpoint.org/listingarticle.asp?ID=8389#" target="_blank">Praying
+            the Imprecatory Psalms</a></p>
 </asp:Content>

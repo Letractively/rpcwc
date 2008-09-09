@@ -1,7 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects xmlns="http://www.springframework.net">
   <import resource="../dao/rpcwc-dao.xml" />
-  <object id="CalendarManager" type="CalendarManager">
+  <object id="CalendarManager" type="rpcwc.bo.CalendarManager">
     <property name="calendarDAO" ref="CalendarDAO" />
+  </object>
+  <object id="PodcastManager" type="rpcwc.bo.PodcastManager">
+    <property name="itemDAO" ref="ItemDAO" />
+    <property name="channelDAO" ref="ChannelDAO" />
+  </object>
+  <object id="RSSManager" type="rpcwc.bo.RSSManager">
+    <property name="itemDAO" ref="ItemDAO" />
+    <property name="channelDAO" ref="ChannelDAO" />
+  </object>
+  <object id="BlogManager" type="rpcwc.bo.BlogManager">
+    <property name="itemDAO" ref="ItemDAO" />
+  </object>
+  <object id="NewsAndNotesManager" type="rpcwc.bo.NewsAndNotesManager">
+    <property name="itemDAO" ref="ItemDAO" />
+  </object>
+  <object id="BulletinManager" type="rpcwc.bo.BulletinManager">
+    <property name="itemDAO" ref="ItemDAO" />
   </object>
 </objects>
