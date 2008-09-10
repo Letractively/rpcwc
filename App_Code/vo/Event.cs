@@ -36,8 +36,8 @@ namespace rpcwc.vo
         {
             Event otherEvent = (Event) obj;
 
-            if (allDayEvent && !otherEvent.allDayEvent)
-                return -1;
+            //if (allDayEvent && !otherEvent.allDayEvent)
+            //    return -1;
 
             return date.CompareTo(otherEvent.date);
         }
