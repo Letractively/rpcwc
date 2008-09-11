@@ -15,6 +15,7 @@
   </object>
   <object id="BlogManager" type="rpcwc.bo.BlogManager">
     <property name="itemDAO" ref="ItemDAO" />
+    <property name="BloggerDao" ref="BloggerDao" />
   </object>
   <object id="NewsAndNotesManager" type="rpcwc.bo.NewsAndNotesManager">
     <property name="itemDAO" ref="ItemDAO" />

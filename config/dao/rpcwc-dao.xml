@@ -8,6 +8,8 @@
   <import resource="sql/DirectoryDAOSQL-context.xml" />
   <import resource="sql/ItemDAOSQL-context.xml" />
   <import resource="sql/RecommendedReadingsDAOSQL-context.xml" />
+  <import resource="gdata/BloggerDaoGData-context.xml" />
+  <import resource="gdata/GDataDaoHelper-context.xml" />
   <alias name="CalendarDAOGData" alias="CalendarDAO" />
 
   <alias name="ChannelDAOSQL" alias="ChannelDAO" />
@@ -20,4 +22,5 @@
   <object abstract="true" name="RPCWCDAO">
     <property name="dbProvider" ref="DbProvider" />
   </object>
+  <alias name="BloggerDaoGData" alias="BloggerDao" />
 </objects>

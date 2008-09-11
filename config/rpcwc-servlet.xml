@@ -26,6 +26,9 @@
   <object type="~/blog.aspx" parent="basePage">
     <property name="blogManager" ref="BlogManager" />
   </object>
+  <object type="~/sermon.aspx" parent="basePage">
+    <property name="BlogManager" ref="BlogManager" />
+  </object>
   <object type="~/bulletin.aspx" parent="basePage">
     <property name="bulletinManager" ref="BulletinManager" />
 

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<objects xmlns="http://www.springframework.net">
+  <object name="BloggerDaoGData" type="rpcwc.dao.GData.BloggerDaoGData">
+    <property name="BlogId" value="2434993358587492815" />
+    <property name="GDataDaoHelper" ref="GDataDaoHelper" />
+    <property name="PermalinkRegex">
+      <value>
+        <![CDATA[http://www.blogger.com/feeds/(?<blogid>[^/]+)/posts/default/(?<postid>[^/]+)]]>
+      </value>
+    </property>
+    <property name="CommentIdRegex">
+      <value>
+        <![CDATA[http://www.blogger.com/feeds/(?<blogid>[^/]+)/(?<postid>[^/]+)/comments/default/(?<commentid>[^/]+)]]>
+      </value>
+    </property>
+  </object>
+</objects>
