@@ -6,6 +6,7 @@ using Spring.Context.Support;
 using System.Collections;
 using rpcwc.vo;
 using rpcwc.dao;
+using rpcwc.vo.Blog;
 
 /// <summary>
 /// Summary description for BlogManager
@@ -15,6 +16,7 @@ namespace rpcwc.bo
     public class BlogManager
     {
         private ItemDAO _itemDAO;
+        private IBloggerDao _bloggerDao;
 
         public BlogManager()
         {
@@ -36,11 +38,29 @@ namespace rpcwc.bo
         public IList getBlogEntries()
         {
             ArrayList blogEntries = new ArrayList();
-            blogEntries.AddRange(itemDAO.findItemsRSS(RPCConstants.Channels.SERMON_BLOG));
+            //IList sermonBlogEntries = itemDAO.findItemsRSS(RPCConstants.Channels.SERMON_BLOG);
+            IList<BlogEntry> sermonBlogEntries = BloggerDao.GetAllEntries();
+
+            foreach (BlogEntry blogEntry in sermonBlogEntries)
+            {
+                Item blogItem = new Item();
+                blogItem.author = blogEntry.Author;
+                blogItem.pubDate = blogEntry.PubDate;
+                blogItem.title = blogEntry.Title;
+                blogItem.url = blogEntry.MediaUri;
+                blogEntries.Add(blogItem);
+            }
+
+            //blogEntries.AddRange(sermonBlogEntries);
 
             blogEntries.Sort(new BlogEntryComparer());
 
             return blogEntries;
+        }
+
+        public IList<BlogEntry> GetSermonPosts()
+        {
+            return BloggerDao.GetAllEntries();
         }
 
         public ItemDAO itemDAO
@@ -53,6 +73,12 @@ namespace rpcwc.bo
             {
                 _itemDAO = value;
             }
+        }
+
+        public IBloggerDao BloggerDao
+        {
+            get { return _bloggerDao; }
+            set { _bloggerDao = value; }
         }
     }
 }

@@ -45,7 +45,7 @@ namespace rpcwc.dao.sql
             protected override object MapRow(IDataReader reader, int num)
             {
                 Event oneEvent = new Event();
-                oneEvent.id = getInt16(reader, 0);
+                oneEvent.id = getInt16(reader, 0).ToString();
                 oneEvent.date = getDateTime(reader, 1);
                 oneEvent.title = getString(reader, 2);
                 oneEvent.description = getString(reader, 3);
@@ -73,7 +73,7 @@ namespace rpcwc.dao.sql
             protected override object MapRow(IDataReader reader, int num)
             {
                 Event oneEvent = new Event();
-                oneEvent.id = getInt16(reader, 0);
+                oneEvent.id = getInt16(reader, 0).ToString();
                 oneEvent.date = getDateTime(reader, 1);
                 oneEvent.title = getString(reader, 2);
                 oneEvent.description = getString(reader, 3);
@@ -96,7 +96,7 @@ namespace rpcwc.dao.sql
             protected override object MapRow(IDataReader reader, int num)
             {
                 Event oneEvent = new Event();
-                oneEvent.id = getInt16(reader, 0);
+                oneEvent.id = getInt16(reader, 0).ToString();
                 oneEvent.date = getDateTime(reader, 1);
                 oneEvent.title = getString(reader, 2);
                 oneEvent.allDayEvent = getBoolean(reader, 3);
@@ -145,7 +145,7 @@ namespace rpcwc.dao.sql
             protected override object MapRow(IDataReader reader, int num)
             {
                 Event oneEvent = new Event();
-                oneEvent.id = getInt16(reader, 0);
+                oneEvent.id = getInt16(reader, 0).ToString();
                 oneEvent.date = getDateTime(reader, 1);
                 oneEvent.title = getString(reader, 2);
                 oneEvent.allDayEvent = getBoolean(reader, 3);

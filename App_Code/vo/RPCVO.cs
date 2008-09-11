@@ -15,10 +15,10 @@ namespace rpcwc.vo
 {
     public class RPCVO
     {
-        private int _id;
+        private String _id;
         private bool _active;
 
-        public int id
+        public String id
         {
             get { return _id; }
             set { _id = value; }

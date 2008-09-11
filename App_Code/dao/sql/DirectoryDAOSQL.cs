@@ -46,7 +46,7 @@ namespace rpcwc.dao.sql
                 directory.city = getString(dataReader, 3);
                 directory.state = getString(dataReader, 4);
                 directory.zip = getString(dataReader, 5);
-                directory.id = getByte(dataReader, 6);
+                directory.id = getByte(dataReader, 6).ToString();
 
                 return directory;
             }
@@ -68,7 +68,7 @@ namespace rpcwc.dao.sql
                 Email email = new Email();
                 email.emailAddress = getString(dataReader, 0);
                 email.emailType = getString(dataReader, 1);
-                email.id = getByte(dataReader, 2);
+                email.id = getByte(dataReader, 2).ToString();
 
                 return email;
             }
@@ -90,7 +90,7 @@ namespace rpcwc.dao.sql
                 Phone phone = new Phone();
                 phone.phoneNumber = getString(dataReader, 0);
                 phone.phoneType = getString(dataReader, 1);
-                phone.id = getByte(dataReader, 2);
+                phone.id = getByte(dataReader, 2).ToString();
 
                 return phone;
             }
@@ -110,7 +110,7 @@ namespace rpcwc.dao.sql
             protected override object MapRow(IDataReader dataReader, int num)
             {
                 Person person = new Person();
-                person.id = getInt16(dataReader, 0);
+                person.id = getInt16(dataReader, 0).ToString();
                 person.firstName = getString(dataReader, 2);
                 person.lastName = getString(dataReader, 3);
                 person.birthDate = getDateTime(dataReader, 4);
@@ -135,7 +135,7 @@ namespace rpcwc.dao.sql
                 Email email = new Email();
                 email.emailAddress = getString(dataReader, 0);
                 email.emailType = getString(dataReader, 1);
-                email.id = getByte(dataReader, 2);
+                email.id = getByte(dataReader, 2).ToString();
 
                 return email;
             }
@@ -157,7 +157,7 @@ namespace rpcwc.dao.sql
                 Phone phone = new Phone();
                 phone.phoneNumber = getString(dataReader, 0);
                 phone.phoneType = getString(dataReader, 1);
-                phone.id = getByte(dataReader, 2);
+                phone.id = getByte(dataReader, 2).ToString();
 
                 return phone;
             }
