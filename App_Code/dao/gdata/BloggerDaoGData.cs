@@ -29,11 +29,15 @@ namespace rpcwc.dao.GData
             return MapEntries(Service.Query(query).Entries);
         }
 
-        public IList<BlogEntry> GetEntriesByLabel(string label)
+        public IList<BlogEntry> GetEntriesByLabel(params String[] labels)
         {
             FeedQuery query = new FeedQuery();
             query.Uri = new Uri("http://www.blogger.com/feeds/" + BlogId + "/posts/default");
-            query.Categories.Add(new QueryCategory(new AtomCategory(label)));
+            foreach (String label in labels)
+            {
+                if (label != null && !label.Equals(""))
+                    query.Categories.Add(new QueryCategory(new AtomCategory(label)));
+            }
             query.CategoryQueriesAsParameter = true;
 
             return MapEntries(Service.Query(query).Entries);

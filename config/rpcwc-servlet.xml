@@ -28,6 +28,20 @@
   </object>
   <object type="~/sermon.aspx" parent="basePage">
     <property name="BlogManager" ref="BlogManager" />
+    <property name="SermonSeriesList">
+      <list>
+        <object type="rpcwc.vo.Blog.SermonSeries">
+          <property name="Label" value="ecclesiastes08" />
+          <property name="ImageUrl" value="images/sermon/ecclesiastes.001.png" />
+          <property name="Caption" value="Ecclesiastes: Making Sanity out of Vanity" />
+        </object>
+        <object type="rpcwc.vo.Blog.SermonSeries">
+          <property name="Label" value="ephesians08" />
+          <property name="ImageUrl" value="images/sermon/ephesians.001.jpg" />
+          <property name="Caption" value="Ephesians: The Gospel Message for Believers" />
+        </object>
+      </list>
+    </property>
   </object>
   <object type="~/bulletin.aspx" parent="basePage">
     <property name="bulletinManager" ref="BulletinManager" />

@@ -63,6 +63,16 @@ namespace rpcwc.bo
             return BloggerDao.GetEntriesByLabel(DaoConstants.SERMON);
         }
 
+        /// <summary>
+        /// Retrieves all blog posts from the sermon series marked by the given label
+        /// </summary>
+        /// <param name="label">This is a tag associated with blog posts, representing a sermon series</param>
+        /// <returns>A list of blog posts in the sermon series</returns>
+        public IList<BlogEntry> GetSermonPosts(String label)
+        {
+            return BloggerDao.GetEntriesByLabel(DaoConstants.SERMON, label);
+        }
+
         public ItemDAO itemDAO
         {
             get
