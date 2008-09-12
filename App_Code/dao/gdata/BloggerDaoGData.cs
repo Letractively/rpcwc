@@ -103,6 +103,9 @@ namespace rpcwc.dao.GData
 
         private BlogEntry MapEntry(AtomEntry entry)
         {
+            if (entry.Published.CompareTo(DateTime.Now) > 0)
+                return null;
+
             if (entry.IsDraft)
                 return null;
 
