@@ -37,7 +37,7 @@ namespace rpcwc.web
             blogPostControl.Controls.Add(BuildContentsControl(entry));
             blogPostControl.Controls.Add(contentsFootSeparator);
             blogPostControl.Controls.Add(PostFootControl(entry));
-            blogPostControl.Controls.Add(BuildCategoryPanel(entry));
+            //blogPostControl.Controls.Add(BuildCategoryPanel(entry));
 
             return blogPostControl;
         }
@@ -69,9 +69,8 @@ namespace rpcwc.web
             authorAndDate.Controls.Add(new LiteralControl(authorAndDateString.ToString()));
 
             HyperLink commentsControl = new HyperLink();
-            Link commentsLink = entry.Links[1];
-            commentsControl.NavigateUrl = commentsLink.Uri;
-            commentsControl.Text = commentsLink.Title;
+            commentsControl.NavigateUrl = entry.CommentsLink.Uri;
+            commentsControl.Text = entry.CommentsLink.Title;
             
             postFootControl.Controls.Add(authorAndDate);
             postFootControl.Controls.Add(commentsControl);
@@ -89,11 +88,11 @@ namespace rpcwc.web
             dateHeader.Controls.Add(new LiteralControl(entry.PubDate.ToString("MMMM d, yyyy")));
             WebControl postTitleHeader = new WebControl(HtmlTextWriterTag.H3);
             postTitleHeader.CssClass = "post-title";
-            if (entry.MediaUri != null && !entry.MediaUri.Equals(""))
+            if (entry.Enclosure != null && entry.Enclosure.Uri != null)
             {
                 HyperLink postTitle = new HyperLink();
                 postTitle.Text = entry.Title;
-                postTitle.NavigateUrl = entry.MediaUri;
+                postTitle.NavigateUrl = entry.Enclosure.Uri;
                 postTitleHeader.Controls.Add(postTitle);
             } else
                 postTitleHeader.Controls.Add(new LiteralControl(entry.Title));

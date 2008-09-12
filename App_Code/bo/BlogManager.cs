@@ -60,7 +60,7 @@ namespace rpcwc.bo
 
         public IList<BlogEntry> GetSermonPosts()
         {
-            return BloggerDao.GetAllEntries();
+            return BloggerDao.GetEntriesByLabel(DaoConstants.SERMON);
         }
 
         public ItemDAO itemDAO

@@ -87,5 +87,23 @@ namespace rpcwc.vo.Blog
             get { return _comments; }
             set { _comments = value; }
         }
+
+        private Link _enclosure;
+
+        public Link Enclosure
+        {
+            get { return _enclosure; }
+            set { _enclosure = value; }
+        }
+
+        private Link _commentsLink;
+
+        public Link CommentsLink
+        {
+            get { return _commentsLink; }
+            set { _commentsLink = value; }
+        }
+	
+	
     }
 }

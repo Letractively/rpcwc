@@ -108,17 +108,15 @@ namespace rpcwc.dao.GData
             blogEntry.PubDate = entry.Published;
             blogEntry.Author = entry.Authors[0].Name;
             blogEntry.Summary = entry.Summary.Text;
-            blogEntry.MediaUri = entry.MediaUri != null ? entry.MediaUri.Content : null;
-            blogEntry.Links = new List<Link>();
+            //blogEntry.MediaUri = entry.MediaUri != null ? entry.MediaUri.Content : null;
+            //blogEntry.Links = new List<Link>();
             foreach (AtomLink link in entry.Links)
             {
-                Link linkObj = new Link();
-                linkObj.Rel = link.Rel;
-                linkObj.Title = link.Title;
-                linkObj.Type = link.Type;
-                linkObj.Uri = link.AbsoluteUri;
-
-                blogEntry.Links.Add(linkObj);
+                if (link.Type.Equals("audio/mpeg"))
+                    blogEntry.Enclosure = mapLink(link);
+                else if (link.Rel.Equals("replies") && link.Type.Equals("text/html"))
+                    blogEntry.CommentsLink = mapLink(link);
+                //blogEntry.Links.Add(mapLink(link));
             }
             blogEntry.Permalink = entry.SelfUri.Content;
             blogEntry.id = PermalinkRegex.Match(blogEntry.Permalink).Groups["postid"].Value;
@@ -129,6 +127,17 @@ namespace rpcwc.dao.GData
             }
 
             return blogEntry;
+        }
+
+        private Link mapLink(AtomLink link)
+        {
+            Link linkObj = new Link();
+            linkObj.Rel = link.Rel;
+            linkObj.Title = link.Title;
+            linkObj.Type = link.Type;
+            linkObj.Uri = link.AbsoluteUri;
+
+            return linkObj;
         }
 
         private BlogEntry MapEntry(AtomEntry entry, AtomFeed comments)
