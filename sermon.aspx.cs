@@ -17,13 +17,23 @@ namespace rpcwc.web
     {
         private BlogManager _blogManager;
 
+        delegate Control BuildBlogPostControlDelegate(BlogEntry blogEntry);
+
         protected void Page_Load(Object source, EventArgs eventArgs)
         {
             IList<BlogEntry> blogEntries = BlogManager.GetSermonPosts();
+            BuildBlogPostControlDelegate buildBlogPostControlDelegate = BlogHelper.buildBlogPostControl;
+
+            IList<IAsyncResult> delegateResults = new List<IAsyncResult>();
 
             foreach (BlogEntry blogEntry in blogEntries)
             {
-                BlogHolder.Controls.Add(BlogHelper.buildBlogPostControl(blogEntry));
+                delegateResults.Add(buildBlogPostControlDelegate.BeginInvoke(blogEntry, delegate(IAsyncResult result) { }, null));
+            }
+
+            foreach (IAsyncResult result in delegateResults)
+            {
+                BlogHolder.Controls.Add(buildBlogPostControlDelegate.EndInvoke(result));
             }
         }
 
