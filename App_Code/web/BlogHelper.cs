@@ -31,12 +31,17 @@ namespace rpcwc.web
             
             WebControl contentsFootSeparator = new WebControl(HtmlTextWriterTag.Br);
             contentsFootSeparator.Attributes.Add("clear", "all");
-            
-            blogPostControl.Controls.Add(BuildTitleControl(entry));
-            blogPostControl.Controls.Add(titleContentsSeparator);
-            blogPostControl.Controls.Add(BuildContentsControl(entry));
-            blogPostControl.Controls.Add(contentsFootSeparator);
-            blogPostControl.Controls.Add(PostFootControl(entry));
+
+            if (entry.Scheduled)
+                blogPostControl.Controls.Add(BuildScheduledBlogPostTitle(entry));
+            else
+            {
+                blogPostControl.Controls.Add(BuildTitleControl(entry));
+                blogPostControl.Controls.Add(titleContentsSeparator);
+                blogPostControl.Controls.Add(BuildContentsControl(entry));
+                blogPostControl.Controls.Add(contentsFootSeparator);
+                blogPostControl.Controls.Add(PostFootControl(entry));
+            }
             //blogPostControl.Controls.Add(BuildCategoryPanel(entry));
 
             return blogPostControl;
@@ -78,7 +83,7 @@ namespace rpcwc.web
             return postFootControl;
         }
 
-        private static WebControl BuildTitleControl(BlogEntry entry)
+        private static WebControl BuildScheduledBlogPostTitle(BlogEntry entry)
         {
             Panel titleControl = new Panel();
             titleControl.Style.Add(HtmlTextWriterStyle.TextAlign, "left");
@@ -88,6 +93,25 @@ namespace rpcwc.web
             dateHeader.Controls.Add(new LiteralControl(entry.PubDate.ToString("MMMM d, yyyy")));
             WebControl postTitleHeader = new WebControl(HtmlTextWriterTag.H3);
             postTitleHeader.CssClass = "post-title";
+            postTitleHeader.Style.Add(HtmlTextWriterStyle.Color, "gray");
+            postTitleHeader.Controls.Add(new LiteralControl(entry.Title));
+            titleControl.Controls.Add(dateHeader);
+            titleControl.Controls.Add(postTitleHeader);
+
+            return titleControl;
+        }
+
+        private static WebControl BuildTitleControl(BlogEntry entry)
+        {
+            Panel titleControl = new Panel();
+            titleControl.Style.Add(HtmlTextWriterStyle.TextAlign, "left");
+            titleControl.Style.Add("border-bottom", "solid 1px #666");
+            //WebControl dateHeader = new WebControl(HtmlTextWriterTag.H2);
+            //dateHeader.CssClass = "date-header";
+            //dateHeader.Controls.Add(new LiteralControl(entry.PubDate.ToString("MMMM d, yyyy")));
+            WebControl postTitleHeader = new WebControl(HtmlTextWriterTag.H3);
+            postTitleHeader.CssClass = "post-title";
+            postTitleHeader.Controls.Add(new LiteralControl(entry.PubDate.ToString("MMMM d, yyyy: ")));
             if (entry.Enclosure != null && entry.Enclosure.Uri != null)
             {
                 HyperLink postTitle = new HyperLink();
@@ -96,7 +120,7 @@ namespace rpcwc.web
                 postTitleHeader.Controls.Add(postTitle);
             } else
                 postTitleHeader.Controls.Add(new LiteralControl(entry.Title));
-            titleControl.Controls.Add(dateHeader);
+            //titleControl.Controls.Add(dateHeader);
             titleControl.Controls.Add(postTitleHeader);
 
             return titleControl;

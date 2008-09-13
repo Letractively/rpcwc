@@ -70,7 +70,11 @@ namespace rpcwc.bo
         /// <returns>A list of blog posts in the sermon series</returns>
         public IList<BlogEntry> GetSermonPosts(String label)
         {
-            return BloggerDao.GetEntriesByLabel(DaoConstants.SERMON, label);
+            IList<BlogEntry> blogEntryList = BloggerDao.GetEntriesByLabel(DaoConstants.SERMON, label);
+
+            ArrayList.Adapter((IList)blogEntryList).Sort();
+
+            return blogEntryList;
         }
 
         public ItemDAO itemDAO

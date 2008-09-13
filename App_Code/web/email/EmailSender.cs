@@ -24,7 +24,8 @@ namespace rpcwc.web.email
             objEmail.To.Add(toEmail);
             if (ccEmail != null && ccEmail.Length > 0)
                 objEmail.CC.Add(ccEmail);
-            
+
+            objEmail.From = new MailAddress(fromEmail);
             objEmail.Body = body;
             objEmail.Subject = subject;
 
@@ -44,6 +45,7 @@ namespace rpcwc.web.email
             if (ccEmail != null && ccEmail.Length > 0)
                 objEmail.CC.Add(ccEmail);
 
+            objEmail.From = new MailAddress(fromEmail);
             objEmail.Body = body;
             objEmail.Subject = subject;
 

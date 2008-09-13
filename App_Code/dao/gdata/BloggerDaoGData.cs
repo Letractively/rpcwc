@@ -103,16 +103,16 @@ namespace rpcwc.dao.GData
 
         private BlogEntry MapEntry(AtomEntry entry)
         {
-            if (entry.Published.CompareTo(DateTime.Now) > 0)
-                return null;
-
-            if (entry.IsDraft)
+            DateTime pubDate = entry.Published.ToLocalTime();
+            if (pubDate.CompareTo(DateTime.Now) <= 0 && entry.IsDraft)
                 return null;
 
             BlogEntry blogEntry = new BlogEntry();
+
+            blogEntry.Scheduled = pubDate.CompareTo(DateTime.Now) > 0;
             blogEntry.Content = entry.Content.Content;
             blogEntry.Title = entry.Title.Text;
-            blogEntry.PubDate = entry.Published;
+            blogEntry.PubDate = pubDate;
             blogEntry.Author = entry.Authors[0].Name;
             blogEntry.Summary = entry.Summary.Text;
             //blogEntry.MediaUri = entry.MediaUri != null ? entry.MediaUri.Content : null;

@@ -7,7 +7,7 @@ using System.Text;
 /// </summary>
 namespace rpcwc.vo.Blog
 {
-    public class BlogEntry : RPCVO
+    public class BlogEntry : RPCVO, IComparable
     {
         private String _title;
 
@@ -103,7 +103,27 @@ namespace rpcwc.vo.Blog
             get { return _commentsLink; }
             set { _commentsLink = value; }
         }
-	
-	
+
+        private bool _scheduled;
+
+        public bool Scheduled
+        {
+            get { return _scheduled; }
+            set { _scheduled = value; }
+        }
+
+        #region IComparable Members
+
+        public int CompareTo(object obj)
+        {
+            BlogEntry blogEntryObj = (BlogEntry)obj;
+
+            if (this.Scheduled != blogEntryObj.Scheduled)
+                return this.Scheduled ? 1 : -1;
+
+            return Scheduled ? -PubDate.CompareTo(blogEntryObj.PubDate) : PubDate.CompareTo(blogEntryObj.PubDate);
+        }
+
+        #endregion
     }
 }
