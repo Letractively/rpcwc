@@ -12,6 +12,8 @@ using System.IO;
 using System.Xml;
 using rpcwc.dao;
 using rpcwc.vo;
+using rpcwc.vo.Blog;
+using System.Collections.Generic;
 
 /// <summary>
 /// Summary description for PodcastManager
@@ -23,6 +25,8 @@ namespace rpcwc.bo
         private ChannelDAO _channelDAO;
         private ItemDAO _itemDAO;
         private static String itunesXmlns = "http://www.itunes.com/DTDs/Podcast-1.0.dtd";
+        private static String FORMAT_PROVIDER = System.Globalization.DateTimeFormatInfo.CurrentInfo.RFC1123Pattern;
+        private BlogManager _blogManager;
 
         public PodcastManager()
         {
@@ -49,11 +53,18 @@ namespace rpcwc.bo
             w.WriteStartElement("channel");
             channel.toItunesXml(w);
 
-            IList items = itemDAO.findItemsPodcast(channelId);
+            /*IList items = itemDAO.findItemsPodcast(channelId);
 
             foreach (Item item in items)
             {
                 item.toItunesXML(w);
+            }*/
+
+            IList<BlogEntry> items = BlogManager.GetSermonPosts();
+            foreach (BlogEntry item in items)
+            {
+                if (!item.Scheduled)
+                    WriteItunesXML(item, w);
             }
 
             w.WriteEndElement(); //channel
@@ -67,6 +78,25 @@ namespace rpcwc.bo
             StreamReader sr = new StreamReader(ms);
 
             return sr.ReadToEnd();
+        }
+
+        public void WriteItunesXML(BlogEntry blogEntry, XmlTextWriter w)
+        {
+            if (blogEntry.Enclosure == null || blogEntry.Enclosure.Uri == null || blogEntry.Enclosure.Uri.Equals(""))
+                return;
+
+            w.WriteStartElement("item");
+            w.WriteElementString("title", blogEntry.Title);
+            w.WriteElementString("itunes", "author", null, blogEntry.Author);
+            //w.WriteElementString("itunes", "subtitle", null, blogEntry.sub);
+            w.WriteElementString("itunes", "summary", null, blogEntry.Content);
+            w.WriteElementString("pubDate", blogEntry.PubDate.ToString(FORMAT_PROVIDER));
+            w.WriteStartElement("enclosure");
+            w.WriteAttributeString("url", blogEntry.Enclosure.Uri);
+            w.WriteAttributeString("type", blogEntry.Enclosure.Type);
+            w.WriteEndElement();
+            w.WriteElementString("guid", blogEntry.Enclosure.Uri);
+            w.WriteEndElement();
         }
 
         public ChannelDAO channelDAO
@@ -91,6 +121,12 @@ namespace rpcwc.bo
             {
                 _itemDAO = value;
             }
+        }
+
+        public BlogManager BlogManager
+        {
+            get { return _blogManager; }
+            set { _blogManager = value; }
         }
     }
 }
