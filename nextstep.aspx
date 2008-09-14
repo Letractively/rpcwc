@@ -72,5 +72,5 @@
     <br />
     <p>
         To hear more about God's Good News for us in Jesus Christ, call or email the church
-        at (610) 696-3482 or <a href="mailto:rpcwc@ccil.org">rpcwc@ccil.org</a></p>
+        at (610) 696-3482 or <a href="mailto:pastor@rpcwc.org">pastor@rpcwc.org</a></p>
 </asp:Content>

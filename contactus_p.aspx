@@ -15,7 +15,7 @@
     610-696-3482<br />
     <br />
     Pastor Stan Gale's Email<br />
-    rpcwc@ccil.org<br />
+    pastor@rpcwc.org<br />
     <br />
     Church Office Email<br />
     rpc_office@juno.com<br />

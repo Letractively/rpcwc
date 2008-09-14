@@ -12,7 +12,7 @@
         <br />
         610-696-3482
         <br />
-        <a href="mailto:rpcwc@ccil.org" runat="server">rpcwc@ccil.org</a><br />
+        <a href="mailto:pastor@rpcwc.org" runat="server">pastor@rpcwc.org</a><br />
         <a href="http://www.rpcwc.org" runat="server">www.rpcwc.org</a></p>
     <p align="right">
         Dr. Stanley D. Gale, Pastor</p>

@@ -23,10 +23,10 @@
         Linda Gale
     </p>
     <p>
-        For the Spring quarter the class will be studying stories from the book of Acts.
-        Starting with the death and resurrection of Jesus, we see God showing His love for
-        His people. We will then look at the gift of the Holy Spirit and the men and women
-        God raised up to carry on His message of Jesus as the Christ.</p>
+        For the Fall quarter our class will be looking in the Old Testament to examine ways
+        of learning to obey God. In learning about obedience it is also important to learn
+        about the One who we are to obey. We will be looking at how God is loving, powerful,
+        sovereign, forgiving & faithful. What a great God we serve!</p>
     <p>
         <strong>Bible Story Hour </strong>
         <br />
