@@ -121,7 +121,7 @@ namespace rpcwc.vo.Blog
             if (this.Scheduled != blogEntryObj.Scheduled)
                 return this.Scheduled ? 1 : -1;
 
-            return Scheduled ? -PubDate.CompareTo(blogEntryObj.PubDate) : PubDate.CompareTo(blogEntryObj.PubDate);
+            return Scheduled ? PubDate.CompareTo(blogEntryObj.PubDate) : -PubDate.CompareTo(blogEntryObj.PubDate);
         }
 
         #endregion
