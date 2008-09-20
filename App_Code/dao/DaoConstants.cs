@@ -16,5 +16,6 @@ namespace rpcwc.dao
     public static class DaoConstants
     {
         public const String SERMON = "sermon";
+        public const int CHANNEL_RECOMMENDED_READINGS = 9;
     }
 }

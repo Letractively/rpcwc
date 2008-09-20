@@ -7,6 +7,7 @@ using System.Collections;
 using rpcwc.vo;
 using rpcwc.dao;
 using rpcwc.vo.Blog;
+using rpcwc.bo.cache;
 
 /// <summary>
 /// Summary description for BlogManager
@@ -15,6 +16,31 @@ namespace rpcwc.bo
 {
     public class BlogManager
     {
+        private BlogCache _blogCache;
+
+        public BlogCache BlogCache
+        {
+            get { return _blogCache; }
+            set { _blogCache = value; }
+        }
+        
+        public IList<BlogEntry> GetSermonPosts(String label)
+        {
+            return BlogCache.GetSermonPosts(label);
+        }
+    
+        public IList getBlogEntries()
+        {
+            return BlogCache.BlogEntries;
+        }
+
+        public IList<BlogEntry> GetSermonPosts()
+        {
+            return BlogCache.GetSermonPosts();
+        }
+        
+        /*
+
         private ItemDAO _itemDAO;
         private IBloggerDao _bloggerDao;
 
@@ -94,5 +120,6 @@ namespace rpcwc.bo
             get { return _bloggerDao; }
             set { _bloggerDao = value; }
         }
+         */
     }
 }

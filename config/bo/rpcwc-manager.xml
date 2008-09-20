@@ -1,28 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects xmlns="http://www.springframework.net">
-  <import resource="../dao/rpcwc-dao.xml" />
+  <import resource="rpcwc-cache.xml" />
   <object id="CalendarManager" type="rpcwc.bo.CalendarManager">
     <property name="calendarDAO" ref="CalendarDAO" />
+    <property name="CalendarCache" ref="CalendarCache" />
   </object>
   <object id="PodcastManager" type="rpcwc.bo.PodcastManager">
     <property name="itemDAO" ref="ItemDAO" />
     <property name="channelDAO" ref="ChannelDAO" />
     <property name="BlogManager" ref="BlogManager" />
   </object>
-
   <object id="RSSManager" type="rpcwc.bo.RSSManager">
     <property name="itemDAO" ref="ItemDAO" />
     <property name="channelDAO" ref="ChannelDAO" />
   </object>
   <object id="BlogManager" type="rpcwc.bo.BlogManager">
-    <property name="itemDAO" ref="ItemDAO" />
-    <property name="BloggerDao" ref="BloggerDao" />
+    <property name="BlogCache" ref="BlogCache" />
   </object>
   <object id="NewsAndNotesManager" type="rpcwc.bo.NewsAndNotesManager">
     <property name="itemDAO" ref="ItemDAO" />
-
   </object>
   <object id="BulletinManager" type="rpcwc.bo.BulletinManager">
     <property name="itemDAO" ref="ItemDAO" />
+  </object>
+  <object id="CacheManager" type="rpcwc.bo.CacheManager">
+    <property name="CacheList" >
+      <list element-type="rpcwc.bo.cache.AbstractCache">
+        <ref object="BlogCache" />
+        <ref object="CalendarCache" />
+        <ref object="RecommendedReadingsCache" />
+      </list>
+    </property>
   </object>
 </objects>

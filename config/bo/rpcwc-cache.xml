@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<objects xmlns="http://www.springframework.net">
+  <import resource="../dao/rpcwc-dao.xml" />
+  <object id="BlogCache" type="rpcwc.bo.cache.BlogCache">
+    <property name="itemDAO" ref="ItemDAO" />
+    <property name="BloggerDao" ref="BloggerDao" />
+    <property name="RefreshInterval" value="01:00:00" />
+  </object>
+  <object id="CalendarCache" type="rpcwc.bo.cache.CalendarCache">
+    <property name="CalendarDao" ref="CalendarDAO" />
+    <property name="RefreshInterval" value="01:00:00" />
+  </object>
+  <object id="RecommendedReadingsCache" type="rpcwc.bo.cache.RecommendedReadingsCache">
+    <property name="RecommendedReadingsDao" ref="RecommendedReadingsDAO" />
+    <property name="RefreshInterval" value="01:00:00" />
+  </object>
+</objects>

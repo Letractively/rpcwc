@@ -78,4 +78,7 @@
 
     <property name="smtpClientHost" value="smtp.gmail.com" />
   </object>
+  <object type="~/maintenance/cache.aspx">
+    <property name="CacheManager" ref="CacheManager" />
+  </object>
 </objects>

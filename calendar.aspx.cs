@@ -6,6 +6,7 @@ using rpcwc.bo;
 using Spring.Context;
 using Spring.Context.Support;
 using rpcwc.vo;
+using System.Collections.Generic;
 
 namespace rpcwc.web
 {
@@ -27,16 +28,26 @@ namespace rpcwc.web
             }
         }
 
+        delegate EventControl CreateEventControlDelegate(Event eventObj);
+
         private WebControl findEventsForDay(DateTime dateTime)
         {
+            CreateEventControlDelegate createEventControlDelegate = CalendarUtil.createEventControl;
+
             IList eventList = calendarManager.findEventsForDay(SmallCalendarControl.SelectedDate.Date);
+            IList<IAsyncResult> results = new List<IAsyncResult>();
 
             WebControl eventControl = new WebControl(HtmlTextWriterTag.Div);
             eventControl.Controls.Add(CalendarUtil.getDateHeader(SmallCalendarControl.SelectedDate.Date));
-
+            
             foreach (Event oneEvent in eventList)
             {
-                eventControl.Controls.Add(CalendarUtil.createEventControl(oneEvent));
+                results.Add(createEventControlDelegate.BeginInvoke(oneEvent, delegate(IAsyncResult result) { }, null));
+            }
+
+            foreach (IAsyncResult result in results)
+            {
+                eventControl.Controls.Add(createEventControlDelegate.EndInvoke(result));
             }
 
             return eventControl;
