@@ -20,9 +20,20 @@ namespace rpcwc.bo.cache
         private CalendarDAO _calendarDAO;
         private static Object LOCK = new Object();
 
-        public override void Refresh()
+        delegate void RefresherDelegate();
+
+        public override void Refresh(bool visitorRefresh)
         {
-            RefreshCount++;
+            if (visitorRefresh)
+                RefreshCount++;
+
+            if (!RefresherRunning)
+            {
+                RefresherDelegate refresherDelegate = RefreshAndSleep;
+                refresherDelegate.BeginInvoke(delegate(IAsyncResult result) { }, null);
+                RefresherRunning = true;
+            }
+
             IDictionary dateMapList = new Hashtable(5);
 
             DateTime startTime = DateTime.Now;
@@ -57,7 +68,7 @@ namespace rpcwc.bo.cache
         public IList findEventsByDateRange(DateTime startDate, DateTime endDate)
         {
             if (!UpToDate)
-                Refresh();
+                Refresh(true);
 
             DateTime startTime = DateTime.Now;
 
@@ -80,7 +91,7 @@ namespace rpcwc.bo.cache
         public IList findEventsByDate(DateTime date)
         {
             if (!UpToDate)
-                Refresh();
+                Refresh(true);
 
             HitCount++;
 
@@ -93,7 +104,7 @@ namespace rpcwc.bo.cache
         public IList findEventsByMonth(int year, int month)
         {
             if (!UpToDate)
-                Refresh();
+                Refresh(true);
 
             DateTime startTime = DateTime.Now;
 

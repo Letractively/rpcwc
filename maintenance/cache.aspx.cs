@@ -17,7 +17,7 @@ namespace rpcwc.web.Maintenance
 
         public void RefreshCache(Object source, CommandEventArgs eventArgs)
         {
-            CacheManager.CacheMap[eventArgs.CommandArgument.ToString()].Refresh();
+            CacheManager.CacheMap[eventArgs.CommandArgument.ToString()].Refresh(false);
         }
 
         public void Page_Load(Object source, EventArgs eventArgs)
@@ -61,8 +61,6 @@ namespace rpcwc.web.Maintenance
                 //}
 
                 CacheInfo.Controls.Add(panel);
-
-                BeginRefreshersLink.Enabled = !CacheManager.RefreshersBegun;
             }
         }
 

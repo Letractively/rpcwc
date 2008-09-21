@@ -19,6 +19,8 @@ namespace rpcwc.bo.cache
         private IDictionary<String, IList<BlogEntry>> _blogEntriesMappedByLabel = new Dictionary<String, IList<BlogEntry>>();
         private Object blogCacheLock = new Object();
 
+        delegate void RefresherDelegate();
+
         public class BlogEntryComparer : IComparer
         {
             #region IComparer Members
@@ -36,16 +38,24 @@ namespace rpcwc.bo.cache
             get
             {
                 if (!UpToDate)
-                    Refresh();
+                    Refresh(true);
 
                 HitCount++;
                 return _blogEntries;
             }
         }
 
-        public override void Refresh()
+        public override void Refresh(bool visitorRefresh)
         {
-            RefreshCount++;
+            if (visitorRefresh)
+                RefreshCount++;
+
+            if (!RefresherRunning)
+            {
+                RefresherDelegate refresherDelegate = RefreshAndSleep;
+                refresherDelegate.BeginInvoke(delegate(IAsyncResult result) { }, null);
+                RefresherRunning = true;
+            }
 
             DateTime startTime = DateTime.Now;
 
@@ -98,7 +108,7 @@ namespace rpcwc.bo.cache
         public IList<BlogEntry> GetSermonPosts()
         {
             if (!UpToDate)
-                Refresh();
+                Refresh(true);
 
             HitCount++;
 
@@ -113,7 +123,7 @@ namespace rpcwc.bo.cache
         public IList<BlogEntry> GetSermonPosts(String label)
         {
             if (!UpToDate)
-                Refresh();
+                Refresh(true);
 
             HitCount++;
 

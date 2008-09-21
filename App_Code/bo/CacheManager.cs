@@ -14,7 +14,6 @@ namespace rpcwc.bo
     {
         private IList<AbstractCache> _cacheList;
         private IDictionary<String, AbstractCache> _cacheMap;
-        private bool _refreshersBegun = false;
 
         public IDictionary<String, Object> GetAttributes(AbstractCache cache)
         {
@@ -39,28 +38,13 @@ namespace rpcwc.bo
             return cacheMap;
         }
 
-        delegate void RefresherDelegate(AbstractCache cache);
-
         public void BeginRefreshers()
         {
-            if (RefreshersBegun)
-                return;
-
-            RefresherDelegate refresherDelegate = RefreshAndSleep;
-
-            foreach(AbstractCache cache in CacheList)
-                refresherDelegate.BeginInvoke(cache, delegate(IAsyncResult result) { }, null);
-
-            RefreshersBegun = true;
-        }
-
-        private void RefreshAndSleep(AbstractCache cache)
-        {
-            do
+            foreach (AbstractCache cache in CacheList)
             {
-                cache.Refresh();
-                Thread.Sleep(cache.RefreshInterval - new TimeSpan(0,5,0));
-            } while (true);
+                if (cache.RefresherRunning)
+                    cache.Refresh(false);
+            }
         }
 
         public IList<AbstractCache> CacheList
@@ -76,12 +60,6 @@ namespace rpcwc.bo
                     _cacheMap = MapCacheList(CacheList);
                 return _cacheMap;
             }
-        }
-
-        public bool RefreshersBegun
-        {
-            get { return _refreshersBegun; }
-            set { _refreshersBegun = value; }
         }
     }
 }

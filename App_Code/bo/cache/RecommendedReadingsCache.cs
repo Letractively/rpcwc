@@ -16,9 +16,20 @@ namespace rpcwc.bo.cache
         private Queue _recommendedReadings = new Queue();
         private Object LOCK = new Object();
 
-        public override void Refresh()
+        delegate void RefresherDelegate();
+
+        public override void Refresh(bool visitorRefresh)
         {
-            RefreshCount++;
+            if (visitorRefresh)
+                RefreshCount++;
+
+            if (!RefresherRunning)
+            {
+                RefresherDelegate refresherDelegate = RefreshAndSleep;
+                refresherDelegate.BeginInvoke(delegate(IAsyncResult result) { }, null);
+                RefresherRunning = true;
+            }
+
             DateTime startTime = DateTime.Now;
 
             IList recommendedReadings = RecommendedReadingsDao.FindAllActiveRecommendedReadings();
@@ -39,7 +50,7 @@ namespace rpcwc.bo.cache
         public HyperLink GetReading()
         {
             if (!UpToDate)
-                Refresh();
+                Refresh(true);
 
             DateTime startTime = DateTime.Now;
 
