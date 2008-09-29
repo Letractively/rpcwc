@@ -36,6 +36,7 @@ namespace rpcwc.bo.cache
 
             lock (LOCK)
             {
+                RecommendedReadings.Clear();
                 foreach (Object recommendedReading in recommendedReadings)
                 {
                     RecommendedReadings.Enqueue(recommendedReading);
@@ -56,8 +57,13 @@ namespace rpcwc.bo.cache
 
             HitCount++;
 
-            HyperLink reading = (HyperLink)RecommendedReadings.Dequeue();
-            RecommendedReadings.Enqueue(reading);
+            HyperLink reading = null;
+
+            lock (LOCK)
+            {
+                reading = (HyperLink)RecommendedReadings.Dequeue();
+                RecommendedReadings.Enqueue(reading);
+            }
 
             CacheTime += DateTime.Now - startTime;
 
