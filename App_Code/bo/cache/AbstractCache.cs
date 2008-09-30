@@ -13,11 +13,13 @@ namespace rpcwc.bo.cache
         private DateTime _lastRefresh;
         private bool _upToDate;
         private TimeSpan _refreshInterval;
-        private int _refreshCount;
+        private int _totalRefreshCount;
+        private int _userRefreshCount;
         private int _hitCount;
         private TimeSpan _refreshTime;
         private TimeSpan _cacheTime;
         private bool _refresherRunning;
+        protected bool refreshing;
 
         public abstract void Refresh(bool visitorRefresh);
         
@@ -30,10 +32,16 @@ namespace rpcwc.bo.cache
             } while (true);
         }
 
-        public int RefreshCount
+        public int TotalRefreshCount
         {
-            get { return _refreshCount; }
-            set { _refreshCount = value; }
+            get { return _totalRefreshCount; }
+            set { _totalRefreshCount = value; }
+        }
+
+        public int UserRefreshCount
+        {
+            get { return _userRefreshCount; }
+            set { _userRefreshCount = value; }
         }
 
         public TimeSpan RefreshTime
@@ -57,10 +65,10 @@ namespace rpcwc.bo.cache
         public TimeSpan AverageRefreshTime
         {
             get {
-                if (_refreshCount == 0)
+                if (_totalRefreshCount == 0)
                     return TimeSpan.Zero;
 
-                return new TimeSpan(_refreshTime.Ticks / _refreshCount);
+                return new TimeSpan(_refreshTime.Ticks / _totalRefreshCount);
             }
         }
 
@@ -79,10 +87,10 @@ namespace rpcwc.bo.cache
         {
             get
             {
-                if (_refreshCount == 0)
+                if (_totalRefreshCount == 0)
                     return TimeSpan.Zero;
 
-                return new TimeSpan(AverageRefreshTime.Ticks * _hitCount) - (RefreshTime + CacheTime);
+                return new TimeSpan(AverageRefreshTime.Ticks * (HitCount - UserRefreshCount)) - CacheTime;
                 //return new TimeSpan((AverageRefreshTime - AverageCacheTime).Ticks * (_hitCount - _refreshCount)) - CacheTime;
             }
         }

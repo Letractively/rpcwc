@@ -24,8 +24,12 @@ namespace rpcwc.bo.cache
 
         public override void Refresh(bool visitorRefresh)
         {
+            refreshing = true;
+
             if (visitorRefresh)
-                RefreshCount++;
+                UserRefreshCount++;
+
+            TotalRefreshCount++;
 
             if (!RefresherRunning)
             {
@@ -63,11 +67,13 @@ namespace rpcwc.bo.cache
             LastRefresh = DateTime.Now;
 
             RefreshTime += LastRefresh - startTime;
+
+            refreshing = false;
         }
 
         public IList findEventsByDateRange(DateTime startDate, DateTime endDate)
         {
-            if (!UpToDate)
+            if (!UpToDate && !refreshing)
                 Refresh(true);
 
             DateTime startTime = DateTime.Now;
@@ -79,7 +85,12 @@ namespace rpcwc.bo.cache
             for (DateTime date = startDate; date.CompareTo(endDate) < 0; date = date.AddDays(1))
             {
                 if (EventsMappedByDate.Contains(date))
-                    dates.AddRange((IList) EventsMappedByDate[date]);
+                {
+                    lock (LOCK)
+                    {
+                        dates.AddRange((IList)EventsMappedByDate[date]);
+                    }
+                }
             }
 
             CacheTime += DateTime.Now - startTime;
@@ -90,20 +101,27 @@ namespace rpcwc.bo.cache
 
         public IList findEventsByDate(DateTime date)
         {
-            if (!UpToDate)
+            if (!UpToDate && !refreshing)
                 Refresh(true);
 
             HitCount++;
 
             if (!EventsMappedByDate.Contains(date))
                 return null;
+       
+            IList dates = null;
 
-            return (IList)EventsMappedByDate[date];
+            lock (LOCK)
+            {
+                dates = (IList)EventsMappedByDate[date];
+            }
+
+            return dates;
         }
 
         public IList findEventsByMonth(int year, int month)
         {
-            if (!UpToDate)
+            if (!UpToDate && !refreshing)
                 Refresh(true);
 
             DateTime startTime = DateTime.Now;

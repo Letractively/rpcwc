@@ -20,8 +20,11 @@ namespace rpcwc.bo.cache
 
         public override void Refresh(bool visitorRefresh)
         {
+
             if (visitorRefresh)
-                RefreshCount++;
+                UserRefreshCount++;
+
+            TotalRefreshCount++;
 
             if (!RefresherRunning)
             {
@@ -50,7 +53,7 @@ namespace rpcwc.bo.cache
 
         public HyperLink GetReading()
         {
-            if (!UpToDate)
+            if (!UpToDate && !refreshing)
                 Refresh(true);
 
             DateTime startTime = DateTime.Now;

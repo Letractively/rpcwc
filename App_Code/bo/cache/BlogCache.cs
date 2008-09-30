@@ -48,7 +48,9 @@ namespace rpcwc.bo.cache
         public override void Refresh(bool visitorRefresh)
         {
             if (visitorRefresh)
-                RefreshCount++;
+                UserRefreshCount++;
+
+            TotalRefreshCount++;
 
             if (!RefresherRunning)
             {
