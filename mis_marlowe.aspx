@@ -1,5 +1,6 @@
-﻿<%@ Page Title="Reformed Presbyterian Church &mdash; Jeff and Mischa Marlowe" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="mis_marlowe.aspx.cs" Inherits="mis_marlowe" %>
+﻿<%@ Page Title="Reformed Presbyterian Church &mdash; Jeff and Mischa Marlowe" Language="C#"
+    MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="mis_marlowe.aspx.cs"
+    Inherits="mis_marlowe" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
 </asp:Content>
@@ -9,65 +10,68 @@
     <h4>
         Jeff and Mischa (Undisclosed, <a href="http://www.mtw.org/home/site/templates/splash.asp"
             target="_blank">MTW</a>)</h4>
-    <p>
-        August 19, 2008</p>
-    <p>
-        Dear Kingdom Partners,</p>
     <h3>
-        Training
-    </h3>
+        A Changing World</h3>
     <p>
-        We are thankful for a very rich summer. The entire Marlowe family lived in New York
-        City as a part of MTW’s pre-field training program for new workers going to the
-        field. Jeff directed the program. Mischa helped teach the language acquisition techniques,
-        focusing on phonetics and cultural issues. We had an incredible group of nineteen
-        new workers, ten interns, and five mentors.
+        October 2008
+        <br />
     </p>
     <p>
-        Alex directed the childcare program consisting of 21 kids. Eric, Magali, and Michael
-        were part of an internship program that consisted of childcare, field work in churches,
-        and a mentoring/discipleship component to help them grow spiritually and understand
-        more of God’s diverse world through missions. All were involved in different churches
-        of different ethnic populations. They helped to organize and teach VBS in the inner
-        city, taught ESL to newly arrived immigrants, and were involved in all facets of
-        these great PCA church plants.
+        Dear Partners,
+        <br />
     </p>
     <p>
-        Here is a link to the blog and summary newletter written by the program participants.
-        Hopefully, it will give you a glimpse into a bit of what they experienced during
-        their pre-field training in New York:</p>
+        We trust that you are well despite the chaotic economic and political news these
+        past few weeks. Despite all that is happening in a world that seems a bit out of
+        control at the moment, I need to remind myself that Jesus is on the throne!
+        <br />
+    </p>
     <p>
-        <a href="http://pftnyc2008.wordpress.com/2008/08/05/summary-newsletter/">http://pftnyc2008.wordpress.com/2008/08/05/summary-newsletter/</a>
+        God is indeed ruling. I realized this as I recently traveled and worked with our
+        workers and national partners from various parts of the world over the past month.
+        <br />
     </p>
     <h3>
-        Upcoming Events</h3>
+        Central Asia</h3>
     <p>
-        Please pray for several upcoming events in which our training / Muslim focused team
-        will be conducting and facilitating training:</p>
-    <ul>
-        <li>In September, we will be traveling to a Central Asian Mulsim country on the Caspian
-            Sea to conduct leadership training as well as visit this new MTW site.</li>
-        <li>In November, part of the team will be traveling to Eastern Europe to conduct training
-            on mentoring and leadership.</li>
-        <li>Several other training and consulting trips will take place over the next few months
-            including trips to Belgium.</li>
-    </ul>
+        It’s amazing what God is doing in parts of the world where one would have no idea
+        that people are interested in the Gospel. I just returned from a country in the
+        heart of Central Asia – a Muslim country with a Soviet history where I helped facilitate
+        our leadership in defining vision and structure for our work in the Muslim world.
+        I thoroughly enjoyed the culture in this country – painful history, great food,
+        and intriguing people. Our work is very new to this country within the past year.
+        One of the highlights for me was being able to interact with three national leaders
+        in training. It was exciting to hear their testimonies of coming from a Muslim and
+        communist context as well as their vision for bringing people to Christ and seeing
+        churches planted.
+        <br />
+    </p>
     <h3>
-        Family News</h3>
+        West Africa</h3>
     <p>
-        Magali will be attending Gainesville State College this fall as a freshman. She
-        is living in Athens, GA where her brother Eric is attending the University of Georgia.
-        Pray for both of them as they begin a new year. Alex has moved back home and is
-        looking for a job! After four years of college, he is ready! He is looking for a
-        job in teaching (theater and English) as well as in local professional theater in
-        the Atlanta area.
+        Authentic partnership is becoming the new paradigm for missions. As we seek to empower
+        our national brethren, we are seeing more discussions around the table about vision
+        and strategy that are putting westerners and nationals on an equal footing. This
+        is no easy task. I just finished facilitating meetings among African leaders, the
+        MTW team on the ground in West Africa, and key PCA churches committed to West Africa.
+        We worked on vision, expectations of each other, roles and responsibilities, and
+        learning how to treat each other with all the cross cultural issues that are involved.
+        In this West Africa partnership, composed of three countries with significant Muslim
+        populations, our role is changing as we come along to serve and train. But the vision
+        and strategy are being cast by local leadership. As I reviewed the goals at the
+        end, the vision is bold. The goal of the partnership is to plant 125 churches in
+        the next five years in Islamic regions of the involved countries in West Africa.
+        <br />
     </p>
     <p>
-        We thank you again for your continued partnership with us!
+        We continue to thank you for your prayers and commitment to seeing churches planted
+        and leaders trained!
     </p>
+    <br />
     <p>
-        In Christ,
+        For His Kingdom,
     </p>
+    <br />
     <p>
         Jeff and Mischa</p>
     <p>
