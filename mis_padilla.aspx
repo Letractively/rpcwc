@@ -1,4 +1,5 @@
-﻿<%@ Page Title="Reformed Presbyterian Church &mdash; Tito and Kim Padilla" Language="C#" MasterPageFile="~/MasterPage.master" %>
+﻿<%@ Page Title="Reformed Presbyterian Church &mdash; Tito and Kim Padilla" Language="C#"
+    MasterPageFile="~/MasterPage.master" %>
 
 <script runat="server">
 
@@ -12,66 +13,83 @@
     <h4>
         Tito and Kim Padilla (Tex-Mex border, MNA)</h4>
     <p>
-        Dear Friend in Christ,</p>
+        Dear Praying Friends,
+    </p>
+    
     <p>
-        Great is our God, and gracious and kind are his dealings with us! During this past
-        month we have been abundantly blessed, and so we want to give him the glory!</p>
-    <p>
-        <strong>1. Sports Camp, 2008</strong></p>
-    <p>
-        Thank you for praying diligently for this outreach into the community. Praise God
-        because all went very well this year. We had just about<strong> 80 kids and about 20
-            coaches/assistants and other helpers. </strong>
+        God continues to add more people to our fellowship, for which we are extremely
+        grateful. Moreover, the Lord has been at work in the men of our congregation as
+        we learn and commune together in being disciples of Jesus. Pray for us as we (about
+        7 men) meet on Saturday mornings for life-on-life discipleship.
     </p>
     <p>
-        The kids enjoyed themselves tremendously, and hopefully improved their skills in
-        the different sports they played. God graciously provided the exact volunteers needed
-        through Las Tierras church members, neighbors and a group from Village 7 Church
-        in Colorado Springs. The City of El Paso provided a soccer coach (former professional
-        player in Mexico). However, he twisted his ankle mid-week. Please pray for God to
-        <strong>bring healing to Coach Alex</strong>.</p>
-    <p>
-        We have already had one family from the Sports Camp visit us at church. Please pray
-        for the <strong>Lord to direct the Gonzalez family</strong> back to us if that is
-        his good purpose. Pray that other families would visit and that Las Tierras Church&#39;s
-        love for and service to the community would continue to open many doors of opportunity.</p>
-    <p>
-        <strong>2. Facility Use</strong></p>
-    <p>
-        Praise God that the school district <strong>approved our use of the school band</strong>
-        room for our Sunday worship services for another year!</p>
-    <p>
-        <strong>3. Montana Vista Project, Peña Home</strong></p>
-    <p>
-        The construction of the Peña home is going great! God is providing every step of
-        the way through unexpected people and gifts! To all of you who continue to pray
-        and who have given, a <strong>heart-felt thanks</strong>! Folks from Village Seven
-        Church not only helped at the Sports Camp, but they also served by putting the roof
-        and (most of the) shingles. They labored tirelessly under the El Paso sun with temperatures
-        around 105-107 degrees daily. God preserved and strengthened us for the task.</p>
-    <p>
-        Last week a few of us framed the interior walls of the house and just yesterday
-        we put the windows and doors in place.
+        Pray also...
     </p>
     <p>
-        We will soon have 66% of the funding needed to complete the house. We are hoping
-        to <strong>complete the house by the first week of August. If you (and/or your church)
-            are able to give any size gift, we would be most grateful.</strong> Please pray
-        for God to provide the balance of the monies needed...about <strong>$10,000 more</strong>.
-        Pray for God to bless the teams that are coming throughout the month of July to
-        work on the house. Ask God to mercifully protect and strengthen them so that they
-        may serve with great joy and out of love for Jesus.</p>
+        <strong>1. Sunday, October 19th launch/celebration worship service</strong>
+    </p>
     <p>
-        The Peña family continues to worship with us and needless to say, are thrilled with
-        the progress of their house. (<strong>See the attached picture of the house!)</strong>
-        The day that Alma Peña (the mom) saw the roof on her house, the daughter Brenda
-        told me of how her mom screamed with excitement, and then cried with joy. <strong>What
-            a glorious picture of our response when we see our future everlasting home...our
-            mansion in heaven!</strong></p>
+        On this Sunday we will be holding a special service in which we will invite many
+        people in our community with a view of praying for our community and city. The
+        preparation requires attention to many details for which we ask our Father's blessings.
+    </p>
     <p>
-        Peace in the Great Provider,</p>
+        This Sunday afternoon, the 12th, we plan on distributing 3,000 flyers. Please
+        pray for good weather...Hurricane Norbert in the Pacific Ocean is threatening
+        to bring us rain. We certainly want the rain here in the desert, but would ask
+        God to bring it another afternoon!
+    </p>
     <p>
-        Manuel "Tito" Padilla</p>
+        Please pray for God's blessing on the preaching of the gospel, the music and singing
+        (which is one of our weaknesses!), but above all for Him to be glorified and his
+        Kingdom extended.
+    </p>
+    <p>
+        <strong>2. Vaughn Family</strong>
+    </p>
+    <p>
+        Jeff, Heather and their four children arrived about 3 weeks ago. As you may recall,
+        Jeff, an ordained minister will be working with us at Las Tierras for a couple
+        of years. After this he will probably be sent to work in another area of the border.=20
+    </p>
+    <p>
+        Please pray for the Lord to help them settle in and adjust to border life, and
+        for God to encourage and give them opportunities to use and test their gifts.
+        Pray for me as I have the privilege and responsibility of mentoring Jeff.
+    </p>
+    <p>
+        Pray also for the Lord's protection and provision for them. In the short time
+        they have been here they have had car and computer problems, sicknesses and accidents
+        (their 2 yr old fell off a bunk bed- which he should not have been on- and was
+        blessed with 14 stitches!).
+    </p>
+    <p>
+        <strong>3. Praise for a great Block Party</strong>
+    </p>
+    <p>
+        Thank you for praying for the Lord's blessing on the block party. It was a perfect
+        evening in which neighbors who rarely see each other spent hours getting re-acquainted.
+        Please ask God to grant us favor with our neighbors especially as we invite them
+        to our special service on the 19th.
+    </p>
+    <p>
+        <strong>4. Health and Safety Fair</strong>
+    </p>
+    <p>
+        On October 25, the Las Tierras Neighborhood Association (of which I am their fearless
+        leader!) will be co-hosting, along with the new hospital, a Health Safety Fair
+        in our community. As a church we are supporting and helping organize this event.
+        Please ask the Lord's blessing as folks come for various health screenings.
+    </p>
+    <p>
+        As always, thank you for your faithful prayer and financial support.
+    </p>
+    <p>
+        For the King,
+    </p>
+    <p>
+        Manuel "Tito" Padilla
+    </p>
     <p>
         Note: Make out your tax deductible gifts to: Las Tierras Community Church, and mail
         to 3664 Tierra Calida Dr. El Paso, TX 79938. Thank you!</p>
