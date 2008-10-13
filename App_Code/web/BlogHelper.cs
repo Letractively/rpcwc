@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web.UI.WebControls;
 using rpcwc.vo.Blog;
+using System.Drawing;
 
 /// <summary>
 /// Summary description for BlogHelper
@@ -60,6 +61,7 @@ namespace rpcwc.web
             Panel postFootControl = new Panel();
             postFootControl.Style.Add(HtmlTextWriterStyle.TextAlign, "right");
             postFootControl.Width = new Unit("100%");
+            postFootControl.Style.Add(HtmlTextWriterStyle.PaddingBottom, "2em");
 
             Panel authorAndDate = new Panel();
             authorAndDate.Style.Add("float", "left");
@@ -109,19 +111,27 @@ namespace rpcwc.web
             //WebControl dateHeader = new WebControl(HtmlTextWriterTag.H2);
             //dateHeader.CssClass = "date-header";
             //dateHeader.Controls.Add(new LiteralControl(entry.PubDate.ToString("MMMM d, yyyy")));
-            WebControl postTitleHeader = new WebControl(HtmlTextWriterTag.H3);
+            Label postTitleHeader = new Label();
+            postTitleHeader.Font.Size = FontUnit.Parse("14px");
+            postTitleHeader.Font.Bold = true;
+            postTitleHeader.ForeColor = Color.FromArgb(183,217,125);
             postTitleHeader.CssClass = "post-title";
             postTitleHeader.Controls.Add(new LiteralControl(entry.PubDate.ToString("MMMM d, yyyy: ")));
+
+            postTitleHeader.Controls.Add(new LiteralControl(entry.Title));
+
+            //titleControl.Controls.Add(dateHeader);
+            titleControl.Controls.Add(postTitleHeader);
+
             if (entry.Enclosure != null && entry.Enclosure.Uri != null)
             {
                 HyperLink postTitle = new HyperLink();
-                postTitle.Text = entry.Title;
+                postTitle.Text = "(download)";
                 postTitle.NavigateUrl = entry.Enclosure.Uri;
-                postTitleHeader.Controls.Add(postTitle);
-            } else
-                postTitleHeader.Controls.Add(new LiteralControl(entry.Title));
-            //titleControl.Controls.Add(dateHeader);
-            titleControl.Controls.Add(postTitleHeader);
+                //postTitle.Font.Size = FontUnit.Smaller;
+                titleControl.Controls.Add(new LiteralControl(" "));
+                titleControl.Controls.Add(postTitle);
+            }
 
             return titleControl;
         }
