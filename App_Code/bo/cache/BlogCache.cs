@@ -17,7 +17,10 @@ namespace rpcwc.bo.cache
         private IBloggerDao _bloggerDao;
         private IList _blogEntries = new ArrayList();
         private IDictionary<String, IList<BlogEntry>> _blogEntriesMappedByLabel = new Dictionary<String, IList<BlogEntry>>();
+        private IDictionary<String, IList<BlogEntry>> _newsAndNotesMappedByLabel = new Dictionary<String, IList<BlogEntry>>();
         private Object blogCacheLock = new Object();
+
+        private const String NEWS_AND_NOTES_LABEL = "newsandnotes";
 
         delegate void RefresherDelegate();
 
@@ -78,12 +81,14 @@ namespace rpcwc.bo.cache
             blogEntries.Sort(new BlogEntryComparer());
 
             IDictionary<String, IList<BlogEntry>> blogEntriesMappedByLabel = MapBlogEntriesByLabel(sermonBlogEntries);
+            IDictionary<String, IList<BlogEntry>> newsAndNotesMappedByLabel = MapNewsAndNotesByLabel(sermonBlogEntries);
 
             lock (blogCacheLock)
             {
                 _blogEntries.Clear();
                 ((ArrayList)_blogEntries).AddRange(blogEntries);
                 _blogEntriesMappedByLabel = blogEntriesMappedByLabel;
+                _newsAndNotesMappedByLabel = newsAndNotesMappedByLabel;
                 LastRefresh = DateTime.Now;
             }
 
@@ -105,6 +110,26 @@ namespace rpcwc.bo.cache
             }
 
             return blogEntriesMappedByLabel;
+        }
+
+        private IDictionary<String, IList<BlogEntry>> MapNewsAndNotesByLabel(IList<BlogEntry> blogEntries)
+        {
+            IDictionary<String, IList<BlogEntry>> newsAndNotesMappedByLabel = new Dictionary<String, IList<BlogEntry>>();
+
+            foreach (BlogEntry blogEntry in blogEntries)
+            {
+                if (blogEntry.Categories.Contains(NEWS_AND_NOTES_LABEL))
+                {
+                    foreach (String category in blogEntry.Categories)
+                    {
+                        if (!newsAndNotesMappedByLabel.ContainsKey(category))
+                            newsAndNotesMappedByLabel.Add(category, new List<BlogEntry>());
+                        ((IList<BlogEntry>)newsAndNotesMappedByLabel[category]).Add(blogEntry);
+                    }
+                }
+            }
+
+            return newsAndNotesMappedByLabel;
         }
 
         public IList<BlogEntry> GetSermonPosts()
@@ -130,6 +155,28 @@ namespace rpcwc.bo.cache
             HitCount++;
 
             IList<BlogEntry> blogEntryList = _blogEntriesMappedByLabel[label];
+
+            ArrayList.Adapter((IList)blogEntryList).Sort();
+
+            return blogEntryList;
+        }
+
+        /// <summary>
+        /// Retrieves all news and notes posts marked by the given label
+        /// </summary>
+        /// <param name="label">This is a tag associated with blog posts, representing a bulletin-week</param>
+        /// <returns>A list of news and notes entries in the bulletin for the given week</returns>
+        public IList<BlogEntry> GetNewsAndNotesEntries(String label)
+        {
+            if (!UpToDate)
+                Refresh(true);
+
+            HitCount++;
+
+            if (!_newsAndNotesMappedByLabel.ContainsKey(label))
+                return new List<BlogEntry>();
+
+            IList<BlogEntry> blogEntryList = _newsAndNotesMappedByLabel[label];
 
             ArrayList.Adapter((IList)blogEntryList).Sort();
 
