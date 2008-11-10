@@ -27,7 +27,7 @@ namespace rpcwc.dao.GData
 
                     service.Credentials = new GDataCredentials(username, password);
                     GDataGAuthRequestFactory requestFactory = (GDataGAuthRequestFactory)service.RequestFactory;
-                    //requestFactory.Proxy = new WebProxy(WebRequest.DefaultWebProxy.GetProxy(new Uri("http://www.blogger.com")));
+                    requestFactory.Proxy = new WebProxy(WebRequest.DefaultWebProxy.GetProxy(new Uri("http://www.blogger.com")));
                     requestFactory.AccountType = "GOOGLE";
                 }
                 return _service;
