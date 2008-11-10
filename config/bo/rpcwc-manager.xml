@@ -19,6 +19,7 @@
   </object>
   <object id="NewsAndNotesManager" type="rpcwc.bo.NewsAndNotesManager">
     <property name="itemDAO" ref="ItemDAO" />
+    <property name="BlogCache" ref="BlogCache" />
   </object>
   <object id="BulletinManager" type="rpcwc.bo.BulletinManager">
     <property name="itemDAO" ref="ItemDAO" />
