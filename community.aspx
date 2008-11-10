@@ -9,8 +9,9 @@
             displayed on this page. Please contact the church office for the information.</em></p>
     <asp:Repeater DataSourceID="RPCNewsAndNotesObjectDataSource" runat="server">
         <ItemTemplate>
+            <h3 style="text-align: left;border-bottom: solid 1px #ccc;"><%# DataBinder.Eval(Container.DataItem, "Title") %></h3>
             <p>
-                <%# DataBinder.Eval(Container.DataItem, "summary") %>
+                <%# DataBinder.Eval(Container.DataItem, "Content")%>
             </p>
         </ItemTemplate>
     </asp:Repeater>
