@@ -22,11 +22,13 @@
         </ul>
     </li>
     <li><a href="~/maintenance/blog/default.aspx" runat="server">Sermon Blog Maintenance</a></li>
-    <li><a href="~/maintenance/sermon.aspx" runat="server">Sermon Audio Maintenance</a></li>
-    <li><a href="~/maintenance/calendar.aspx" runat="server">Event Calendar Maintenance</a></li>
+    <!--<li><a href="~/maintenance/sermon.aspx" runat="server">Sermon Audio Maintenance</a></li>-->
+    <li><a href="~/maintenance/cache.aspx" runat="server">Cache Maintenance</a></li>
+    <!--<li><a href="~/maintenance/calendar.aspx" runat="server">Event Calendar Maintenance</a></li>-->
     <li><a href="~/maintenance/alert.aspx" runat="server">News/Alert Maintenance</a></li>
     <li><a href="~/maintenance/bulletin.aspx" runat="server">Bulletin Maintenance</a></li>
     <li><a href="~/maintenance/prayer.aspx" runat="server">Prayer Maintenance</a></li>
+    <li><a href="RestartApplication.aspx" runat="server">Restart Application</a></li>
     </ul>
     </div>
     </form>
