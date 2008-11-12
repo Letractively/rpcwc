@@ -1,0 +1,6 @@
+CREATE PROCEDURE deleteNewsAndNotesEntry
+@itemId smallint
+AS
+DELETE FROM ITEM_DESCRIPTION WHERE ITEM_ID = @itemId;
+
+DELETE FROM ITEM WHERE ITEM_ID = @itemId;

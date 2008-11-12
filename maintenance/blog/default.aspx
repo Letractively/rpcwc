@@ -5,7 +5,7 @@
     public void Inserting(Object source, SqlDataSourceCommandEventArgs eventArgs)
     {
         eventArgs.Command.Parameters["@pubDate"].Value = ((Calendar)FormView1.FindControl("DatePicker")).SelectedDate;
-        eventArgs.Command.Parameters["@title"].Value = ((TextBox)FormView1.FindControl("SermonTitle")).Text;
+        eventArgs.Command.Parameters["@title"].Value = "";// ((TextBox)FormView1.FindControl("SermonTitle")).Text;
     }
     
     public void UploadFile(Object source, CommandEventArgs eventArgs)
@@ -26,8 +26,9 @@
                 BlogMaintenanceSqlDataSource.InsertParameters["link"].DefaultValue = "sermons/" + filename;
                 BlogMaintenanceSqlDataSource.InsertParameters["size"].DefaultValue = FileControl.PostedFile.ContentLength.ToString();
                 BlogMaintenanceSqlDataSource.InsertParameters["type"].DefaultValue = "audio/mpeg3";
-                //BlogMaintenanceSqlDataSource.Insert();
+                    //BlogMaintenanceSqlDataSource.Insert();
                 FormView1.InsertItem(false);
+                
             }
             catch (Exception exception)
             {
@@ -51,11 +52,11 @@
         DeleteCommand="deleteSermonBlogEntry" DeleteCommandType="StoredProcedure">
         <InsertParameters>
             <asp:Parameter Name="channelId" DefaultValue="1" />
-            <asp:Parameter Name="title" Type="String" />
+            <asp:Parameter Name="title" Type="String" DefaultValue="" />
             <asp:Parameter Name="author" DefaultValue='Dr. Stanley D. Gale' />
             <asp:Parameter Name="pubDate" />
-            <asp:Parameter Name="description" Type="String" />
-            <asp:Parameter Name="sermonTextReference" Type="String" />
+            <asp:Parameter Name="description" Type="String" DefaultValue="" />
+            <asp:Parameter Name="sermonTextReference" Type="String" DefaultValue="" />
             <asp:Parameter Name="link" />
             <asp:Parameter Name="size" />
             <asp:Parameter Name="type" />
@@ -99,20 +100,20 @@
                     runat="server" />
             <br />
             <br />
-            <asp:Label ID="SermonTitleLabel1" AssociatedControlID="SermonTitle" Text="Title: "
+<%--            <asp:Label ID="SermonTitleLabel1" AssociatedControlID="SermonTitle" Text="Title: "
                 runat="server" /><asp:TextBox ID="SermonTitle" Text='<%# Bind("title") %>' runat="server" /><br />
             <br />
             <asp:Label ID="ScriptureReferenceLabel1" AssociatedControlID="ScriptureReference"
                 Text="Scripture Reference: " runat="server" /><asp:TextBox ID="ScriptureReference"
                     Text='<%# Bind("sermonTextReference") %>' runat="server" /><br />
-            <br />
+            <br />--%>
             <asp:Label ID="FileControlLabel" AssociatedControlID="FileControl" Text="File: "
                 runat="server" /><asp:FileUpload ID="FileControl" runat="server" /><br />
             <br />
-            <asp:Label ID="BlogEntry1" AssociatedControlID="Description" Text="Blog Entry: " runat="server" /><asp:TextBox
+<%--            <asp:Label ID="BlogEntry1" AssociatedControlID="Description" Text="Blog Entry: " runat="server" /><asp:TextBox
                 ID="Description" runat="server" Text='<%# Bind("description") %>' Rows="10" Wrap="true"
                 Columns="50" TextMode="MultiLine" />
-                <br />
+                <br />--%>
             <asp:LinkButton ID="InsertButton" runat="server" OnCommand="UploadFile" Text="Insert"
                 CausesValidation="false" />
             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False"
@@ -122,12 +123,12 @@
             <b>ID</b>:
             <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
             <br />
-            <b>Title</b>:
+<%--            <b>Title</b>:
             <asp:Label ID="titleLabel" runat="server" Text='<%# Bind("title") %>' />
             <br />
             <b>Sermon Text</b>:
             <asp:Label ID="sermonTextReferenceLabel" runat="server" Text='<%# Bind("sermonTextReference") %>' />
-            <br />
+            <br />--%>
             <!--Preacher:
             <asp:Label ID="authorLabel" runat="server" Text='<%# Bind("author") %>' />
             <br />-->
@@ -137,9 +138,9 @@
             <b>Date Preached</b>:
             <asp:Label ID="pubDateLabel" runat="server" Text='<%# Bind("pubDate") %>' />
             <br />
-            <b>Blog Entry</b>:
+<%--            <b>Blog Entry</b>:
             <asp:Label ID="descriptionLabel" runat="server" Text='<%# Bind("description") %>' />
-            <br />
+            <br />--%>
             <asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New"
                 Text="New" />
             &nbsp;<asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit"

@@ -32,6 +32,6 @@
     <br />
     <br />
     <p>
-        Click <a href="leadershiptraining.aspx" runat="server">here</a> to view information
-        on RPC Leadership Development</p>
+        Click <a href="leadershiptraining.aspx" runat="server">here</a> to view materials
+        for RPC Leadership Development</p>
 </asp:Content>

@@ -1,0 +1,4 @@
+CREATE PROCEDURE markAsRead
+@itemId smallint
+AS
+UPDATE ITEM SET ALL_DAY_EVENT = NULL WHERE ITEM_ID = @itemId

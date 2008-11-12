@@ -1,4 +1,4 @@
-<%@ Master Language="C#" %>
+<%@ Master Language="C#"  %>
 
 <%@ Register TagName="top" TagPrefix="include" Src="~/includes/top.ascx" %>
 <%@ Register TagName="topleftbox" TagPrefix="include" Src="~/includes/topleftbox.ascx" %>
@@ -24,18 +24,6 @@
     <script type="text/javascript" src="scripts/jquery.js"></script>
     <script type="text/javascript" src="scripts/thickbox.js"></script>
 
-<!-- The following are for site traffic analysis -->
-
-    <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-
-    <script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-3375098-2");
-pageTracker._initData();
-pageTracker._trackPageview();
-    </script>
     <script src="http://www.google.com/jsapi?key=ABQIAAAAm3W1dWSp28bnsTNS8d3YjBQ6Az9DtOpeO68GL1uvpKxuBRsCORS7EacS20iqfxoMbZ9v3xFfjBkxjg" type="text/javascript"></script>
     
     <script type="text/javascript" src="scripts/googlesearch.js"></script>
@@ -65,7 +53,7 @@ pageTracker._trackPageview();
             <include:rightside runat="server" />
         </div>
         <div id="content_combined">
-            <div id="main_content">
+            <div id="main_content" width="100%">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
@@ -77,5 +65,18 @@ pageTracker._trackPageview();
         <div id="searchbox" style="display:none;"></div>
         </div>
     </form>
+
+<!-- The following are for site traffic analysis -->
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-3375098-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>    
 </body>
 </html>

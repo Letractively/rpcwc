@@ -28,19 +28,17 @@
         <li>Self-study will focus on biblical qualifications and character and practical training
             for the role of ruling elder or deacon through study, mentoring and activities in
             keeping with PCA <i>Book of Church Order</i> requirements.</li>
-        <li>Meeting schedule: Sunday evenings, 7:00-9:00 p.m.</li>
+        <li>Meeting schedule: Sunday evenings, 7:00-9:00 p.m.
         <ul type="disc">
             <li>Ruling Elder: January 4 &amp; 18, February 1 &amp; 15</li>
             <li>Deacon: January 11 &amp; 25; February 8 &amp; 22</li>
-        </ul>
+        </ul></li>
     </ul>
-    <ul>
         <p>
             Ordination to office would be contingent on examination and an interview with the
             Session and election by the congregation.
-            <br>
+            <br />
         </p>
-    </ul>
     <h3>
         <b>General Leadership Development</b> (6 meetings)
     </h3>
@@ -77,7 +75,7 @@
     <ul type="disc">
         <li>Review Study Bible outlines for Job through Song of Solomon</li>
         <li>Complete Westminster Confession of Faith Study Guide, chapters XI-XXII</li>
-        <li>Read and highlight <i>The Five Points of Calvinism</i></li>
+        <li>Read and highlight <i>The Five Points of Calvinism</i>, pp. 1&ndash;8, 17&ndash;71</li>
     </ul>
     <p>
         October 19</p>
@@ -126,7 +124,7 @@
     </p>
     <p>
         Examination: open book, oral follow up in Session
-        <br>
+        <br />
     </p>
     <p>
         Areas of Examination</p>
@@ -137,18 +135,18 @@
         Theology: English Bible, Theology, ordination questions (BCO 24-5)</p>
     <p>
         Skills: BCO description, sense of call and giftedness (1 Tim 4.14-16), mentor remarks
-        <br>
+        <br />
     </p>
     <p>
         In addition, wives of candidates would be met with to hear their thoughts on their
         husbands’ fitness for the office.
-        <br>
+        <br />
     </p>
     <p>
         Note: role of mentor is prayer support, accountability in study, involve in role,
         help to answer questions, give evaluation at examination</p>
     <p>
-        <br>
+        <br />
     </p>
     <h5 style="text-align: left">RULING ELDER</h5>
     <p>
@@ -158,7 +156,7 @@
         <li><i>The Elder &amp; His Work</i>, Dickson</li>
         <li><i>The Biblical Qualifications for Elders &amp; Deacons</i>, A. A. Allison</li>
     </ul>
-    <br>
+    <br />
     <p>
         Training:</p>
     <ul type="disc">
@@ -184,7 +182,7 @@
         <li>Read and highlight <i>The Elder &amp; His Work</i>, chapters 1-3</li>
         <li>Complete <i>Shepherding God’s Flock</i>, lessons 1-2</li>
     </ul>
-    <br>
+    <br />
     <p>
         January 18</p>
     <ul type="disc">
@@ -193,7 +191,7 @@
         <li>Read and highlight The Elder &amp; His Work, chapters 4-6</li>
         <li>Complete <i>Shepherding God’s Flock</i>, lessons 3-5</li>
     </ul>
-    <br>
+    <br />
     <p>
         February 1</p>
     <ul type="disc">
@@ -202,7 +200,7 @@
         <li>Read and highlight <i>The Elder &amp; His Work</i>, chapters 7-9</li>
         <li>Complete <i>Shepherding God’s Flock</i>, lessons 6-8</li>
     </ul>
-    <br>
+    <br />
     <p>
         February 15</p>
     <ul type="disc">
@@ -213,14 +211,14 @@
     </ul>
     <h5 style="text-align: left">
         <u>DEACON</u></h5>
-    <br>
+    <br />
     <p>
         Materials:</p>
     <ul type="disc">
         <li>Keller video training with study guide</li>
         <li><i>The Biblical Qualifications for Elders &amp; Deacons</i>, A. A. Allison</li>
     </ul>
-    <br>
+    <br />
     <p>
         Training</p>
     <ul type="disc">
@@ -229,16 +227,16 @@
         <li>Visit 3 homes with mentor</li>
         <li>Attend Embers to a Flame seminar, Oct 17-18, 2008</li>
     </ul>
-    <br>
+    <br />
     <p>
         Deacon Mentor ______________________</p>
     <p>
         <b>Schedule </b>
     </p>
-    <br>
+    <br />
     <p>
         Readings <u>in preparation for</u> meeting of:
-        <br>
+        <br />
     </p>
     <p>
         January 11</p>
@@ -247,7 +245,7 @@
             pp. 40-49</li>
         <li>Watch Keller video, lessons 1-3</li>
     </ul>
-    <br>
+    <br />
     <p>
         January 25</p>
     <ul type="disc">
@@ -255,7 +253,7 @@
             pp. 50-56</li>
         <li>Watch Keller video, lessons 4-6</li>
     </ul>
-    <br>
+    <br />
     <p>
         February 8</p>
     <ul type="disc">
@@ -263,7 +261,7 @@
             pp. 57-64</li>
         <li>Watch Keller video, lessons 7-9</li>
     </ul>
-    <br>
+    <br />
     <p>
         February 22</p>
     <ul type="disc">
@@ -271,5 +269,4 @@
             pp. 65-71</li>
         <li>Watch Keller video, lessons 10-12</li>
     </ul>
-    </div>
 </asp:Content>

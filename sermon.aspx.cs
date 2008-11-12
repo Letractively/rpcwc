@@ -24,7 +24,6 @@ namespace rpcwc.web
         protected void Page_Load(Object source, EventArgs eventArgs)
         {
             String label = Request.Params["label"];
-            IList<BlogEntry> blogEntries = null;
 
             if (label != null && !label.Equals(""))
                 DisplayPostsInSeries(label);
