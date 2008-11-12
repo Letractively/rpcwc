@@ -12,7 +12,96 @@
     <property name="RefreshInterval" value="01:00:00" />
   </object>
   <object id="RecommendedReadingsCache" type="rpcwc.bo.cache.RecommendedReadingsCache">
-    <property name="RecommendedReadingsDao" ref="RecommendedReadingsDAO" />
-    <property name="RefreshInterval" value="01:00:00" />
+    <property name="RefreshInterval" value="7.00:00:00" />
+    <property name="ControlRotationList" ref="ControlRotationList" />
+  </object>
+  <object name="ControlRotationList" type="System.Collections.Generic.Dictionary&lt;System.String,System.Collections.Generic.List&lt;System.Web.UI.Control>>">
+    <constructor-arg name="dictionary" >
+      <dictionary key-type="System.String" value-type="System.Collections.Generic.List&lt;System.Web.UI.Control>">
+        <entry key="readings">
+          <list element-type="System.Web.UI.Control">
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5987/nm/What_Is_Biblical_Preaching_Basics_of_the_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/9781596381131t.jpg" />
+              <property name="Text" value="What Is Biblical Preaching? by Alexander, Eric J." />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/4985/nm/Why_Do_We_Baptize_Infants_Basics_of_the_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/1596380586t.jpg" />
+              <property name="Text" value="Why Do We Baptize Infants? by Chapell, Bryan." />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5560/nm/What_Is_Justification_by_Faith_Alone_Basics_of_the_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/9781596380837t.jpg" />
+              <property name="Text" value="What Is Justification by Faith Alone? by Fesko, J. V." />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5988/nm/What_is_Spiritual_Warfare_Basics_of_the_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/9781596381230t.jpg" />
+              <property name="Text" value="What is Spiritual Warfare? by Gale, Stanley D." />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5561/nm/How_Do_We_Glorify_God_Basics_of_the_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/9781596380820t.jpg" />
+              <property name="Text" value="How Do We Glorify God? by Hannah, John D." />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/4867/nm/What_Are_Election_and_Predestination_Basics_of_the_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/1596380454t.jpg" />
+              <property name="Text" value="What Are Election and Predestination? by Phillips, Richard D." />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/2189/nm/What_Is_the_Lord_s_Supper_Basics_of_the_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/0875526470t.jpg" />
+              <property name="Text" value="What Is the Lord's Supper? by Phillips, Richard D." />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/4866/nm/What_Is_the_Christian_Worldview_Basics_of_the_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/159638008Xt.jpg" />
+              <property name="Text" value="What Is the Christian Worldview? by Ryken, Philip Graham" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/39/nm/What_Is_a_True_Calvinist_Basics_of_the_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/0875525989t.jpg" />
+              <property name="Text" value="What Is a True Calvinist? by Ryken, Philip Graham" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/4992/nm/How_Our_Children_Come_to_Faith_Basics_of_the_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/1596380535t.jpg" />
+              <property name="Text" value="How Our Children Come to Faith by Smallman, Stephen" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/43/nm/What_Is_a_Reformed_Church_Basics_of_the_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/0875525946t.jpg" />
+              <property name="Text" value="What Is a Reformed Church? by Smallman, Stephen" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/3932/nm/What_Is_True_Conversion_Basics_of_Reformed_Faith_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/0875526594t.jpg" />
+              <property name="Text" value="What Is True Conversion? by Smallman, Stephen" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5666/nm/What_Is_Providence_Basics_of_the_Reformed_Faith_Paperback_"/>
+              <property name="ImageUrl" value="~/images/readings/9781596380929t.jpg" />
+              <property name="Text" value="What Is Providence? by Thomas, Derek" />
+            </object>
+          </list>
+        </entry>
+        <entry key="readingsOld">
+          <list element-type="System.Web.UI.Control">
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="ImageUrl" value="~/images/jehoshaphat.jpg" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5190/nm/Prayer_of_Jehoshaphat_Seeing_Beyond_Life_s_Storms_Paperback_" />
+              <property name="Text" value="The Prayer of Jehoshaphat, Stanley D. Gale" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="ImageUrl" value="~/images/ferguson_inchristalone.jpg" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5457/nm/In_Christ_Alone_Reflections_on_the_Heart_of_the_Gospel_Hardcover_" />
+              <property name="Text" value="In Christ Alone, Sinclair Ferguson" />
+            </object>
+          </list>
+        </entry>
+      </dictionary>
+    </constructor-arg>
   </object>
 </objects>

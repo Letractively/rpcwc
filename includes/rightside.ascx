@@ -36,19 +36,11 @@
         </ItemTemplate>
     </asp:DataList>
 <asp:SiteMapDataSource ID="SiteMapSource" runat="server" StartingNodeUrl="~/resources.aspx" ShowStartingNode="false" />
-<asp:SqlDataSource ID="RecommendedReadingDataSource" ConnectionString="<%$ ConnectionStrings:RPC %>"
- SelectCommand="findRecommendedReading" SelectCommandType="StoredProcedure" runat="server">
-    <SelectParameters>
-        <asp:Parameter Name="channelId" DefaultValue="9" />
-    </SelectParameters>
-</asp:SqlDataSource>
+
 <br />
 <h2>
     Recommended Reading</h2>
 <br />
-<asp:Repeater ID="Repeater1" OnItemDataBound="ItemDataBound" DataSourceID="RecommendedReadingDataSource" runat="server">
-<ItemTemplate>
-<a href="<%# DataBinder.Eval(Container.DataItem, "link")%>"><img src="<%# DataBinder.Eval(Container.DataItem, "url")%>" alt="<%# DataBinder.Eval(Container.DataItem, "title")%>" /></a>
-</ItemTemplate>
-</asp:Repeater>
+<asp:Panel id="RecommendedReading" OnPreRender="GetRecommendedReading" runat="server">
+</asp:Panel>
 <br />

@@ -4,6 +4,7 @@ using System.Web;
 using rpcwc.dao;
 using System.Collections;
 using System.Web.UI.WebControls;
+using System.Web.UI;
 
 /// <summary>
 /// Summary description for RecommendedReadingCache
@@ -12,9 +13,11 @@ namespace rpcwc.bo.cache
 {
     public class RecommendedReadingsCache : AbstractCache
     {
-        private RecommendedReadingsDAO _recommendedReadingsDao;
+        private IDictionary<String, IList<Control>> _controlRotationList = new Dictionary<String, IList<Control>>();
         private Queue _recommendedReadings = new Queue();
         private Object LOCK = new Object();
+
+        private const String READINGS_KEY = "readings";
 
         delegate void RefresherDelegate();
 
@@ -35,16 +38,15 @@ namespace rpcwc.bo.cache
 
             DateTime startTime = DateTime.Now;
 
-            IList recommendedReadings = RecommendedReadingsDao.FindAllActiveRecommendedReadings();
+            IList<Control> recommendedReadings = ControlRotationList[READINGS_KEY];
 
             lock (LOCK)
             {
                 RecommendedReadings.Clear();
-                foreach (Object recommendedReading in recommendedReadings)
+                foreach (Control recommendedReading in recommendedReadings)
                 {
                     RecommendedReadings.Enqueue(recommendedReading);
                 }
-                //_recommendedReadings = recommendedReadings;
             }
 
             LastRefresh = DateTime.Now;
@@ -73,16 +75,16 @@ namespace rpcwc.bo.cache
             return reading;
         }
 
-        public RecommendedReadingsDAO RecommendedReadingsDao
-        {
-            get { return _recommendedReadingsDao; }
-            set { _recommendedReadingsDao = value; }
-        }
-
         public Queue RecommendedReadings
         {
             get { return _recommendedReadings; }
             set { _recommendedReadings = value; }
+        }
+
+        public IDictionary<String, IList<Control>> ControlRotationList
+        {
+            get { return _controlRotationList; }
+            set { _controlRotationList = value; }
         }
     }
 }
