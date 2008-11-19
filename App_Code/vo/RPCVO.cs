@@ -7,6 +7,8 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
+using Newtonsoft.Json;
+using System.IO;
 
 /// <summary>
 /// Summary description for RPCVO
@@ -17,6 +19,11 @@ namespace rpcwc.vo
     {
         private String _id;
         private bool _active;
+        
+        public override string ToString()
+        {
+            return JavaScriptConvert.SerializeObject(this);
+        }
 
         public String id
         {
