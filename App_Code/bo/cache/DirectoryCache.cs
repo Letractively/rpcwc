@@ -31,6 +31,8 @@ namespace rpcwc.bo.cache
 
             TotalRefreshCount++;
 
+            DateTime startTime = DateTime.Now;
+
             IList directoryEntries = DirectoryDao.getDirectory();
             IList<Directory> directoryList = new List<Directory>();
             foreach (Directory directoryEntry in directoryEntries)
