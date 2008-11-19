@@ -64,7 +64,7 @@
     <property name="calendarManager" ref="CalendarManager" />
   </object>
   <object type="~/members/directory.aspx" parent="basePage">
-    <property name="DirectoryManager" ref="DirectoryManager" />
+    <property name="DirectoryCache" ref="DirectoryCache" />
 
   </object>
   <object type="~/maintenance/calendar.aspx" parent="basePage" />

@@ -3,10 +3,6 @@ using System.Data;
 using System.Configuration;
 using System.Web;
 using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using rpcwc.dao;
 using System.Collections.Generic;
 using rpcwc.vo.directory;
@@ -18,7 +14,8 @@ using System.Collections;
 namespace rpcwc.bo.cache
 {
     public class DirectoryCache : AbstractCache {
-        private DirectoryDAO _directoryDao;
+        //private DirectoryDAO _directoryDao;
+        private DirectoryManager _directoryManager;
         private IList<Directory> _directoryEntries;
         private static Object LOCK = new Object();
 
@@ -33,7 +30,7 @@ namespace rpcwc.bo.cache
 
             DateTime startTime = DateTime.Now;
 
-            IList directoryEntries = DirectoryDao.getDirectory();
+            IList directoryEntries = DirectoryManager.getDirectory();
             IList<Directory> directoryList = new List<Directory>();
             foreach (Directory directoryEntry in directoryEntries)
             {
@@ -84,11 +81,17 @@ namespace rpcwc.bo.cache
                 return _directoryEntries;
             }
         }
-
+        /*
         public DirectoryDAO DirectoryDao
         {
             get { return _directoryDao; }
             set { _directoryDao = value; }
+        }*/
+
+        public DirectoryManager DirectoryManager
+        {
+            get { return _directoryManager; }
+            set { _directoryManager = value; }
         }
 	
     }

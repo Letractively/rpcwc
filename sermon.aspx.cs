@@ -42,6 +42,17 @@ namespace rpcwc.web
 
                 BlogHolder.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
             }
+
+            Panel specialSeriesPanel = new Panel();
+            HyperLink specialSeriesLink = new HyperLink();
+            specialSeriesLink.Text = "Click here";
+            specialSeriesLink.NavigateUrl = ResolveClientUrl("sermon.aspx?label=special");
+            specialSeriesPanel.Controls.Add(specialSeriesLink);
+            specialSeriesPanel.Controls.Add(new LiteralControl(" to view all special sermons"));
+
+            BlogHolder.Controls.Add(specialSeriesPanel);
+
+            BlogHolder.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
         }
 
         private Control BuildSermonSeriesLabel(SermonSeries sermonSeries)

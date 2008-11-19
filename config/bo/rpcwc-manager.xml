@@ -30,6 +30,7 @@
         <ref object="BlogCache" />
         <ref object="CalendarCache" />
         <ref object="RecommendedReadingsCache" />
+        <ref object="DirectoryCache" />
       </list>
     </property>
   </object>

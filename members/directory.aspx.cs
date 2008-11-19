@@ -5,19 +5,20 @@ using System.Web.UI.WebControls;
 using rpcwc.vo.directory;
 using rpcwc.bo;
 using System.Collections.Generic;
+using rpcwc.bo.cache;
 
 namespace rpcwc.web.members
 {
     public partial class directory : Page
     {
-        private DirectoryManager _directoryManager;
+        private DirectoryCache _directoryCache;
 
         delegate WebControl BuildCellDelegate(Directory directoryEntry);
 
         protected void Page_Load(object sender, EventArgs e)
         {
             BuildCellDelegate buildCellDelegate = DirectoryHelper.makeCell;
-            IList directory = DirectoryManager.getDirectory();
+            IList<Directory> directory = DirectoryCache.FindDirectoryEntries();
             WebControl table = new WebControl(HtmlTextWriterTag.Table);
             WebControl colgroup = new WebControl(HtmlTextWriterTag.Colgroup);
             WebControl col = new WebControl(HtmlTextWriterTag.Col);
@@ -47,12 +48,12 @@ namespace rpcwc.web.members
 
         }
 
-        
 
-        public DirectoryManager DirectoryManager
+
+        public DirectoryCache DirectoryCache
         {
-            get { return _directoryManager; }
-            set { _directoryManager = value; }
+            get { return _directoryCache; }
+            set { _directoryCache = value; }
         }
     }
 }

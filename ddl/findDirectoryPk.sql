@@ -1,0 +1,7 @@
+CREATE PROCEDURE
+findDirectoryPk
+@entryId smallint
+AS
+SELECT     LAST_NAME, ADDRESS_1, ADDRESS_2, CITY, STATE, ZIP, ENTRY_ID
+FROM         DIRECTORY AS d
+WHERE	(ENTRY_ID = @entryId)
