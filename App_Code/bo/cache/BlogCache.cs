@@ -154,6 +154,9 @@ namespace rpcwc.bo.cache
 
             HitCount++;
 
+            if (!_blogEntriesMappedByLabel.ContainsKey(label))
+                return new List<BlogEntry>();
+
             IList<BlogEntry> blogEntryList = _blogEntriesMappedByLabel[label];
 
             ArrayList.Adapter((IList)blogEntryList).Sort();

@@ -14,17 +14,9 @@ namespace rpcwc.dao.sql
     public class DirectoryDAOSQL : RPCWCDAO, DirectoryDAO
     {
         private FindDirectoryQuery _findDirectoryQuery;
-        private FindDirEmailQuery _findDirEmailQuery;
-        private FindDirPhoneQuery _findDirPhoneQuery;
-        private FindPersonQuery _findPersonQuery;
-        private FindPersonEmailQuery _findPersonEmailQuery;
-        private FindPersonPhoneQuery _findPersonPhoneQuery;
+        private FindDirectoryPkQuery _findDirectoryPkQuery;
         private static string directoryCommandString = "findDirectory";
-        private static string emailForDirCommandString = "findEmailForDir";
-        private static string phonesForDirCommandString = "findPhoneForDir";
-        private static string personCommandString = "findPersonForDir";
-        private static string emailForPersonCommandString = "findEmailForPerson";
-        private static string phonesForPersonCommandString = "findPhoneForPerson";
+        private static string directoryPkCommandString = "findDirectoryPk";
 
         public class FindDirectoryQuery : MappingAdoQuery
         {
@@ -52,173 +44,43 @@ namespace rpcwc.dao.sql
             }
         }
 
-        public class FindDirEmailQuery : MappingAdoQuery
+        public class FindDirectoryPkQuery : MappingAdoQuery
         {
-            public FindDirEmailQuery(IDbProvider dbProvider, string sql)
+            public FindDirectoryPkQuery(IDbProvider dbProvider, string sql)
                 : base(dbProvider, sql)
             {
                 CommandType = CommandType.StoredProcedure;
                 DeclaredParameters = new DbParameters(dbProvider);
-                DeclaredParameters.Add("entryId", SqlDbType.TinyInt);
+                DeclaredParameters.Add("entryId", SqlDbType.SmallInt);
                 Compile();
             }
 
             protected override object MapRow(IDataReader dataReader, int num)
             {
-                Email email = new Email();
-                email.emailAddress = getString(dataReader, 0);
-                email.emailType = getString(dataReader, 1);
-                email.id = getByte(dataReader, 2).ToString();
+                Directory directory = new Directory();
 
-                return email;
+                directory.lastName = getString(dataReader, 0);
+                directory.address1 = getString(dataReader, 1);
+                directory.address2 = getString(dataReader, 2);
+                directory.city = getString(dataReader, 3);
+                directory.state = getString(dataReader, 4);
+                directory.zip = getString(dataReader, 5);
+                directory.id = getByte(dataReader, 6).ToString();
+
+                return directory;
             }
         }
 
-        public class FindDirPhoneQuery : MappingAdoQuery
+        public IList findAllDirectoryEntriesActive()
         {
-            public FindDirPhoneQuery(IDbProvider dbProvider, string sql)
-                : base(dbProvider, sql)
-            {
-                CommandType = CommandType.StoredProcedure;
-                DeclaredParameters = new DbParameters(dbProvider);
-                DeclaredParameters.Add("entryId", SqlDbType.TinyInt);
-                Compile();
-            }
-
-            protected override object MapRow(IDataReader dataReader, int num)
-            {
-                Phone phone = new Phone();
-                phone.phoneNumber = getString(dataReader, 0);
-                phone.phoneType = getString(dataReader, 1);
-                phone.id = getByte(dataReader, 2).ToString();
-
-                return phone;
-            }
+            return findDirectoryQuery.Query();
         }
 
-        public class FindPersonQuery : MappingAdoQuery
+        public Directory find(String directoryId)
         {
-            public FindPersonQuery(IDbProvider dbProvider, string sql)
-                : base(dbProvider, sql)
-            {
-                CommandType = CommandType.StoredProcedure;
-                DeclaredParameters = new DbParameters(dbProvider);
-                DeclaredParameters.Add("entryId", SqlDbType.TinyInt);
-                Compile();
-            }
-
-            protected override object MapRow(IDataReader dataReader, int num)
-            {
-                Person person = new Person();
-                person.id = getInt16(dataReader, 0).ToString();
-                person.firstName = getString(dataReader, 2);
-                person.lastName = getString(dataReader, 3);
-                person.birthDate = getDateTime(dataReader, 4);
-                person.isMember = getBoolean(dataReader, 5);
-                return person;
-            }
-        }
-
-        public class FindPersonEmailQuery : MappingAdoQuery
-        {
-            public FindPersonEmailQuery(IDbProvider dbProvider, string sql)
-                : base(dbProvider, sql)
-            {
-                CommandType = CommandType.StoredProcedure;
-                DeclaredParameters = new DbParameters(dbProvider);
-                DeclaredParameters.Add("personEntryId", SqlDbType.SmallInt);
-                Compile();
-            }
-
-            protected override object MapRow(IDataReader dataReader, int num)
-            {
-                Email email = new Email();
-                email.emailAddress = getString(dataReader, 0);
-                email.emailType = getString(dataReader, 1);
-                email.id = getByte(dataReader, 2).ToString();
-
-                return email;
-            }
-        }
-
-        public class FindPersonPhoneQuery : MappingAdoQuery
-        {
-            public FindPersonPhoneQuery(IDbProvider dbProvider, string sql)
-                : base(dbProvider, sql)
-            {
-                CommandType = CommandType.StoredProcedure;
-                DeclaredParameters = new DbParameters(dbProvider);
-                DeclaredParameters.Add("personEntryId", SqlDbType.SmallInt);
-                Compile();
-            }
-
-            protected override object MapRow(IDataReader dataReader, int num)
-            {
-                Phone phone = new Phone();
-                phone.phoneNumber = getString(dataReader, 0);
-                phone.phoneType = getString(dataReader, 1);
-                phone.id = getByte(dataReader, 2).ToString();
-
-                return phone;
-            }
-        }
-
-        public IList getDirectory()
-        {
-
-            IList directoryEntries = findDirectoryQuery.Query();
-
-            foreach (Directory directoryEntry in directoryEntries)
-            {
-                directoryEntry.emails = getEmails(directoryEntry);
-                directoryEntry.phones = getPhones(directoryEntry);
-                directoryEntry.persons = getPersons(directoryEntry);
-            }
-
-            return directoryEntries;
-        }
-
-        public IList getPersons(Directory directory)
-        {
-            IDictionary parameterMap = new Hashtable(1);
-            parameterMap.Add("@entryId", directory.id);
-            IList personList = findPersonQuery.QueryByNamedParam(parameterMap);
-
-            foreach (Person person in personList)
-            {
-                person.emails = getEmails(person);
-                person.phones = getPhones(person);
-            }
-
-            return personList;
-        }
-
-        public IList getEmails(Directory directory)
-        {
-            IDictionary parameterMap = new Hashtable(1);
-            parameterMap.Add("@entryId", directory.id);
-            return findDirEmailQuery.QueryByNamedParam(parameterMap);
-        }
-
-        public IList getPhones(Directory directory)
-        {
-            IDictionary parameterMap = new Hashtable(1);
-            parameterMap.Add("@entryId", directory.id);
-            return findDirPhoneQuery.QueryByNamedParam(parameterMap);
-        }
-
-        public IList getEmails(Person person)
-        {
-            IDictionary parameterMap = new Hashtable(1);
-            parameterMap.Add("@personEntryId", person.id);
-            return findPersonEmailQuery.QueryByNamedParam(parameterMap);
-        }
-
-        public IList getPhones(Person person)
-        {
-            IDictionary parameterMap = new Hashtable(1);
-            parameterMap.Add("@personEntryId", person.id);
-            return findPersonPhoneQuery.QueryByNamedParam(parameterMap);
+            IDictionary paramMap = new Hashtable();
+            paramMap.Add("@entryId", directoryId);
+            return (Directory)findDirectoryPkQuery.QueryForObject(paramMap);
         }
 
         public FindDirectoryQuery findDirectoryQuery
@@ -234,70 +96,17 @@ namespace rpcwc.dao.sql
                 _findDirectoryQuery = value;
             }
         }
-        public FindDirEmailQuery findDirEmailQuery
+
+        public FindDirectoryPkQuery findDirectoryPkQuery
         {
             get
             {
-                if (_findDirEmailQuery == null)
-                    _findDirEmailQuery = new FindDirEmailQuery(dbProvider, emailForDirCommandString);
-                return _findDirEmailQuery;
+                if (_findDirectoryPkQuery == null)
+                    _findDirectoryPkQuery = new FindDirectoryPkQuery(dbProvider, directoryPkCommandString);
+                return _findDirectoryPkQuery;
             }
-            set
-            {
-                _findDirEmailQuery = value;
-            }
+            set { _findDirectoryPkQuery = value; }
         }
-        public FindDirPhoneQuery findDirPhoneQuery
-        {
-            get
-            {
-                if (_findDirPhoneQuery == null)
-                    _findDirPhoneQuery = new FindDirPhoneQuery(dbProvider, phonesForDirCommandString);
-                return _findDirPhoneQuery;
-            }
-            set
-            {
-                _findDirPhoneQuery = value;
-            }
-        }
-        public FindPersonQuery findPersonQuery
-        {
-            get
-            {
-                if (_findPersonQuery == null)
-                    _findPersonQuery = new FindPersonQuery(dbProvider, personCommandString);
-                return _findPersonQuery;
-            }
-            set
-            {
-                _findPersonQuery = value;
-            }
-        }
-        public FindPersonEmailQuery findPersonEmailQuery
-        {
-            get
-            {
-                if (_findPersonEmailQuery == null)
-                    _findPersonEmailQuery = new FindPersonEmailQuery(dbProvider, emailForPersonCommandString);
-                return _findPersonEmailQuery;
-            }
-            set
-            {
-                _findPersonEmailQuery = value;
-            }
-        }
-        public FindPersonPhoneQuery findPersonPhoneQuery
-        {
-            get
-            {
-                if (_findPersonPhoneQuery == null)
-                    _findPersonPhoneQuery = new FindPersonPhoneQuery(dbProvider, phonesForPersonCommandString);
-                return _findPersonPhoneQuery;
-            }
-            set
-            {
-                _findPersonPhoneQuery = value;
-            }
-        }
+
     }
 }

@@ -33,4 +33,10 @@
       </list>
     </property>
   </object>
+  <object id="DirectoryManager" type="rpcwc.bo.DirectoryManager">
+    <property name="DirectoryDAO" ref="DirectoryDAO" />
+    <property name="DirectoryEmailDao" ref="DirectoryEmailDao" />
+    <property name="DirectoryPersonDao" ref="DirectoryPersonDao" />
+    <property name="DirectoryPhoneDao" ref="DirectoryPhoneDao" />
+  </object>
 </objects>
