@@ -5,44 +5,6 @@
 <%@ Import Namespace="Spring.Context" %>
 <%@ Import Namespace="Spring.Context.Support" %>
 
-<script type="text/C#" runat="server">
-    protected void SetBold(object sender, DayRenderEventArgs eventArgs)
-    {
-        if (dates.Contains(eventArgs.Day.Date))
-        {
-            eventArgs.Day.IsSelectable = true;
-            eventArgs.Cell.Font.Bold = true;
-        }
-        else
-        {
-            eventArgs.Day.IsSelectable = false;
-        }
-    }
-
-    protected void VisibleMonthChanged(object sender, MonthChangedEventArgs eventArgs)
-    {
-        dates = calendarManager.findDatesByMonth(eventArgs.NewDate.Year, eventArgs.NewDate.Month);
-    }
-
-    protected void Page_Load(object sender, EventArgs eventArgs)
-    {        
-        if (SmallCalendarControl.VisibleDate.Ticks == 0)
-        {
-            dates = calendarManager.findDatesByMonth(DateTime.Today.Year, DateTime.Today.Month);
-        }
-        else
-        {
-            dates = calendarManager.findDatesByMonth(SmallCalendarControl.VisibleDate.Year, SmallCalendarControl.VisibleDate.Month);
-        }
-    }
-
-    protected void DisplayCalendar(object sender, EventArgs eventArgs)
-    {
-        Server.Transfer(String.Format("{0}?selectedDate={1}", "calendar.aspx", SmallCalendarControl.SelectedDate.ToShortDateString()));
-    }
-    
-</script>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <rpc:AlertMarquee runat="server" />
     <table style="width: 390; border: 0px; margin: auto;">
