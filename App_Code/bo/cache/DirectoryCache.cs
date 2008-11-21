@@ -19,6 +19,8 @@ namespace rpcwc.bo.cache
         private IList<Directory> _directoryEntries;
         private static Object LOCK = new Object();
 
+        delegate void RefresherDelegate();
+
         public override void Refresh(bool visitorRefresh)
         {
             refreshing = true;
@@ -27,6 +29,13 @@ namespace rpcwc.bo.cache
                 UserRefreshCount++;
 
             TotalRefreshCount++;
+
+            if (!RefresherRunning)
+            {
+                RefresherDelegate refresherDelegate = RefreshAndSleep;
+                refresherDelegate.BeginInvoke(delegate(IAsyncResult result) { }, null);
+                RefresherRunning = true;
+            }
 
             DateTime startTime = DateTime.Now;
 
