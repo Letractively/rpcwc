@@ -25,35 +25,35 @@ namespace rpcwc.bo
             return calendarDAO.findEventDetails(itemId);
         }
 
-        public IDictionary findDatesByMonth(int year, int month)
+        public IDictionary<DateTime, IList<Event>> findDatesByMonth(int year, int month)
         {
-            IList events = CalendarCache.findEventsByMonth(year, month);
-            IDictionary eventsMappedByDate = new Hashtable();
+            IList<Event> events = CalendarCache.findEventsByMonth(year, month);
+            IDictionary<DateTime, IList<Event>> eventsMappedByDate = new Dictionary<DateTime, IList<Event>>();
 
             CalendarUtil.EventByDateMapKeyCreator eventByDateMapKeyCreator = new CalendarUtil.EventByDateMapKeyCreator();
             foreach (Event eventObj in events)
             {
-                Object key = eventByDateMapKeyCreator.createKey(eventObj);
-                if (!eventsMappedByDate.Contains(key))
-                    eventsMappedByDate.Add(key, new ArrayList());
+                DateTime key = (DateTime) eventByDateMapKeyCreator.createKey(eventObj);
+                if (!eventsMappedByDate.ContainsKey(key))
+                    eventsMappedByDate.Add(key, new List<Event>());
                 
-                ((IList)eventsMappedByDate[key]).Add(eventObj);
+                eventsMappedByDate[key].Add(eventObj);
             }
 
             return eventsMappedByDate;
         }
 
-        public IList findEventsForDay(DateTime date)
+        public IList<Event> findEventsForDay(DateTime date)
         {
             return CalendarCache.findEventsByDate(date);
         }
 
-        public IList findEventsByDateRange(DateTime startDate, DateTime endDate)
+        public IList<Event> findEventsByDateRange(DateTime startDate, DateTime endDate)
         {
             return CalendarCache.findEventsByDateRange(startDate, endDate);
         }
 
-        public IList findSpecialEventsFuture()
+        public IList<Event> findSpecialEventsFuture()
         {
             return calendarDAO.findSpecialEventsFuture();
         }
@@ -74,9 +74,9 @@ namespace rpcwc.bo
         private void addToDate(EventCalendar eventCalendar, DateTime date, Event scheduledEvent)
         {
             if (eventCalendar.events[date] == null)
-                eventCalendar.events[date] = new ArrayList();
+                eventCalendar.events[date] = new List<Event>();
 
-            ((ArrayList)eventCalendar.events[date]).Add(scheduledEvent);
+            eventCalendar.events[date].Add(scheduledEvent);
         }
 
         public CalendarDAO calendarDAO
@@ -89,10 +89,8 @@ namespace rpcwc.bo
 
         public CalendarCache CalendarCache
         {
-            get
-            { return _calendarCache; }
-            set
-            { _calendarCache = value; }
+            get { return _calendarCache; }
+            set { _calendarCache = value; }
         }
 
         public Event findEventDetails(int itemId)

@@ -15,8 +15,8 @@ namespace rpcwc.bo.cache
 {
     public class CalendarCache : AbstractCache
     {
-        private IDictionary _eventsMappedByMonth = new Hashtable();
-        private IDictionary _eventsMappedByDate = new Hashtable();
+        private IDictionary<DateTime, IList<Event>> _eventsMappedByMonth = new Dictionary<DateTime, IList<Event>>();
+        private IDictionary<DateTime, IList<Event>> _eventsMappedByDate = new Dictionary<DateTime, IList<Event>>();
         private CalendarDAO _calendarDAO;
         private static Object LOCK = new Object();
 
@@ -38,7 +38,7 @@ namespace rpcwc.bo.cache
                 RefresherRunning = true;
             }
 
-            IDictionary dateMapList = new Hashtable(5);
+            IDictionary<DateTime, IList<Event>> dateMapList = new Dictionary<DateTime, IList<Event>>(5);
 
             DateTime startTime = DateTime.Now;
 
@@ -47,15 +47,16 @@ namespace rpcwc.bo.cache
             dateMapList.Add(new DateTime( DateTime.Today.AddMonths(1).Year, DateTime.Today.AddMonths(1).Month, 1 ), calendarDAO.findEventsByDateRange(DateUtils.getStartOfMonth(DateTime.Today.AddMonths(1)), DateUtils.getEndOfMonth(DateTime.Today.AddMonths(1))));
 
             EventsMappedByDate.Clear();
-            foreach (IList events in dateMapList.Values)
+
+            foreach (IList<Event> events in dateMapList.Values)
             {
                 foreach (Event eventObj in events)
                 {
-                    Object key = eventObj.date.Date;
-                    if (!EventsMappedByDate.Contains(key))
-                        EventsMappedByDate[key] = new ArrayList();
+                    DateTime key = eventObj.date.Date;
+                    if (!EventsMappedByDate.ContainsKey(key))
+                        EventsMappedByDate[key] = new List<Event>();
 
-                    ((IList)EventsMappedByDate[key]).Add(eventObj);
+                    EventsMappedByDate[key].Add(eventObj);
                 }
             }
 
@@ -71,7 +72,7 @@ namespace rpcwc.bo.cache
             refreshing = false;
         }
 
-        public IList findEventsByDateRange(DateTime startDate, DateTime endDate)
+        public IList<Event> findEventsByDateRange(DateTime startDate, DateTime endDate)
         {
             if (!UpToDate && !refreshing)
                 Refresh(true);
@@ -80,15 +81,15 @@ namespace rpcwc.bo.cache
 
             HitCount++;
 
-            ArrayList dates = new ArrayList();
+            List<Event> dates = new List<Event>();
 
             for (DateTime date = startDate; date.CompareTo(endDate) < 0; date = date.AddDays(1))
             {
-                if (EventsMappedByDate.Contains(date))
+                if (EventsMappedByDate.ContainsKey(date))
                 {
                     lock (LOCK)
                     {
-                        dates.AddRange((IList)EventsMappedByDate[date]);
+                        dates.AddRange(EventsMappedByDate[date]);
                     }
                 }
             }
@@ -99,27 +100,27 @@ namespace rpcwc.bo.cache
         }
 
 
-        public IList findEventsByDate(DateTime date)
+        public IList<Event> findEventsByDate(DateTime date)
         {
             if (!UpToDate && !refreshing)
                 Refresh(true);
 
             HitCount++;
 
-            if (!EventsMappedByDate.Contains(date))
+            if (!EventsMappedByDate.ContainsKey(date))
                 return null;
-       
-            IList dates = null;
+
+            IList<Event> dates = null;
 
             lock (LOCK)
             {
-                dates = (IList)EventsMappedByDate[date];
+                dates = EventsMappedByDate[date];
             }
 
             return dates;
         }
 
-        public IList findEventsByMonth(int year, int month)
+        public IList<Event> findEventsByMonth(int year, int month)
         {
             if (!UpToDate && !refreshing)
                 Refresh(true);
@@ -128,11 +129,11 @@ namespace rpcwc.bo.cache
 
             HitCount++;
 
-            IList dateMap = null;
+            IList<Event> dateMap = null;
 
             lock (LOCK)
             {
-                dateMap = (IList)EventsMappedByMonth[new DateTime(year, month, 1)];
+                dateMap = EventsMappedByMonth[new DateTime(year, month, 1)];
             }
 
             CacheTime += DateTime.Now - startTime;
@@ -140,7 +141,7 @@ namespace rpcwc.bo.cache
             return dateMap;
         }
 
-        public IDictionary EventsMappedByMonth
+        public IDictionary<DateTime, IList<Event>> EventsMappedByMonth
         {
             get
             {
@@ -152,7 +153,7 @@ namespace rpcwc.bo.cache
             }
         }
 
-        public IDictionary EventsMappedByDate
+        public IDictionary<DateTime, IList<Event>> EventsMappedByDate
         {
             get
             {

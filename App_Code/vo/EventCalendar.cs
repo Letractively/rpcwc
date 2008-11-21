@@ -8,6 +8,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Summary description for EventCalendar
@@ -17,39 +18,12 @@ namespace rpcwc.vo
     public class EventCalendar
     {
         //private IList _events;
-        private IDictionary _events;
+        private IDictionary<DateTime, IList<Event>> _events;
 
-        public EventCalendar()
+        public IDictionary<DateTime, IList<Event>> events
         {
-            //
-            // TODO: Add constructor logic here
-            //
+            get { return _events; }
+            set { _events = value; }
         }
-
-
-        public IDictionary events
-        {
-            get
-            {
-                return _events;
-            }
-            set
-            {
-                _events = value;
-            }
-        }
-
-        /*
-
-        public IList events
-        {
-            get {
-                return _events;
-            }
-            set {
-                _events = value;
-            }
-        }
-         * */
     }
 }

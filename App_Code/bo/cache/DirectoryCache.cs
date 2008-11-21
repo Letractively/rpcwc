@@ -17,9 +17,19 @@ namespace rpcwc.bo.cache
         //private DirectoryDAO _directoryDao;
         private DirectoryManager _directoryManager;
         private IList<Directory> _directoryEntries;
+        private IDictionary<String, Directory> _directoryEntriesMappedById;
         private static Object LOCK = new Object();
 
         delegate void RefresherDelegate();
+
+        public class DirectoryByIdMapKeyCreator : CollectionUtils.MapKeyCreator<String, Directory>
+        {
+            public String createKey(Directory obj)
+            {
+                Directory directryEntry = (Directory)obj;
+                return directryEntry.id;
+            }
+        }
 
         public override void Refresh(bool visitorRefresh)
         {
@@ -41,15 +51,24 @@ namespace rpcwc.bo.cache
 
             IList directoryEntries = DirectoryManager.getDirectory();
             IList<Directory> directoryList = new List<Directory>();
+            
             foreach (Directory directoryEntry in directoryEntries)
             {
                 directoryList.Add(directoryEntry);
             }
 
+            IDictionary<String, Directory> directoryEntriesMappedById =
+                CollectionUtils.Map(directoryList, new DirectoryByIdMapKeyCreator());
+
             lock (LOCK)
             {
                 DirectoryEntries.Clear();
                 ((List<Directory>)DirectoryEntries).AddRange(directoryList);
+                DirectoryEntriesMappedById.Clear();
+                foreach (KeyValuePair<String, Directory> directoryEntry in directoryEntriesMappedById)
+                {
+                    DirectoryEntriesMappedById.Add(directoryEntry);
+                }
             }
 
             LastRefresh = DateTime.Now;
@@ -81,6 +100,30 @@ namespace rpcwc.bo.cache
             return directoryList;
         }
 
+        public Directory FindDirectoryEntryPk(string directoryId)
+        {
+            if (!UpToDate && !refreshing)
+                Refresh(true);
+
+            DateTime startTime = DateTime.Now;
+
+            HitCount++;
+
+            Directory directoryEntry = null;
+
+            lock (LOCK)
+            {
+                if (DirectoryEntriesMappedById.ContainsKey(directoryId))
+                {
+                    directoryEntry = DirectoryEntriesMappedById[directoryId];
+                }
+            }
+
+            CacheTime += DateTime.Now - startTime;
+
+            return directoryEntry;
+        }
+
         public IList<Directory> DirectoryEntries
         {
             get
@@ -88,6 +131,16 @@ namespace rpcwc.bo.cache
                 if (_directoryEntries == null)
                     _directoryEntries = new List<Directory>();
                 return _directoryEntries;
+            }
+        }
+
+        public IDictionary<String, Directory> DirectoryEntriesMappedById
+        {
+            get
+            {
+                if (_directoryEntriesMappedById == null)
+                    _directoryEntriesMappedById = new Dictionary<String, Directory>();
+                return _directoryEntriesMappedById;
             }
         }
         /*
@@ -102,6 +155,5 @@ namespace rpcwc.bo.cache
             get { return _directoryManager; }
             set { _directoryManager = value; }
         }
-	
     }
 }
