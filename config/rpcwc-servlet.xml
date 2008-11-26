@@ -84,4 +84,7 @@
   <object type="~/maintenance/directory/default.aspx">
     <property name="DirectoryManager" ref="DirectoryManager" />
   </object>
+  <object type="~/maintenance/directory/directoryEntry.aspx">
+    <property name="DirectoryCache" ref="DirectoryCache" />
+  </object>
 </objects>

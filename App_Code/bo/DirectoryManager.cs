@@ -1,7 +1,5 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Web;
-using System.Collections;
 using rpcwc.dao;
 using rpcwc.vo.directory;
 
@@ -12,15 +10,14 @@ namespace rpcwc.bo
 {
     public class DirectoryManager
     {
-        private DirectoryDAO _directoryDAO;
-        private DirectoryEmailDao _directoryEmailDao;
-        private DirectoryPersonDao _directoryPersonDao;
-        private DirectoryPhoneDao _directoryPhoneDao;
+        private IDirectoryDAO _directoryDAO;
+        private IDirectoryEmailDao _directoryEmailDao;
+        private IDirectoryPersonDao _directoryPersonDao;
+        private IDirectoryPhoneDao _directoryPhoneDao;
 
-        public IList getDirectory()
+        public IList<Directory> getDirectory()
         {
-
-            IList directoryEntries = DirectoryDAO.findAllDirectoryEntriesActive();
+            IList<Directory> directoryEntries = DirectoryDAO.findAllDirectoryEntriesActive();
 
             foreach (Directory directoryEntry in directoryEntries)
             {
@@ -30,10 +27,10 @@ namespace rpcwc.bo
             return directoryEntries;
         }
 
-        public Directory findDirectoryEntry(String directoryId)
+        /*public Directory findDirectoryEntry(String directoryId)
         {
             return DirectoryDAO.find(directoryId);
-        }
+        }*/
 
         public void populateDirectoryDetails(Directory directoryEntry)
         {
@@ -49,30 +46,30 @@ namespace rpcwc.bo
             }
         }
 
-        public IList findAllDirectoryEntries()
+        public IList<Directory> findAllDirectoryEntries()
         {
             return DirectoryDAO.findAllDirectoryEntriesActive();
         }
 
-        public DirectoryDAO DirectoryDAO
+        public IDirectoryDAO DirectoryDAO
         {
             get { return _directoryDAO; }
             set { _directoryDAO = value; }
         }
 
-        public DirectoryEmailDao DirectoryEmailDao
+        public IDirectoryEmailDao DirectoryEmailDao
         {
             get { return _directoryEmailDao; }
             set { _directoryEmailDao = value; }
         }
 
-        public DirectoryPersonDao DirectoryPersonDao
+        public IDirectoryPersonDao DirectoryPersonDao
         {
             get { return _directoryPersonDao; }
             set { _directoryPersonDao = value; }
         }
 
-        public DirectoryPhoneDao DirectoryPhoneDao
+        public IDirectoryPhoneDao DirectoryPhoneDao
         {
             get { return _directoryPhoneDao; }
             set { _directoryPhoneDao = value; }

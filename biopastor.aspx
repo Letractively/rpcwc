@@ -7,7 +7,7 @@
             Biography of Pastor Stan Gale</h4>
     </p>
     <p>
-        <img src="~/images/stangale.gif" width="329" height="165" /></p>
+        <img src="~/images/stangale.gif" width="329" height="165" runat="server" /></p>
     <p>
         Stanley D. Gale has served as pastor of RPC since 1988.&nbsp; He and his wife, Linda,
         married in 1975.&nbsp; They have four children and two grandchildren.&nbsp; He holds

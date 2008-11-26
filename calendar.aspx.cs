@@ -39,7 +39,7 @@ namespace rpcwc.web
 
             WebControl eventControl = new WebControl(HtmlTextWriterTag.Div);
             eventControl.Controls.Add(CalendarUtil.getDateHeader(SmallCalendarControl.SelectedDate.Date));
-            
+
             foreach (Event oneEvent in eventList)
             {
                 results.Add(createEventControlDelegate.BeginInvoke(oneEvent, delegate(IAsyncResult result) { }, null));
@@ -104,14 +104,8 @@ namespace rpcwc.web
 
         public CalendarManager calendarManager
         {
-            get
-            {
-                return _calendarManager;
-            }
-            set
-            {
-                _calendarManager = value;
-            }
+            get { return _calendarManager; }
+            set { _calendarManager = value; }
         }
     }
 }

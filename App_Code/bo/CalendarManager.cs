@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections;
-using System.Web.UI.WebControls;
-using Spring.Context;
-using Spring.Context.Support;
-using System.Web.UI;
 using System.Collections.Generic;
+using rpcwc.bo.cache;
 using rpcwc.dao;
 using rpcwc.vo;
-using rpcwc.util;
-using rpcwc.bo.cache;
 
 /// <summary>
 /// Summary description for CalendarManager
@@ -28,19 +23,9 @@ namespace rpcwc.bo
         public IDictionary<DateTime, IList<Event>> findDatesByMonth(int year, int month)
         {
             IList<Event> events = CalendarCache.findEventsByMonth(year, month);
-            IDictionary<DateTime, IList<Event>> eventsMappedByDate = new Dictionary<DateTime, IList<Event>>();
-
+            
             CalendarUtil.EventByDateMapKeyCreator eventByDateMapKeyCreator = new CalendarUtil.EventByDateMapKeyCreator();
-            foreach (Event eventObj in events)
-            {
-                DateTime key = (DateTime) eventByDateMapKeyCreator.createKey(eventObj);
-                if (!eventsMappedByDate.ContainsKey(key))
-                    eventsMappedByDate.Add(key, new List<Event>());
-                
-                eventsMappedByDate[key].Add(eventObj);
-            }
-
-            return eventsMappedByDate;
+            return CollectionUtils.MapAsLists(events, eventByDateMapKeyCreator);
         }
 
         public IList<Event> findEventsForDay(DateTime date)
@@ -79,6 +64,11 @@ namespace rpcwc.bo
             eventCalendar.events[date].Add(scheduledEvent);
         }
 
+        public Event findEventDetails(int itemId)
+        {
+            return calendarDAO.findEventDetails(itemId);
+        }
+
         public CalendarDAO calendarDAO
         {
             get
@@ -91,11 +81,6 @@ namespace rpcwc.bo
         {
             get { return _calendarCache; }
             set { _calendarCache = value; }
-        }
-
-        public Event findEventDetails(int itemId)
-        {
-            return calendarDAO.findEventDetails(itemId);
         }
     }
 }

@@ -2,16 +2,17 @@
 using System.Collections;
 using System.Data;
 using Spring.Data.Common;
-using Spring.Data.Objects;
+using Spring.Data.Objects.Generic;
 using rpcwc.dao;
 using rpcwc.vo.directory;
+using System.Collections.Generic;
 
 /// <summary>
 /// Summary description for DirectoryDAOSQL
 /// </summary>
 namespace rpcwc.dao.sql
 {
-    public class DirectoryDAOSQL : RPCWCDAO, DirectoryDAO
+    public class DirectoryDAOSQL : RPCWCDAO, IDirectoryDAO
     {
         private FindDirectoryQuery _findDirectoryQuery;
         private FindDirectoryPkQuery _findDirectoryPkQuery;
@@ -28,7 +29,7 @@ namespace rpcwc.dao.sql
                 Compile();
             }
 
-            protected override object MapRow(IDataReader dataReader, int num)
+            protected override T MapRow<T>(IDataReader dataReader, int num)
             {
                 Directory directory = new Directory();
 
@@ -40,7 +41,7 @@ namespace rpcwc.dao.sql
                 directory.zip = getString(dataReader, 5);
                 directory.id = getByte(dataReader, 6).ToString();
 
-                return directory;
+                return (T)(object)directory;
             }
         }
 
@@ -55,7 +56,7 @@ namespace rpcwc.dao.sql
                 Compile();
             }
 
-            protected override object MapRow(IDataReader dataReader, int num)
+            protected override T MapRow<T>(IDataReader dataReader, int num)
             {
                 Directory directory = new Directory();
 
@@ -67,20 +68,20 @@ namespace rpcwc.dao.sql
                 directory.zip = getString(dataReader, 5);
                 directory.id = getByte(dataReader, 6).ToString();
 
-                return directory;
+                return (T)(object)directory;
             }
         }
 
-        public IList findAllDirectoryEntriesActive()
+        public IList<Directory> findAllDirectoryEntriesActive()
         {
-            return findDirectoryQuery.Query();
+            return findDirectoryQuery.Query<Directory>();
         }
 
         public Directory find(String directoryId)
         {
             IDictionary paramMap = new Hashtable();
             paramMap.Add("@entryId", directoryId);
-            return (Directory)findDirectoryPkQuery.QueryForObject(paramMap);
+            return findDirectoryPkQuery.QueryForObject<Directory>(paramMap);
         }
 
         public FindDirectoryQuery findDirectoryQuery

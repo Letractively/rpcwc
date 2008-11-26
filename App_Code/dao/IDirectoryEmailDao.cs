@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Collections;
+using rpcwc.vo.directory;
 
 /// <summary>
 /// Summary description for DirectoryEmailDao
 /// </summary>
 namespace rpcwc.dao
 {
-    public interface DirectoryEmailDao
+    public interface IDirectoryEmailDao
     {
-        IList findDirectoryLevelEmail(String directoryId);
-        IList findPersonLevelEmail(String personEntryId);
+        IList<Email> findDirectoryLevelEmail(String directoryId);
+        IList<Email> findPersonLevelEmail(String personEntryId);
     }
 }

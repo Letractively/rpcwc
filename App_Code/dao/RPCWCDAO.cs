@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using Spring.Data.Common;
+using Spring.Data.Objects.Generic;
 
 /// <summary>
 /// Summary description for RPCWCDAO
@@ -10,6 +11,7 @@ namespace rpcwc.dao
     public class RPCWCDAO
     {
         private IDbProvider _dbProvider;
+
 
         protected static string getString(IDataReader dataReader, int column)
         {
@@ -53,14 +55,8 @@ namespace rpcwc.dao
 
         public IDbProvider dbProvider
         {
-            get
-            {
-                return _dbProvider;
-            }
-            set
-            {
-                _dbProvider = value;
-            }
+            get { return _dbProvider; }
+            set { _dbProvider = value; }
         }
     }
 }

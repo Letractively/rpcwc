@@ -5,14 +5,14 @@ using System.Collections;
 using rpcwc.vo.directory;
 using Spring.Data.Common;
 using System.Data;
-using Spring.Data.Objects;
+using Spring.Data.Objects.Generic;
 
 /// <summary>
 /// Summary description for DirectoryEmailDaoSql
 /// </summary>
 namespace rpcwc.dao.sql
 {
-    public class DirectoryEmailDaoSql : RPCWCDAO, DirectoryEmailDao
+    public class DirectoryEmailDaoSql : RPCWCDAO, IDirectoryEmailDao
     {
         private FindDirEmailQuery _findDirEmailQuery;
         private FindPersonEmailQuery _findPersonEmailQuery;
@@ -29,14 +29,14 @@ namespace rpcwc.dao.sql
                 Compile();
             }
 
-            protected override object MapRow(IDataReader dataReader, int num)
+            protected override T MapRow<T>(IDataReader dataReader, int num)
             {
                 Email email = new Email();
                 email.emailAddress = getString(dataReader, 0);
                 email.emailType = getString(dataReader, 1);
                 email.id = getByte(dataReader, 2).ToString();
 
-                return email;
+                return (T)(object)email;
             }
         }
 
@@ -51,31 +51,31 @@ namespace rpcwc.dao.sql
                 Compile();
             }
 
-            protected override object MapRow(IDataReader dataReader, int num)
+            protected override T MapRow<T>(IDataReader dataReader, int num)
             {
                 Email email = new Email();
                 email.emailAddress = getString(dataReader, 0);
                 email.emailType = getString(dataReader, 1);
                 email.id = getByte(dataReader, 2).ToString();
 
-                return email;
+                return (T)(object)email;
             }
         }
 
         #region DirectoryEmailDao Members
 
-        public System.Collections.IList findDirectoryLevelEmail(string directoryId)
+        public IList<Email> findDirectoryLevelEmail(string directoryId)
         {
             IDictionary parameterMap = new Hashtable(1);
             parameterMap.Add("@entryId", directoryId);
-            return findDirEmailQuery.QueryByNamedParam(parameterMap);
+            return findDirEmailQuery.QueryByNamedParam<Email>(parameterMap);
         }
 
-        public System.Collections.IList findPersonLevelEmail(string personEntryId)
+        public IList<Email> findPersonLevelEmail(string personEntryId)
         {
             IDictionary parameterMap = new Hashtable(1);
             parameterMap.Add("@personEntryId", personEntryId);
-            return findPersonEmailQuery.QueryByNamedParam(parameterMap);
+            return findPersonEmailQuery.QueryByNamedParam<Email>(parameterMap);
         }
 
         #endregion

@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Collections;
+using rpcwc.vo.directory;
 
 /// <summary>
 /// Summary description for DirectoryPersonDao
 /// </summary>
 namespace rpcwc.dao
 {
-    public interface DirectoryPersonDao
+    public interface IDirectoryPersonDao
     {
-        IList findPersonEntries(String directoryId);
+        IList<Person> findPersonEntries(String directoryId);
     }
 }

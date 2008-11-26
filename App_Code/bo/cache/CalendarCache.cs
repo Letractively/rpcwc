@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Web;
 using System.Collections;
-using Spring.Collections;
-using rpcwc.bo.cache;
+using System.Collections.Generic;
 using rpcwc.dao;
 using rpcwc.util;
 using rpcwc.vo;
@@ -42,27 +39,27 @@ namespace rpcwc.bo.cache
 
             DateTime startTime = DateTime.Now;
 
-            dateMapList.Add(new DateTime( DateTime.Today.Year, DateTime.Today.Month, 1), calendarDAO.findEventsByDateRange(DateUtils.getStartOfMonth(DateTime.Today), DateUtils.getEndOfMonth(DateTime.Today)));
-            dateMapList.Add(new DateTime( DateTime.Today.AddMonths(-1).Year, DateTime.Today.AddMonths(-1).Month, 1 ), calendarDAO.findEventsByDateRange(DateUtils.getStartOfMonth(DateTime.Today.AddMonths(-1)), DateUtils.getEndOfMonth(DateTime.Today.AddMonths(-1))));
-            dateMapList.Add(new DateTime( DateTime.Today.AddMonths(1).Year, DateTime.Today.AddMonths(1).Month, 1 ), calendarDAO.findEventsByDateRange(DateUtils.getStartOfMonth(DateTime.Today.AddMonths(1)), DateUtils.getEndOfMonth(DateTime.Today.AddMonths(1))));
+            dateMapList.Add(new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1), calendarDAO.findEventsByDateRange(DateUtils.getStartOfMonth(DateTime.Today), DateUtils.getEndOfMonth(DateTime.Today)));
+            dateMapList.Add(new DateTime(DateTime.Today.AddMonths(-1).Year, DateTime.Today.AddMonths(-1).Month, 1), calendarDAO.findEventsByDateRange(DateUtils.getStartOfMonth(DateTime.Today.AddMonths(-1)), DateUtils.getEndOfMonth(DateTime.Today.AddMonths(-1))));
+            dateMapList.Add(new DateTime(DateTime.Today.AddMonths(1).Year, DateTime.Today.AddMonths(1).Month, 1), calendarDAO.findEventsByDateRange(DateUtils.getStartOfMonth(DateTime.Today.AddMonths(1)), DateUtils.getEndOfMonth(DateTime.Today.AddMonths(1))));
 
-            EventsMappedByDate.Clear();
-
-            foreach (IList<Event> events in dateMapList.Values)
-            {
-                foreach (Event eventObj in events)
-                {
-                    DateTime key = eventObj.date.Date;
-                    if (!EventsMappedByDate.ContainsKey(key))
-                        EventsMappedByDate[key] = new List<Event>();
-
-                    EventsMappedByDate[key].Add(eventObj);
-                }
-            }
+            IDictionary<DateTime, IList<Event>> eventsMappedByDate = CollectionUtils.MapAsLists(CollectionUtils.ConcatenateLists(dateMapList.Values), new CalendarUtil.EventByDateMapKeyCreator());
 
             lock (LOCK)
             {
-                EventsMappedByMonth = dateMapList;
+                EventsMappedByMonth.Clear();
+
+                foreach (KeyValuePair<DateTime, IList<Event>> events in dateMapList)
+                {
+                    EventsMappedByMonth[events.Key] = events.Value;
+                }
+
+                EventsMappedByDate.Clear();
+
+                foreach (KeyValuePair<DateTime, IList<Event>> events in eventsMappedByDate)
+                {
+                    EventsMappedByDate[events.Key] = events.Value;
+                }
             }
 
             LastRefresh = DateTime.Now;
@@ -98,7 +95,6 @@ namespace rpcwc.bo.cache
 
             return dates;
         }
-
 
         public IList<Event> findEventsByDate(DateTime date)
         {
@@ -143,38 +139,20 @@ namespace rpcwc.bo.cache
 
         public IDictionary<DateTime, IList<Event>> EventsMappedByMonth
         {
-            get
-            {
-                return _eventsMappedByMonth;
-            }
-            set
-            {
-                _eventsMappedByMonth = value;
-            }
+            get { return _eventsMappedByMonth; }
+            set { _eventsMappedByMonth = value; }
         }
 
         public IDictionary<DateTime, IList<Event>> EventsMappedByDate
         {
-            get
-            {
-                return _eventsMappedByDate;
-            }
-            set
-            {
-                _eventsMappedByDate = value;
-            }
+            get { return _eventsMappedByDate; }
+            set { _eventsMappedByDate = value; }
         }
 
         public CalendarDAO calendarDAO
         {
-            get
-            {
-                return _calendarDAO;
-            }
-            set
-            {
-                _calendarDAO = value;
-            }
+            get { return _calendarDAO; }
+            set { _calendarDAO = value; }
         }
     }
 }

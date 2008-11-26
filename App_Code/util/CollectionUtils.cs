@@ -8,22 +8,16 @@ using System.Collections;
 /// </summary>
 public static class CollectionUtils
 {
-    public static IDictionary map(ICollection collection, MapKeyCreator mapKeyCreator, bool mapAsLists)
+    public static IList<T> ConcatenateLists<T>(ICollection<IList<T>> lists)
     {
-        IDictionary map = new Hashtable();
+        List<T> concatenatedList = new List<T>();
 
-        foreach (Object obj in collection)
+        foreach (IList<T> list in lists)
         {
-            if (mapAsLists) {
-                if (!map.Contains(mapKeyCreator.createKey(obj)))
-                    map.Add(mapKeyCreator.createKey(obj), new ArrayList());
-                ((IList) map[mapKeyCreator.createKey(obj)]).Add(obj);
-            } else {
-                map.Add(mapKeyCreator.createKey(obj), obj);
-            }
+            concatenatedList.AddRange(list);
         }
 
-        return map;
+        return concatenatedList;
     }
 
     public static IDictionary<TKey, TValue> Map<TKey, TValue>(ICollection<TValue> collection, MapKeyCreator<TKey, TValue> mapKeyCreator)
@@ -55,10 +49,5 @@ public static class CollectionUtils
     public interface MapKeyCreator<TKey, TValue>
     {
         TKey createKey(TValue obj);
-    }
-
-    public interface MapKeyCreator
-    {
-        Object createKey(Object obj);
     }
 }

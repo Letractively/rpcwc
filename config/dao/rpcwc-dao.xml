@@ -10,7 +10,6 @@
   <import resource="sql/DirectoryPhoneDAOSQL-context.xml" />
   <import resource="sql/DirectoryEmailDAOSQL-context.xml" />
   <import resource="sql/ItemDAOSQL-context.xml" />
-  <import resource="sql/RecommendedReadingsDAOSQL-context.xml" />
   <import resource="gdata/BloggerDaoGData-context.xml" />
   <import resource="gdata/GDataDaoHelper-context.xml" />
   <alias name="CalendarDAOGData" alias="CalendarDAO" />
@@ -21,7 +20,6 @@
   <alias name="DirectoryEmailDaoSql" alias="DirectoryEmailDao" />
   <alias name="DirectoryPhoneDaoSql" alias="DirectoryPhoneDao" />
   <alias name="ItemDAOSQL" alias="ItemDAO" />
-  <alias name="RecommendedReadingsDAOSQL" alias="RecommendedReadingsDAO" />
   <db:provider id="DbProvider"
                provider="System.Data.SqlClient"
                connectionString="Data Source=beeserver9.bee.net;Initial Catalog=rpcwc;Persist Security Info=True;User ID=rpcwc;Password=xrpcwcx"/>

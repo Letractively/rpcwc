@@ -6,7 +6,6 @@
     <property name="CalendarCache" ref="CalendarCache" />
   </object>
   <object id="PodcastManager" type="rpcwc.bo.PodcastManager">
-    <property name="itemDAO" ref="ItemDAO" />
     <property name="channelDAO" ref="ChannelDAO" />
     <property name="BlogManager" ref="BlogManager" />
   </object>

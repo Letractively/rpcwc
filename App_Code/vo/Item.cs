@@ -6,7 +6,7 @@ using System.Xml;
 /// </summary>
 namespace rpcwc.vo
 {
-    public class Item : IComparable
+    public class Item : IComparable<Item>
     {
         private String _url;
         private String _author;
@@ -67,6 +67,15 @@ namespace rpcwc.vo
             return "";
         }
 
+        #region IComparable<Item> Members
+
+        public int CompareTo(Item obj)
+        {
+            return pubDate.CompareTo(obj.pubDate);
+        }
+
+        #endregion
+
         public String url
         {
             get { return _url; }
@@ -108,14 +117,5 @@ namespace rpcwc.vo
             get { return _formatProvider; }
             set { _formatProvider = value; }
         }
-
-        #region IComparable Members
-
-        public int CompareTo(object obj)
-        {
-            return pubDate.CompareTo(((Item)obj).pubDate);
-        }
-
-        #endregion
     }
 }

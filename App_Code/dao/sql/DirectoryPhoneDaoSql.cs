@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Web;
 using System.Collections;
 using rpcwc.vo.directory;
-using Spring.Data.Objects;
+using Spring.Data.Objects.Generic;
 using Spring.Data.Common;
 using System.Data;
 
@@ -12,7 +12,7 @@ using System.Data;
 /// </summary>
 namespace rpcwc.dao.sql
 {
-    public class DirectoryPhoneDaoSql : RPCWCDAO, DirectoryPhoneDao
+    public class DirectoryPhoneDaoSql : RPCWCDAO, IDirectoryPhoneDao
     {
         private FindDirPhoneQuery _findDirPhoneQuery;
         private FindPersonPhoneQuery _findPersonPhoneQuery;
@@ -31,14 +31,14 @@ namespace rpcwc.dao.sql
                 Compile();
             }
 
-            protected override object MapRow(IDataReader dataReader, int num)
+            protected override T MapRow<T>(IDataReader dataReader, int num)
             {
                 Phone phone = new Phone();
                 phone.phoneNumber = getString(dataReader, 0);
                 phone.phoneType = getString(dataReader, 1);
                 phone.id = getByte(dataReader, 2).ToString();
 
-                return phone;
+                return (T)(object)phone;
             }
         }
 
@@ -53,31 +53,31 @@ namespace rpcwc.dao.sql
                 Compile();
             }
 
-            protected override object MapRow(IDataReader dataReader, int num)
+            protected override T MapRow<T>(IDataReader dataReader, int num)
             {
                 Phone phone = new Phone();
                 phone.phoneNumber = getString(dataReader, 0);
                 phone.phoneType = getString(dataReader, 1);
                 phone.id = getByte(dataReader, 2).ToString();
 
-                return phone;
+                return (T)(object)phone;
             }
         }
 
         #region DirectoryPhoneDao Members
 
-        public System.Collections.IList findDirectoryLevelPhone(string directoryId)
+        public IList<Phone> findDirectoryLevelPhone(string directoryId)
         {
             IDictionary parameterMap = new Hashtable(1);
             parameterMap.Add("@entryId", directoryId);
-            return findDirPhoneQuery.QueryByNamedParam(parameterMap);
+            return findDirPhoneQuery.QueryByNamedParam<Phone>(parameterMap);
         }
 
-        public System.Collections.IList findPersonLevelPhone(string personEntryId)
+        public IList<Phone> findPersonLevelPhone(string personEntryId)
         {
             IDictionary parameterMap = new Hashtable(1);
             parameterMap.Add("@personEntryId", personEntryId);
-            return findPersonPhoneQuery.QueryByNamedParam(parameterMap);
+            return findPersonPhoneQuery.QueryByNamedParam<Phone>(parameterMap);
         }
 
         #endregion

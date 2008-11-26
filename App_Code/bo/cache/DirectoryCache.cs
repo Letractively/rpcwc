@@ -1,12 +1,7 @@
 using System;
-using System.Data;
-using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using rpcwc.dao;
+using System.Collections;
 using System.Collections.Generic;
 using rpcwc.vo.directory;
-using System.Collections;
 
 /// <summary>
 /// Summary description for DirectoryCache
@@ -49,14 +44,8 @@ namespace rpcwc.bo.cache
 
             DateTime startTime = DateTime.Now;
 
-            IList directoryEntries = DirectoryManager.getDirectory();
-            IList<Directory> directoryList = new List<Directory>();
+            IList<Directory> directoryList = DirectoryManager.getDirectory();
             
-            foreach (Directory directoryEntry in directoryEntries)
-            {
-                directoryList.Add(directoryEntry);
-            }
-
             IDictionary<String, Directory> directoryEntriesMappedById =
                 CollectionUtils.Map(directoryList, new DirectoryByIdMapKeyCreator());
 

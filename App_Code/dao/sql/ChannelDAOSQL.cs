@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
-using Spring.Data.Objects;
+using Spring.Data.Objects.Generic;
 using Spring.Data.Common;
 using System.Data;
 using System.Collections;
@@ -29,7 +29,7 @@ namespace rpcwc.dao.sql
                 Compile();
             }
 
-            protected override object MapRow(IDataReader dataReader, int num)
+            protected override T MapRow<T>(IDataReader dataReader, int num)
             {
                 Channel channel = new Channel();
 
@@ -39,7 +39,7 @@ namespace rpcwc.dao.sql
                 channel.language = getString(dataReader, 3);
                 channel.copyright = getString(dataReader, 4);
 
-                return channel;
+                return (T)(object)channel;
             }
         }
 
@@ -48,7 +48,7 @@ namespace rpcwc.dao.sql
             IDictionary parameterMap = new Hashtable(1);
             parameterMap.Add("@channelId", channelId);
 
-            return (Channel)findChannelQuery.QueryForObject(parameterMap);
+            return findChannelQuery.QueryForObject<Channel>(parameterMap);
         }
 
 

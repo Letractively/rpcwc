@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Collections;
+using rpcwc.vo.directory;
 
 /// <summary>
 /// Summary description for DirectoryPhoneDao
 /// </summary>
 namespace rpcwc.dao
 {
-    public interface DirectoryPhoneDao
+    public interface IDirectoryPhoneDao
     {
-        IList findDirectoryLevelPhone(String directoryId);
-        IList findPersonLevelPhone(String personEntryId);
+        IList<Phone> findDirectoryLevelPhone(String directoryId);
+        IList<Phone> findPersonLevelPhone(String personEntryId);
     }
 }

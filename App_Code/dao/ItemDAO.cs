@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using rpcwc.vo;
 
 /// <summary>
 /// Summary description for ItemDAO
@@ -7,9 +9,9 @@ namespace rpcwc.dao
 {
     public interface ItemDAO
     {
-        IList findItemsRSS(int channelId);
-        IList findItemsPrayerRSS(int channelId);
-        IList findItemsPodcast(int channelId);
-        IList findAllActive(int channelId);
+        IList<Item> findItemsRSS(int channelId);
+        IList<Item> findItemsPrayerRSS(int channelId);
+        IList<Item> findItemsPodcast(int channelId);
+        IList<Item> findAllActive(int channelId);
     }
 }

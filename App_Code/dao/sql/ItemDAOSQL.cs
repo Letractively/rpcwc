@@ -13,9 +13,10 @@ using System.Globalization;
 using Spring.Context.Support;
 using Spring.Context;
 using Spring.Data.Common;
-using Spring.Data.Objects;
+using Spring.Data.Objects.Generic;
 using rpcwc.dao;
 using rpcwc.vo;
+using System.Collections.Generic;
 
 /// <summary>
 /// Summary description for ItemDAOSQL
@@ -48,7 +49,7 @@ namespace rpcwc.dao.sql
                 Compile();
             }
 
-            protected override object MapRow(IDataReader dataReader, int num)
+            protected override T MapRow<T>(IDataReader dataReader, int num)
             {
                 Item item = new Item();
 
@@ -58,7 +59,7 @@ namespace rpcwc.dao.sql
                 item.summary = getString(dataReader, 3);
                 item.pubDate = getDateTime(dataReader, 4);
 
-                return item;
+                return (T)(object)item;
             }
         }
 
@@ -73,7 +74,7 @@ namespace rpcwc.dao.sql
                 Compile();
             }
 
-            protected override object MapRow(IDataReader dataReader, int num)
+            protected override T MapRow<T>(IDataReader dataReader, int num)
             {
                 Item item = new Item();
 
@@ -83,7 +84,7 @@ namespace rpcwc.dao.sql
                 item.summary = getString(dataReader, 5);
                 item.pubDate = getDateTime(dataReader, 4);
 
-                return item;
+                return (T)(object)item;
             }
         }
 
@@ -98,7 +99,7 @@ namespace rpcwc.dao.sql
                 Compile();
             }
 
-            protected override object MapRow(IDataReader dataReader, int num)
+            protected override T MapRow<T>(IDataReader dataReader, int num)
             {
                 Item item = new Item();
 
@@ -108,11 +109,11 @@ namespace rpcwc.dao.sql
                 item.summary = getString(dataReader, 3);
                 item.pubDate = getDateTime(dataReader, 4);
 
-                return item;
+                return (T)(object)item;
             }
         }
 
-        public IList findItemsRSS(int channelId)
+        public IList<Item> findItemsRSS(int channelId)
         {
             if (channelId == 6)
                 return findItemsPrayerRSS(channelId);
@@ -120,30 +121,30 @@ namespace rpcwc.dao.sql
             IDictionary parameterMap = new Hashtable(1);
             parameterMap.Add("@channelId", channelId);
 
-            return findItemRSSQuery.QueryByNamedParam(parameterMap);
+            return findItemRSSQuery.QueryByNamedParam<Item>(parameterMap);
         }
 
-        public IList findItemsPrayerRSS(int channelId)
+        public IList<Item> findItemsPrayerRSS(int channelId)
         {
             IDictionary parameterMap = new Hashtable(1);
             parameterMap.Add("@channelId", channelId);
 
-            return findItemPrayerRSSQuery.QueryByNamedParam(parameterMap);
+            return findItemPrayerRSSQuery.QueryByNamedParam<Item>(parameterMap);
         }
 
-        public IList findAllActive(int channelId)
+        public IList<Item> findAllActive(int channelId)
         {
             IDictionary parameterMap = new Hashtable(1);
             parameterMap.Add("@channelId", channelId);
 
-            return findAllActiveQuery.QueryByNamedParam(parameterMap);
+            return findAllActiveQuery.QueryByNamedParam<Item>(parameterMap);
         }
 
-        public IList findItemsPodcast(int channelId)
+        public IList<Item> findItemsPodcast(int channelId)
         {
             IDictionary parameterMap = new Hashtable(1);
             parameterMap.Add("@channelId", channelId);
-            IList episodes = findItemPodcastQuery.QueryByNamedParam(parameterMap);
+            IList<Item> episodes = findItemPodcastQuery.QueryByNamedParam<Item>(parameterMap);
 
             foreach (Item episode in episodes)
             {
@@ -155,14 +156,8 @@ namespace rpcwc.dao.sql
 
         public ESVServiceDAO esvServiceDAO
         {
-            get
-            {
-                return _esvServiceDAO;
-            }
-            set
-            {
-                _esvServiceDAO = value;
-            }
+            get { return _esvServiceDAO; }
+            set { _esvServiceDAO = value; }
         }
 
         public FindItemRSSQuery findItemRSSQuery
