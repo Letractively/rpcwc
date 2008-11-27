@@ -6,7 +6,6 @@
     <property name="CalendarCache" ref="CalendarCache" />
   </object>
   <object id="PodcastManager" type="rpcwc.bo.PodcastManager">
-    <property name="itemDAO" ref="ItemDAO" />
     <property name="channelDAO" ref="ChannelDAO" />
     <property name="BlogManager" ref="BlogManager" />
   </object>
@@ -30,7 +29,14 @@
         <ref object="BlogCache" />
         <ref object="CalendarCache" />
         <ref object="RecommendedReadingsCache" />
+        <ref object="DirectoryCache" />
       </list>
     </property>
+  </object>
+  <object id="DirectoryManager" type="rpcwc.bo.DirectoryManager">
+    <property name="DirectoryDAO" ref="DirectoryDAO" />
+    <property name="DirectoryEmailDao" ref="DirectoryEmailDao" />
+    <property name="DirectoryPersonDao" ref="DirectoryPersonDao" />
+    <property name="DirectoryPhoneDao" ref="DirectoryPhoneDao" />
   </object>
 </objects>

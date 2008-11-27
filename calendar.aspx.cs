@@ -12,7 +12,7 @@ namespace rpcwc.web
 {
     public partial class SmallCalendar : System.Web.UI.Page
     {
-        private IDictionary dates;
+        private IDictionary<DateTime, IList<Event>> dates;
         private CalendarManager _calendarManager;
 
         protected void SelectionChanged(object sender, EventArgs eventArgs)
@@ -34,12 +34,12 @@ namespace rpcwc.web
         {
             CreateEventControlDelegate createEventControlDelegate = CalendarUtil.createEventControl;
 
-            IList eventList = calendarManager.findEventsForDay(SmallCalendarControl.SelectedDate.Date);
+            IList<Event> eventList = calendarManager.findEventsForDay(SmallCalendarControl.SelectedDate.Date);
             IList<IAsyncResult> results = new List<IAsyncResult>();
 
             WebControl eventControl = new WebControl(HtmlTextWriterTag.Div);
             eventControl.Controls.Add(CalendarUtil.getDateHeader(SmallCalendarControl.SelectedDate.Date));
-            
+
             foreach (Event oneEvent in eventList)
             {
                 results.Add(createEventControlDelegate.BeginInvoke(oneEvent, delegate(IAsyncResult result) { }, null));
@@ -55,7 +55,7 @@ namespace rpcwc.web
 
         protected void SetBold(object sender, DayRenderEventArgs eventArgs)
         {
-            if (dates.Contains(eventArgs.Day.Date))
+            if (dates.ContainsKey(eventArgs.Day.Date))
             {
                 eventArgs.Day.IsSelectable = true;
                 eventArgs.Cell.Font.Bold = true;
@@ -97,21 +97,15 @@ namespace rpcwc.web
             }
         }
 
-        private ArrayList getEventCalendarEntry(EventCalendar eventCalendar, DateTime date)
+        private IList<Event> getEventCalendarEntry(EventCalendar eventCalendar, DateTime date)
         {
-            return (ArrayList)eventCalendar.events[date];
+            return eventCalendar.events[date];
         }
 
         public CalendarManager calendarManager
         {
-            get
-            {
-                return _calendarManager;
-            }
-            set
-            {
-                _calendarManager = value;
-            }
+            get { return _calendarManager; }
+            set { _calendarManager = value; }
         }
     }
 }

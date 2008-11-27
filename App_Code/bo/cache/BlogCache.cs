@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Web;
-using rpcwc.dao;
-using rpcwc.vo.Blog;
 using System.Collections;
+using System.Collections.Generic;
+using rpcwc.dao;
 using rpcwc.vo;
+using rpcwc.vo.Blog;
 
 /// <summary>
 /// Summary description for BlogCache
@@ -15,7 +14,7 @@ namespace rpcwc.bo.cache
     {
         private ItemDAO _itemDAO;
         private IBloggerDao _bloggerDao;
-        private IList _blogEntries = new ArrayList();
+        private IList<Item> _blogEntries = new List<Item>();
         private IDictionary<String, IList<BlogEntry>> _blogEntriesMappedByLabel = new Dictionary<String, IList<BlogEntry>>();
         private IDictionary<String, IList<BlogEntry>> _newsAndNotesMappedByLabel = new Dictionary<String, IList<BlogEntry>>();
         private Object blogCacheLock = new Object();
@@ -24,19 +23,19 @@ namespace rpcwc.bo.cache
 
         delegate void RefresherDelegate();
 
-        public class BlogEntryComparer : IComparer
+        public class BlogEntryComparer : IComparer<Item>
         {
-            #region IComparer Members
+            #region IComparer<Item> Members
 
-            int IComparer.Compare(object item1, object item2)
+            public int Compare(Item item1, Item item2)
             {
-                return ((Item)item1).pubDate.CompareTo(((Item)item2).pubDate);
+                return item1.pubDate.CompareTo(item2.pubDate);
             }
 
             #endregion
         }
 
-        public IList BlogEntries
+        public IList<Item> BlogEntries
         {
             get
             {
@@ -64,7 +63,7 @@ namespace rpcwc.bo.cache
 
             DateTime startTime = DateTime.Now;
 
-            ArrayList blogEntries = new ArrayList();
+            List<Item> blogEntries = new List<Item>();
 
             IList<BlogEntry> sermonBlogEntries = BloggerDao.GetAllEntries();
 
@@ -86,7 +85,7 @@ namespace rpcwc.bo.cache
             lock (blogCacheLock)
             {
                 _blogEntries.Clear();
-                ((ArrayList)_blogEntries).AddRange(blogEntries);
+                ((List<Item>)_blogEntries).AddRange(blogEntries);
                 _blogEntriesMappedByLabel = blogEntriesMappedByLabel;
                 _newsAndNotesMappedByLabel = newsAndNotesMappedByLabel;
                 LastRefresh = DateTime.Now;
@@ -105,7 +104,7 @@ namespace rpcwc.bo.cache
                 {
                     if (!blogEntriesMappedByLabel.ContainsKey(category))
                         blogEntriesMappedByLabel.Add(category, new List<BlogEntry>());
-                    ((IList<BlogEntry>)blogEntriesMappedByLabel[category]).Add(blogEntry);
+                    blogEntriesMappedByLabel[category].Add(blogEntry);
                 }
             }
 
@@ -124,7 +123,7 @@ namespace rpcwc.bo.cache
                     {
                         if (!newsAndNotesMappedByLabel.ContainsKey(category))
                             newsAndNotesMappedByLabel.Add(category, new List<BlogEntry>());
-                        ((IList<BlogEntry>)newsAndNotesMappedByLabel[category]).Add(blogEntry);
+                        newsAndNotesMappedByLabel[category].Add(blogEntry);
                     }
                 }
             }
@@ -153,6 +152,9 @@ namespace rpcwc.bo.cache
                 Refresh(true);
 
             HitCount++;
+
+            if (!_blogEntriesMappedByLabel.ContainsKey(label))
+                return new List<BlogEntry>();
 
             IList<BlogEntry> blogEntryList = _blogEntriesMappedByLabel[label];
 

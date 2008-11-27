@@ -13,9 +13,9 @@ namespace rpcwc.dao.gdata
         private String _specialEventsURL;
         private String _regularEventsURL;
 
-        public IList findEventsByDateRange(DateTime startDate, DateTime endDate)
+        public IList<Event> findEventsByDateRange(DateTime startDate, DateTime endDate)
         {
-            ArrayList events = getRegularEvents(startDate, endDate);
+            List<Event> events = getRegularEvents(startDate, endDate);
             events.AddRange(getSpecialEvents(startDate, endDate));
             events.Sort();
             return events;
@@ -26,24 +26,24 @@ namespace rpcwc.dao.gdata
             return null;
         }
 
-        private ArrayList getRegularEvents(DateTime startDate, DateTime endDate)
+        private List<Event> getRegularEvents(DateTime startDate, DateTime endDate)
         {
             return getEvents(_regularEventsURL, startDate, endDate);
         }
 
-        private ArrayList getSpecialEvents(DateTime startDate, DateTime endDate)
+        private List<Event> getSpecialEvents(DateTime startDate, DateTime endDate)
         {
             return getEvents(_specialEventsURL, startDate, endDate);
         }
 
-        public IList findSpecialEventsFuture()
+        public IList<Event> findSpecialEventsFuture()
         {
-            ArrayList events = getEvents(_specialEventsURL, DateTime.Now, DateTime.Now.AddYears(1).AddMonths(6));
+            List<Event> events = getEvents(_specialEventsURL, DateTime.Now, DateTime.Now.AddYears(1).AddMonths(6));
             events.Sort();
             return events;
         }
 
-        private ArrayList getEvents(String url, DateTime startDateTime, DateTime endDateTime)
+        private List<Event> getEvents(String url, DateTime startDateTime, DateTime endDateTime)
         {
             // Create the query object:
             EventQuery query = new EventQuery();
@@ -61,9 +61,9 @@ namespace rpcwc.dao.gdata
             return mapEvents(entries);
         }
 
-        private ArrayList mapEvents(AtomEntryCollection entries)
+        private List<Event> mapEvents(AtomEntryCollection entries)
         {
-            ArrayList events = new ArrayList();
+            List<Event> events = new List<Event>();
 
             foreach (EventEntry entry in entries)
                 foreach (When time in entry.Times)

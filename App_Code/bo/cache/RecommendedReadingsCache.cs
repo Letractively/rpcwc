@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Web;
-using rpcwc.dao;
 using System.Collections;
-using System.Web.UI.WebControls;
+using System.Collections.Generic;
 using System.Web.UI;
 
 /// <summary>
@@ -14,7 +11,7 @@ namespace rpcwc.bo.cache
     public class RecommendedReadingsCache : AbstractCache
     {
         private IDictionary<String, IList<Control>> _controlRotationList = new Dictionary<String, IList<Control>>();
-        private Queue _recommendedReadings = new Queue();
+        private Queue<Control> _recommendedReadings = new Queue<Control>();
         private Object LOCK = new Object();
 
         private const String READINGS_KEY = "readings";
@@ -53,7 +50,7 @@ namespace rpcwc.bo.cache
             RefreshTime += LastRefresh - startTime;
         }
 
-        public HyperLink GetReading()
+        public Control GetReading()
         {
             if (!UpToDate && !refreshing)
                 Refresh(true);
@@ -62,11 +59,11 @@ namespace rpcwc.bo.cache
 
             HitCount++;
 
-            HyperLink reading = null;
+            Control reading = null;
 
             lock (LOCK)
             {
-                reading = (HyperLink)RecommendedReadings.Dequeue();
+                reading = (Control)RecommendedReadings.Dequeue();
                 RecommendedReadings.Enqueue(reading);
             }
 
@@ -75,7 +72,7 @@ namespace rpcwc.bo.cache
             return reading;
         }
 
-        public Queue RecommendedReadings
+        public Queue<Control> RecommendedReadings
         {
             get { return _recommendedReadings; }
             set { _recommendedReadings = value; }

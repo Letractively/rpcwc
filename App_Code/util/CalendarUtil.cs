@@ -115,12 +115,11 @@ public class CalendarUtil
         return eventControl;
     }
 
-    public class EventByDateMapKeyCreator : CollectionUtils.MapKeyCreator
+    public class EventByDateMapKeyCreator : CollectionUtils.MapKeyCreator<DateTime, Event>
     {
-        public Object createKey(Object obj)
+        public DateTime createKey(Event obj)
         {
-            Event evnt = (Event)obj;
-            return evnt.date.Date;
+            return obj.date.Date;
         }
     }
 

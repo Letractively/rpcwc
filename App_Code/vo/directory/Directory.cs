@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Data;
-using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Summary description for Directory
@@ -22,9 +14,9 @@ namespace rpcwc.vo.directory
         private String _city;
         private String _state;
         private String _zip;
-        private IList _emails;
-        private IList _phones;
-        private IList _persons;
+        private IList<Email> _emails;
+        private IList<Phone> _phones;
+        private IList<Person> _persons;
 
         public Directory()
         {
@@ -63,17 +55,17 @@ namespace rpcwc.vo.directory
             get { return _zip; }
             set { _zip = value; }
         }
-        public IList emails
+        public IList<Email> emails
         {
             get { return _emails; }
             set { _emails = value; }
         }
-        public IList phones
+        public IList<Phone> phones
         {
             get { return _phones; }
             set { _phones = value; }
         }
-        public IList persons
+        public IList<Person> persons
         {
             get { return _persons; }
             set { _persons = value; }

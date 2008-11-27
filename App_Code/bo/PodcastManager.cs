@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Data;
-using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using rpcwc.dao;
 using rpcwc.vo;
 using rpcwc.vo.Blog;
-using System.Collections.Generic;
 
 /// <summary>
 /// Summary description for PodcastManager
@@ -23,19 +15,9 @@ namespace rpcwc.bo
     public class PodcastManager
     {
         private ChannelDAO _channelDAO;
-        private ItemDAO _itemDAO;
         private static String itunesXmlns = "http://www.itunes.com/DTDs/Podcast-1.0.dtd";
         private static String FORMAT_PROVIDER = System.Globalization.DateTimeFormatInfo.CurrentInfo.RFC1123Pattern;
         private BlogManager _blogManager;
-
-        public PodcastManager()
-        {
-            //channelDAO = new ChannelDAO();
-            //itemDAO = new ItemDAO();
-            //
-            // TODO: Add constructor logic here
-            //
-        }
 
         public String getFeed(int channelId)
         {
@@ -101,26 +83,8 @@ namespace rpcwc.bo
 
         public ChannelDAO channelDAO
         {
-            get
-            {
-                return _channelDAO;
-            }
-            set
-            {
-                _channelDAO = value;
-            }
-        }
-
-        public ItemDAO itemDAO
-        {
-            get
-            {
-                return _itemDAO;
-            }
-            set
-            {
-                _itemDAO = value;
-            }
+            get { return _channelDAO; }
+            set { _channelDAO = value; }
         }
 
         public BlogManager BlogManager

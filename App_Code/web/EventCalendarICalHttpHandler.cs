@@ -4,6 +4,7 @@ using System.IO;
 using System.Web;
 using rpcwc.bo;
 using rpcwc.vo;
+using System.Collections.Generic;
 
 /// <summary>
 /// Summary description for EventCalendarICalHttpHandler
@@ -41,7 +42,7 @@ namespace rpcwc.web
             HttpResponse Response = context.Response;
             DateTime startDate = DateTime.Today.AddDays(-DateTime.Today.Day);
             DateTime endDate = startDate.AddMonths(3);
-            IList events = calendarManager.findEventsByDateRange(startDate, endDate);
+            IList<Event> events = calendarManager.findEventsByDateRange(startDate, endDate);
 
             Response.ContentType = "text/calendar";
             //Response.ContentType = "text/plain";

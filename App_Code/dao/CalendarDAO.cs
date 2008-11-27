@@ -12,10 +12,10 @@ namespace rpcwc.dao
 {
     public interface CalendarDAO
     {
-        IList findEventsByDateRange(DateTime startDate, DateTime endDate);
+        IList<Event> findEventsByDateRange(DateTime startDate, DateTime endDate);
 
         Event findEventDetails(int itemId);
 
-        IList findSpecialEventsFuture();
+        IList<Event> findSpecialEventsFuture();
     }
 }

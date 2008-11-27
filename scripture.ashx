@@ -34,6 +34,11 @@ public class scripture : IHttpHandler {
         
         sOut.Replace("h4>", "h5>");
         sOut.Replace("h2>", "h4>");
+        
+        context.Response.Cache.SetCacheability(HttpCacheability.Public);
+        context.Response.Cache.SetExpires(DateTime.Now.AddDays(7));
+        context.Response.Cache.VaryByParams["ref"] = true;
+        
         context.Response.Write(sOut.ToString());
     }
  

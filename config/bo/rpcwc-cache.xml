@@ -15,6 +15,10 @@
     <property name="RefreshInterval" value="7.00:00:00" />
     <property name="ControlRotationList" ref="ControlRotationList" />
   </object>
+  <object id="DirectoryCache" type="rpcwc.bo.cache.DirectoryCache">
+    <property name="RefreshInterval" value="7.00:00:00" />
+    <property name="DirectoryManager" ref="DirectoryManager" />
+  </object>
   <object name="ControlRotationList" type="System.Collections.Generic.Dictionary&lt;System.String,System.Collections.Generic.List&lt;System.Web.UI.Control>>">
     <constructor-arg name="dictionary" >
       <dictionary key-type="System.String" value-type="System.Collections.Generic.List&lt;System.Web.UI.Control>">

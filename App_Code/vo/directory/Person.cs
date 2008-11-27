@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Data;
-using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Summary description for Person
@@ -20,15 +12,8 @@ namespace rpcwc.vo.directory
         private String _lastName;
         private DateTime _birthDate;
         private bool _isMember;
-        private IList _emails;
-        private IList _phones;
-
-        public Person()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
+        private IList<Email> _emails;
+        private IList<Phone> _phones;
 
         public String firstName
         {
@@ -50,12 +35,12 @@ namespace rpcwc.vo.directory
             get { return _isMember; }
             set { _isMember = value; }
         }
-        public IList emails
+        public IList<Email> emails
         {
             get { return _emails; }
             set { _emails = value; }
         }
-        public IList phones
+        public IList<Phone> phones
         {
             get { return _phones; }
             set { _phones = value; }

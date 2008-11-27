@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web;
-using Spring.Context;
-using Spring.Context.Support;
-using System.Collections;
-using rpcwc.vo;
-using rpcwc.dao;
-using rpcwc.vo.Blog;
 using rpcwc.bo.cache;
+using rpcwc.vo;
+using rpcwc.vo.Blog;
 
 /// <summary>
 /// Summary description for BlogManager
@@ -23,13 +18,18 @@ namespace rpcwc.bo
             get { return _blogCache; }
             set { _blogCache = value; }
         }
-        
+
+        /// <summary>
+        /// Retrieves all blog posts from the sermon series marked by the given label
+        /// </summary>
+        /// <param name="label">This is a tag associated with blog posts, representing a sermon series</param>
+        /// <returns>A list of blog posts in the sermon series</returns>
         public IList<BlogEntry> GetSermonPosts(String label)
         {
             return BlogCache.GetSermonPosts(label);
         }
     
-        public IList getBlogEntries()
+        public IList<Item> getBlogEntries()
         {
             return BlogCache.BlogEntries;
         }

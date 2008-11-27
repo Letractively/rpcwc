@@ -4,6 +4,7 @@ using System.IO;
 using System.Xml;
 using rpcwc.dao;
 using rpcwc.vo;
+using System.Collections.Generic;
 
 /// <summary>
 /// Summary description for RSSManager
@@ -14,16 +15,6 @@ namespace rpcwc.bo
     {
         private ChannelDAO _channelDAO;
         private ItemDAO _itemDAO;
-
-        public RSSManager()
-        {
-            //channelDAO = new ChannelDAO();
-            //IApplicationContext context = ContextRegistry.GetContext();
-            //itemDAO = (ItemDAO)context.GetObject("ItemDAO");
-            //
-            // TODO: Add constructor logic here
-            //
-        }
 
         public String getFeed(int channelId)
         {
@@ -41,7 +32,7 @@ namespace rpcwc.bo
             w.WriteStartElement("channel");
             channel.toRSSXml(w);
 
-            IList items = itemDAO.findItemsRSS(channelId);
+            IList<Item> items = itemDAO.findItemsRSS(channelId);
 
             foreach (Item item in items)
             {
@@ -63,26 +54,14 @@ namespace rpcwc.bo
 
         public ChannelDAO channelDAO
         {
-            get
-            {
-                return _channelDAO;
-            }
-            set
-            {
-                _channelDAO = value;
-            }
+            get { return _channelDAO; }
+            set { _channelDAO = value; }
         }
 
         public ItemDAO itemDAO
         {
-            get
-            {
-                return _itemDAO;
-            }
-            set
-            {
-                _itemDAO = value;
-            }
+            get { return _itemDAO; }
+            set { _itemDAO = value; }
         }
     }
 }

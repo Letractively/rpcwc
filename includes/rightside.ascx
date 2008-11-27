@@ -16,16 +16,6 @@
         {
         }
     }
-
-    public delegate void MarkAsRead(Int16 num);
-    
-    public void ItemDataBound(Object source, RepeaterItemEventArgs eventArgs)
-    {
-        Object itemId = DataBinder.Eval(eventArgs.Item.DataItem, "item_id");
-        MarkAsRead markAsRead;
-        markAsRead = new MarkAsRead(recommendedReadingsDAO.MarkAsRead);
-        markAsRead.BeginInvoke((Int16) itemId, null, null);
-    }
 </script>
 
 <h2>
