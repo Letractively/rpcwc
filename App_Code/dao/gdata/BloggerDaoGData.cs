@@ -25,6 +25,7 @@ namespace rpcwc.dao.GData
         {
             FeedQuery query = new FeedQuery();
             query.Uri = new Uri("http://www.blogger.com/feeds/" + BlogId + "/posts/default");
+            query.NumberToRetrieve = 200;
 
             return MapEntries(Service.Query(query).Entries);
         }
