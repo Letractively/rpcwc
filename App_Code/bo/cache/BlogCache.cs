@@ -178,23 +178,19 @@ namespace rpcwc.bo.cache
             if (!_newsAndNotesMappedByLabel.ContainsKey(label))
                 return new List<BlogEntry>();
 
-            IList<BlogEntry> blogEntryList = _newsAndNotesMappedByLabel[label];
+            List<BlogEntry> blogEntryList = new List<BlogEntry>();
 
-            ArrayList.Adapter((IList)blogEntryList).Sort();
+            blogEntryList.AddRange(_newsAndNotesMappedByLabel[label]);
+
+            blogEntryList.Sort();
 
             return blogEntryList;
         }
 
         public ItemDAO itemDAO
         {
-            private get
-            {
-                return _itemDAO;
-            }
-            set
-            {
-                _itemDAO = value;
-            }
+            private get { return _itemDAO; }
+            set { _itemDAO = value; }
         }
 
         public IBloggerDao BloggerDao
