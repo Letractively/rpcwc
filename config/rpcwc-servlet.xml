@@ -31,6 +31,11 @@
     <property name="SermonSeriesList">
       <list>
         <object type="rpcwc.vo.Blog.SermonSeries">
+          <property name="Label" value="A Son is Given" />
+          <property name="ImageUrl" value="images/sermon/son of god.001.png" />
+          <property name="Caption" value="A Son is Given: Christmas Sermon Series" />
+        </object>
+        <object type="rpcwc.vo.Blog.SermonSeries">
           <property name="Label" value="ecclesiastes08" />
           <property name="ImageUrl" value="images/sermon/ecclesiastes.001.png" />
           <property name="Caption" value="Ecclesiastes: Making Sanity out of Vanity" />
