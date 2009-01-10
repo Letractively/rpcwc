@@ -19,10 +19,46 @@
     <property name="RefreshInterval" value="7.00:00:00" />
     <property name="DirectoryManager" ref="DirectoryManager" />
   </object>
+  <object id="PhotoCache" type="rpcwc.bo.cache.PhotoCache">
+    <property name="RefreshInterval" value="01:00:00" />
+    <property name="PhotoDao" ref="PhotoDao" />
+  </object>
   <object name="ControlRotationList" type="System.Collections.Generic.Dictionary&lt;System.String,System.Collections.Generic.List&lt;System.Web.UI.Control>>">
     <constructor-arg name="dictionary" >
       <dictionary key-type="System.String" value-type="System.Collections.Generic.List&lt;System.Web.UI.Control>">
         <entry key="readings">
+          <list element-type="System.Web.UI.Control">
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="Jesus the Evangelist" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5230/nm/Jesus_the_Evangelist_Hardcover_" />
+              <property name="ImageUrl" value="~/images/readings/9781567690880t.jpg" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="Face to Face, vol. 1" />
+              <property name="NavigateUrl">
+                <value>
+                  <![CDATA[http://www.amazon.com/Face-Praying-Scriptures-Intimate-Worship/dp/0310925509/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1231249084&sr=8-1]]>
+                </value>
+              </property>
+              <property name="ImageUrl" value="~/images/readings/facetofacevolume1.jpg" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="Face to Face, vol. 2" />
+              <property name="NavigateUrl">
+                <value>
+                  <![CDATA[http://www.amazon.com/Face-Praying-Scriptures-Spiritual-Growth/dp/0310925525/ref=sr_1_2?ie=UTF8&s=books&qid=1231249084&sr=8-2]]>
+                </value>
+              </property>
+              <property name="ImageUrl" value="~/images/readings/facetofacevolume2.jpg" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="Community Houses of Prayer" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5447/nm/Community_Houses_of_Prayer_Ministry_Manual_Revised_Paperback_" />
+              <property name="ImageUrl" value="~/images/readings/9780822310730t.jpg" />
+            </object>
+          </list>
+        </entry>
+        <entry key="readingsBasicsOfReformedFaithSeries">
           <list element-type="System.Web.UI.Control">
             <object type="System.Web.UI.WebControls.HyperLink">
               <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5987/nm/What_Is_Biblical_Preaching_Basics_of_the_Reformed_Faith_Paperback_" />

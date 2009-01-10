@@ -92,4 +92,7 @@
   <object type="~/maintenance/directory/directoryEntry.aspx">
     <property name="DirectoryCache" ref="DirectoryCache" />
   </object>
+  <object type="~/photogallery.aspx">
+    <property name="PhotoCache" ref="PhotoCache" />
+  </object>
 </objects>
