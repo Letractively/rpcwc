@@ -52,5 +52,5 @@
         </asp:TableRow>
     </asp:Table>
     <br />
-    <asp:Label ID="Error" runat="server" />
+    <asp:Label ID="ErrorLabel" runat="server" />
 </asp:Content>
