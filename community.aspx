@@ -16,5 +16,5 @@
         </ItemTemplate>
     </asp:Repeater>
     <asp:ObjectDataSource ID="RPCNewsAndNotesObjectDataSource" TypeName="rpcwc.bo.NewsAndNotesManager" SelectMethod="findAllNewsAndNotesActive"
-        EnableCaching="true" OnObjectCreating="SetObjectDataSourceInstance" runat="server" />
+        EnableCaching="false" OnObjectCreating="SetObjectDataSourceInstance" runat="server" />
 </asp:Content>

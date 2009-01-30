@@ -60,7 +60,9 @@
   </object>
   <object type="~/guest.aspx" parent="basePage">
     <property name="emailSender" ref="EmailSender" />
-
+  </object>
+  <object type="~/prayer.aspx" parent="basePage">
+    <property name="EmailSender" ref="EmailSender" />
   </object>
   <object type="~/sg_registration.aspx" parent="basePage">
     <property name="emailSender" ref="EmailSender" />

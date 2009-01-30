@@ -11,7 +11,7 @@ namespace rpcwc.web
 
         public void SetObjectDataSourceInstance(Object source, ObjectDataSourceEventArgs eventArgs)
         {
-            eventArgs.ObjectInstance = newsAndNotesManager;
+            eventArgs.ObjectInstance = (Object) newsAndNotesManager;
         }
 
         public NewsAndNotesManager newsAndNotesManager
