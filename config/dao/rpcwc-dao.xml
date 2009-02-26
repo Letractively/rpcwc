@@ -2,7 +2,6 @@
 <objects xmlns="http://www.springframework.net"
          xmlns:db="http://www.springframework.net/database">
   <import resource="services/ESVServiceDAO-context.xml" />
-  <import resource="sql/CalendarDAOSQL-context.xml" />
   <import resource="services/CalendarDAOGData-context.xml" />
   <import resource="sql/ChannelDAOSQL-context.xml" />
   <import resource="sql/DirectoryDAOSQL-context.xml" />
