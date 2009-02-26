@@ -18,7 +18,7 @@
                 </p>
                 <p>
                     Church Office<br />
-                    <a href="mailto:rpc_office@juno.com">rpc_office@juno.com</a>
+                    <a href="mailto:rpc_office@rpcwc.org">rpc_office@rpcwc.org</a>
                 </p>
                 <p>
                     <a href="contactus_p.aspx" runat="server" target="_blank">Print this page</a></p>

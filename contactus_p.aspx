@@ -18,6 +18,6 @@
     pastor@rpcwc.org<br />
     <br />
     Church Office Email<br />
-    rpc_office@juno.com<br />
+    rpc_office@rpcwc.org<br />
 </body>
 </html>
