@@ -16,11 +16,6 @@ public partial class maintenance_sermon : System.Web.UI.Page
                 FileControl.PostedFile.SaveAs(saveLocation);
                 status.InnerHtml = "Uploaded Succesfully";
                 status.Style.Add(HtmlTextWriterStyle.Color, "Red");
-
-                SermonSqlDataSource.InsertParameters.Add(new Parameter("Link", TypeCode.String, "sermons/" +filename));
-                SermonSqlDataSource.InsertParameters.Add(new Parameter("size", TypeCode.Int32, FileControl.PostedFile.ContentLength.ToString()));
-                SermonSqlDataSource.InsertParameters.Add(new Parameter("type", TypeCode.String, "audio/mpeg3"));
-                SermonSqlDataSource.Insert();
             }
             catch (Exception exception)
             {
