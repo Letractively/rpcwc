@@ -3,3 +3,5 @@ findDirectory
 AS
 SELECT     LAST_NAME, ADDRESS_1, ADDRESS_2, CITY, STATE, ZIP, ENTRY_ID
 FROM         DIRECTORY AS d
+WHERE     (DEL_IND IS NULL) OR
+                      (DEL_IND = 0)
