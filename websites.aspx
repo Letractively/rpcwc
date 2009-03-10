@@ -41,4 +41,6 @@ window.onload = externalLinks;
 <div><a href="http://www.pca-mna.org/fiftydaysofprayer.php" rel="External">PCA &rsquo;50 days of Prayer&rsquo;</a></div>
 <div><a href="http://preview.gospelcom.net/index.html" rel="External">Preview Online</a> (Movie Reviews)</div>
 <div><a href="http://www.pluggedinonline.com/" rel="External">Plugged In</a> (Movie Reviews)</div>
+<div><a href="http://www.igracemusic.com/hymnbook/home.html" rel="External">RUF Hymnbook</a></div>
+<div><a href="http://www.ccli.com/" rel="External">CCLI USA</a></div>
 </asp:Content>
