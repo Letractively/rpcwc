@@ -15,7 +15,6 @@
     <p>
         <a href="~/mis_marshall.aspx" runat="server">Verne and Alina Marshall (Chile, MTW)</a><br />
         David and Barbara Cross (England, MTW)<br />
-        Bruce and Pat (undisclosed, MTW)<br />
         <a href="~/images/spooner.jpg" class="thickbox" runat="server">Art and Ursula Spooner
             (Austria, MTW)</a><br />
         <a href="~/bogphur.aspx" runat="server">Bhogpur Home</a> (India)<br />
