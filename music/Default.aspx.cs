@@ -11,8 +11,10 @@ namespace rpcwc.web.music
         protected void Page_Load(object sender, EventArgs e)
         {
             IList<FileGetter> fileGetters = new List<FileGetter>();
-            fileGetters.Add(new LeadFileGetter());
-            fileGetters.Add(new PianoFileGetter());
+            fileGetters.Add(new GenericFileGetter("piano", "pdf"));
+            fileGetters.Add(new GenericFileGetter("lead", "pdf"));
+            fileGetters.Add(new GenericFileGetter("SATB", "pdf"));
+            fileGetters.Add(new GenericFileGetter("demo", "mp3"));
             MusicHolder.Controls.Add(RPCMusicUtility.GetMusicList(Server, fileGetters));
         }
 
