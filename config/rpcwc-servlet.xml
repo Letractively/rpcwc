@@ -31,6 +31,11 @@
     <property name="SermonSeriesList">
       <list>
         <object type="rpcwc.vo.Blog.SermonSeries">
+          <property name="Label" value="Genesis 2009" />
+          <property name="ImageUrl" value="images/sermon/genesis_2.002.jpg" />
+          <property name="Caption" value="Genesis: Book of Beginnings" />
+        </object>
+        <object type="rpcwc.vo.Blog.SermonSeries">
           <property name="Label" value="Philippians 2009" />
           <property name="ImageUrl" value="images/sermon/philippians.001.jpg" />
           <property name="Caption" value="Philippians: Owed to Joy" />
@@ -76,6 +81,10 @@
     <property name="calendarManager" ref="CalendarManager" />
   </object>
   <object type="~/members/directory.aspx" parent="basePage">
+    <property name="DirectoryCache" ref="DirectoryCache" />
+
+  </object>
+  <object type="~/members/map.aspx" parent="basePage">
     <property name="DirectoryCache" ref="DirectoryCache" />
 
   </object>
