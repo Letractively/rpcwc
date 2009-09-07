@@ -10,7 +10,7 @@ public partial class maintenance_sermon : System.Web.UI.Page
         {
             String filename = System.IO.Path.GetFileName(FileControl.PostedFile.FileName);
             filename = DatePicker.SelectedDate.ToString("yyyy.MM.dd") + ".mp3";
-            String saveLocation = Server.MapPath("../../sermons") + "\\" + filename;
+            String saveLocation = Server.MapPath("~\\sermons") + "\\" + filename;
             try
             {
                 FileControl.PostedFile.SaveAs(saveLocation);
