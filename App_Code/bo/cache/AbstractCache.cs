@@ -23,11 +23,11 @@ namespace rpcwc.bo.cache
         
         public void RefreshAndSleep()
         {
-            do
+            /*do
             {
                 Refresh(false);
-                Thread.Sleep(RefreshInterval - new TimeSpan(0,5,0));
-            } while (true);
+                // Thread.Sleep(RefreshInterval - new TimeSpan(0,5,0));
+            } while (true);*/
         }
 
         public int TotalRefreshCount
