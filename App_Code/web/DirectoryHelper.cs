@@ -37,7 +37,7 @@ namespace rpcwc.web
             return td;
         }
 
-        private static Control makeGeneralEmails(Directory directory)
+        public static Control makeGeneralEmails(Directory directory)
         {
             WebControl emailSection = new WebControl(HtmlTextWriterTag.Div);
 
@@ -52,7 +52,7 @@ namespace rpcwc.web
             return emailSection;
         }
 
-        private static Control makePersonEmails(Directory directory)
+        public static Control makePersonEmails(Directory directory)
         {
             WebControl emailSection = new WebControl(HtmlTextWriterTag.Div);
 
@@ -70,7 +70,7 @@ namespace rpcwc.web
             return emailSection;
         }
 
-        private static Control makeGeneralPhones(Directory directory)
+        public static Control makeGeneralPhones(Directory directory)
         {
             WebControl phoneSection = new WebControl(HtmlTextWriterTag.Div);
 
@@ -85,7 +85,7 @@ namespace rpcwc.web
             return phoneSection;
         }
 
-        private static Control makePersonPhones(Directory directory)
+        public static Control makePersonPhones(Directory directory)
         {
             WebControl phoneSection = new WebControl(HtmlTextWriterTag.Div);
 
@@ -179,7 +179,7 @@ namespace rpcwc.web
             return phoneDiv;
         }
 
-        private static Control makeAddress(Directory directory)
+        public static Control makeAddress(Directory directory)
         {
             WebControl address = new WebControl(HtmlTextWriterTag.Div);
             if (directory.address1 == null || directory.address1.Equals(""))
@@ -207,7 +207,7 @@ namespace rpcwc.web
             return address;
         }
 
-        private static Control makeLastName(Directory directory)
+        public static Control makeLastName(Directory directory)
         {
             WebControl lastNameSpan = new WebControl(HtmlTextWriterTag.Span);
             Label lastName = new Label();
@@ -247,7 +247,7 @@ namespace rpcwc.web
             return firstNameSpan;
         }
 
-        private static Control makeFirstNames(Directory directory)
+        public static Control makeFirstNames(Directory directory)
         {
             WebControl firstNameSpan = new WebControl(HtmlTextWriterTag.Span);
             if (directory.persons == null || directory.persons.Count == 0)
