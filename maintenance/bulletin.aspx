@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Untitled Page" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" Title="Untitled Page" 
+CodeFile="bulletin.aspx.cs" Inherits="maintenance_bulletin"%>
 
 <script runat="server">
     public void Add(Object source, CommandEventArgs commandEventArgs)
@@ -14,7 +15,8 @@
         SelectCommandType="StoredProcedure"
         InsertCommand="
 INSERT INTO ITEM
-(CHANNEL_ID, TITLE, AUTHOR, PUBDATE, ACTIVE) VALUES (@channelId, '', 'raymond.rishty', @pubDate, @active)">
+(CHANNEL_ID, TITLE, AUTHOR, PUBDATE, ACTIVE) VALUES (@channelId, '', 'raymond.rishty', @pubDate, @active)"
+        OnInserting="OnInserting">
         <SelectParameters>
             <asp:Parameter Name="channelId" DefaultValue="7" />
         </SelectParameters>
@@ -29,7 +31,16 @@ INSERT INTO ITEM
         runat="server" AutoGenerateRows="False">
         <Fields>
             <asp:BoundField DataField="pubDate" HeaderText="Date" />
+            <asp:TemplateField HeaderText="PDF File">
+            <ItemTemplate>
+                <a href="../bulletins/<%# Convert.ToDateTime(Eval("pubDate")).ToString("yyyy-MM-dd") %>.pdf"><%# Convert.ToDateTime(Eval("pubDate")).ToString("yyyy-MM-dd") %>.pdf</a>
+            </ItemTemplate>
+            <InsertItemTemplate>
+                <asp:FileUpload ID="bulletinPdf" runat="server" />
+            </InsertItemTemplate>
+            </asp:TemplateField>
         </Fields>
     </asp:DetailsView>
+    <div ID="status" runat="server" />
 </asp:Content>
 
