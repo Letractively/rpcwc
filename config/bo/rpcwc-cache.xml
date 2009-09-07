@@ -29,9 +29,19 @@
         <entry key="readings">
           <list element-type="System.Web.UI.Control">
             <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="Face to Face: Praying the Scriptures for Intimate Worship" />
+              <property name="NavigateUrl" value="http://www.amazon.com/Face-Praying-Scriptures-Intimate-Worship/dp/0310925509" />
+              <property name="ImageUrl" value="~/images/readings/0310925509_sm.jpg" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
               <property name="Text" value="Quiet Strength by Tony Dungy" />
               <property name="NavigateUrl" value="http://www.amazon.com/Quiet-Strength-Principles-Practices-Priorities/dp/1414318014" />
               <property name="ImageUrl" value="~/images/readings/quietstrength_sm.jpg" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="A Praying Life by Paul Miller" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/6281/nm/A+Praying+Life:+Connecting+With+God+in+a+Distracting+World+(Paperback)" />
+              <property name="ImageUrl" value="~/images/readings/9781600063008sm.jpg" />
             </object>
           </list>
         </entry>
