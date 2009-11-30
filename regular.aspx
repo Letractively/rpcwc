@@ -58,15 +58,6 @@
     <p style="font-style: italic;">
         Various meetings and activities.</p>
     <h3>
-            UPPER ROOM
-    </h3>
-    <p>
-        A men's ministry based on Jesus' disciples meeting with Him in John 13-17. Involves
-        meeting weekly over breakfast for fellowship, sharing, prayer and Bible study to
-        grow and encourage each other in a walk with Christ.</p>
-    <p style="font-style: italic;">
-        Wednesdays at 6:30 am, September through May.</p>
-    <h3>
             RPC SUPPER CLUBS
     </h3>
     <p>
@@ -82,7 +73,7 @@
         in carrying out the covenant responsibility of raising our children in the nurture
         and admonition of the Lord. Meets monthly in a home for dinner, study and prayer.</p>
     <p style="font-style: italic;">
-        First Friday of the montb at 6:00 p.m.</p>
+        First Friday of the month at 6:00 p.m.</p>
     <h3>
             MINISTRY AT WENTWORTH HOME
     </h3>
