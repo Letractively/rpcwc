@@ -29,13 +29,13 @@
         </tr>
         <tr>
             <td>
-                Price Cluster
+                Gale Cluster
             </td>
             <td>
                 Tuesdays at 7:00 p.m
             </td>
             <td>
-                <a href="mailto:cxp374@verizon.net">cxp374@verizon.net</a>
+                <a href="mailto:lgale13@juno.com">lgale13@juno.com</a>
             </td>
         </tr>
         <tr>
