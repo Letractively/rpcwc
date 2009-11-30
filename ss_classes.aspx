@@ -17,27 +17,11 @@
             </td>
         </tr>
         <tr>
-            <td width="175" valign="top">
-                Adults&mdash;&lsquo;RPC Orientation&rsquo;
-            </td>
-            <td width="112" valign="top">
-                Pastor's Office
-            </td>
-        </tr>
-        <tr>
-            <td width="175" valign="top">
-                Adults&mdash;&lsquo;Shepherding a Child’s Heart&rsquo;
-            </td>
-            <td width="112" valign="top">
-                Fellowship Hall
-            </td>
-        </tr>
-        <tr>
             <td valign="top">
                 Age 2&ndash;Kindergarten
             </td>
             <td valign="top">
-                 1st floor classroom behind Bathroom.  (Old Teen Sunday School room)
+                 Church Building, First Floor
             </td>
             <td valign="top">
                 Joel Comanda and Terese Judkins
@@ -48,21 +32,21 @@
                 Grades 1&ndash;5
             </td>
             <td valign="top">
-                Ministry House, 2nd Floor, front west classroom
+                Ministry House, 2nd Floor
             </td>
             <td valign="top">
-                Mrs. Linda Gale
+                Linda Gale
             </td>
         </tr>
         <tr>
             <td valign="top">
-                Middle&ndash;High School
+                Jr&ndash;Sr High School
             </td>
             <td valign="top">
-                Ministry House, 3rd floor, Attic
+                Ministry House, 2rd floor
             </td>
             <td valign="top">
-                 Shawn &amp; Meg Carafa
+                 Mark McCaffrey
             </td>
         </tr>
     </table>

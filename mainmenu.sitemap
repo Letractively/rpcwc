@@ -6,7 +6,7 @@
       <siteMapNode url="~/ss_desc.aspx" title="Description" description="" />
       <siteMapNode url="~/ss_classes.aspx" title="Classes/Location" description="" />
       <siteMapNode url="~/ss_adult.aspx" title="Adult Classes" description="" />
-      <siteMapNode url="~/ss_childrens.aspx" title="Childrens Classes" description="" />
+      <siteMapNode url="~/ss_childrens.aspx" title="Student Classes" description="" />
     </siteMapNode>
     <siteMapNode url="" title="Small Groups" description="">
       <siteMapNode url="~/sg_clusterletter.aspx" title="Cluster Letter"  description="" />

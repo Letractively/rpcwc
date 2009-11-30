@@ -4,30 +4,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h4>
-        2008 RPC Cluster Group Registration</h4>
+        RPC Cluster Group Registration</h4>
     <p>
-        In June, leaders in the Cluster Group ministry met to evaluate the value and workings
-        of this small group ministry of RPC.&nbsp; The uniform consensus indicated that
-        Clusters are integral in <b>individual spiritual formation</b>, in <b>building community</b>
-        and in <b>assimilation</b> of those new to RPC.&nbsp;
+		If you would like to be part of a Cluster Group, please complete the form below and someone will be in contact with you.
     </p>
-    <p>
-        Some <b>changes</b> were also recommended and approved by the Session.&nbsp; Beginning
-        this fall each group will decide its own meeting schedule (e.g., weekly, bi-weekly)
-        and will decide its own curriculum approved by Session.&nbsp; The two suggested
-        offerings this year are The Gospel of Mark (using the New Life study guide) or the
-        book <i>In Christ Alone</i> by Sinclair Ferguson.</p>
-    <p>
-        <span>Clusters resume meeting the week of September 21<sup>st</sup>.&nbsp; There are
-            <b>three options</b> for involvement.<o:p></o:p></span></p>
-    <ol>
-        <li>If you are already part of a Cluster contact your Cluster leader to indicate your
-            continuing interest and to find the out the time and place of the first meeting.</li>
-        <li>If you were not part of a Cluster last year but would like to join an existing group,
-            contact that Cluster leader.</li>
-        <li>If you were not in a Cluster last year but would like to be part of a newly formed
-            group, complete the information below.</li>
-    </ol>
     <table>
         <asp:TableRow ID="TableRow1" runat="server">
             <asp:TableCell ID="TableCell1" runat="server">
@@ -37,6 +17,26 @@
             </asp:TableCell>
             <asp:TableCell ID="TableCell2" runat="server">
                 <input name="name" type="text" id="name" />
+            </asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow ID="TableRow5" runat="server">
+            <asp:TableCell ID="TableCell9" runat="server">
+                <label for="email">
+                    Email:
+                </label>
+            </asp:TableCell>
+            <asp:TableCell ID="TableCell10" runat="server">
+                <input name="email" type="text" id="email" />
+            </asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow ID="TableRow6" runat="server">
+            <asp:TableCell ID="TableCell11" runat="server">
+                <label for="phone">
+                    Phone:
+                </label>
+            </asp:TableCell>
+            <asp:TableCell ID="TableCell12" runat="server">
+                <input name="phone" type="text" id="phone" />
             </asp:TableCell>
         </asp:TableRow>
     </table>

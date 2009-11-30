@@ -1,15 +1,15 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    Title="Reformed Presbyterian Church &mdash; Children's Sunday School Classes" %>
+    Title="Reformed Presbyterian Church &mdash; Student Sunday School Classes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h4>
-        Childrens Classes</h4>
+        Student Classes</h4>
     <p>
-        <strong>Middle&ndash;High School</strong><br />
-        Shawn and Meg Carafa
+        <strong>Jr&ndash;Sr School</strong><br />
+        Mark McCaffrey
     </p>
     <p>
-        Every Sunday morning children from Junior and senior high ages meet together to
+        Every Sunday morning children from Junior and Senior high ages meet together to
         learn more about Christ and what He means to them in their lives. This age is a
         difficult time in children's lives with many peer pressures, emotional highs and
         lows, spiritual questions, and many other struggles. This Sunday bible school is

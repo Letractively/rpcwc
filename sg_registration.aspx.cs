@@ -17,6 +17,10 @@ namespace rpcwc.web.SmallGroup
             StringBuilder body = new StringBuilder();
             body.Append("Name: ");
             body.Append(Request.Form["Name"]);
+            body.Append("\nEmail: ");
+            body.Append(Request.Form["email"]);
+            body.Append("\nPhone: ");
+            body.Append(Request.Form["phone"]);
             body.Append("\n");
             body.Append("Day Of Week: ");
             body.Append(Request.Form["dayofweek"]);
