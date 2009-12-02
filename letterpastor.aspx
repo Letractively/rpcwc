@@ -21,7 +21,7 @@
         grace.</p>
     <div>
         <div style="float: right">
-            <img src="~/images/gale2.gif" width="151" height="130" alt="Pastor Stanley D. Gale"
+            <img src="~/images/SDG pic desk.jpg" width="134" height="151" alt="Pastor Stanley D. Gale"
                 runat="server" /></div>
         <div style="float: left">
             <p style="padding-bottom: 1em;">

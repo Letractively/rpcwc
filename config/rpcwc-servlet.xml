@@ -102,6 +102,28 @@
   <object type="~/maintenance/cache.aspx">
     <property name="CacheManager" ref="CacheManager" />
   </object>
+  <object type="~/music/default.aspx">
+    <property name="FileGetters">
+      <list element-type="rpcwc.RPCMusic.FileGetter">
+        <object type="rpcwc.RPCMusic.GenericFileGetter">
+          <property name="Type" value="piano" />
+          <property name="Extension" value="pdf" />
+        </object>
+        <object type="rpcwc.RPCMusic.GenericFileGetter">
+          <property name="Type" value="lead" />
+          <property name="Extension" value="pdf" />
+        </object>
+        <object type="rpcwc.RPCMusic.GenericFileGetter">
+          <property name="Type" value="SATB" />
+          <property name="Extension" value="pdf" />
+        </object>
+        <object type="rpcwc.RPCMusic.GenericFileGetter">
+          <property name="Type" value="midi" />
+          <property name="Extension" value="mid" />
+        </object>
+      </list>
+    </property>
+  </object>
   <object type="~/maintenance/directory/default.aspx">
     <property name="DirectoryManager" ref="DirectoryManager" />
   </object>

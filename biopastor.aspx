@@ -7,10 +7,10 @@
             Biography of Pastor Stan Gale</h4>
     </p>
     <p>
-        <img src="~/images/stangale.gif" width="329" height="165" runat="server" /></p>
+        <img src="~/images/SDG pic1-1.jpg" width="150" height="144" runat="server" /></p>
     <p>
         Stanley D. Gale has served as pastor of RPC since 1988.&nbsp; He and his wife, Linda,
-        married in 1975.&nbsp; They have four children and two grandchildren.&nbsp; He holds
+        married in 1975.&nbsp; They have four children and four grandchildren.&nbsp; He holds
         Bachelor of Arts and Master of Education degrees from the University of Delaware,
         a Master of Divinity degree from Westminster Theological Seminary in Philadelphia,
         and a Doctor of Ministry degree from Covenant Theological Seminary in St. Louis.&nbsp;

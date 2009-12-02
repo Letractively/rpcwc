@@ -11,7 +11,7 @@
         Sermon Archive
     </h4>
     <p style="text-align: center;">
-        <img src="~/images/stangale.gif" width="300" height="150" alt="Pastor Stanley D. Gale"
+        <img src="~/images/SDG pic1-1.jpg" width="150" height="144" alt="Pastor Stanley D. Gale"
             runat="server" /></p>
     
     <!-- Let's populate this programmatically (see code-behind) -->

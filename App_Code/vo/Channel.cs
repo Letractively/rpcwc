@@ -27,11 +27,11 @@ namespace rpcwc.vo
             w.WriteElementString("link", link);
             w.WriteElementString("copyright", copyright);
             w.WriteElementString("itunes", "subtitle", null, null);
-            w.WriteElementString("itunes", "author", null, author);
+            w.WriteElementString("itunes", "author", null, "Dr. Stanley D. Gale");
             w.WriteElementString("description", summary);
             w.WriteStartElement("itunes", "owner", null);
             w.WriteElementString("itunes", "name", null, ownerName);
-            w.WriteElementString("itunes", "email", null, ownerEmail);
+            w.WriteElementString("itunes", "email", null, "raymond.rishty@rpcwc.org");
             w.WriteEndElement();
             if (imageURL != null && !imageURL.Equals(""))
             {

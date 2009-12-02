@@ -11,6 +11,8 @@
     <asp:RadioButtonList ID="RadioButtonListControl" AutoPostBack="false" runat="server">
         <asp:ListItem Text="Piano" Value="piano" />
         <asp:ListItem Text="Lead" Value="lead" />
+        <asp:ListItem Text="SATB" Value="SATB" />
+        <asp:ListItem Text="Midi" Value="midi" />
     </asp:RadioButtonList>
     <asp:LinkButton Text="Submit" OnCommand="UploadMusicFile" runat="server" />
 </asp:Content>

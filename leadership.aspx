@@ -12,11 +12,9 @@
     <h3>
         RULING ELDERS</h3>
     <p>
-        Robert Carlson
+        Glenn Seeger
         <br />
-        Dwayne Edwards (leave of absence)
-        <br />
-        Glenn Seeger</p>
+        Frank Ells</p>
     <h3>
         DEACONS</h3>
     <p>
@@ -24,14 +22,15 @@
         <br />
         Shawn Carafa
         <br />
-        Joseph Myshko
+        Sean Cliggett
+        <br />
+        William Judkins
+        <br />
+        Joe Myshko
+        <br />
+        Stanley Perli
         <br />
         Andrew Root
         <br />
         Jeremy Verrillo</p>
-    <br />
-    <br />
-    <p>
-        Click <a href="leadershiptraining.aspx" runat="server">here</a> to view materials
-        for RPC Leadership Development</p>
 </asp:Content>

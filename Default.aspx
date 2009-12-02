@@ -60,4 +60,12 @@
             </td>
         </tr>
     </table>
+    <script
+        type="text/javascript"
+        src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script>
+    <script type="text/javascript">FB.init("e1af994035803aed5c87901023439e44");</script>
+    <fb:fan profile_id="80304337298" stream="1" connections="" width="300"></fb:fan>
+    <div style="font-size:8px; padding-left:10px">
+        <a href="http://www.facebook.com/pages/West-Chester-PA/The-Reformed-Presbyterian-Church-of-West-Chester/80304337298">The Reformed Presbyterian Church of West Chester on Facebook</a>
+    </div>
 </asp:Content>

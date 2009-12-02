@@ -8,14 +8,16 @@ namespace rpcwc.web.music
     {
         private RPCMusicUtility _rpcMusicUtility;
 
+        private IList<FileGetter> _fileGetters;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            IList<FileGetter> fileGetters = new List<FileGetter>();
-            fileGetters.Add(new GenericFileGetter("piano", "pdf"));
-            fileGetters.Add(new GenericFileGetter("lead", "pdf"));
-            fileGetters.Add(new GenericFileGetter("SATB", "pdf"));
-            fileGetters.Add(new GenericFileGetter("demo", "mp3"));
-            MusicHolder.Controls.Add(RPCMusicUtility.GetMusicList(Server, fileGetters));
+            IList<FileGetter> fileGetters = FileGetters;
+            //fileGetters.Add(new GenericFileGetter("piano", "pdf"));
+            //fileGetters.Add(new GenericFileGetter("lead", "pdf"));
+            //fileGetters.Add(new GenericFileGetter("SATB", "pdf"));
+            //fileGetters.Add(new GenericFileGetter("demo", "mp3"));
+            MusicHolder.Controls.Add(RPCMusicUtility.GetMusicList(Server, FileGetters));
         }
 
         private RPCMusicUtility RPCMusicUtility
@@ -26,6 +28,12 @@ namespace rpcwc.web.music
                     _rpcMusicUtility = new RPCMusicUtility();
                 return _rpcMusicUtility;
             }
+        }
+
+        public IList<FileGetter> FileGetters
+        {
+            get { return _fileGetters; }
+            set { _fileGetters = value; }
         }
     }
 }

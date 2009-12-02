@@ -28,6 +28,7 @@ window.onload = externalLinks;
     <div><a href="~/314.aspx" runat="server">Pastoral Letter</a></div>
     <div><a href="~/i_see.aspx" runat="server">I See</a></div>
     <div><a href="~/gallery_314.aspx" runat="server">Photo Gallery</a></div>
+    <div><a href="~/pdf/Service of Dedication.pdf" target="_blank" runat="server">Service of Dedication</a></div>
     <br />
     
     <h3>
