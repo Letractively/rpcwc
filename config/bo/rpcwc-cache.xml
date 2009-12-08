@@ -43,6 +43,11 @@
               <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/6281/nm/A+Praying+Life:+Connecting+With+God+in+a+Distracting+World+(Paperback)" />
               <property name="ImageUrl" value="~/images/readings/9781600063008sm.jpg" />
             </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="Caught Off Guard: Encounters with the Unexpected God by William Smith" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/4887" />
+              <property name="ImageUrl" value="~/images/readings/0977080773sm.jpg" />
+            </object>
           </list>
         </entry>
         <entry key="readings50DaysOfPrayer2009">

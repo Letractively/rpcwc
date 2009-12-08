@@ -2,6 +2,8 @@
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using rpcwc.vo.directory;
+using rpcwc.util;
+using Google.GData.Photos;
 
 /// <summary>
 /// Summary description for DirectoryHelper
@@ -13,7 +15,7 @@ namespace rpcwc.web
         public static WebControl makeCell(Directory directory)
         {
             WebControl td = new WebControl(HtmlTextWriterTag.Td);
-            td.BorderWidth = Unit.Pixel(1);
+            //td.BorderWidth = Unit.Pixel(1);
             td.Style.Add(HtmlTextWriterStyle.Padding, "1em");
             td.Style.Add(HtmlTextWriterStyle.VerticalAlign, "top");
 
@@ -26,15 +28,46 @@ namespace rpcwc.web
                 citystatezip.Text = directory.city + ", ";
             citystatezip.Text += directory.state + " " + directory.zip;
 
-            td.Controls.Add(makeLastName(directory));
-            td.Controls.Add(makeFirstNames(directory));
-            td.Controls.Add(makeAddress(directory));
-            td.Controls.Add(makeGeneralEmails(directory));
-            td.Controls.Add(makePersonEmails(directory));
-            td.Controls.Add(makeGeneralPhones(directory));
-            td.Controls.Add(makePersonPhones(directory));
+            Panel textPanel = new Panel();
+            textPanel.Style.Add("float", "left");
+            textPanel.Controls.Add(makeLastName(directory));
+            textPanel.Controls.Add(makeFirstNames(directory));
+            textPanel.Controls.Add(makeAddress(directory));
+            textPanel.Controls.Add(makeGeneralEmails(directory));
+            textPanel.Controls.Add(makePersonEmails(directory));
+            textPanel.Controls.Add(makeGeneralPhones(directory));
+            textPanel.Controls.Add(makePersonPhones(directory));
+            td.Controls.Add(textPanel);
+            if (directory.photo != null)
+            {
+                Panel picturePanel = new Panel();
+                picturePanel.Style.Add("float", "right");
+                picturePanel.Controls.Add(makeGeneralPhoto(directory));
+                td.Controls.Add(picturePanel);
+            }
 
             return td;
+        }
+
+        public static Control makeGeneralPhoto(Directory directory)
+        {
+            Panel panel = new Panel();
+            WebControl link = new WebControl(HtmlTextWriterTag.A);
+            link.Attributes.Add("href", (String)directory.photo.Media.Thumbnails[1].Attributes["url"]/*(String) entry.Media.Content.Attributes["url"]*/);
+            link.CssClass = "thickbox";
+
+            PhotoAccessor pa = new PhotoAccessor(directory.photo);
+
+            Image image = new Image();
+            image.AlternateText = pa.PhotoTitle;
+
+            image.ImageUrl = (String)directory.photo.Media.Thumbnails[0].Attributes["url"];
+
+            link.Controls.Add(image);
+            panel.Controls.Add(link);
+            panel.Style.Add(HtmlTextWriterStyle.TextAlign, "center");
+
+            return panel;
         }
 
         public static Control makeGeneralEmails(Directory directory)

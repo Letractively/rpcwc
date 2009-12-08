@@ -99,12 +99,12 @@ namespace rpcwc.web.members
             WebControl colgroup2 = new WebControl(HtmlTextWriterTag.Colgroup);
             WebControl col1 = new WebControl(HtmlTextWriterTag.Col);
             WebControl col2 = new WebControl(HtmlTextWriterTag.Col);
-            col1.Width = Unit.Percentage(50);
+            col1.Width = Unit.Percentage(100);
             col2.Width = Unit.Percentage(50);
             colgroup1.Controls.Add(col1);
             colgroup2.Controls.Add(col2);
             table.Controls.Add(colgroup1);
-            table.Controls.Add(colgroup2);
+            //table.Controls.Add(colgroup2);
             table.Width = Unit.Percentage(100);
 
             IList<IAsyncResult> results = new List<IAsyncResult>();
@@ -114,18 +114,16 @@ namespace rpcwc.web.members
                 results.Add(buildCellDelegate.BeginInvoke(directoryEntry, delegate(IAsyncResult result) { }, null));
             }
 
-            for (int i = 0; i < results.Count; i += 2)
+            for (int i = 0; i < results.Count; i ++)
             {
                 WebControl tr = new WebControl(HtmlTextWriterTag.Tr);
-                tr.Controls.Add(buildCellDelegate.EndInvoke(results[i]));
-                if (i + 1 < results.Count)
+                WebControl td = buildCellDelegate.EndInvoke(results[i]);
+                td.Style.Add("border-top", "solid 1px gray");
+                if (i == 0)
                 {
-                    tr.Controls.Add(buildCellDelegate.EndInvoke(results[i + 1]));
+                    td.Style.Add("border-top", "solid 1px black");
                 }
-                else if (results.Count == 1)
-                {
-                    tr.Controls.Add(new WebControl(HtmlTextWriterTag.Td));
-                }
+                tr.Controls.Add(td);
                 table.Controls.Add(tr);
             }
 

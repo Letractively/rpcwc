@@ -19,7 +19,7 @@ namespace rpcwc.dao.GData
 
         public IList<PicasaEntry> findAllAlbums()
         {
-            AlbumQuery query = new AlbumQuery(PicasaQuery.CreatePicasaUri(GDataDaoHelper.Username));
+            AlbumQuery query = new AlbumQuery(PicasaQuery.CreatePicasaUri(GDataDaoHelper.PhotoUsername));
 
             PicasaFeed feed = Service.Query(query);
 
@@ -37,7 +37,7 @@ namespace rpcwc.dao.GData
 
         public IList<PicasaEntry> findPhotosByAlbum(string albumId)
         {
-            PhotoQuery query = new PhotoQuery(PicasaQuery.CreatePicasaUri(GDataDaoHelper.Username, albumId) + "?thumbsize=144u,640");
+            PhotoQuery query = new PhotoQuery(PicasaQuery.CreatePicasaUri(GDataDaoHelper.PhotoUsername, albumId) + "?thumbsize=144u,640");
             //query.Thumbsize = "144u, 800u";
             
             PicasaFeed feed = Service.Query(query);
@@ -50,12 +50,18 @@ namespace rpcwc.dao.GData
                 photos.Add(photo);
             }
 
+            Google.GData.Photos.PicasaFeed tagFeed = Service.Query(new Google.GData.Photos.TagQuery(TagQuery.CreatePicasaUri(GDataDaoHelper.PhotoUsername)));
+
+            foreach (PicasaEntry tag in tagFeed.Entries) {
+                TagEntry tagEntry = (TagEntry) tag;
+            }
+
             return photos;
         }
 
         public AlbumEntry findAlbumDetail(String albumId)
         {
-            AlbumQuery query = new AlbumQuery(PicasaQuery.CreatePicasaUri(GDataDaoHelper.Username, albumId));
+            AlbumQuery query = new AlbumQuery(PicasaQuery.CreatePicasaUri(GDataDaoHelper.PhotoUsername, albumId));
             //PicasaFeed feed = Service.Query(query);
 
            //if (feed.TotalResults > 0)

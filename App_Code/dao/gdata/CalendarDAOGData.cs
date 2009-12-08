@@ -6,7 +6,7 @@ using Google.GData.Extensions;
 using System.Collections;
 using rpcwc.vo;
 
-namespace rpcwc.dao.gdata
+namespace rpcwc.dao.GData
 {
     class CalendarDAOGData : CalendarDAO
     {

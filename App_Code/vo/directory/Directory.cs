@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Google.GData.Photos;
 
 /// <summary>
 /// Summary description for Directory
@@ -17,6 +18,7 @@ namespace rpcwc.vo.directory
         private IList<Email> _emails;
         private IList<Phone> _phones;
         private IList<Person> _persons;
+        private PicasaEntry _photo;
 
         public Directory()
         {
@@ -69,6 +71,11 @@ namespace rpcwc.vo.directory
         {
             get { return _persons; }
             set { _persons = value; }
+        }
+        public PicasaEntry photo
+        {
+            get { return _photo; }
+            set { _photo = value; }
         }
     }
 }

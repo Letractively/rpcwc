@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using rpcwc.dao;
 using rpcwc.vo.directory;
+using rpcwc.bo.cache;
+using Google.GData.Photos;
 
 /// <summary>
 /// Summary description for DirectoryManager
@@ -14,6 +16,7 @@ namespace rpcwc.bo
         private IDirectoryEmailDao _directoryEmailDao;
         private IDirectoryPersonDao _directoryPersonDao;
         private IDirectoryPhoneDao _directoryPhoneDao;
+        private PhotoCache _photoCache;
 
         public IList<Directory> getDirectory()
         {
@@ -37,7 +40,15 @@ namespace rpcwc.bo
             directoryEntry.emails = DirectoryEmailDao.findDirectoryLevelEmail(directoryEntry.id);
             directoryEntry.phones = DirectoryPhoneDao.findDirectoryLevelPhone(directoryEntry.id);
             directoryEntry.persons = DirectoryPersonDao.findPersonEntries(directoryEntry.id);
-
+            string photoId = new PhotoAccessor(directoryEntry.photo).Id;
+            if (photoId != null)
+            {
+                directoryEntry.photo = PhotoCache.FindPhoto(photoId);
+            }
+            else
+            {
+                directoryEntry.photo = null;
+            }
 
             foreach (Person person in directoryEntry.persons)
             {
@@ -73,6 +84,12 @@ namespace rpcwc.bo
         {
             get { return _directoryPhoneDao; }
             set { _directoryPhoneDao = value; }
+        }
+
+        public PhotoCache PhotoCache
+        {
+            get { return _photoCache; }
+            set { _photoCache = value; }
         }
     }
 }

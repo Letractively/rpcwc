@@ -3,7 +3,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h3>
-            SUNDAY SERVICE OF WORSHIP
+        SUNDAY SERVICE OF WORSHIP
     </h3>
     <p>
         We gather together for corporate worship of our triune God on the Lord's Day. Our
@@ -17,7 +17,7 @@
     <p style="font-style: italic;">
         Sundays at 11:00 a.m.</p>
     <h3>
-            SUNDAY BIBLE SCHOOL
+        SUNDAY BIBLE SCHOOL
     </h3>
     <p>
         Weekly course offerings designed to educate and equip both children and adults in
@@ -27,29 +27,23 @@
         Sundays at 9:30 a.m.</p>
     <h3>
         <p>
-            CHILDREN'S CHURCH</p>
+            CHILDREN'S WORSHIP</p>
     </h3>
     <p>
-        Children ages 2 through fifth grade are ministered to in a special way during the
-        worship service on Sunday mornings to make the time more meaningful and to train
-        them in worship. Children ages 2&ndash;4 will meet separately for the entire service for
-        supervised play time, a Bible lesson and activities. Children age 5 through 5th
-        grade will worship with their families and be dismissed at the sermon for teaching
-        and crafts. Once a month this older group will meet in the balcony area for instruction
-        in worship using a special childrens bulletin called <em>RPC Junior Jots &amp; Tittles</em>
-        prepared by Pastor Gale specifically for that week.
+        Children ages 2-5 gather at 11:00 a.m., while children first through fifth grades
+        stay with their parents in the main worship service and are dismissed before the
+        sermon for age appropriate lessons and activities. The older group meets once a
+        month for training in worship using a specially prepared children’s bulletin.
     </p>
     <h3>
-            RPC CLUSTER GROUPS
+        RPC CLUSTER GROUPS
     </h3>
     <p>
         Clusters are the small group ministry of RPC to cultivate spiritual health and vitality
         for personal and corporate growth in the life of Christ, through Bible study, prayer,
         fellowship and ministry.</p>
-    <p style="font-style: italic;">
-        Weekly in homes, except for the second full week of the month.</p>
     <h3>
-            WOMEN IN THE CHURCH (WIC)
+        WOMEN IN THE CHURCH (WIC)
     </h3>
     <p>
         The purpose of WIC is that every woman know Christ personally and be committed to
@@ -58,7 +52,16 @@
     <p style="font-style: italic;">
         Various meetings and activities.</p>
     <h3>
-            RPC SUPPER CLUBS
+        MEN IN CHRIST (MIC)
+    </h3>
+    <p>
+        Toward the goal of helping them to grow in Christ and honor Him in their various
+        roles, men meet monthly for breakfast, study, prayer and mutual encouragement. MIC
+        also includes an annual men’s retreat and service projects.</p>
+    <p style="font-style: italic;">
+        Second Saturday of each month 9:00 a.m.&nbsp;10:30 a.m</p>
+    <h3>
+        RPC SUPPER CLUBS
     </h3>
     <p>
         Monthly gatherings for a meal and prayer to foster community and caring. The groups
@@ -66,7 +69,7 @@
     <p style="font-style: italic;">
         Second Sunday of each month.</p>
     <h3>
-            COVENANT KEEPERS
+        COVENANT KEEPERS
     </h3>
     <p>
         A group for parents with children at home to provide direction and mutual support
@@ -75,7 +78,7 @@
     <p style="font-style: italic;">
         First Friday of the month at 6:00 p.m.</p>
     <h3>
-            MINISTRY AT WENTWORTH HOME
+        MINISTRY AT WENTWORTH HOME
     </h3>
     <p>
         A monthly worship service led by an elder, which all are welcome to attend. The
@@ -83,7 +86,7 @@
     <p style="font-style: italic;">
         Second Sunday of each month at 2:00 p.m.</p>
     <h3>
-            MISSIONS AND MINISTRY
+        MISSIONS AND MINISTRY
     </h3>
     <p>
         RPC supports specific local, national and foreign missions through the annual budget
@@ -91,4 +94,13 @@
         early December, "The Christmas Story told through rod puppets," a narration of the
         Gospel accounts of Christ's birth acted out by large-scale rod puppets. The year
         also includes a men's retreat, a women's retreat and youth events.</p>
+    <h3>
+        MONTHLY PRAYER CONVOCATIONS</h3>
+    <p>
+        Believing that prayer is vital to the health and growth of its members and the effectiveness
+        of its ministry, an emphasis on prayer pervades all parts of the life of RPC. One
+        facet of that emphasis is a monthly gathering in corporate prayer for communion
+        with God and seeking His care.</p>
+    <p style="font-style: italic;">
+        Fourth or Fifth Sunday of each month at 7:00 p. m.</p>
 </asp:Content>

@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#"  %>
+
+<%@ Register TagName="top" TagPrefix="include" Src="~/includes/top.ascx" %>
+<%@ Register TagName="topleftbox" TagPrefix="include" Src="~/includes/topleftbox.ascx" %>
+<%@ Register TagName="leftside" TagPrefix="include" Src="~/includes/leftside.ascx" %>
+<%@ Register TagName="mainmenu" TagPrefix="include" Src="~/includes/mainmenu.ascx" %>
+<%@ Register TagName="header" TagPrefix="include" Src="~/includes/heading.ascx" %>
+<%@ Register TagName="rightside" TagPrefix="include" Src="~/includes/rightside.ascx" %>
+<%@ Register TagName="footer" TagPrefix="include" Src="~/includes/footer.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <title>Reformed Presbyterian Church of West Chester, PA</title>
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    <link rel="stylesheet" type="text/css" href="~/css/master.css" runat="server" />
+    <link rel="stylesheet" type="text/css" href="~/css/thickbox.css"  media="screen" runat="server" />
+    <link rel="stylesheet" type="text/css" href="~/css/esvtext.css" runat="server" />
+
+    <script type="text/javascript" src="../scripts/jquery.js"></script>
+    <script type="text/javascript" src="../scripts/thickbox.js"></script>
+
+    <script src="http://www.google.com/jsapi?key=ABQIAAAAm3W1dWSp28bnsTNS8d3YjBQ6Az9DtOpeO68GL1uvpKxuBRsCORS7EacS20iqfxoMbZ9v3xFfjBkxjg" type="text/javascript"></script>
+    
+    <script type="text/javascript" src="../scripts/googlesearch.js"></script>
+
+</head>
+<body>
+    <form runat="server">
+    <div id="top">
+        <include:top ID="Top1" runat="server" />
+    </div>
+    <div id="page-container">
+        <div style="padding-bottom: 10px; background: #6D8A98;">
+        </div>
+        <div id="topleftbox">
+            <include:topleftbox runat="server" />
+        </div>
+        <div id="header">
+            <img src="~/images/pixel.gif" runat="server"  width="650" height="150" />
+        </div>
+        <div id="mainmenu">
+            <include:mainmenu runat="server" />
+        </div>
+        <div id="leftside">
+            <include:leftside runat="server" />
+        </div>
+        <div id="rightside">
+            <include:rightside runat="server" />
+        </div>
+        <div id="content_combined">
+            <div id="main_content" width="100%">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="searchResults" style="display:none;"></div>
+        </div>
+        <div id="footer">
+            <include:footer runat="server" />
+        </div>
+        <div id="searchbox" style="display:none;"></div>
+        </div>
+    </form>
+
+<!-- The following are for site traffic analysis -->
+
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-3375098-2");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+    </script>    
+</body>
+</html>

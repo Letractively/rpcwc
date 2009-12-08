@@ -33,4 +33,6 @@
         Andrew Root
         <br />
         Jeremy Verrillo</p>
+    <br />
+    <p>Leadership Training materials are available <a href="~/leadershiptraining.aspx" runat="server">here</a>.</p>
 </asp:Content>

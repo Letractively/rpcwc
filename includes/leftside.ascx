@@ -43,8 +43,6 @@
 <p>
     <strong><a href="../314house.aspx" runat="server">314 Ministry House</a></strong></p>
 <p>
-    <strong><a href="~/pdf/Service of Dedication.pdf" target="_blank" runat="server">Service of Dedication</a></strong></p>
-<p>
     <a href="http://www.adobe.com/products/acrobat/readstep2.html" target="_blank">
         <img src="../images/reader_icon.gif" alt="Click here to download Adobe Reader" width="34"
             height="40" border="0" longdesc="http://www.adobe.com/products/acrobat/readstep2.html" runat="server" /></a>

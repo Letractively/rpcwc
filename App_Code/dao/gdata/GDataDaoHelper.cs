@@ -4,6 +4,7 @@ using System.Web;
 using Google.GData.Client;
 using System.Net;
 using Google.GData.Photos;
+using rpcwc.dao.GData.auth;
 
 /// <summary>
 /// Helper class for GData DAOs. Defines and instantiates a Service object.
@@ -12,58 +13,41 @@ namespace rpcwc.dao.GData
 {
     public class GDataDaoHelper
     {
-        private Service _service;
+        private rpcwc.dao.GData.auth.GDataDaoHelper _gDataDaoHelper;
 
-        private PicasaService _picasaService;
-
-        private String _username = "raymond.rishty@rpcwc.org";
-
-        public Service service
+        public rpcwc.dao.GData.auth.GDataDaoHelper DaoHelper
         {
             get
             {
-                if (_service == null)
+                if (_gDataDaoHelper == null)
                 {
-                    _service = new Service("blogger", "rpcwc-blog-1");
-
-                    // ClientLogin using username/password authentication
-                    string username = Username;// "raymond.rishty@rpcwc.org";
-                    string password = "gr33ntea";
-
-                    service.Credentials = new GDataCredentials(username, password);
-                    GDataGAuthRequestFactory requestFactory = (GDataGAuthRequestFactory)service.RequestFactory;
-                    //requestFactory.Proxy = new WebProxy(WebRequest.DefaultWebProxy.GetProxy(new Uri("http://www.blogger.com")));
-                    requestFactory.AccountType = "GOOGLE";
+                    _gDataDaoHelper = new auth.GDataDaoHelper();
                 }
-                return _service;
+
+                return _gDataDaoHelper;
             }
+        }
+
+        public Service service
+        {
+            get { return DaoHelper.service; }
         }
 
         public PicasaService PicasaService
         {
-            get
-            {
-                if (_picasaService == null)
-                {
-                    _picasaService = new PicasaService("rpcwc-photos-1");
-
-                    // ClientLogin using username/password authentication
-                    string username = Username;// "raymond.rishty@rpcwc.org";
-                    string password = "gr33ntea";
-
-                    _picasaService.Credentials = new GDataCredentials(username, password);
-                    GDataGAuthRequestFactory requestFactory = (GDataGAuthRequestFactory)_picasaService.RequestFactory;
-                    //requestFactory.Proxy = new WebProxy(WebRequest.DefaultWebProxy.GetProxy(new Uri("http://www.blogger.com")));
-                    requestFactory.AccountType = "GOOGLE";
-                }
-                return _picasaService;
-            }
+            get { return DaoHelper.PicasaService; }
         }
 
         public String Username
         {
-            get { return _username; }
-            set { _username = value; }
+            get { return DaoHelper.Username; }
+            set { DaoHelper.Username = value; }
+        }
+
+        public String PhotoUsername
+        {
+            get { return DaoHelper.PhotoUsername; }
+            set { DaoHelper.PhotoUsername = value; }
         }
     }
 

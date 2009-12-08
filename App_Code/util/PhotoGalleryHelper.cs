@@ -51,7 +51,7 @@ namespace rpcwc.util
             return images;
         }
 
-        private static WebControl BuildImageFromPicasaEntry(PicasaEntry entry)
+        public static WebControl BuildImageFromPicasaEntry(PicasaEntry entry)
         {
             WebControl link = new WebControl(HtmlTextWriterTag.A);
             link.Attributes.Add("href", (String)entry.Media.Thumbnails[1].Attributes["url"]/*(String) entry.Media.Content.Attributes["url"]*/);

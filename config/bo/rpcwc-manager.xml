@@ -39,5 +39,6 @@
     <property name="DirectoryEmailDao" ref="DirectoryEmailDao" />
     <property name="DirectoryPersonDao" ref="DirectoryPersonDao" />
     <property name="DirectoryPhoneDao" ref="DirectoryPhoneDao" />
+    <property name="PhotoCache" ref="PhotoCache" />
   </object>
 </objects>
