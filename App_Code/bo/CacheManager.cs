@@ -36,15 +36,6 @@ namespace rpcwc.bo
             return cacheMap;
         }
 
-        public void BeginRefreshers()
-        {
-            foreach (AbstractCache cache in CacheList)
-            {
-                if (cache.RefresherRunning)
-                    cache.Refresh(false);
-            }
-        }
-
         public IList<AbstractCache> CacheList
         {
             get { return _cacheList;}

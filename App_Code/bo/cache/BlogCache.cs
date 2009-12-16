@@ -21,8 +21,6 @@ namespace rpcwc.bo.cache
 
         private const String NEWS_AND_NOTES_LABEL = "newsandnotes";
 
-        delegate void RefresherDelegate();
-
         public class BlogEntryComparer : IComparer<Item>
         {
             #region IComparer<Item> Members
@@ -53,13 +51,6 @@ namespace rpcwc.bo.cache
                 UserRefreshCount++;
 
             TotalRefreshCount++;
-
-            if (!RefresherRunning)
-            {
-                RefresherDelegate refresherDelegate = RefreshAndSleep;
-                refresherDelegate.BeginInvoke(delegate(IAsyncResult result) { }, null);
-                RefresherRunning = true;
-            }
 
             DateTime startTime = DateTime.Now;
 

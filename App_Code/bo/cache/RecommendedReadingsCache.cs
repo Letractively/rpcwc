@@ -16,8 +16,6 @@ namespace rpcwc.bo.cache
 
         private const String READINGS_KEY = "readings";
 
-        delegate void RefresherDelegate();
-
         public override void Refresh(bool visitorRefresh)
         {
 
@@ -25,13 +23,6 @@ namespace rpcwc.bo.cache
                 UserRefreshCount++;
 
             TotalRefreshCount++;
-
-            if (!RefresherRunning)
-            {
-                RefresherDelegate refresherDelegate = RefreshAndSleep;
-                refresherDelegate.BeginInvoke(delegate(IAsyncResult result) { }, null);
-                RefresherRunning = true;
-            }
 
             DateTime startTime = DateTime.Now;
 

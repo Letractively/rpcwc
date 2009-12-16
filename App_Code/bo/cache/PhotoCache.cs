@@ -19,8 +19,6 @@ namespace rpcwc.bo.cache
         private IPhotoDao _photoDao;
         private static Object LOCK = new Object();
 
-        delegate void RefresherDelegate();
-
         public class AlbumByIdMapKeyCreator : CollectionUtils.MapKeyCreator<String, PicasaEntry>
         {
             public String createKey(PicasaEntry obj)
@@ -47,13 +45,6 @@ namespace rpcwc.bo.cache
                 UserRefreshCount++;
 
             TotalRefreshCount++;
-
-            if (!RefresherRunning)
-            {
-                RefresherDelegate refresherDelegate = RefreshAndSleep;
-                refresherDelegate.BeginInvoke(delegate(IAsyncResult result) { }, null);
-                RefresherRunning = true;
-            }
 
             DateTime startTime = DateTime.Now;
 

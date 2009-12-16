@@ -16,20 +16,10 @@ namespace rpcwc.bo.cache
         private int _hitCount;
         private TimeSpan _refreshTime;
         private TimeSpan _cacheTime;
-        private bool _refresherRunning;
         protected bool refreshing;
 
         public abstract void Refresh(bool visitorRefresh);
         
-        public void RefreshAndSleep()
-        {
-            /*do
-            {
-                Refresh(false);
-                // Thread.Sleep(RefreshInterval - new TimeSpan(0,5,0));
-            } while (true);*/
-        }
-
         public int TotalRefreshCount
         {
             get { return _totalRefreshCount; }
@@ -109,12 +99,6 @@ namespace rpcwc.bo.cache
         {
             get { return !_upToDate && LastRefresh.Add(RefreshInterval).CompareTo(DateTime.Now) > 0; }
             set { _upToDate = value; }
-        }
-
-        public bool RefresherRunning
-        {
-            get { return _refresherRunning; }
-            set { _refresherRunning = value; }
         }
     }
 }
