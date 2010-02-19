@@ -14,26 +14,30 @@ This course will focus on three primary areas essential to Christian leaders&mda
 	<li>Read <a href="http://www.wtsbooks.com/product-exec/product_id/5988/nm/What+is+Spiritual+Warfare%3F+%28Basics+of+the+Reformed+Faith%29+%28Paperback%29" target="_blank">What is Spiritual Warfare?</a> (Gale, 44 pages)</li>
 	<li>Complete Discipleship Inventory</li>
 	<li>Complete Personal Rule</li>
-	<li>Explore areas of piety, purity and faithfulness</li>
+	<li>Explore areas of piety, purity and faithfulness
 	<ul>
-		<li>Piety</li>
+		<li>Piety
 		<ul>
 			<li>Discipline of daily devotions.  Read through entire Bible?</li>
 			<li>Discipline of prayer.  Quantity and quality?</li>
 			<li>Evaluation of wife and/or others who know him well (for elders and deacons)</li>
 		</ul>
-		<li>Purity</li>
+        </li>
+		<li>Purity
 		<ul>
 			<li>Involvement in pornography?  How accountable?</li>
 			<li>Besetting sins (idols): alcohol, money, squandering time</li>
 		</ul>
-		<li>Faithfulness to vows of membership</li>
+        </li>
+		<li>Faithfulness to vows of membership
 		<ul>
 			<li>Attendance in worship, SBS, Sunday evenings, Cluster</li>
 			<li>Areas have served or are serving in?</li>
 			<li>Tithe? Attitude toward giving? (Alcorn <a href="http://www.wtsbooks.com/product-exec/product_id/4183/nm/Treasure+Principle+%28Lifechange+Books+-+Hardcover%29" target="_blank">Treasure Principle</a>)</li>
 		</ul>
+        </li>
 	</ul>
+    </li>
 </ul>
 <h3>Biblical Foundation</h3>
 
@@ -59,7 +63,7 @@ General ability to lead and specific competencies related to the area in which t
 </ul>
 <h3>Ordination</h3>
 <p>
-All candidates for ordained office will be required to complete the general leadership training as well as those below.<p>
+All candidates for ordained office will be required to complete the general leadership training as well as those below.</p>
 <ul>
 	<li>Review qualification for office from <a href="http://www.gnpcb.org/esv/search/?q=1+Timothy+3" target="_blank">1 Timothy 3</a></li>
 	<li>Complete study guide on the PCA Book of Church Order</li>
@@ -67,19 +71,17 @@ All candidates for ordained office will be required to complete the general lead
 	<li>Assess personal sense of call to the role, affirmation by others of the call (esp. by wife, if married; interviews with those who know him; nomination to office), and verification of the call through ministry efforts. </li>
 	<li>Probation period.  period of participation with Session or Diaconate without vote as a period of testing (<a href="http://www.gnpcb.org/esv/search/?q=1+Timothy+3%3A10" target="_blank">1 Tim. 3:10</a>) and to judge chemistry (<a href="http://books.google.com/books?id=64wjHp0z8aIC&lpg=PP1&dq=leadership%20dynamic&pg=PT161#v=onepage" target="_blank">Reeder, 161</a>; <a href="http://www.gnpcb.org/esv/search/?q=Acts+15%3A37f" target="_blank">Acts 15:37f</a>.). </li>
 </ul>
-<h3>CALENDAR</h3>
- 
-
+<h3>Calendar</h3>
 <p>Mentoring Groups (Each mentoring group will have a particular emphasis. However, each will be open to general discussion and questions on any assignment.)</p>
 <ul>
-	<li>Character  Saturday, February 20, 9-11 a.m.</li>
-	<li>Biblical Bearings Saturday, March 6, 9-11 a.m.</li>
-	<li>Leadership Skills Saturday, March 27, 9-11 a.m.</li>
+	<li>Character </li>
+	<li>Biblical Bearings</li>
+	<li>Leadership Skills</li>
 </ul>
 <h3>Classes</h3>
 <ul>
-	<li>January-March SBS (9:15-10:30 a.m.) -  “Embers to a Flame” Seminar</li>
-	<li>Sundays January 17, February 7, March 21 (7-8:30 p.m.) - Shepherding DVD, RPC Shepherding Plan</li>
-	<li>Sunday Jan 10, Jan 24, Feb 21, March 7, March 28 (7-8:30 p.m.) – Diaconal DVD</li>
+	<li>“Embers to a Flame” Seminar</li>
+	<li>Shepherding DVD, RPC Shepherding Plan</li>
+	<li>Diaconal DVD</li>
 </ul>
 </asp:Content>
