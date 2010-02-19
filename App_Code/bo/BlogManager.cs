@@ -28,6 +28,16 @@ namespace rpcwc.bo
         {
             return BlogCache.GetSermonPosts(label);
         }
+
+        /// <summary>
+        /// Retrieves blog post marked by the given id
+        /// </summary>
+        /// <param name="label">This is a unique identifier for the sermon blog post</param>
+        /// <returns>A single blog posts for the sermon</returns>
+        public BlogEntry GetSermonPost(String sermonid)
+        {
+            return BlogCache.GetSermonPost(sermonid);
+        }
     
         public IList<Item> getBlogEntries()
         {
