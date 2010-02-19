@@ -32,21 +32,29 @@
               <property name="Text" value="Face to Face: Praying the Scriptures for Intimate Worship" />
               <property name="NavigateUrl" value="http://www.amazon.com/Face-Praying-Scriptures-Intimate-Worship/dp/0310925509" />
               <property name="ImageUrl" value="~/images/readings/0310925509_sm.jpg" />
+              <property name="Width" value="80" />
+              <property name="Height" value="122" />
             </object>
             <object type="System.Web.UI.WebControls.HyperLink">
               <property name="Text" value="Quiet Strength by Tony Dungy" />
               <property name="NavigateUrl" value="http://www.amazon.com/Quiet-Strength-Principles-Practices-Priorities/dp/1414318014" />
               <property name="ImageUrl" value="~/images/readings/quietstrength_sm.jpg" />
+              <property name="Width" value="80" />
+              <property name="Height" value="119" />
             </object>
             <object type="System.Web.UI.WebControls.HyperLink">
               <property name="Text" value="A Praying Life by Paul Miller" />
               <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/6281/nm/A+Praying+Life:+Connecting+With+God+in+a+Distracting+World+(Paperback)" />
               <property name="ImageUrl" value="~/images/readings/9781600063008sm.jpg" />
+              <property name="Width" value="80" />
+              <property name="Height" value="120" />
             </object>
             <object type="System.Web.UI.WebControls.HyperLink">
               <property name="Text" value="Caught Off Guard: Encounters with the Unexpected God by William Smith" />
               <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/4887" />
               <property name="ImageUrl" value="~/images/readings/0977080773sm.jpg" />
+              <property name="Width" value="80" />
+              <property name="Height" value="122" />
             </object>
           </list>
         </entry>
