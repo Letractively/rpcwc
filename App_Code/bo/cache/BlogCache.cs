@@ -17,6 +17,7 @@ namespace rpcwc.bo.cache
         private IList<Item> _blogEntries = new List<Item>();
         private IDictionary<String, IList<BlogEntry>> _blogEntriesMappedByLabel = new Dictionary<String, IList<BlogEntry>>();
         private IDictionary<String, IList<BlogEntry>> _newsAndNotesMappedByLabel = new Dictionary<String, IList<BlogEntry>>();
+        private IDictionary<String, BlogEntry> _blogEntriesMappedById = new Dictionary<String, BlogEntry>();
         private Object blogCacheLock = new Object();
 
         private const String NEWS_AND_NOTES_LABEL = "newsandnotes";
@@ -31,6 +32,14 @@ namespace rpcwc.bo.cache
             }
 
             #endregion
+        }
+
+        public class BlogEntryByIdMapKeyCreator : CollectionUtils.MapKeyCreator<String, BlogEntry>
+        {
+            public String createKey(BlogEntry obj)
+            {
+                return obj.id;
+            }
         }
 
         public IList<Item> BlogEntries
@@ -72,6 +81,7 @@ namespace rpcwc.bo.cache
 
             IDictionary<String, IList<BlogEntry>> blogEntriesMappedByLabel = MapBlogEntriesByLabel(sermonBlogEntries);
             IDictionary<String, IList<BlogEntry>> newsAndNotesMappedByLabel = MapNewsAndNotesByLabel(sermonBlogEntries);
+            IDictionary<String, BlogEntry> blogEntriesMappedById = CollectionUtils.Map<String, BlogEntry>(sermonBlogEntries, new BlogEntryByIdMapKeyCreator());
 
             lock (blogCacheLock)
             {
@@ -79,6 +89,7 @@ namespace rpcwc.bo.cache
                 ((List<Item>)_blogEntries).AddRange(blogEntries);
                 _blogEntriesMappedByLabel = blogEntriesMappedByLabel;
                 _newsAndNotesMappedByLabel = newsAndNotesMappedByLabel;
+                _blogEntriesMappedById = blogEntriesMappedById;
                 LastRefresh = DateTime.Now;
             }
 
@@ -152,6 +163,26 @@ namespace rpcwc.bo.cache
             ArrayList.Adapter((IList)blogEntryList).Sort();
 
             return blogEntryList;
+        }
+
+        /// <summary>
+        /// Retrieves all blog posts from the sermon series marked by the given label
+        /// </summary>
+        /// <param name="label">This is a tag associated with blog posts, representing a sermon series</param>
+        /// <returns>A list of blog posts in the sermon series</returns>
+        public BlogEntry GetSermonPost(String sermonid)
+        {
+            if (!UpToDate)
+                Refresh(true);
+
+            HitCount++;
+
+            if (!_blogEntriesMappedById.ContainsKey(sermonid))
+                return null;
+
+            BlogEntry blogEntry = _blogEntriesMappedById[sermonid];
+
+            return blogEntry;
         }
 
         /// <summary>

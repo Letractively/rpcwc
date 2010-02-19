@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 /// <summary>
 /// Summary description for RecommendedReadingCache
@@ -18,7 +19,6 @@ namespace rpcwc.bo.cache
 
         public override void Refresh(bool visitorRefresh)
         {
-
             if (visitorRefresh)
                 UserRefreshCount++;
 
@@ -27,6 +27,17 @@ namespace rpcwc.bo.cache
             DateTime startTime = DateTime.Now;
 
             IList<Control> recommendedReadings = ControlRotationList[READINGS_KEY];
+
+            foreach (HyperLink reading in recommendedReadings)
+            {
+                Image image = new Image();
+                image.ImageUrl = reading.ImageUrl;
+                reading.ImageUrl = null;
+                image.Width = reading.Width;
+                image.Height = reading.Height;
+                image.AlternateText = reading.Text;
+                reading.Controls.Add(image);
+            }
 
             lock (LOCK)
             {
@@ -50,11 +61,11 @@ namespace rpcwc.bo.cache
 
             HitCount++;
 
-            Control reading = null;
+            HyperLink reading = null;
 
             lock (LOCK)
             {
-                reading = (Control)RecommendedReadings.Dequeue();
+                reading = (HyperLink)RecommendedReadings.Dequeue();
                 RecommendedReadings.Enqueue(reading);
             }
 
