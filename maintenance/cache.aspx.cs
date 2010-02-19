@@ -64,11 +64,6 @@ namespace rpcwc.web.Maintenance
             }
         }
 
-        public void BeginRefresherJob(Object source, CommandEventArgs eventArgs)
-        {
-            CacheManager.BeginRefreshers();
-        }
-
         public CacheManager CacheManager
         {
             get
