@@ -4,6 +4,7 @@ using System.Text;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using rpcwc.vo.Blog;
+using System.Web.UI.HtmlControls;
 
 /// <summary>
 /// Summary description for BlogHelper
@@ -46,8 +47,22 @@ namespace rpcwc.web
 
         private static WebControl BuildContentsControl(BlogEntry entry)
         {
-            WebControl contentsControl = new WebControl(HtmlTextWriterTag.P);
-            contentsControl.Controls.Add(new LiteralControl(entry.Content));
+            Panel contentsControl = new Panel();
+            WebControl textControl = new WebControl(HtmlTextWriterTag.P);
+            textControl.Controls.Add(new LiteralControl(entry.Content));
+            contentsControl.Controls.Add(textControl);
+
+            if (entry.Enclosure != null && entry.Enclosure.Uri != null)
+            {
+                HtmlGenericControl musicPlayer = new HtmlGenericControl("iframe");
+                musicPlayer.ID = "musicPlayer_" + entry.id;
+                musicPlayer.Style.Add("border", "1px solid rgb(170, 170, 170)");
+                musicPlayer.Style.Add(HtmlTextWriterStyle.Width, "400px");
+                musicPlayer.Style.Add(HtmlTextWriterStyle.Height, "27px");
+                musicPlayer.Attributes.Add("src", "http://www.google.com/reader/ui/3247397568-audio-player.swf?audioUrl=" + entry.Enclosure.Uri);
+                contentsControl.Controls.Add(musicPlayer);
+            }
+
 
             return contentsControl;
         }
@@ -107,12 +122,13 @@ namespace rpcwc.web
             //WebControl dateHeader = new WebControl(HtmlTextWriterTag.H2);
             //dateHeader.CssClass = "date-header";
             //dateHeader.Controls.Add(new LiteralControl(entry.PubDate.ToString("MMMM d, yyyy")));
-            Label postTitleHeader = new Label();
+            HyperLink postTitleHeader = new HyperLink();
             postTitleHeader.Font.Size = FontUnit.Parse("14px");
             postTitleHeader.Font.Bold = true;
             postTitleHeader.ForeColor = Color.FromArgb(183,217,125);
             postTitleHeader.CssClass = "post-title";
             postTitleHeader.Controls.Add(new LiteralControl(entry.PubDate.ToString("MMMM d, yyyy: ")));
+            postTitleHeader.NavigateUrl = "sermon.aspx?sermonid=" + entry.id;
 
             postTitleHeader.Controls.Add(new LiteralControl(entry.Title));
 
