@@ -31,5 +31,12 @@ namespace rpcwc.vo.Blog
             set { _caption = value; }
         }
 
+        private ushort _width;
+
+        public ushort Width { get { return _width; } set { _width = value; } }
+
+        private ushort _height;
+
+        public ushort Height { get { return _height; } set { _height = value; } }
     }
 }
