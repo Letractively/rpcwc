@@ -2,12 +2,10 @@
     Title="Reformed Presbyterian Church &mdash; Biography of Pastor Stan Gale" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <h4>
+        Biography of Pastor Stan Gale</h4>
     <p>
-        <h4>
-            Biography of Pastor Stan Gale</h4>
-    </p>
-    <p>
-        <img src="~/images/SDG pic1-1.jpg" width="150" height="144" runat="server" /></p>
+        <img src="~/images/SDG pic1-1.jpg" alt="Dr. Stanley D. Gale" width="150" height="144" runat="server" /></p>
     <p>
         Stanley D. Gale has served as pastor of RPC since 1988.&nbsp; He and his wife, Linda,
         married in 1975.&nbsp; They have four children and four grandchildren.&nbsp; He holds

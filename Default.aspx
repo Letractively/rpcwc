@@ -22,11 +22,32 @@
             </td>
             <td width="190" valign="top">
                 <p>
-                    <a href="godsgoodnews.aspx" runat="server">
-                        <img src="~/images/ggn.gif" width="190" height="162" border="0" alt="The Message of Life"
+                    <a href="sermon.aspx?label=James 2010" runat="server">
+                        <img src="~/images/jamesbelief.jpg" width="190" height="162" border="0" alt="James: Belief You Can Change In"
                             runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a href="godsgoodnews.aspx" runat="server">The Message of Life</a></strong></p>
+                    <strong><a href="sermon.aspx?label=James 2010" runat="server">James: Belief You Can Change In</a></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="190" valign="top">
+                <p>
+                    <a id="A5" href="~/pdf/Christianity Explored invitation.pdf" runat="server">
+                        <img id="Img1" src="~/images/ChristianityExplored.001.jpg" width="190" height="162" border="0" alt="Christianity Explored"
+                            runat="server" /></a></p>
+                <p style="text-align: center;">
+                    <strong><a id="A6" href="~/pdf/Christianity Explored invitation.pdf" runat="server">Christianity Explored</a></strong></p>
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td valign="top">
+                <p>
+                    <a id="A1" href="~/upcomingevents.aspx" runat="server">
+                        <img src="~/images/upcoming.gif" width="190" height="162" alt="Upcoming Events" border="0"
+                            runat="server" /></a></p>
+                <p style="text-align: center;">
+                    <strong><a href="~/upcomingevents.aspx" runat="server">Upcoming Events</a></strong></p>
             </td>
         </tr>
         <tr>
@@ -45,18 +66,18 @@
                     </asp:Calendar>
                 </p>
                 <p style="padding-top: 1em; text-align: center;">
-                    <strong><a href="~/calendar.aspx" runat="server">Church Calendar</a></strong></p>
+                    <strong><a id="A4" href="~/calendar.aspx" runat="server">Church Calendar</a></strong></p>
             </td>
-            <td>
+            <td width="10">
                 &nbsp;
             </td>
-            <td valign="top">
+            <td width="190" valign="top">
                 <p>
-                    <a id="A1" href="~/upcomingevents.aspx" runat="server">
-                        <img src="~/images/upcoming.gif" width="190" height="162" alt="Upcoming Events" border="0"
+                    <a id="A2" href="godsgoodnews.aspx" runat="server">
+                        <img id="Img2" src="~/images/ggn.png" width="190" height="162" border="0" alt="The Message of Life"
                             runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a href="~/upcomingevents.aspx" runat="server">Upcoming Events</a></strong></p>
+                    <strong><a id="A3" href="godsgoodnews.aspx" runat="server">The Message of Life</a></strong></p>
             </td>
         </tr>
     </table>

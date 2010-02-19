@@ -17,16 +17,10 @@
     <meta http-equiv="imagetoolbar" content="no" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
-    <link rel="stylesheet" type="text/css" href="~/css/master.css" runat="server" />
-    <link rel="stylesheet" type="text/css" href="~/css/thickbox.css"  media="screen" runat="server" />
-    <link rel="stylesheet" type="text/css" href="~/css/esvtext.css" runat="server" />
+    <link rel="stylesheet" type="text/css" href="~/css/css_combined.css" runat="server" />
 
-    <script type="text/javascript" src="scripts/jquery.js"></script>
-    <script type="text/javascript" src="scripts/thickbox.js"></script>
-
+    <script type="text/javascript" src="scripts/js_combined.js"></script>
     <script src="http://www.google.com/jsapi?key=ABQIAAAAm3W1dWSp28bnsTNS8d3YjBQ6Az9DtOpeO68GL1uvpKxuBRsCORS7EacS20iqfxoMbZ9v3xFfjBkxjg" type="text/javascript"></script>
-    
-    <script type="text/javascript" src="scripts/googlesearch.js"></script>
 
 </head>
 <body>

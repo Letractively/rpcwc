@@ -15,6 +15,11 @@ namespace rpcwc.web
         private IDictionary<DateTime, IList<Event>> dates;
         private CalendarManager _calendarManager;
 
+        public void SetObjectDataSourceInstance(Object source, ObjectDataSourceEventArgs eventArgs)
+        {
+            eventArgs.ObjectInstance = calendarManager;
+        }
+
         protected void SelectionChanged(object sender, EventArgs eventArgs)
         {
             SmallCalendarControl.VisibleDate = SmallCalendarControl.SelectedDate;

@@ -24,11 +24,20 @@ namespace rpcwc.web
         protected void Page_Load(Object source, EventArgs eventArgs)
         {
             String label = Request.Params["label"];
+            String sermonid = Request.Params["sermonid"];
 
             if (label != null && !label.Equals(""))
+            {
                 DisplayPostsInSeries(label);
+            }
+            else if (sermonid != null && !sermonid.Equals(""))
+            {
+                DisplayPost(sermonid);
+            }
             else
+            {
                 DisplaySermonSeriesList();
+            }
         }
 
         private void DisplaySermonSeriesList()
@@ -58,12 +67,20 @@ namespace rpcwc.web
         private Control BuildSermonSeriesLabel(SermonSeries sermonSeries)
         {
             HyperLink seriesLink = new HyperLink();
-            seriesLink.ImageUrl = sermonSeries.ImageUrl;
-            seriesLink.Height = new Unit("150px");
-            seriesLink.Style.Add(HtmlTextWriterStyle.Padding, "1em");
-            seriesLink.Text = sermonSeries.Caption;
+            Image seriesImage = new Image();
+            seriesImage.Height = sermonSeries.Height;
+            seriesImage.Width = sermonSeries.Width;
+            seriesImage.ImageUrl = sermonSeries.ImageUrl;
+            //seriesLink.ImageUrl = sermonSeries.ImageUrl;
+            //seriesLink.Width = sermonSeries.Width;
+            //seriesLink.Height = sermonSeries.Height;// new Unit("150px");
+            seriesImage.Style.Add(HtmlTextWriterStyle.Padding, "1em");
+            seriesImage.AlternateText = sermonSeries.Caption;
+            seriesImage.BorderWidth = 0;
+            seriesLink.Controls.Add(seriesImage);
+            
             seriesLink.NavigateUrl = ResolveClientUrl(String.Format("sermon.aspx?label={0}", sermonSeries.Label));
-
+            
             WebControl image = new WebControl(HtmlTextWriterTag.Img);
             image.Attributes.Add("src", sermonSeries.ImageUrl);
             image.Height = new Unit("150px");
@@ -74,6 +91,13 @@ namespace rpcwc.web
         private void DisplayPostsInSeries(String label)
         {
             AddPostsToPage(BlogManager.GetSermonPosts(label));
+        }
+
+        private void DisplayPost(String sermonid)
+        {
+            IList<BlogEntry> posts = new List<BlogEntry>();
+            posts.Add(BlogManager.GetSermonPost(sermonid));
+            AddPostsToPage(posts);
         }
 
         private void AddPostsToPage(IList<BlogEntry> blogEntries)
