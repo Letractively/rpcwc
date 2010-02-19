@@ -177,43 +177,6 @@ mainMenuStaticItem
     color: #6D8A98;
 }
 
-.rightside
-{
-    float: right;
-    background: #92B18A;
-    width: 150px;
-    color: white;
-    text-align: right;
-    width: 130px;
-    color: white;
-    padding: 10px;
-}
-
-.rightside a
-{
-    color: white;
-    text-decoration: none;
-}
-
-.rightside a:hover
-{
-    color: #6D8A98;
-}
-
-.sideMenuRootNode
-{
-    color: #6D8A98;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.sideMenuNode
-{
-    text-align: right;
-    color: white;
-    text-decoration: none;
-}
-
 #content_combined
 {
     color: black;
@@ -250,28 +213,6 @@ mainMenuStaticItem
     text-decoration: none;
 }
 
-#content_left
-{
-    color: black;
-    background: white;
-    width: 230px;
-    float: left;
-    padding: 10px;
-    font-size: 12px;
-}
-
-#content_left a
-{
-    color: #6D8A98;
-    text-decoration: underline;
-}
-
-#content_left a:hover
-{
-    color: #B7D87D;
-    text-decoration: none;
-}
-
 #content_right
 {
     color: black;
@@ -280,18 +221,6 @@ mainMenuStaticItem
     float: left;
     padding: 10px;
     font-size: 12px;
-}
-
-#content_right a
-{
-    color: #6D8A98;
-    text-decoration: underline;
-}
-
-#content_right a:hover
-{
-    color: #B7D87D;
-    text-decoration: none;
 }
 
 #footer
@@ -404,7 +333,7 @@ p
     padding-bottom: 1em;
 }
 
-table.photogallery
+.photogallery
 {
     width: 400px;
     border: 0px;
@@ -412,12 +341,12 @@ table.photogallery
     margin-right: auto;
 }
 
-table.photogallery tr td
+.photogallery tr td
 {
     padding: 1em 1.5em 1em 1.5em;
 }
 
-table.photogallery tr td img
+.photogallery tr td img
 {
     border: solid 1px black;
     width: 100;
