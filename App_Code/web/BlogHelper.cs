@@ -5,6 +5,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using rpcwc.vo.Blog;
 using System.Web.UI.HtmlControls;
+using System.IO;
 
 /// <summary>
 /// Summary description for BlogHelper
@@ -52,14 +53,25 @@ namespace rpcwc.web
             textControl.Controls.Add(new LiteralControl(entry.Content));
             contentsControl.Controls.Add(textControl);
 
+            if (entry.Enclosure == null || entry.Enclosure.Uri == null)
+            {
+                String filename = "c:\\inetpub\\wwwroot\\rpcwc\\" + entry.PubDate.AddDays(-2).ToString("yyyy.MM.dd") + ".mp3";
+                if (File.Exists(filename))
+                {
+                    entry.Enclosure.Uri = filename;
+                }
+            }
+
             if (entry.Enclosure != null && entry.Enclosure.Uri != null)
             {
-                HtmlGenericControl musicPlayer = new HtmlGenericControl("iframe");
+                WebControl musicPlayer = new WebControl(HtmlTextWriterTag.Embed);
                 musicPlayer.ID = "musicPlayer_" + entry.id;
-                musicPlayer.Style.Add("border", "1px solid rgb(170, 170, 170)");
                 musicPlayer.Style.Add(HtmlTextWriterStyle.Width, "400px");
                 musicPlayer.Style.Add(HtmlTextWriterStyle.Height, "27px");
-                musicPlayer.Attributes.Add("src", "http://www.google.com/reader/ui/3247397568-audio-player.swf?audioUrl=" + entry.Enclosure.Uri);
+                musicPlayer.Style.Add("border", "1px solid rgb(170, 170, 170)");
+                musicPlayer.Attributes.Add("src", "http://www.google.com/reader/ui/3523697345-audio-player.swf");
+                musicPlayer.Attributes.Add("flashvars", "audioUrl=" + entry.Enclosure.Uri);
+                musicPlayer.Attributes.Add("pluginspage", "http://www.macromedia.com/go/getflashplayer");
                 contentsControl.Controls.Add(musicPlayer);
             }
 

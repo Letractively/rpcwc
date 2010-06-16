@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using rpcwc.dao;
 using rpcwc.vo;
 using rpcwc.vo.Blog;
+using System.Text;
+using rpcwc.util;
 
 /// <summary>
 /// Summary description for BlogCache
@@ -83,6 +85,18 @@ namespace rpcwc.bo.cache
             IDictionary<String, IList<BlogEntry>> newsAndNotesMappedByLabel = MapNewsAndNotesByLabel(sermonBlogEntries);
             IDictionary<String, BlogEntry> blogEntriesMappedById = CollectionUtils.Map<String, BlogEntry>(sermonBlogEntries, new BlogEntryByIdMapKeyCreator());
 
+            foreach (BlogEntry blogEntry in blogEntriesMappedByLabel[DaoConstants.SERMON]) {
+                if (blogEntry.Enclosure == null || blogEntry.Enclosure.Uri == null)
+                {
+                    String expectedUrl = DateToSermonMP3URL(blogEntry.PubDate.AddDays(-2));
+                    if (WebUtil.IsURLExtant(expectedUrl))
+                    {
+                        blogEntry.Enclosure = new Link();
+                        blogEntry.Enclosure.Uri = expectedUrl;
+                    }
+                }
+            }
+
             lock (blogCacheLock)
             {
                 _blogEntries.Clear();
@@ -94,6 +108,16 @@ namespace rpcwc.bo.cache
             }
 
             RefreshTime += LastRefresh - startTime;
+        }
+
+        private static String DateToSermonMP3URL(DateTime date)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("http://www.rpcwc.org/sermons/");
+            sb.AppendFormat(date.ToString("yyyy.MM.dd"));
+            sb.Append(".mp3");
+
+            return sb.ToString();
         }
 
         private IDictionary<String, IList<BlogEntry>> MapBlogEntriesByLabel(IList<BlogEntry> blogEntries)

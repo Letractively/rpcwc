@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using rpcwc.bo.cache;
 using rpcwc.vo;
 using rpcwc.vo.Blog;
+using System.Text;
 
 /// <summary>
 /// Summary description for BlogManager
