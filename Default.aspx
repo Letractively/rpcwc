@@ -43,11 +43,11 @@
             </td>
             <td valign="top">
                 <p>
-                    <a id="A1" href="~/upcomingevents.aspx" runat="server">
-                        <img src="~/images/upcoming.gif" width="190" height="162" alt="Upcoming Events" border="0"
+                    <a id="A1" href="~/vbs.aspx" runat="server">
+                        <img src="~/images/GCP_The Race Logo.jpg" width="190" height="162" alt="Vacation Bible School" border="0"
                             runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a href="~/upcomingevents.aspx" runat="server">Upcoming Events</a></strong></p>
+                    <strong><a href="~/vbs.aspx" runat="server">Vacation Bible School</a></strong></p>
             </td>
         </tr>
         <tr>
@@ -74,19 +74,11 @@
             <td width="190" valign="top">
                 <p>
                     <a id="A2" href="godsgoodnews.aspx" runat="server">
-                        <img id="Img2" src="~/images/ggn.png" width="190" height="162" border="0" alt="The Message of Life"
+                        <img id="Img2" src="~/images/ggncover.jpg" width="190" height="162" border="0" alt="The Message of Life"
                             runat="server" /></a></p>
                 <p style="text-align: center;">
                     <strong><a id="A3" href="godsgoodnews.aspx" runat="server">The Message of Life</a></strong></p>
             </td>
         </tr>
     </table>
-    <script
-        type="text/javascript"
-        src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script>
-    <script type="text/javascript">FB.init("e1af994035803aed5c87901023439e44");</script>
-    <fb:fan profile_id="80304337298" stream="1" connections="" width="300"></fb:fan>
-    <div style="font-size:8px; padding-left:10px">
-        <a href="http://www.facebook.com/pages/West-Chester-PA/The-Reformed-Presbyterian-Church-of-West-Chester/80304337298">The Reformed Presbyterian Church of West Chester on Facebook</a>
-    </div>
 </asp:Content>
