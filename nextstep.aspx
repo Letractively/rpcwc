@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church &mdash; Creation" %>
+<%@ Page Language="C#" MasterPageFile="~/GoodNews.master" Title="Reformed Presbyterian Church &mdash; Creation" %> 
 
 <script runat="server">
 
@@ -70,6 +70,10 @@
         the Son of God, and that by believing you may have life in his name.<a href="scripture.ashx?ref=John+20:30-31&height=300&width=300"
             title="John 20:30-31" style="text-decoration: none;" class="thickbox">^</a></blockquote>
     <br />
+    <p>
+	    <a href="pdf/How_can_I_know_eternal_life_extract.pdf" title="View samples of the hard copy booklet">View samples of the hard copy booklet</a></p>
+    <p>
+	    <a href="http://www.cepbookstore.com/p-7208-gods-good-news-bklet.aspx" >Purchase copies of the hard copy booklet</a></p>
     <p>
         To hear more about God's Good News for us in Jesus Christ, call or email the church
         at (610) 696-3482 or <a href="mailto:pastor@rpcwc.org">pastor@rpcwc.org</a></p>

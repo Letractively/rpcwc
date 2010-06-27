@@ -12,8 +12,8 @@
      <table style="width: 100%; text-align: center"> 
          <tr> 
              <td style="padding-bottom: 2em;"> 
- 		<a href="http://www.rpcwc.org/godsgoodnewsintro.aspx"><IMG alt="How Can I Know Eternal Life?"
-      src="images/ggncover.jpg" 
+ 		<a href="godsgoodnewsintro.aspx" runat="server"><IMG alt="How Can I Know Eternal Life?"
+      src="images/goodnews/ggnIntro.jpg" width="350" height="249"
        border="0"></a></TD>
          </tr> 
      </table> 
