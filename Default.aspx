@@ -26,28 +26,7 @@
                         <img src="~/images/jamesbelief.jpg" width="190" height="162" border="0" alt="James: Belief You Can Change In"
                             runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a href="sermon.aspx?label=James 2010" runat="server">James: Belief You Can Change In</a></strong></p>
-            </td>
-        </tr>
-        <tr>
-            <td width="190" valign="top">
-                <p>
-                    <a id="A5" href="~/pdf/Christianity Explored invitation.pdf" runat="server">
-                        <img id="Img1" src="~/images/ChristianityExplored.001.jpg" width="190" height="162" border="0" alt="Christianity Explored"
-                            runat="server" /></a></p>
-                <p style="text-align: center;">
-                    <strong><a id="A6" href="~/pdf/Christianity Explored invitation.pdf" runat="server">Christianity Explored</a></strong></p>
-            </td>
-            <td>
-                &nbsp;
-            </td>
-            <td valign="top">
-                <p>
-                    <a id="A1" href="~/vbs.aspx" runat="server">
-                        <img src="~/images/GCP_The Race Logo.jpg" width="190" height="162" alt="Vacation Bible School" border="0"
-                            runat="server" /></a></p>
-                <p style="text-align: center;">
-                    <strong><a href="~/vbs.aspx" runat="server">Vacation Bible School</a></strong></p>
+                    <strong><a href="sermon.aspx?label=James 2010" runat="server">Current Sermon Series</a></strong></p>
             </td>
         </tr>
         <tr>

@@ -7,7 +7,7 @@
     <p>
         <strong>9:30 AM</strong>
         <br />
-        Sunday Bible School</p>
+        Christian Education Hour</p>
     <p>
         <strong>10:30 AM</strong><br />
         Fellowship Gathering</p>

@@ -5,12 +5,12 @@
 </script>
 
 <asp:Content ContentPlaceHolderID="navbar" runat="server">
-    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_b_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_l_50.gif" ImageAlign="Middle" Height="50" runat="server" />
-    <asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_l_50.gif" ImageAlign="Middle" Height="50" runat="server" />
-    <asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_l_50.gif" ImageAlign="Middle" Height="50" runat="server" />
-    <asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_l_50.gif" ImageAlign="Middle" Height="50" runat="server" />
-    <asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_l_50.gif" ImageAlign="Middle" Height="50" runat="server" />
+    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_b_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
+    <asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_l_50.png" ImageAlign="Middle" Height="50" Width="50" runat="server" />
+    <asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_l_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" />
+    <asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_l_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" />
+    <asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_l_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" />
+    <asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_l_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" />
 </asp:Content>
 <asp:Content ContentPlaceHolderID="title" runat="server">
     <h4>
@@ -72,7 +72,7 @@
         <a id="A1" href="alienation.aspx" runat="server">But something happened&hellip;</a></p>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="Picture" runat="server">
-    <asp:Image ID="Image1" ImageUrl="~/images/goodnews/creation.gif" Width="100" runat="server" />
+    <asp:Image ID="Image1" ImageUrl="~/images/goodnews/creation.png" Width="100" Height="94" runat="server" />
 </asp:Content>
 <asp:Content ContentPlaceHolderID="CauseForPause" runat="server">
     <div style="background-color: #446A7D; padding-left: 1em; padding-right: 1em; color: White;">

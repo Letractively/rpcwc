@@ -34,5 +34,7 @@
 <asp:Panel id="RecommendedReading" OnPreRender="GetRecommendedReading" runat="server">
 </asp:Panel>
 <br />
-<asp:HyperLink ImageUrl="~/images/facebook.gif" width="72" Height="22" NavigateUrl="http://www.facebook.com/pages/West-Chester-PA/The-Reformed-Presbyterian-Church-of-West-Chester/80304337298" Target="_blank" runat="server" />
+<a href="http://www.facebook.com/pages/West-Chester-PA/The-Reformed-Presbyterian-Church-of-West-Chester/80304337298" target="_blank" rel="External">
+    <img src="~/images/facebook.png" width="72" height="22" alt="Facebook" runat="server" />
+</a>
 <br />

@@ -11,8 +11,7 @@
         framework. Emphasis is on God's wisdom contained within His Word, and on a Christ-centeredness
         and Christ-reliance for both the children and parents in helping parents to keep
         their baptismal vows to raise their children in the nurture and admonition of the
-        Lord. Meetings are ordinarily held in a home the first Friday of the month. The group is
-		currently viewing and discussing a DVD by Dr. Tedd Tripp on <a href="http://www.wtsbooks.com/product-exec/product_id/6128" target="_blank">&ldquo;Instructing a Child's Heart.&rdquo;</a></p>
+        Lord. Meetings are ordinarily held in a home the first Friday of the month. </p>
     <h3>
         Resources for Parents
     </h3>

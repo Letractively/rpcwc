@@ -5,12 +5,12 @@
 </script>
 
 <asp:Content ID="Content5" ContentPlaceHolderID="navbar" runat="server">
-    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_d_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <a href="alienation.aspx" runat="server"><asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_d_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <a href="initiation.aspx" runat="server"><asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_d_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <a href="reconciliation.aspx" runat="server"><asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_d_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <a href="obligation.aspx" runat="server"><asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_b_50.gif" ImageAlign="Middle" Height="50" runat="server" /></a>
-    <asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_l_50.gif" ImageAlign="Middle" Height="50" runat="server" />
+    <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_d_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
+    <a href="alienation.aspx" runat="server"><asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_d_50.png" ImageAlign="Middle" Height="50" Width="50" runat="server" /></a>
+    <a href="initiation.aspx" runat="server"><asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_d_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
+    <a href="reconciliation.aspx" runat="server"><asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_d_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
+    <a href="obligation.aspx" runat="server"><asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_b_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
+    <asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_l_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" />
 </asp:Content>
 <asp:Content ContentPlaceHolderID="title" runat="server">
     <h4>
@@ -112,7 +112,7 @@
         <a id="A1" href="respond.aspx" runat="server">Now what?</a></p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Picture" runat="server">
-    <asp:Image ID="Image2" ImageUrl="~/images/goodnews/obligation.gif" Width="100" runat="server" />
+    <asp:Image ID="Image2" ImageUrl="~/images/goodnews/obligation.png" Width="100" Height="94" runat="server" />
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="CauseForPause" runat="server">
     <div style="background-color: #446A7D; padding-left: 1em; padding-right: 1em; color: White;">

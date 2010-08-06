@@ -18,7 +18,6 @@
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
     <link rel="stylesheet" type="text/css" href="~/css/css_combined.css" runat="server" />
-    <link rel="stylesheet" type="text/css" href="~/css/thickbox.css" runat="server" />
     <script type="text/javascript" src="scripts/googlesearch.js"></script>
     <script type="text/javascript" src="scripts/jquery.js"></script>
     <script type="text/javascript" src="scripts/thickbox.js"></script>

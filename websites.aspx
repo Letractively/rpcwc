@@ -42,4 +42,5 @@ window.onload = externalLinks;
 <div><a href="http://www.pluggedinonline.com/" rel="External">Plugged In</a> (Movie Reviews)</div>
 <div><a href="http://www.igracemusic.com/hymnbook/home.html" rel="External">RUF Hymnbook</a></div>
 <div><a href="http://www.ccli.com/" rel="External">CCLI USA</a></div>
+<div><a href="~/pdf/Christianity Explored invitation.pdf" runat="server">Christianity Explored</a></div>
 </asp:Content>

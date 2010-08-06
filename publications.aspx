@@ -15,7 +15,7 @@
     <p>
         <a href="~/worship.aspx" runat="server">Worship at RPC Study Paper</a></p>
     <p>
-        <a href="http://www.breakpoint.org/listingarticle.asp?ID=8389#" target="_blank">Praying
+        <a href="https://www.breakpoint.org/features-columns/articles/breakpoint-features-archive/entry/12/9736" target="_blank">Praying
             the Imprecatory Psalms</a></p>
     <p>
         <a id="A1" href="~/lordssupper.aspx" runat="server">The Lord's Supper</a></p>

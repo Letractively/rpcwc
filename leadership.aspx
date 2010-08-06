@@ -14,12 +14,12 @@
     <p>
         Glenn Seeger
         <br />
-        Frank Ells</p>
+        Frank Ells
+        <br />
+        Tim Gold</p>
     <h3>
         DEACONS</h3>
     <p>
-        Craig Bailey
-        <br />
         Shawn Carafa
         <br />
         Sean Cliggett
@@ -30,9 +30,7 @@
         <br />
         Stanley Perli
         <br />
-        Andrew Root
-        <br />
-        Jeremy Verrillo</p>
+        Andrew Root</p>
     <br />
     <p>Leadership Training materials are available <a href="~/leadershiptraining.aspx" runat="server">here</a>.</p>
 </asp:Content>

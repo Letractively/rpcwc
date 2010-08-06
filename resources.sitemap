@@ -3,7 +3,6 @@
     <siteMapNode url="resources.aspx" title="Church Resources">
       <siteMapNode url="sermon.aspx" title="Sermons" />
       <siteMapNode url="http://www.gnpcb.org/esv/devotions" title="Daily Devotions" />
-      <siteMapNode url="bulletin.aspx" title="Church Bulletins" />
       <siteMapNode url="stewardship.aspx" title="Stewardship" />
       <siteMapNode url="websites.aspx" title="Useful Links" />
       <siteMapNode url="members/directory.aspx" title="RPC Directory" />

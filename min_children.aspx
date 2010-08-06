@@ -17,7 +17,7 @@
         Goal: to help parents disciple their covenant children to find life in Christ and
         bring life to others</p>
     <h3>
-        Sunday Bible School (SBS)</h3>
+        Christian Education Hour</h3>
     <p>
         Sundays, 9:30 a.m. &ndash; 10:30 a.m., Sept. &ndash; June</p>
     <ul>

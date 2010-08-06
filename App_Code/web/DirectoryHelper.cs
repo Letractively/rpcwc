@@ -62,6 +62,8 @@ namespace rpcwc.web
             image.AlternateText = pa.PhotoTitle;
 
             image.ImageUrl = (String)directory.photo.Media.Thumbnails[0].Attributes["url"];
+            image.Height = int.Parse((String)directory.photo.Media.Thumbnails[0].Attributes["height"]);
+            image.Width = int.Parse((String)directory.photo.Media.Thumbnails[0].Attributes["width"]);
 
             link.Controls.Add(image);
             panel.Controls.Add(link);

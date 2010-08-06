@@ -16,4 +16,9 @@ West Chester, PA 19382<br />
 <p>From 202 south, go into West Chester on High Street. Left at Rosedale Avenue. Right onto New Street.</p>
 
 <p>From 202 north, take Route 3 exit into West Chester. Becomes Gay Street. Left onto New Street. RPC is at the junction of New and Union Streets.</p>
+
+<h4>Parking</h4>
+<p>The church has a small parking lot.  On-street parking is permissible on Sundays.  Two municipal parking garages are within easy walking distance of the church and are free on Sundays.</p>
+<p>Note in the map below, the garages are marked in red, and the church is marked in green.</p>
+<img src="http://maps.google.com/maps/api/staticmap?size=480x343&maptype=roadmap\&markers=color:red|100%20S%20HIGH%20ST,%20west%20chester,%20pa&markers=color:red|220%20W.%20MARKET%20ST.,%20west%20chester,%20pa&markers=color:green|312%20w%20union%20st.,%20west%20chester,%20pa&sensor=false&zoom=16" width="480" height="343" alt="Parking Map" />
 </asp:Content>

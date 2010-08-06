@@ -17,7 +17,7 @@
     <p style="font-style: italic;">
         Sundays at 11:00 a.m.</p>
     <h3>
-        SUNDAY BIBLE SCHOOL
+        Christian Education Hour
     </h3>
     <p>
         Weekly course offerings designed to educate and equip both children and adults in
