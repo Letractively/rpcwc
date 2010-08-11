@@ -2,7 +2,7 @@
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="~/mainmenu.aspx" title="Top Menu"  description="">
     <siteMapNode url="~/Default.aspx" title="Home"  description="" />
-    <siteMapNode url="" title="Christian Education"  description="">
+    <siteMapNode url="" title="Christian Ed. Hour"  description="">
       <siteMapNode url="~/ss_desc.aspx" title="Description" description="" />
       <siteMapNode url="~/ss_classes.aspx" title="Classes/Location" description="" />
       <siteMapNode url="~/ss_adult.aspx" title="Adult Classes" description="" />
