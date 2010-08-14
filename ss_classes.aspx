@@ -18,10 +18,10 @@
         </tr>
         <tr>
             <td valign="top">
-                Age 2&ndash;Kindergarten
+                Age 2&ndash;3
             </td>
             <td valign="top">
-                 Church Building, First Floor
+                Basement of Church Building
             </td>
             <td valign="top">
                 Joel Comanda and Terese Judkins
@@ -29,7 +29,18 @@
         </tr>
         <tr>
             <td valign="top">
-                Grades 1&ndash;5
+                Age 4&ndash;Kindergarten
+            </td>
+            <td valign="top">
+                Basement of Church Building
+            </td>
+            <td valign="top">
+                Sarah Brown and Livi Verrillo
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                Grades 1&ndash;4
             </td>
             <td valign="top">
                 Ministry House, 2nd Floor
@@ -40,14 +51,17 @@
         </tr>
         <tr>
             <td valign="top">
-                Jr&ndash;Sr High School
+                Grades 5&ndash;Sr High School
             </td>
             <td valign="top">
-                Ministry House, 2rd floor
+                Ministry House, 3rd floor
             </td>
             <td valign="top">
-                 Mark McCaffrey
+                Shawn and Meg Carada
             </td>
+        </tr>
+        <tr>
+        <td>&nbsp;</td>
         </tr>
         <tr>
             <td valign="top">
@@ -57,6 +71,7 @@
                 Ministry House, 2nd floor
             </td>
             <td valign="top">
+                Stan Gale
             </td>
         </tr>
         <tr>
@@ -64,9 +79,10 @@
                 Adult&mdash;Basics of the Faith
             </td>
             <td valign="top">
-                Conference Room
+                Bullock Library
             </td>
             <td valign="top">
+                Various
             </td>
         </tr>
         <tr>
@@ -74,9 +90,10 @@
                 Adult&mdash;War of Words
             </td>
             <td valign="top">
-                Fellowship Hall
+                Conference Room
             </td>
             <td valign="top">
+                Carlsons, Jansens
             </td>
         </tr>
     </table>

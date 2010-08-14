@@ -114,7 +114,7 @@
                         Leaders: various
                     </td>
                     <td>
-                        Location: Conference Room
+                        Location: Bullock Library
                     </td>
                 </tr>
             </table>
@@ -138,7 +138,7 @@
                         Leaders: Carlsons, Jansens
                     </td>
                     <td>
-                        Location: Fellowship Hall
+                        Location: Conference Room
                     </td>
                 </tr>
             </table>
