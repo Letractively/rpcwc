@@ -22,11 +22,11 @@
             </td>
             <td width="190" valign="top">
                 <p>
-                    <a href="sermon.aspx?label=James 2010" runat="server">
-                        <img src="~/images/jamesbelief.jpg" width="190" height="162" border="0" alt="James: Belief You Can Change In"
-                            runat="server" /></a></p>
+                    <a href="sermon.aspx?label=Minor Prophets 2010" runat="server">
+                        <img src="~/images/sermon/minorspurplegreen_sm.jpg" width="190" height="143" border="0" alt="Messages from the Minor Prophets: Majoring on the Minors"
+                            style="padding-top: 9px; padding-bottom: 10px;" runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a href="sermon.aspx?label=James 2010" runat="server">Current Sermon Series</a></strong></p>
+                    <strong><a href="sermon.aspx?label=Minor Prophets 2010" runat="server">Current Sermon Series</a></strong></p>
             </td>
         </tr>
         <tr>

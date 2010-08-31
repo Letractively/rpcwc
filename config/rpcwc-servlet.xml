@@ -31,6 +31,13 @@
     <property name="SermonSeriesList">
       <list>
         <object type="rpcwc.vo.Blog.SermonSeries">
+          <property name="Label" value="Minor Prophets 2010" />
+          <property name="ImageUrl" value="images/sermon/minorspurplegreen.jpg" />
+          <property name="Caption" value="Majoring on the Minors: Messages from the Minor Prophets" />
+          <property name="Width" value="195" />
+          <property name="Height" value="147" />
+        </object>
+        <object type="rpcwc.vo.Blog.SermonSeries">
           <property name="Label" value="James 2010" />
           <property name="ImageUrl" value="images/sermon/jamesbelief.003.jpg" />
           <property name="Caption" value="James: Belief You Can Change In" />
