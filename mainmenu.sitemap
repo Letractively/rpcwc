@@ -22,6 +22,7 @@
       <siteMapNode url="~/min_youth.aspx" title="Youth" description="" />
       <siteMapNode url="~/min_covenant_keepers.aspx" title="Covenant Keepers" description="" />
       <siteMapNode url="~/min_rpc_supperclubs.aspx" title="RPC Supper Clubs" description="" />
+      <siteMapNode url="~/min_counseling.aspx" title="Counseling" description="" />
     </siteMapNode>
     <siteMapNode url="" title="Missions" description="">
       <siteMapNode url="~/missions.aspx" title="Missionaries" />

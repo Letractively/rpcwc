@@ -9,7 +9,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <h3>
 		Counseling Ministry</h3>
-
+    <br />
 	<h4>
 		Vision of the RPC Counseling Ministry</h4>
 	<p>

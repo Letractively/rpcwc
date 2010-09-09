@@ -4,7 +4,7 @@
     <siteMapNode url="welcome.aspx" title="Welcome">
       <siteMapNode url="letterpastor.aspx" title="Letter From Pastor" />
       <siteMapNode url="contactus.aspx" title="Contact Us" />
-      <siteMapNode url="directions.aspx" title="Directions" />
+      <siteMapNode url="directions.aspx" title="Directions / Parking" />
       <siteMapNode url="regular.aspx" title="Regular Activities" />
       <siteMapNode url="services.aspx" title="Sunday Services" />
       <siteMapNode url="brochure.pdf" title="Church Brochure" />
