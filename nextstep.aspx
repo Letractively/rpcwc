@@ -29,20 +29,20 @@
         grow in your new relationship with him.</p>
     <br style="clear: both; padding: 0em" />
     <ul>
-        <li>Gather with God's people for worship<a href="scripture.ashx?ref=John+4:23&height=300&width=300"
-            title="John 4:23" style="text-decoration: none;" class="thickbox">^</a> and fellowship.<a
+        <li>Gather with God's people for worship <a href="scripture.ashx?ref=John+4:23&height=300&width=300"
+            title="John 4:23" style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a> and fellowship.<a
                 href="scripture.ashx?ref=Hebrews+10:23-25&height=300&width=300" title="Hebrews 10:23-25"
-                style="text-decoration: none;" class="thickbox">^</a></li>
-        <li>Read the Bible<a href="scripture.ashx?ref=2+Timothy+3:14-16&height=300&width=300"
-            title="2 Timothy 3:14-16" style="text-decoration: none;" class="thickbox">^</a>
+                style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a></li>
+        <li>Read the Bible <a href="scripture.ashx?ref=2+Timothy+3:14-16&height=300&width=300"
+            title="2 Timothy 3:14-16" style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a>
             to learn of God and his will for your life.</li>
         <li>Approach God continually in prayer.<a href="scripture.ashx?ref=Colossians+4:2&height=300&width=300"
-            title="Colossians 4:2" style="text-decoration: none;" class="thickbox">^</a></li>
-        <li>Commit<a href="scripture.ashx?ref=Colossians+2:6-8;+1+Peter+1:14-15;+Proverbs+3:5-8&height=300&width=300"
+            title="Colossians 4:2" style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a></li>
+        <li>Commit <a href="scripture.ashx?ref=Colossians+2:6-8;+1+Peter+1:14-15;+Proverbs+3:5-8&height=300&width=300"
             title="Colossians 2:6-8; 1 Peter 1:14-15; Proverbs 3:5-8" style="text-decoration: none;"
-            class="thickbox">^</a> your ways to the Lord.</li>
+            class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a> your ways to the Lord.</li>
         <li>Engage others<a href="scripture.ashx?ref=1+Peter+2:11-12;+1+Peter+3:15&height=300&width=300"
-            title="1 Peter 2:11-12; 1 Peter 3:15" style="text-decoration: none;" class="thickbox">^</a>
+            title="1 Peter 2:11-12; 1 Peter 3:15" style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a>
             for Christ.</li>
     </ul>
     <p>
@@ -60,7 +60,7 @@
         Now Jesus did many other signs in the presence of the disciples, which are not written
         in this book; but these are written so that you may believe that Jesus is the Christ,
         the Son of God, and that by believing you may have life in his name.<a href="scripture.ashx?ref=John+20:30-31&height=300&width=300"
-            title="John 20:30-31" style="text-decoration: none;" class="thickbox">^</a></blockquote>
+            title="John 20:30-31" style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a></blockquote>
     <br />
     <p>
 	    <a href="pdf/How_can_I_know_eternal_life_extract.pdf" title="View samples of the hard copy booklet" target="_blank">View samples of the hard copy booklet</a></p>

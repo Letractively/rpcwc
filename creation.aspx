@@ -40,17 +40,17 @@
                 for spiritual relationship with God. God has endowed us with a rational intellect
                 and a spiritual capacity to know and relate to him as God. Animals don't pray. We
                 can and do.<a href="scripture.ashx?ref=Psalm+65:2&height=300&width=300" title="Psalm 65:2"
-                    style="text-decoration: none;" class="thickbox">^</a> Prayer reminds us of this
+                    style="text-decoration: none;" class="thickbox"> <img src="..\images\book_rpc.JPG" style="border:0px;" /></a> Prayer reminds us of this
                 ability for relationship.</li>
             <li>Like a reflection in a mirror, an image finds its true <span style="font-style:italic;">
                 identity</span> in the one whose image is reflected.<a href="scripture.ashx?ref=James+3:9&height=300&width=300"
-                    title="James 3:9" style="text-decoration: none;" class="thickbox">^</a> As ones
+                    title="James 3:9" style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a> As ones
                 created in God's image, we can answer the question, "Who am I?" only in relationship
                 to God.<a href="scripture.ashx?ref=Psalm+8:1-9&height=300&width=300" title="Psalm 8:1-9"
-                    style="text-decoration: none;" class="thickbox">^</a></li>
+                    style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a></li>
             <li><span style="font-style:italic;">Meaning</span> in life for us is found in respect
                 to God. He gives direction and purpose in life.<a href="scripture.ashx?ref=Genesis+1:28;+Colossians+3:23&ndash;24&height=300&width=300"
-                    title="Genesis 1:28; Colossians 3:23&ndash;24" style="text-decoration: none;" class="thickbox">^</a>
+                    title="Genesis 1:28; Colossians 3:23&ndash;24" style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a>
                 The image of God gives us understanding of why we are here and what life is all
                 about.</li>
         </ul>
@@ -60,13 +60,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="EndParagraph" runat="server">
     <p>
         The image of God we bear says that we belong to God and that our lives are understood
-        and lived in reference to him<a href="scripture.ashx?ref=Acts+17:29&height=300&width=300"
-            title="Acts 17:29" style="text-decoration: none;" class="thickbox">^</a>. The
+        and lived in reference to him <a href="scripture.ashx?ref=Acts+17:29&height=300&width=300"
+            title="Acts 17:29" style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a>. The
         psalmist declares: <span style="font-style:italic;">Know that the Lord, he is God. It is he who made us and we are
         his.<a href="scripture.ashx?ref=Psalm+100:3&height=300&width=300" title="Psalm 100:3"
-            style="text-decoration: none;" class="thickbox">^</a></span> God's design in creation
-        paints a picture of fullness and delight<a href="scripture.ashx?ref=Psalm+42:1-2&height=300&width=300"
-            title="Psalm 42:1-2" style="text-decoration: none;" class="thickbox">^</a> in
+            style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a></span> God's design in creation
+        paints a picture of fullness and delight <a href="scripture.ashx?ref=Psalm+42:1-2&height=300&width=300"
+            title="Psalm 42:1-2" style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a> in
         knowing, loving and serving our Creator.</p>
     <p>
         <a id="A1" href="alienation.aspx" runat="server">But something happened&hellip;</a></p>

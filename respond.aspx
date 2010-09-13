@@ -46,10 +46,10 @@
         How do you complete the "R" in the box above? as "<span style="font-style: italic;">repent</span>"?
         or, as "<span style="font-style: italic;">rebel</span>"? Those are the only two
         options.<a href="scripture.ashx?ref=Matthew+12:30&height=300&width=300" title="Matthew 12:30"
-            style="text-decoration: none;" class="thickbox">^</a> Either we bow our hearts
+            style="text-decoration: none;" class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a> Either we bow our hearts
         before Jesus, repenting of our rebellion against him, or we remain in our rebellion.<a
             href="scripture.ashx?ref=John+3:36&height=300&width=300" title="John 3:36" style="text-decoration: none;"
-            class="thickbox">^</a> The question that confronts us, though, is: "How could
+            class="thickbox"><img src="..\images\book_rpc.JPG" style="border:none;" /></a> The question that confronts us, though, is: "How could
         we refuse such a great salvation and turn our back on such a loving God?"
     </p>
     <div style="text-align:right;"><a href="~/nextstep.aspx" runat="server">What happens next?</a></div>

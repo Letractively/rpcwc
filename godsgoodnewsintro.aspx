@@ -5,12 +5,10 @@
 </script>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="text" runat="Server">
-    <div style="width: 35%; padding-right: 1em; margin-left: auto; margin-right: auto">
-        <div style="border: solid 1px black; background-color: #92B18A; color: White;">
-            <div style="font-style: italic; padding: 1em;">
-                &ldquo;O Lord, you awaken us to delight in your praise, for you made us for yourself,
-                and our heart is restless, until it rests in you.&rdquo;
-            </div>
+    <div>
+        <div style="font-style: italic; font-weight: bold; font-size: 16px; padding: 1em;">
+            &ldquo;O Lord, you awaken us to delight in your praise, for you made us for yourself,
+            and our heart is restless, until it rests in you.&rdquo;
         </div>
     </div>
     <br />
@@ -31,7 +29,7 @@
     <div style="text-align: right;"><a id="A1" href="~/creation.aspx" runat="server">In the beginning &hellip;</a></div>
     <p>Copyright &copy;2005 by Stanley D. Gale</p>
     <p><a href="http://www.chopministry.net" runat="server">Community Houses of Prayer</a></p>
-    <p>Click on the '^' symbol in the text to see the related Bible verses.</p>
+    <p>Click on the <img src="..\images\book_rpc.JPG" style="border:none;" /> image in the text to see the related Bible verses.</p>
     <p>Scripture quotations are from The Holy Bible,
     English Standard Version, copyright &copy;2001 by Crossway Bibles, a division of Good
     News Publishers. Used by permission. All rights reserved.</p>
