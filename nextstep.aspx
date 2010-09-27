@@ -5,12 +5,16 @@
 </script>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="navbar" runat="server">
+    <span><a id="prevNav" href="respond.aspx" runat= "server" class="ggnPrevLink"><img src="images\goodnews\rpc_back.jpg" style="border:0px;display:block;" />  Previous</a></span>
+    <span style="float:left;">
     <a id="A1" href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_d_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
     <a id="A2" href="alienation.aspx" runat="server"><asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_d_50.png" ImageAlign="Middle" Height="50" Width="50" runat="server" /></a>
     <a id="A3" href="initiation.aspx" runat="server"><asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_d_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
     <a id="A4" href="reconciliation.aspx" runat="server"><asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_d_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
     <a id="A5" href="obligation.aspx" runat="server"><asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_d_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
     <a id="A6" href="respond.aspx" runat="server"><asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_d_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
+    </span>
+    
 </asp:Content>
 <asp:Content ID="TextContent" ContentPlaceHolderID="text" runat="Server">
     <div style="float: left; width: 27%; padding-right: 1em;">

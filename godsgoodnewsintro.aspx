@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="text" runat="Server">
     <div>
-        <div style="font-style: italic; font-weight: bold; font-size: 16px; padding: 1em;">
+        <div style="font-style: italic; font-weight: bold; font-size: 16px; padding: 1em;position:relative;top:-30px;">
             &ldquo;O Lord, you awaken us to delight in your praise, for you made us for yourself,
             and our heart is restless, until it rests in you.&rdquo;
         </div>

@@ -5,12 +5,17 @@
 </script>
 
 <asp:Content ID="Content5" ContentPlaceHolderID="navbar" runat="server">
+    <span><a id="prevNav" href="initiation.aspx" runat= "server" class="ggnPrevLink"><img src="images\goodnews\rpc_back.jpg" style="border:0px;display:block;" />  Previous</a></span>
+    <span style="float:left;">
     <a id="A2" href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_d_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
     <a id="A3" href="alienation.aspx" runat="server"><asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_d_50.png" ImageAlign="Middle" Height="50" Width="50" runat="server" /></a>
     <a id="A4" href="initiation.aspx" runat="server"><asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_d_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
     <a href="reconciliation.aspx" runat="server"><asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_b_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
     <asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_l_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" />
     <asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_l_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" />
+    </span>
+    <span><a id="nextNav" href="obligation.aspx" runat= "server" class="ggnForwardLink" ><img src="images\goodnews\rpc_forward.jpg" style="border:0px;display:block;" />  Next</a></span>
+
 </asp:Content>
 <asp:Content ContentPlaceHolderID="title" runat="server">
     <h4>

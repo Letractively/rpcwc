@@ -5,12 +5,18 @@
 </script>
 
 <asp:Content ContentPlaceHolderID="navbar" runat="server">
+    <span id="prevNav" runat = "server" class="ggnPrevLink" style="width:48px;" />
+    <span style="float:left;">
     <a href="creation.aspx" runat="server"><asp:Image ID="Creation" ImageUrl="~/images/goodnews/creation_b_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" /></a>
     <asp:Image ID="Alienation" ImageUrl="~/images/goodnews/alienation_l_50.png" ImageAlign="Middle" Height="50" Width="50" runat="server" />
     <asp:Image ID="Initiation" ImageUrl="~/images/goodnews/initiation_l_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" />
     <asp:Image ID="Reconciliation" ImageUrl="~/images/goodnews/reconciliation_l_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" />
     <asp:Image ID="Obligation" ImageUrl="~/images/goodnews/obligation_l_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" />
     <asp:Image ID="R__" ImageUrl="~/images/goodnews/respond_l_50.png" ImageAlign="Middle" Height="50" Width="53" runat="server" />
+    </span>
+
+    <span><a id="nextNav" href="alienation.aspx" runat= "server" class="ggnForwardLink" ><img src="images\goodnews\rpc_forward.jpg" style="border:0px;display:block;" />  Next</a></span>
+    
 </asp:Content>
 <asp:Content ContentPlaceHolderID="title" runat="server">
     <h4>

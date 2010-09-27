@@ -86,3 +86,7 @@ dd{padding-bottom:1em;}
 * html #TB_HideSelect{position:absolute;height:expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight:document.body.offsetHeight +'px');}
 #TB_iframeContent{clear:both;border:none;margin-bottom:-1px;margin-top:1px;_margin-bottom:1px;}
 
+/* 20-Sep-2010, WL, supporting GodsGoodNews navigation */
+.ggnPrevLink{display: block;float: left;padding: 4px 10px 0px 0px;text-decoration: none;color: Gray !important;}
+.ggnForwardLink{display: block;float: left;padding: 4px 0px 0px 18px;text-decoration: none;color: Gray !important;}
+.ggn_heading{color:Red;}
