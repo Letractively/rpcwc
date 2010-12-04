@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+  <object id="GuestRegistrationDAOSQL" parent="RPCWCDAO" type="rpcwc.dao.sql.GuestRegistrationDAOSQL">
+    <property name="CreateSql">
+      <value>
+        <![CDATA[
+INSERT INTO guest_reg 
+  (
+    [name],
+    address,
+    phone,
+    email,
+    visited,
+    visitDate,
+    college,
+    newtoarea,
+    howhear,
+    contactme,
+    faith,
+    churchhome,
+    worship,
+    teaching,
+    youth,
+    [service],
+    love,
+    evangelism,
+    othertext,
+    commentsprayer,
+    create_date,
+    create_user,
+    last_upd_date,
+    last_upd_user
+  )
+VALUES
+  (
+    @name,
+    @address,
+    @phone,
+    @email,
+    @visited,
+    @visitDate,
+    @college,
+    @newtoarea,
+    @howhear,
+    @contactme,
+    @faith,
+    @churchhome,
+    @worship,
+    @teaching,
+    @youth,
+    @service,
+    @love,
+    @evangelism,
+    @othertext,
+    @commentsprayer,
+    GETDATE(),
+    @create_user,
+    GETDATE(),
+    @last_upd_user
+  )
+      ]]></value>
+    </property>
+    <property name="GetReportSql">
+      <value>
+        <![CDATA[
+SELECT 
+	id,
+	[name],
+	address,
+	phone,
+	email,
+	visited,
+	visitdate,
+	college,
+	newtoarea,
+	howhear,
+	contactme,
+	faith,
+	churchhome,
+	worship,
+	teaching,
+	youth,
+	[service],
+	love,
+	evangelism, 
+	othertext,
+	[commentsprayer],
+	create_date,
+	create_user,
+	last_upd_date,
+	last_upd_user
+FROM
+	rpcwc.guest_reg
+	LEFT OUTER JOIN rpcwc.guest_tag
+  		ON guest_reg.id = guest_tag.guest_id
+  		AND guest_tag.tag_cd = 'IP'
+WHERE
+	guest_tag.guest_id IS NULL
+ORDER BY
+	guest_reg.create_date
+      ]]></value>
+    </property>
+    <property name="TagGuestSql">
+      <value><![CDATA[
+INSERT INTO
+  guest_tag
+(
+  guest_id,
+  tag_cd
+) VALUES (
+  @guest_id,
+  @tag_cd
+)
+      ]]></value>
+    </property>
+  </object>
+</objects>

@@ -59,5 +59,16 @@
                     <strong><a id="A3" href="godsgoodnews.aspx" runat="server">The Message of Life</a></strong></p>
             </td>
         </tr>
+        <tr>
+            <td width="390" valign="top" colspan="3">
+                <asp:hyperlink 
+                width="390"
+                height="162"
+                imageurl="~/images/puppetshowbar.jpg"
+                text="Click here for information about The Christmas Story told through rod puppets"
+                navigateurl="announcement.aspx"
+                runat="server" />
+            </td>
+        </tr>
     </table>
 </asp:Content>

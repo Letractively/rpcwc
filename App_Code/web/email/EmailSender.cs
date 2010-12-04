@@ -56,6 +56,27 @@ namespace rpcwc.web.email
 
         }
 
+        public void sendHtmlEmail(String toEmail, String ccEmail, String subject, String body)
+        {
+            MailMessage objEmail = new MailMessage();
+            objEmail.To.Add(toEmail);
+            if (ccEmail != null && ccEmail.Length > 0)
+                objEmail.CC.Add(ccEmail);
+
+            objEmail.From = new MailAddress(fromEmail);
+            objEmail.Body = body;
+            objEmail.Subject = subject;
+            objEmail.IsBodyHtml = true;
+
+            SmtpClient client = new SmtpClient();
+            client.EnableSsl = true;
+            client.Port = smtpClientPort;
+            client.Host = smtpClientHost;
+            client.Credentials = new System.Net.NetworkCredential(fromEmail, password);
+            client.Send(objEmail);
+
+        }
+
         public string toEmail
         {
             get { return _toEmail; }

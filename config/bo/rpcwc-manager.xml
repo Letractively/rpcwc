@@ -41,4 +41,8 @@
     <property name="DirectoryPhoneDao" ref="DirectoryPhoneDao" />
     <property name="PhotoCache" ref="PhotoCache" />
   </object>
+  <object id="GuestRegistrationManager" type="rpcwc.bo.GuestRegistrationManager">
+    <property name="GuestRegistrationDAO" ref="GuestRegistrationDAO" />
+    <property name="EmailSender" ref="EmailSender" />
+  </object>
 </objects>

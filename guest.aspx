@@ -3,70 +3,6 @@
 
 <%@ Import Namespace="System.Net.Mail" %>
 
-<script type="text/C#" runat="server">
-    public void Submit(Object source, EventArgs eventArgs)
-    {
-        String ccEmail = Request.Form["Email"];
-        StringBuilder body = new StringBuilder();
-        body.Append("Name: ");
-        body.Append(Request.Form["Name"]);
-        body.Append("\n");
-        body.Append("Address: ");
-        body.Append(Request.Form["Address"]);
-        body.Append("\n");
-        body.Append("Telephone: ");
-        body.Append(Request.Form["phone"]);
-        body.Append("\n");
-        body.Append("Email address: ");
-        body.Append(Request.Form["email"]);
-        body.Append("\n");
-        body.Append("Have they visited the church: ");
-        body.Append(Request.Form["visited"]);
-        body.Append("\n");
-        body.Append("College student: ");
-        body.Append(Request.Form["college"]);
-        body.Append("\n");
-        body.Append("How hear about the church: ");
-        body.Append(Request.Form["howhear"]);
-        body.Append("\n");
-        body.Append("Please contact me: ");
-        body.Append(Request.Form["contactme"]);
-        body.Append("\n");
-        body.Append("Know more about Christ: ");
-        body.Append(Request.Form["faith"]);
-        body.Append("\n");
-        body.Append("Looking for church home: ");
-        body.Append(Request.Form["churchhome"]);
-        body.Append("\n");
-        body.Append("Worship style: ");
-        body.Append(Request.Form["worship"]);
-        body.Append("\n");
-        body.Append("Biblical teaching: ");
-        body.Append(Request.Form["teaching"]);
-        body.Append("\n");
-        body.Append("Youth ministry: ");
-        body.Append(Request.Form["youth"]);
-        body.Append("\n");
-        body.Append("Opportunity to serve: ");
-        body.Append(Request.Form["service"]);
-        body.Append("\n");
-        body.Append("Warm and loving church: ");
-        body.Append(Request.Form["love"]);
-        body.Append("\n");
-        body.Append("Evangelistic: ");
-        body.Append(Request.Form["evangelism"]);
-        body.Append("\n");
-        body.Append("Other: ");
-        body.Append(Request.Form["othertext"]);
-        body.Append("\n");
-        body.Append("Comments and Prayer: ");
-        body.Append(Request.Form["commentsprayer"]);
-        body.Append("\n");
-        emailSender.sendEmail(ccEmail, "Reformed Presbyterian Church Guest Registration", body.ToString());
-        Response.Redirect("guestresponse.aspx");
-    }
-</script>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h4>
         RPC Guest Registration
@@ -132,9 +68,16 @@
             <asp:TableCell runat="server">
                 <select name="visited" size="1" id="visited">
                     <option value="none">Please select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                    <option value="True">Yes</option>
+                    <option value="False">No</option>
                 </select>
+            </asp:TableCell>
+            <asp:TableCell ID="TableCell2" runat="server">
+                <label for="visited">
+                    If so, when did you visit?</label>
+            </asp:TableCell>
+            <asp:TableCell ID="TableCell1" runat="server">
+                <input name="visitDate" type="text" id="visitDate" />
             </asp:TableCell>
         </asp:TableRow>
         <asp:TableRow runat="server">
@@ -145,8 +88,8 @@
             <asp:TableCell runat="server">
                 <select name="college" size="1" id="college">
                     <option value="none">Please select</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                    <option value="True">Yes</option>
+                    <option value="False">No</option>
                 </select>
             </asp:TableCell>
         </asp:TableRow>
@@ -157,7 +100,7 @@
             </asp:TableCell>
             <asp:TableCell runat="server">
                 <select name="howhear" size="1" id="howhear">
-                    <option>Please select</option>
+                    <option value="">Please select</option>
                     <option value="Family or friend">Family or friend</option>
                     <option value="Website">Website</option>
                     <option value="Traveled by the church">Traveled by the church</option>

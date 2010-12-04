@@ -94,6 +94,7 @@
   </object>
   <object type="~/guest.aspx" parent="basePage">
     <property name="emailSender" ref="EmailSender" />
+    <property name="GuestRegistrationManager" ref="GuestRegistrationManager" />
   </object>
   <object type="~/prayer.aspx" parent="basePage">
     <property name="EmailSender" ref="EmailSender" />
@@ -114,8 +115,8 @@
   </object>
   <object type="~/maintenance/calendar.aspx" parent="basePage" />
   <object id="EmailSender" type="rpcwc.web.email.EmailSender">
-    <property name="pastorEmail" value="pastor@rpcwc.org" />
-    <property name="officeEmail" value="rpc_office@rpcwc.org" />
+    <property name="pastorEmail" value="webmaster@rpcwc.org" />
+    <property name="officeEmail" value="webmaster@rpcwc.org" />
     <property name="toEmail" value="webmaster@rpcwc.org" />
     <property name="fromEmail" value="mailbot@rpcwc.org" />
     <property name="password" value="emailbot" />
@@ -159,5 +160,16 @@
   </object>
   <object type="~/photogallery.aspx">
     <property name="PhotoCache" ref="PhotoCache" />
+  </object>
+  <object name="GenericHandlerFactoryConfigurer" type="GenericHandlerFactory.GenericHandlerFactoryConfigurer, GenericHandlerFactory">
+    <property name="HandlerMap">
+      <dictionary>
+        <entry key="\.ashx$" value="Handler.SimpleHandlerFactory" />
+      </dictionary>
+    </property>
+  </object>
+  <object name="Handler.SimpleHandlerFactory" type="GenericHandlerFactory.SpringAwareHandlerFactoryWrapper, GenericHandlerFactory" />
+  <object name="GuestReport.ashx">
+    <property name="GuestRegistrationManager" ref="GuestRegistrationManager" />
   </object>
 </objects>

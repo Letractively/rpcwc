@@ -17,5 +17,9 @@ namespace rpcwc.dao
     {
         public const String SERMON = "sermon";
         public const int CHANNEL_RECOMMENDED_READINGS = 9;
+        public class GuestTags
+        {
+            public const String InitialReportGenerated = "IP";
+        }
     }
 }
