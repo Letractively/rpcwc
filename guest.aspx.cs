@@ -36,15 +36,15 @@ namespace rpcwc.web
             Boolean.TryParse(Request.Form["college"], out college);
             contact.college = college;
             contact.howhear = Request.Form["howhear"];
-            contact.contactme = "checked".Equals(Request.Form["contactme"]);
-            contact.faith = "checked".Equals(Request.Form["faith"]);
-            contact.churchhome = "checked".Equals(Request.Form["churchhome"]);
-            contact.worship = "checked".Equals(Request.Form["worship"]);
-            contact.teaching = "checked".Equals(Request.Form["teaching"]);
-            contact.youth = "checked".Equals(Request.Form["youth"]);
-            contact.service = "checked".Equals(Request.Form["service"]);
-            contact.love = "checked".Equals(Request.Form["love"]);
-            contact.evangelism = "checked".Equals(Request.Form["evangelism"]);
+            contact.contactme = "checkbox".Equals(Request.Form["contactme"]);
+            contact.faith = "checkbox".Equals(Request.Form["faith"]);
+            contact.churchhome = "checkbox".Equals(Request.Form["churchhome"]);
+            contact.worship = "checkbox".Equals(Request.Form["worship"]);
+            contact.teaching = "checkbox".Equals(Request.Form["teaching"]);
+            contact.youth = "checkbox".Equals(Request.Form["youth"]);
+            contact.service = "checkbox".Equals(Request.Form["service"]);
+            contact.love = "checkbox".Equals(Request.Form["love"]);
+            contact.evangelism = "checkbox".Equals(Request.Form["evangelism"]);
             contact.othertext = Request.Form["othertext"];
             contact.commentsprayer = Request.Form["commentsprayer"];
 

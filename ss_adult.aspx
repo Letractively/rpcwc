@@ -18,7 +18,9 @@
     <h4>
         Adult Christian Education Hour</h4>
     <h3>
-        Fall 2010 offerings (September&ndash;November)</h3>
+        Winter 2011 offerings (January&ndash;March)</h3>
+    <p>
+        Note: no classes Jan. 2nd; classes start Jan. 9th</p>
     <br />
     <p>
         <span class="sectionHeading">Track 1: Gospel Growth. </span>This track is tailored
@@ -27,16 +29,16 @@
     <ul>
         <li>
             <p>
-                <span class="sectionHeading">Discipleship Explored.</span> An eight-week journey
-                into the book of Philippians exploring what it means “for me to live is Christ and
-                to die is gain.” A course for new believers and for those who want to be equipped
-                for discipling new believers.</p>
-            <p>
-                Open to the first 12 registrants.</p>
+                <span class="sectionHeading">The Prodigal God: Recovering the Heart of the Christian
+                    Faith.</span> In six captivating DVD video sessions, pastor and New York Times
+                best-selling author Timothy Keller opens your eyes to the powerful message of Jesus'
+                best-known -- and least understood -- parable. The Prodigal God is a revelation
+                of the very heart of the gospel: God's radical love for sinners of every kind. Copies
+                of Dr. Keller’s book will be available for purchase</p>
             <table width="100%">
                 <tr>
                     <td>
-                        Leader: Stan Gale
+                        Leaders: Tim Gold, Dwayne Edwards
                     </td>
                     <td>
                         Location: Ministry House
@@ -51,67 +53,16 @@
     <ul>
         <li>
             <p>
-                <span class="sectionHeading">Basics of the Faith Series. </span>"This series of
-                booklets provides us with brief, clear, accurate and edifying introductions to key
-                aspects of Christian life and experience. They are biblically sound, well researched,
-                and written by faithful pastor-teachers." - J. Ligon Duncan. The titles that will
-                be considered this fall are:</p>
-            <table style="padding-left: 2em;">
-                <tr>
-                    <td>
-                        <span class="bookTitle">What is Justification by Faith Alone?</span> &mdash; J V
-                        Fesko
-                    </td>
-                    <td>
-                        Edwards
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="bookTitle">What is the Christian Worldview?</span> &mdash; Philip Graham
-                        Ryken
-                    </td>
-                    <td>
-                        Carafa
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="bookTitle">What is Providence?</span> &mdash; Derek W H Thomas
-                    </td>
-                    <td>
-                        Gold
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="bookTitle">What is Spiritual Warfare?</span> &mdash; Stanley D Gale
-                    </td>
-                    <td>
-                        Cardwell
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="bookTitle">How Our Children Come to Faith</span> &mdash; Stephen Smallman
-                    </td>
-                    <td>
-                        Comanda
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="bookTitle">What is Vocation?</span> &mdash; Stephen J Nichols
-                    </td>
-                    <td>
-                        Seeger
-                    </td>
-                </tr>
-            </table>
+                <span class="sectionHeading">Job: Lessons in Comfort.</span> “Over the years I have
+                read and taught many Bible studies, but never have I come across a study as well
+                written and thought-out as Job: Lessons in Comfort. All thirteen lessons constantly
+                point us not to Job or his situation but to our covenant-keeping God who has perfect,
+                loving control of every aspect of our lives, even when it seems He is clueless to
+                our needs.” — Dennis Bennett</p>
             <table width="100%">
                 <tr>
                     <td>
-                        Leaders: various
+                        Leader: Glenn & Marilyn Seeger
                     </td>
                     <td>
                         Location: Bullock Library
@@ -127,15 +78,15 @@
     <ul>
         <li>
             <p>
-                <span class="sectionHeading">War of Words. </span>Dr. Paul Tripp will lead us through
-                DVD in a 12-week study of his book, War of Words: Getting to the Heart of Your Communication
-                Struggles. Copies of Dr. Tripp’s book will be available for purchase. “Paul Tripp
-                does not offer superficial solutions to our failures of communication. He recognizes
-                that the spiritual quality of our words emanates from our hearts.” – Tremper Longman</p>
+                <span class="sectionHeading">Addictions: A Banquet in the Grave.</span> Dr. Ed Welch
+                will lead us through DVD in a 10-week study of his book by the same title. Dr. Welch
+                describes addiction as a “worship disorder” and discusses the power of the gospel
+                to deliver from the grip of addiction and into the freedom of the power of new life
+                in Christ. Copies of Dr. Welch’s book will be available for purchase.</p>
             <table width="100%">
                 <tr>
                     <td>
-                        Leaders: Carlsons, Jansens
+                        Leaders: Stan Gale, Bob Boyd
                     </td>
                     <td>
                         Location: Conference Room
