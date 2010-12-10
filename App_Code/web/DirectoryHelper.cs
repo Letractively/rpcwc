@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
 using rpcwc.vo.directory;
 using rpcwc.util;
 using Google.GData.Photos;
@@ -19,20 +20,15 @@ namespace rpcwc.web
             td.Style.Add(HtmlTextWriterStyle.Padding, "1em");
             td.Style.Add(HtmlTextWriterStyle.VerticalAlign, "top");
 
-            Label address1 = new Label();
-            address1.Text = directory.address1;
-            Label address2 = new Label();
-            address2.Text = directory.address2;
-            Label citystatezip = new Label();
-            if (directory.city != null && !directory.city.Equals(""))
-                citystatezip.Text = directory.city + ", ";
-            citystatezip.Text += directory.state + " " + directory.zip;
-
             Panel textPanel = new Panel();
-            textPanel.CssClass += "vCard";
+            textPanel.CssClass += "vcard";
             textPanel.Style.Add("float", "left");
-            textPanel.Controls.Add(makeLastName(directory));
-            textPanel.Controls.Add(makeFirstNames(directory));
+            Panel namePanel = new Panel();
+            namePanel.CssClass += "n ";
+            namePanel.CssClass += "fn ";
+            namePanel.Controls.Add(makeLastName(directory));
+            namePanel.Controls.Add(makeFirstNames(directory));
+            textPanel.Controls.Add(namePanel);
             textPanel.Controls.Add(makeAddress(directory));
             textPanel.Controls.Add(makeGeneralEmails(directory));
             textPanel.Controls.Add(makePersonEmails(directory));
@@ -53,6 +49,7 @@ namespace rpcwc.web
         public static Control makeGeneralPhoto(Directory directory)
         {
             Panel panel = new Panel();
+
             WebControl link = new WebControl(HtmlTextWriterTag.A);
             link.Attributes.Add("href", (String)directory.photo.Media.Thumbnails[1].Attributes["url"]/*(String) entry.Media.Content.Attributes["url"]*/);
             link.CssClass = "thickbox";
@@ -145,10 +142,21 @@ namespace rpcwc.web
             Panel emailDiv = new Panel();
             emailDiv.CssClass += "email";
             Label emailType = new Label();
-            emailType.CssClass += "type";
+            //emailType.CssClass += "type";
             emailType.Font.Italic = true;
             if (email.emailType != null && !email.emailType.Equals(""))
-                emailType.Text = personFirstName + "—" + email.emailType + ": ";
+            {
+
+                HtmlControl emailTypeAbbr = new HtmlGenericControl("abbr");
+                emailTypeAbbr.Attributes.Add("class", "type");
+                emailTypeAbbr.Attributes.Add("title", email.emailType.ToLower());
+                emailTypeAbbr.Controls.Add(new LiteralControl(email.emailType));
+
+                emailType.Controls.Add(new LiteralControl(personFirstName));
+                emailType.Controls.Add(new LiteralControl("—"));
+                emailType.Controls.Add(emailTypeAbbr);
+                emailType.Controls.Add(new LiteralControl(": "));
+            }
             else
                 emailType.Text = personFirstName + ": ";
             emailDiv.Controls.Add(emailType);
@@ -167,7 +175,14 @@ namespace rpcwc.web
                 Label emailType = new Label();
                 emailType.CssClass += "type";
                 emailType.Font.Italic = true;
-                emailType.Text = "(" + email.emailType + ": ";
+                emailType.Controls.Add(new LiteralControl("("));
+
+                HtmlControl emailTypeAbbr = new HtmlGenericControl("abbr");
+                emailTypeAbbr.Attributes.Add("class", "type");
+                emailTypeAbbr.Attributes.Add("title", email.emailType.ToLower());
+                emailTypeAbbr.Controls.Add(new LiteralControl(email.emailType));
+
+                emailType.Controls.Add(new LiteralControl(")"));
                 emailDiv.Controls.Add(emailType);
             }
             emailDiv.Controls.Add(makeEmail(email));
@@ -190,12 +205,24 @@ namespace rpcwc.web
             Panel phoneDiv = new Panel();
             phoneDiv.CssClass += "tel";
             Label phoneType = new Label();
-            phoneType.CssClass += "type";
             phoneType.Font.Italic = true;
             if (phone.phoneType != null && !phone.phoneType.Equals(""))
-                phoneType.Text = personFirstName + "—" + phone.phoneType + ": ";
+            {
+                phoneType.Controls.Add(new LiteralControl(personFirstName + "—"));
+
+                HtmlControl phoneTypeAbbr = new HtmlGenericControl("abbr");
+                phoneTypeAbbr.Attributes.Add("class","type");
+                phoneTypeAbbr.Attributes.Add("title",phone.phoneType.ToLower());
+                LiteralControl phoneTypeText = new LiteralControl(phone.phoneType);
+                phoneTypeAbbr.Controls.Add(phoneTypeText);
+                phoneType.Controls.Add(phoneTypeAbbr);
+
+                phoneType.Controls.Add(new LiteralControl(": "));
+            }
             else
+            {
                 phoneType.Text = personFirstName + ": ";
+            }
             phoneDiv.Controls.Add(phoneType);
             Label phoneNumber = new Label();
             phoneNumber.CssClass += "value";
@@ -213,9 +240,15 @@ namespace rpcwc.web
             if (phone.phoneType != null && !phone.phoneType.Equals(""))
             {
                 Label phoneType = new Label();
-                phoneType.CssClass += "type";
+
+                HtmlControl phoneTypeAbbr = new HtmlGenericControl("abbr");
+                phoneTypeAbbr.Attributes.Add("class", "type");
+                phoneTypeAbbr.Attributes.Add("title", phone.phoneType.ToLower());
+                LiteralControl phoneTypeText = new LiteralControl(phone.phoneType);
+                phoneTypeAbbr.Controls.Add(phoneTypeText);
+                phoneType.Controls.Add(phoneTypeAbbr);
+                phoneType.Controls.Add(new LiteralControl(": "));
                 phoneType.Font.Italic = true;
-                phoneType.Text = phone.phoneType + ": ";
                 phoneDiv.Controls.Add(phoneType);
             }
             Label phoneNumber = new Label();
@@ -260,15 +293,14 @@ namespace rpcwc.web
                 cityTxt.CssClass += "locality";
                 cityTxt.Text = directory.city;
                 citystatezip.Controls.Add(cityTxt);
-                citystatezip.Controls.Add(getComma());
-                citystatezip.Controls.Add(getSpace());
+                citystatezip.Controls.Add(new LiteralControl(", "));
             }
 
             Label stateTxt = new Label();
             stateTxt.CssClass += "region";
             stateTxt.Text = directory.state;
             citystatezip.Controls.Add(stateTxt);
-            citystatezip.Controls.Add(getSpace());
+            citystatezip.Controls.Add(new LiteralControl(", "));
 
             Label zipTxt = new Label();
             zipTxt.CssClass += "postal-code";
@@ -365,7 +397,7 @@ namespace rpcwc.web
         private static Control getAmpersand()
         {
             Label ampersand = new Label();
-            ampersand.Text = " & ";
+            ampersand.Text = " &amp; ";
             return ampersand;
         }
 
