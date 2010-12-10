@@ -29,6 +29,7 @@ namespace rpcwc.web
             citystatezip.Text += directory.state + " " + directory.zip;
 
             Panel textPanel = new Panel();
+            textPanel.CssClass += "vCard";
             textPanel.Style.Add("float", "left");
             textPanel.Controls.Add(makeLastName(directory));
             textPanel.Controls.Add(makeFirstNames(directory));
@@ -59,6 +60,7 @@ namespace rpcwc.web
             PhotoAccessor pa = new PhotoAccessor(directory.photo);
 
             Image image = new Image();
+            image.CssClass += "photo";
             image.AlternateText = pa.PhotoTitle;
 
             image.ImageUrl = (String)directory.photo.Media.Thumbnails[0].Attributes["url"];
@@ -140,8 +142,10 @@ namespace rpcwc.web
 
         private static WebControl makePersonEmail(Email email, String personFirstName)
         {
-            WebControl emailDiv = new WebControl(HtmlTextWriterTag.Span);
+            Panel emailDiv = new Panel();
+            emailDiv.CssClass += "email";
             Label emailType = new Label();
+            emailType.CssClass += "type";
             emailType.Font.Italic = true;
             if (email.emailType != null && !email.emailType.Equals(""))
                 emailType.Text = personFirstName + "—" + email.emailType + ": ";
@@ -149,23 +153,25 @@ namespace rpcwc.web
                 emailType.Text = personFirstName + ": ";
             emailDiv.Controls.Add(emailType);
             emailDiv.Controls.Add(makeEmail(email));
-            emailDiv.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
+            //emailDiv.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
 
             return emailDiv;
         }
 
         private static WebControl makeGeneralEmail(Email email)
         {
-            WebControl emailDiv = new WebControl(HtmlTextWriterTag.Span);
+            Panel emailDiv = new Panel();
+            emailDiv.CssClass += "email";
             if (email.emailType != null && !email.emailType.Equals(""))
             {
                 Label emailType = new Label();
+                emailType.CssClass += "type";
                 emailType.Font.Italic = true;
                 emailType.Text = "(" + email.emailType + ": ";
                 emailDiv.Controls.Add(emailType);
             }
             emailDiv.Controls.Add(makeEmail(email));
-            emailDiv.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
+            //emailDiv.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
 
             return emailDiv;
         }
@@ -173,6 +179,7 @@ namespace rpcwc.web
         private static Control makeEmail(Email email)
         {
             HyperLink address = new HyperLink();
+            address.CssClass += "value";
             address.NavigateUrl = "mailto:" + email.emailAddress;
             address.Text = email.emailAddress;
             return address;
@@ -180,8 +187,10 @@ namespace rpcwc.web
 
         private static WebControl makePersonPhone(Phone phone, String personFirstName)
         {
-            WebControl phoneDiv = new WebControl(HtmlTextWriterTag.Span);
+            Panel phoneDiv = new Panel();
+            phoneDiv.CssClass += "tel";
             Label phoneType = new Label();
+            phoneType.CssClass += "type";
             phoneType.Font.Italic = true;
             if (phone.phoneType != null && !phone.phoneType.Equals(""))
                 phoneType.Text = personFirstName + "—" + phone.phoneType + ": ";
@@ -189,54 +198,83 @@ namespace rpcwc.web
                 phoneType.Text = personFirstName + ": ";
             phoneDiv.Controls.Add(phoneType);
             Label phoneNumber = new Label();
+            phoneNumber.CssClass += "value";
             phoneNumber.Text = phone.phoneNumber;
             phoneDiv.Controls.Add(phoneNumber);
-            phoneDiv.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
+            //phoneDiv.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
 
             return phoneDiv;
         }
 
         private static WebControl makeGeneralPhone(Phone phone)
         {
-            WebControl phoneDiv = new WebControl(HtmlTextWriterTag.Span);
+            Panel phoneDiv = new Panel();
+            phoneDiv.CssClass += "tel";
             if (phone.phoneType != null && !phone.phoneType.Equals(""))
             {
                 Label phoneType = new Label();
+                phoneType.CssClass += "type";
                 phoneType.Font.Italic = true;
                 phoneType.Text = phone.phoneType + ": ";
                 phoneDiv.Controls.Add(phoneType);
             }
             Label phoneNumber = new Label();
+            phoneNumber.CssClass += "value";
             phoneNumber.Text = phone.phoneNumber;
             phoneDiv.Controls.Add(phoneNumber);
-            phoneDiv.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
+            //phoneDiv.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
 
             return phoneDiv;
         }
 
         public static Control makeAddress(Directory directory)
         {
-            WebControl address = new WebControl(HtmlTextWriterTag.Div);
+            Panel address = new Panel();
+            address.CssClass += "adr";
             if (directory.address1 == null || directory.address1.Equals(""))
                 return address;
 
-            Label address1 = new Label();
-            address1.Text = directory.address1;
-            Label address2 = new Label();
-            address2.Text = directory.address2;
-            Label citystatezip = new Label();
-            if (directory.city != null && !directory.city.Equals(""))
-                citystatezip.Text = directory.city + ", ";
-
-            citystatezip.Text += directory.state + " " + directory.zip;
-
+            Panel address1 = new Panel();
+            address1.CssClass += "street-address";
+            Label address1Txt = new Label();
+            address1Txt.Text = directory.address1;
+            address1.Controls.Add(address1Txt);
             address.Controls.Add(address1);
-            address.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
+
+
+            Panel address2 = new Panel();
+            address2.CssClass += "extended-address";
+            Label address2Txt = new Label();
+            address2Txt.Text = directory.address2;
+            address2.Controls.Add(address2Txt);
             if (directory.address2 != null)
             {
                 address.Controls.Add(address2);
-                address.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
+                //address.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
             }
+
+            Panel citystatezip = new Panel();
+            if (directory.city != null && !directory.city.Equals(""))
+            {
+                Label cityTxt = new Label();
+                cityTxt.CssClass += "locality";
+                cityTxt.Text = directory.city;
+                citystatezip.Controls.Add(cityTxt);
+                citystatezip.Controls.Add(getComma());
+                citystatezip.Controls.Add(getSpace());
+            }
+
+            Label stateTxt = new Label();
+            stateTxt.CssClass += "region";
+            stateTxt.Text = directory.state;
+            citystatezip.Controls.Add(stateTxt);
+            citystatezip.Controls.Add(getSpace());
+
+            Label zipTxt = new Label();
+            zipTxt.CssClass += "postal-code";
+            zipTxt.Text = directory.zip;
+            citystatezip.Controls.Add(zipTxt);
+
             address.Controls.Add(citystatezip);
 
             return address;
@@ -244,13 +282,14 @@ namespace rpcwc.web
 
         public static Control makeLastName(Directory directory)
         {
-            WebControl lastNameSpan = new WebControl(HtmlTextWriterTag.Span);
+            WebControl lastNameSpan = new Panel();
+            lastNameSpan.CssClass += "family-name";
             Label lastName = new Label();
             lastName.Text = directory.lastName;
             lastName.Font.Bold = true;
 
             lastNameSpan.Controls.Add(lastName);
-            lastNameSpan.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
+            //lastNameSpan.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
 
             return lastNameSpan;
         }
@@ -284,7 +323,7 @@ namespace rpcwc.web
 
         public static Control makeFirstNames(Directory directory)
         {
-            WebControl firstNameSpan = new WebControl(HtmlTextWriterTag.Span);
+            WebControl firstNameSpan = new Panel();
             if (directory.persons == null || directory.persons.Count == 0)
                 return firstNameSpan;
 
@@ -318,7 +357,7 @@ namespace rpcwc.web
             }
 
             firstNameSpan.Controls.Add(firstNames);
-            firstNameSpan.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
+            //firstNameSpan.Controls.Add(new WebControl(HtmlTextWriterTag.Br));
 
             return firstNameSpan;
         }
