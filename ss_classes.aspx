@@ -65,35 +65,35 @@
         </tr>
         <tr>
             <td valign="top">
-                Adult&mdash;Discipleship Explored
+                Adult&mdash;Prodigal God
             </td>
             <td valign="top">
                 Ministry House, 2nd floor
             </td>
             <td valign="top">
-                Stan Gale
+                Tim Gold, Dwayne Edwards
             </td>
         </tr>
         <tr>
             <td valign="top">
-                Adult&mdash;Basics of the Faith
+                Adult&mdash;Job
             </td>
             <td valign="top">
-                Bullock Library
+                Bullock Library 
             </td>
             <td valign="top">
-                Various
+                Glenn and Marilyn Seeger
             </td>
         </tr>
         <tr>
             <td valign="top">
-                Adult&mdash;War of Words
+                Adult&mdash;Addictions
             </td>
             <td valign="top">
                 Conference Room
             </td>
             <td valign="top">
-                Carlsons, Jansens
+                Stan Gale, Bob Boyd
             </td>
         </tr>
     </table>
