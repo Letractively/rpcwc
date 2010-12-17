@@ -43,9 +43,16 @@
               <property name="Height" value="122" />
             </object>
             <object type="System.Web.UI.WebControls.HyperLink">
-              <property name="ImageUrl" value="~/images/readings/0875526047m-1.jpg" />
-              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/173" />
-              <property name="Text" value="War of Words: Getting to the Heart of Your Communication Struggles, Paul David Tripp" />
+              <property name="ImageUrl" value="~/images/readings/9780875526065m.jpg" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/1482" />
+              <property name="Text" value="Addictions: A Banquet to the Grave, Edward T Welch" />
+              <property name="Width" value="80" />
+              <property name="Height" value="122" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="ImageUrl" value="~/images/readings/9780525950790m.jpg" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5762" />
+              <property name="Text" value="The Prodigal God, Tim Keller" />
               <property name="Width" value="80" />
               <property name="Height" value="122" />
             </object>

@@ -19,9 +19,9 @@ namespace rpcwc.web
             //td.BorderWidth = Unit.Pixel(1);
             td.Style.Add(HtmlTextWriterStyle.Padding, "1em");
             td.Style.Add(HtmlTextWriterStyle.VerticalAlign, "top");
+            td.CssClass += "vcard";
 
             Panel textPanel = new Panel();
-            textPanel.CssClass += "vcard";
             textPanel.Style.Add("float", "left");
             Panel namePanel = new Panel();
             namePanel.CssClass += "n ";
