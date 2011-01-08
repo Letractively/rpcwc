@@ -31,6 +31,13 @@
     <property name="SermonSeriesList">
       <list>
         <object type="rpcwc.vo.Blog.SermonSeries">
+          <property name="Label" value="Hebrews 2011" />
+          <property name="ImageUrl" value="images/sermon/hebrews2011.jpg" />
+          <property name="Caption" value="Hebrews: Fixing Our Eyes on Jesus" />
+          <property name="Width" value="195" />
+          <property name="Height" value="147" />
+        </object>
+        <object type="rpcwc.vo.Blog.SermonSeries">
           <property name="Label" value="Minor Prophets 2010" />
           <property name="ImageUrl" value="images/sermon/minorspurplegreen.jpg" />
           <property name="Caption" value="Majoring on the Minors: Messages from the Minor Prophets" />

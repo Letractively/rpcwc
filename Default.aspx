@@ -22,8 +22,8 @@
             </td>
             <td width="190" valign="top">
                 <p>
-                    <a href="sermon.aspx?label=Minor Prophets 2010" runat="server">
-                        <img src="~/images/sermon/minorspurplegreen_sm.jpg" width="190" height="143" border="0" alt="Messages from the Minor Prophets: Majoring on the Minors"
+                    <a href="sermon.aspx?label=Hebrews 2011" runat="server">
+                        <img src="~/images/sermon/hebrews2011.jpg" width="190" height="143" border="0" alt="Hebrews: Fixing Our Eyes on Jesus"
                             style="padding-top: 9px; padding-bottom: 10px;" runat="server" /></a></p>
                 <p style="text-align: center;">
                     <strong><a href="sermon.aspx?label=Minor Prophets 2010" runat="server">Current Sermon Series</a></strong></p>
@@ -57,17 +57,6 @@
                             runat="server" /></a></p>
                 <p style="text-align: center;">
                     <strong><a id="A3" href="godsgoodnews.aspx" runat="server">The Message of Life</a></strong></p>
-            </td>
-        </tr>
-        <tr>
-            <td width="390" valign="top" colspan="3">
-                <asp:hyperlink 
-                width="390"
-                height="162"
-                imageurl="~/images/puppetshowbar.jpg"
-                text="Click here for information about The Christmas Story told through rod puppets"
-                navigateurl="announcement.aspx"
-                runat="server" />
             </td>
         </tr>
     </table>

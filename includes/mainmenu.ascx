@@ -3,9 +3,24 @@
 <script type="text/C#" runat="server">
     public void SetExternalLinks(Object source, EventArgs eventArgs)
     {
-        mainMenuControl.FindItem("Missions/Mission to North America").Target = "_blank";
-        mainMenuControl.FindItem("Missions/Mission to the World").Target = "_blank";
-        mainMenuControl.FindItem("Prayer/Community Houses of Prayer").Target = "_blank";
+        MenuItem mnaItem = mainMenuControl.FindItem("Missions/Mission to North America");
+        if (mnaItem != null)
+        {
+            mnaItem.Target = "_blank";
+            mnaItem = null;
+        }
+        MenuItem mtwItem = mainMenuControl.FindItem("Missions/Mission to the World");
+        if (mtwItem != null)
+        {
+            mtwItem.Target = "_blank";
+            mtwItem = null;
+        }
+        MenuItem chopItem = mainMenuControl.FindItem("Prayer/Community Houses of Prayer");
+        if (chopItem != null)
+        {
+            chopItem.Target = "_blank";
+            chopItem = null;
+        }
     }
 </script>
 
