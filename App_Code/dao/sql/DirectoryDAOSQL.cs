@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Data;
+using Google.Picasa;
+using rpcwc.vo.directory;
 using Spring.Data.Common;
 using Spring.Data.Objects.Generic;
-using rpcwc.dao;
-using rpcwc.vo.directory;
-using System.Collections.Generic;
-using Google.GData.Photos;
 
 /// <summary>
 /// Summary description for DirectoryDAOSQL
@@ -42,8 +41,8 @@ namespace rpcwc.dao.sql
                 directory.zip = getString(dataReader, 5);
                 directory.id = getByte(dataReader, 6).ToString();
                 String photoId = getString(dataReader, 7);
-                directory.photo = new Google.GData.Photos.PhotoEntry();
-                new PhotoAccessor(directory.photo).Id = photoId;
+                directory.photo = new Photo();
+                directory.photo.Id = photoId;
 
                 return (T)(object)directory;
             }
@@ -71,7 +70,7 @@ namespace rpcwc.dao.sql
                 directory.state = getString(dataReader, 4);
                 directory.zip = getString(dataReader, 5);
                 directory.id = getByte(dataReader, 6).ToString();
-                directory.photo = new Google.GData.Photos.PicasaEntry();
+                directory.photo = new Photo();
 
                 return (T)(object)directory;
             }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 using Google.GData.Photos;
-using System.Web.UI;
+using Google.Picasa;
 
 /// <summary>
 /// Summary description for PhotoGalleryHelper
@@ -57,10 +57,11 @@ namespace rpcwc.util
             link.Attributes.Add("href", (String)entry.Media.Thumbnails[1].Attributes["url"]/*(String) entry.Media.Content.Attributes["url"]*/);
             link.CssClass = "thickbox";
 
-            PhotoAccessor pa = new PhotoAccessor(entry);
+            Photo pa = new Photo();
+            pa.AtomEntry = entry;
 
             Image image = new Image();
-            image.AlternateText = pa.PhotoTitle;
+            image.AlternateText = pa.Title;
             
             image.ImageUrl = (String)entry.Media.Thumbnails[0].Attributes["url"];
 

@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web;
 using System.Web.UI;
-using rpcwc.dao;
-using rpcwc.dao.GData;
 using System.Web.UI.WebControls;
 using Google.GData.Photos;
-using rpcwc.util;
+using Google.Picasa;
 using rpcwc.bo.cache;
+using rpcwc.util;
 
 /// <summary>
 /// Summary description for photogallery
@@ -28,8 +26,9 @@ namespace rpcwc.web
                 if (albumEntry != null)
                 {
                     PageTitle.Controls.Add(new LiteralControl(albumEntry.Title.Text));
-                    AlbumAccessor ac = new AlbumAccessor(albumEntry);
-                    Subtitle.Controls.Add(new LiteralControl(ac.AlbumSummary));
+                    Album album = new Album();
+                    album.AtomEntry = albumEntry;
+                    Subtitle.Controls.Add(new LiteralControl(album.Summary));
                 }
                 IList<PicasaEntry> entries = PhotoCache.FindPhotosByAlbum(albumId);
                 IList<WebControl> images = PhotoGalleryHelper.BuildImagesFromPicasaEntries(entries);

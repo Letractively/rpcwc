@@ -26,7 +26,46 @@
   <object name="ControlRotationList" type="System.Collections.Generic.Dictionary&lt;System.String,System.Collections.Generic.List&lt;System.Web.UI.Control>>">
     <constructor-arg name="dictionary" >
       <dictionary key-type="System.String" value-type="System.Collections.Generic.List&lt;System.Web.UI.Control>">
-        <entry key="readings">
+        <entry key="readings"> <!-- Spring 2011 -->
+          <list element-type="System.Web.UI.Control">
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="ImageUrl" value="~/images/jehoshaphat.jpg" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5190" />
+              <property name="Text" value="The Prayer of Jehoshaphat, Stanley D. Gale" />
+              <property name="Width" value="80" />
+              <property name="Height" value="122" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="ImageUrl" value="~/images/readings/9781567691207m-1.jpg" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/6621" />
+              <property name="Text" value="The Masculine Mandate: God's Calling to Men, Richard D. Phillips" />
+              <property name="Width" value="80" />
+              <property name="Height" value="122" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="ImageUrl" value="~/images/readings/9780822310730t.jpeg" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5447" />
+              <property name="Text" value="Community Houses of Prayer: Ministry Manual, Stanley D. Gale" />
+              <property name="Width" value="80" />
+              <property name="Height" value="125" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="ImageUrl" value="~/images/readings/1596380195sm.jpeg" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/4540" />
+              <property name="Text" value="On Being Presbyterian, Sean Lucas" />
+              <property name="Width" value="80" />
+              <property name="Height" value="121" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="Face to Face: Praying the Scriptures for Intimate Worship" />
+              <property name="NavigateUrl" value="http://www.amazon.com/Face-Praying-Scriptures-Intimate-Worship/dp/0310925509" />
+              <property name="ImageUrl" value="~/images/readings/0310925509_sm.jpg" />
+              <property name="Width" value="80" />
+              <property name="Height" value="122" />
+            </object>
+          </list>
+        </entry>
+        <entry key="readingsWinter2011">
           <list element-type="System.Web.UI.Control">
             <object type="System.Web.UI.WebControls.HyperLink">
               <property name="ImageUrl" value="~/images/jehoshaphat.jpg" />

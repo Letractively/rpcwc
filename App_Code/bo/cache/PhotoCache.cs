@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using rpcwc.dao;
-using rpcwc.util;
-using rpcwc.vo;
 using Google.GData.Photos;
+using Google.Picasa;
+using rpcwc.dao;
 
 /// <summary>
 /// Summary description for CalendarCache
@@ -23,8 +22,9 @@ namespace rpcwc.bo.cache
         {
             public String createKey(PicasaEntry obj)
             {
-                AlbumAccessor ac = new AlbumAccessor(obj);
-                return ac.Id;
+                Album album = new Album();
+                album.AtomEntry = obj;
+                return album.Id;
             }
         }
 
@@ -32,8 +32,9 @@ namespace rpcwc.bo.cache
         {
             public String createKey(PicasaEntry obj)
             {
-                PhotoAccessor pa = new PhotoAccessor(obj);
-                return pa.Id;
+                Photo photo = new Photo();
+                photo.AtomEntry = obj;
+                return photo.Id;
             }
         }
 
@@ -54,11 +55,12 @@ namespace rpcwc.bo.cache
 
             IDictionary<String, IList<PicasaEntry>> photosMappedByAlbumId = new Dictionary<String, IList<PicasaEntry>>();
 
-            foreach (PicasaEntry album in albums)
+            foreach (PicasaEntry albumEntry in albums)
             {
-                AlbumAccessor ac = new AlbumAccessor(album);
-                IList<PicasaEntry> photos = PhotoDao.findPhotosByAlbum(ac.Id);
-                photosMappedByAlbumId.Add(ac.Id, photos);
+                Album album = new Album();
+                album.AtomEntry = albumEntry;
+                IList<PicasaEntry> photos = PhotoDao.findPhotosByAlbum(album.Id);
+                photosMappedByAlbumId.Add(album.Id, photos);
             }
 
             IList<PicasaEntry> allPhotos = CollectionUtils.ConcatenateLists<PicasaEntry>(photosMappedByAlbumId.Values);
@@ -142,7 +144,7 @@ namespace rpcwc.bo.cache
             return photos;
         }
 
-        public PicasaEntry FindPhoto(String photoId)
+        public Photo FindPhoto(String photoId)
         {
             if (!UpToDate && !refreshing)
                 Refresh(true);
@@ -151,13 +153,16 @@ namespace rpcwc.bo.cache
 
             HitCount++;
 
-            PicasaEntry photo = null;
+            Photo photo = new Photo();
+            PicasaEntry photoEntry = null;
 
             lock (LOCK)
             {
                 if (PhotosMappedById.ContainsKey(photoId))
-                    photo = PhotosMappedById[photoId];
+                    photoEntry = PhotosMappedById[photoId];
             }
+
+            photo.AtomEntry = photoEntry;
 
             CacheTime += DateTime.Now - startTime;
 

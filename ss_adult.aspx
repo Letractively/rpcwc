@@ -18,9 +18,7 @@
     <h4>
         Adult Christian Education Hour</h4>
     <h3>
-        Winter 2011 offerings (January&ndash;March)</h3>
-    <p>
-        Note: no classes Jan. 2nd; classes start Jan. 9th</p>
+        Spring 2011 offerings (April&ndash;June)</h3>
     <br />
     <p>
         <span class="sectionHeading">Track 1: Gospel Growth. </span>This track is tailored
@@ -29,19 +27,18 @@
     <ul>
         <li>
             <p>
-                <span class="sectionHeading">The Prodigal God: Recovering the Heart of the Christian
-                    Faith.</span> In six captivating DVD video sessions, pastor and New York Times
-                best-selling author Timothy Keller opens your eyes to the powerful message of Jesus'
-                best-known -- and least understood -- parable. The Prodigal God is a revelation
-                of the very heart of the gospel: God's radical love for sinners of every kind. Copies
-                of Dr. Keller’s book will be available for purchase</p>
+                <span class="sectionHeading">Christianity Explored.</span><i>Christianity Explored</i> is a ten-week course that
+introduces people to Jesus Christ, using the Gospel of Mark to answer three
+questions: Who is Jesus? Why did he come? What does it mean to follow him?
+The material is remarkably clear and straightforward as it lays out the gospel in its
+profound simplicity.</p>
             <table width="100%">
                 <tr>
                     <td>
-                        Leaders: Tim Gold, Dwayne Edwards
+                        Leaders: Verrillos, Jansens
                     </td>
                     <td>
-                        Location: Ministry House
+                        Location: Conference Room
                     </td>
                 </tr>
             </table>
@@ -53,16 +50,16 @@
     <ul>
         <li>
             <p>
-                <span class="sectionHeading">Job: Lessons in Comfort.</span> “Over the years I have
-                read and taught many Bible studies, but never have I come across a study as well
-                written and thought-out as Job: Lessons in Comfort. All thirteen lessons constantly
-                point us not to Job or his situation but to our covenant-keeping God who has perfect,
-                loving control of every aspect of our lives, even when it seems He is clueless to
-                our needs.” — Dennis Bennett</p>
+                <span class="sectionHeading">On Being Presbyterian.</span> A 13-week introduction to Presbyterian beliefs,
+practices, and history, using Sean Michael Lucas’ book by the same title and
+Power Point. Helps readers grasp what it means to be a Presbyterian in a
+postmodern age. "Dr. Sean Lucas is a first rate scholar who writes with depth,
+breadth and passion for his topic. <i>On Being Presbyterian</i> is highly recommended
+for anyone who wants to explore Presbyterian traditions down to their roots." — Peter A. Lillback</p>
             <table width="100%">
                 <tr>
                     <td>
-                        Leader: Glenn & Marilyn Seeger
+                        Leaders: 
                     </td>
                     <td>
                         Location: Bullock Library
@@ -78,18 +75,20 @@
     <ul>
         <li>
             <p>
-                <span class="sectionHeading">Addictions: A Banquet in the Grave.</span> Dr. Ed Welch
-                will lead us through DVD in a 10-week study of his book by the same title. Dr. Welch
-                describes addiction as a “worship disorder” and discusses the power of the gospel
-                to deliver from the grip of addiction and into the freedom of the power of new life
-                in Christ. Copies of Dr. Welch’s book will be available for purchase.</p>
+                <span class="sectionHeading">Evangeliving.</span> “Rather than evangelism, think in terms of ‘evangeliving’ that
+seeks genuine, relational witness to the Lord Jesus in actions that serve Him and
+words that give Him glory.” (CHOP Ministry Manual, p. 83). This course will
+provide tactical and practical training for reaching those around us for the sake
+of the gospel. Over the 12 weeks, we will learn how to cultivate a mentality of
+mission and initiate conversations for Christ through classroom instruction and
+field application. (<a href="pdf/evangliving_syllabus.pdf">see syllabus</a>).</p>
             <table width="100%">
                 <tr>
                     <td>
-                        Leaders: Stan Gale, Bob Boyd
+                        Leaders: Stan Gale
                     </td>
                     <td>
-                        Location: Conference Room
+                        Location:Ministry House
                     </td>
                 </tr>
             </table>
@@ -97,7 +96,7 @@
     </ul>
     <hr />
     <p>
-        Classes will generally run along a quarter system (12 weeks), with new offerings
+        Classes will generally run along a quarter system (13 weeks), with new offerings
         starting at the same time in the fall, winter and spring. However, since classes
         within a quarter may be staggered (i.e., differing number of sessions), students
         are welcome to join in an ongoing class, provided there is room, for the duration
@@ -106,7 +105,7 @@
         OR</p>
     <p>
         Those not part of a class or between classes are invited to gather with others in
-        the parlor of the Ministry House for prayer, praying through the weekly prayer sheet
+        the parlor of the Ministry House <b>for prayer</b>, praying through the weekly prayer sheet
         and the order of service and activities in that Sunday’s bulletin.
     </p>
 </asp:Content>

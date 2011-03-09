@@ -65,35 +65,35 @@
         </tr>
         <tr>
             <td valign="top">
-                Adult&mdash;Prodigal God
-            </td>
-            <td valign="top">
-                Ministry House, 2nd floor
-            </td>
-            <td valign="top">
-                Tim Gold, Dwayne Edwards
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">
-                Adult&mdash;Job
-            </td>
-            <td valign="top">
-                Bullock Library 
-            </td>
-            <td valign="top">
-                Glenn and Marilyn Seeger
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">
-                Adult&mdash;Addictions
+                Adult&mdash;Christianity Explored
             </td>
             <td valign="top">
                 Conference Room
             </td>
             <td valign="top">
-                Stan Gale, Bob Boyd
+                Verrillos, Jansens
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                Adult&mdash;On Being Presbyterian
+            </td>
+            <td valign="top">
+                Bullock Library 
+            </td>
+            <td valign="top">
+                
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                Adult&mdash;Evangeliving
+            </td>
+            <td valign="top">
+                Ministry House
+            </td>
+            <td valign="top">
+                Stan Gale
             </td>
         </tr>
     </table>

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
 using rpcwc.vo.directory;
-using rpcwc.util;
 using Google.GData.Photos;
 
 /// <summary>
@@ -35,7 +34,7 @@ namespace rpcwc.web
             textPanel.Controls.Add(makeGeneralPhones(directory));
             textPanel.Controls.Add(makePersonPhones(directory));
             td.Controls.Add(textPanel);
-            if (directory.photo != null)
+            if (directory.photo != null && directory.photo.Id != null && directory.photo.PicasaEntry != null)
             {
                 Panel picturePanel = new Panel();
                 picturePanel.Style.Add("float", "right");
@@ -51,18 +50,16 @@ namespace rpcwc.web
             Panel panel = new Panel();
 
             WebControl link = new WebControl(HtmlTextWriterTag.A);
-            link.Attributes.Add("href", (String)directory.photo.Media.Thumbnails[1].Attributes["url"]/*(String) entry.Media.Content.Attributes["url"]*/);
+            link.Attributes.Add("href", (String) directory.photo.PicasaEntry.Media.Thumbnails[1].Attributes["url"]/*(String) entry.Media.Content.Attributes["url"]*/);
             link.CssClass = "thickbox";
-
-            PhotoAccessor pa = new PhotoAccessor(directory.photo);
 
             Image image = new Image();
             image.CssClass += "photo";
-            image.AlternateText = pa.PhotoTitle;
+            image.AlternateText = directory.photo.Title;
 
-            image.ImageUrl = (String)directory.photo.Media.Thumbnails[0].Attributes["url"];
-            image.Height = int.Parse((String)directory.photo.Media.Thumbnails[0].Attributes["height"]);
-            image.Width = int.Parse((String)directory.photo.Media.Thumbnails[0].Attributes["width"]);
+            image.ImageUrl = (String)directory.photo.PicasaEntry.Media.Thumbnails[0].Attributes["url"].ToString();
+            image.Height = int.Parse((String)directory.photo.PicasaEntry.Media.Thumbnails[0].Attributes["height"]);
+            image.Width = int.Parse((String)directory.photo.PicasaEntry.Media.Thumbnails[0].Attributes["width"]);
 
             link.Controls.Add(image);
             panel.Controls.Add(link);

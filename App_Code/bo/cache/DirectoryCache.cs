@@ -173,7 +173,10 @@ namespace rpcwc.bo.cache
             foreach (KeyValuePair<Char, IList<Directory>> keyValuePair in map)
             {
                 IAsyncResult result = buildLetterPanelDelegate.BeginInvoke(keyValuePair.Key, keyValuePair.Value, buildCellDelegate, delegate(IAsyncResult res) { }, null);
-                results.Add(result);
+                if (result != null)
+                {
+                    results.Add(result);
+                }
             }
 
             foreach (IAsyncResult result in results)
