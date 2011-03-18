@@ -14,6 +14,7 @@ namespace rpcwc.dao.sql
 {
     public class DirectoryEmailDaoSql : RPCWCDAO, IDirectoryEmailDao
     {
+        public String UpdateSql { get; set; }
         private FindDirEmailQuery _findDirEmailQuery;
         private FindPersonEmailQuery _findPersonEmailQuery;
         private static string emailForDirCommandString = "findEmailForDir";
@@ -62,6 +63,19 @@ namespace rpcwc.dao.sql
             }
         }
 
+        public class EmailUpdateNonQuery : Spring.Data.Objects.AdoNonQuery
+        {
+            public EmailUpdateNonQuery(IDbProvider dbProvider, string sql)
+                : base(dbProvider, sql)
+            {
+                CommandType = CommandType.Text;
+                DeclaredParameters = new DbParameters(dbProvider);
+                DeclaredParameters.Add("oldAddress", SqlDbType.VarChar);
+                DeclaredParameters.Add("newAddress", SqlDbType.VarChar);
+                Compile();
+            }
+        }
+
         #region DirectoryEmailDao Members
 
         public IList<Email> findDirectoryLevelEmail(string directoryId)
@@ -76,6 +90,16 @@ namespace rpcwc.dao.sql
             IDictionary parameterMap = new Hashtable(1);
             parameterMap.Add("@personEntryId", personEntryId);
             return findPersonEmailQuery.QueryByNamedParam<Email>(parameterMap);
+        }
+
+        public void UpdateEmail(string oldAddress, string newAddress)
+        {
+            EmailUpdateNonQuery nonQuery = new EmailUpdateNonQuery(dbProvider, UpdateSql);
+            IDictionary paramMap = new Hashtable();
+            paramMap.Add("@oldAddress", oldAddress);
+            paramMap.Add("@newAddress", newAddress);
+
+            nonQuery.ExecuteNonQueryByNamedParam(paramMap);
         }
 
         #endregion

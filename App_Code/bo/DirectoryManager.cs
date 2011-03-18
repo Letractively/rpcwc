@@ -61,6 +61,11 @@ namespace rpcwc.bo
             return DirectoryDAO.findAllDirectoryEntriesActive();
         }
 
+        public void UpdateEmail(string oldAddress, string newAddress)
+        {
+            DirectoryEmailDao.UpdateEmail(oldAddress, newAddress);
+        }
+
         public IDirectoryDAO DirectoryDAO
         {
             get { return _directoryDAO; }

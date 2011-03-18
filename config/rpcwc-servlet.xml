@@ -179,4 +179,7 @@
   <object name="GuestReport.ashx">
     <property name="GuestRegistrationManager" ref="GuestRegistrationManager" />
   </object>
+  <object name="UpdateEmail.ashx">
+    <property name="DirectoryManager" ref="DirectoryManager" />
+  </object>
 </objects>

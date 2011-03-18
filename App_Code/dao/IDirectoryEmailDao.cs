@@ -13,5 +13,7 @@ namespace rpcwc.dao
     {
         IList<Email> findDirectoryLevelEmail(String directoryId);
         IList<Email> findPersonLevelEmail(String personEntryId);
+
+        void UpdateEmail(string oldAddress, string newAddress);
     }
 }
