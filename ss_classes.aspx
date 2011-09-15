@@ -21,7 +21,7 @@
                 Age 2&ndash;3
             </td>
             <td valign="top">
-                Basement of Church Building
+                Lower Level of Church Building
             </td>
             <td valign="top">
                 Joel Comanda and Terese Judkins
@@ -51,7 +51,7 @@
         </tr>
         <tr>
             <td valign="top">
-                Grades 5&ndash;Sr High School
+                Junior&ndash;Senior High School
             </td>
             <td valign="top">
                 Ministry House, 3rd floor

@@ -27,18 +27,17 @@
     <ul>
         <li>
             <p>
-                <span class="sectionHeading">Christianity Explored.</span><i>Christianity Explored</i> is a ten-week course that
-introduces people to Jesus Christ, using the Gospel of Mark to answer three
-questions: Who is Jesus? Why did he come? What does it mean to follow him?
-The material is remarkably clear and straightforward as it lays out the gospel in its
+                <span class="sectionHeading">Back to Basics.</span>This course is divided into two sections. Using a study guide,
+this seven-week first section leads the student in a study of foundational Christian
+belief and living. The second section provides an overview of the Bible.
 profound simplicity.</p>
             <table width="100%">
                 <tr>
                     <td>
-                        Leaders: Verrillos, Jansens
+                        Leaders: Edwards, Judkins
                     </td>
                     <td>
-                        Location: Conference Room
+                        Location: Ministry House
                     </td>
                 </tr>
             </table>
@@ -50,22 +49,7 @@ profound simplicity.</p>
     <ul>
         <li>
             <p>
-                <span class="sectionHeading">On Being Presbyterian.</span> A 13-week introduction to Presbyterian beliefs,
-practices, and history, using Sean Michael Lucas’ book by the same title and
-Power Point. Helps readers grasp what it means to be a Presbyterian in a
-postmodern age. "Dr. Sean Lucas is a first rate scholar who writes with depth,
-breadth and passion for his topic. <i>On Being Presbyterian</i> is highly recommended
-for anyone who wants to explore Presbyterian traditions down to their roots." — Peter A. Lillback</p>
-            <table width="100%">
-                <tr>
-                    <td>
-                        Leaders: 
-                    </td>
-                    <td>
-                        Location: Bullock Library
-                    </td>
-                </tr>
-            </table>
+                <span class="sectionHeading">No class for Fall 2011</span></p>
         </li>
     </ul>
     <p>
@@ -75,20 +59,18 @@ for anyone who wants to explore Presbyterian traditions down to their roots." — 
     <ul>
         <li>
             <p>
-                <span class="sectionHeading">Evangeliving.</span> “Rather than evangelism, think in terms of ‘evangeliving’ that
-seeks genuine, relational witness to the Lord Jesus in actions that serve Him and
-words that give Him glory.” (CHOP Ministry Manual, p. 83). This course will
-provide tactical and practical training for reaching those around us for the sake
-of the gospel. Over the 12 weeks, we will learn how to cultivate a mentality of
-mission and initiate conversations for Christ through classroom instruction and
-field application. (<a href="pdf/evangliving_syllabus.pdf">see syllabus</a>).</p>
+                <span class="sectionHeading">Love and Respect.</span> A 12-week video and discussion based on Dr. Emerson
+Eggerichs' book, Love & Respect: The Love She Most Desires, the Respect He
+Desperately Needs. Developing the biblical passage from Ephesians 5:33, Dr.
+Eggerichs’ deals with how spouses react negatively to each other and they can
+deal with conflict biblically as they honor Christ in their respective calling.</p>
             <table width="100%">
                 <tr>
                     <td>
-                        Leaders: Stan Gale
+                        Leaders: Verrillos
                     </td>
                     <td>
-                        Location:Ministry House
+                        Location: Sanctuary
                     </td>
                 </tr>
             </table>

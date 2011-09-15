@@ -8,18 +8,20 @@
     <h3>
         Men's Monthly Breakfast</h3>
     <p>
-        We will meet the second Saturday of each month from 9 to 10:30 am for a light breakfast
-        and discussion of <a href="http://www.wtsbooks.com/product-exec/product_id/6621"
-            rel="External" target="_blank">The Masculine Mandate</a> by Dr. Richard Phillips.</p>
+    keep the description but change the book (with link) to e by John Calvin. 
+     
+        We will meet the second Saturday of each month from 9 to 10:00 am for a light breakfast
+        and discussion of <a href="http://www.wtsbooks.com/product-exec/product_id/1701/"
+            rel="External" target="_blank">Golden Booklet of the True Christian Life</a> by John Calvin.</p>
     <h3>
         Men's Annual Retreat</h3>
     <p>
+
         The RPC men hold an annual weekend retreat for fellowship, recreation and instruction.&nbsp;
-        Last year&rsquo;s retreat was held October 16&ndash;18 at <a href="http://www.hcbible.com/"
-            runat="server">Harvey Cedars Bible Conference</a> on Long Beach Island, NJ.
-        The conference will be held at the same location during October 22&ndash;24, 2010,
-        where Rev. Jeff Stark, Christian counselor and speaker, will speak on the topic
-        of &ldquo;Grace-based Manhood.&rdquo;</p>
+        The conference will be held at <a id="A1" href="http://www.hcbible.com/"
+            runat="server">Harvey Cedars Bible Conference</a> on Long Beach Island, NJ during October 21&ndash;23, 2011.
+            The title of this year's retreat is "Teaching Men to Apologize" from 1 Peter 3:15.
+       We will view and discuss the DVD by Tim Keller on his book, The Reason for God.
     <h3>
         Account-a-buddies.</h3>
     <p>

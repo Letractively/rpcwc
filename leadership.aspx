@@ -12,19 +12,13 @@
     <h3>
         RULING ELDERS</h3>
     <p>
-        Glenn Seeger
-        <br />
         Frank Ells
         <br />
-        Tim Gold</p>
+        Bill Judkins</p>
     <h3>
         DEACONS</h3>
     <p>
-        Shawn Carafa
-        <br />
         Sean Cliggett
-        <br />
-        William Judkins
         <br />
         Joe Myshko
         <br />

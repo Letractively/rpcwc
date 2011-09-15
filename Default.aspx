@@ -59,12 +59,5 @@
                     <strong><a id="A3" href="godsgoodnews.aspx" runat="server">The Message of Life</a></strong></p>
             </td>
         </tr>
-        <tr>
-            <td colspan="3">
-                <div style="text-align: center;">
-                    <a href="http://pcamna.org/documents/2011FiftyDaysOfPrayer.pdf">Click Here</a> for PCA "50 Days of Prayer"
-                </div>
-            </td>
-        </tr>
     </table>
 </asp:Content>
