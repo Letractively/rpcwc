@@ -95,5 +95,25 @@ namespace rpcwc.bo
             get { return _photoCache; }
             set { _photoCache = value; }
         }
+
+        internal static void DeleteEntry(short p)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        internal static int InsertEntry(string key, Directory directory)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        internal static int UpdateEntry(string key, Directory directory)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        internal static Directory GetEntry(string key)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

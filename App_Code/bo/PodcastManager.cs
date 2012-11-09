@@ -19,9 +19,9 @@ namespace rpcwc.bo
         private static String FORMAT_PROVIDER = System.Globalization.DateTimeFormatInfo.CurrentInfo.RFC1123Pattern;
         private BlogManager _blogManager;
 
-        public String getFeed(int channelId)
+        public String getFeed(RPCConstants.Channel channelId)
         {
-            Channel channel = channelDAO.findChannel(channelId);
+            Channel channel = channelDAO.FindChannel(channelId);
 
             MemoryStream ms = new MemoryStream();
             XmlTextWriter w = new XmlTextWriter(ms, System.Text.Encoding.UTF8);

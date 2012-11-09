@@ -16,9 +16,9 @@ namespace rpcwc.bo
         private ChannelDAO _channelDAO;
         private ItemDAO _itemDAO;
 
-        public String getFeed(int channelId)
+        public String getFeed(RPCConstants.Channel channelId)
         {
-            Channel channel = channelDAO.findChannel(channelId);
+            Channel channel = channelDAO.FindChannel(channelId);
 
             MemoryStream ms = new MemoryStream();
             XmlTextWriter w = new XmlTextWriter(ms, System.Text.Encoding.UTF8);
@@ -32,7 +32,7 @@ namespace rpcwc.bo
             w.WriteStartElement("channel");
             channel.toRSSXml(w);
 
-            IList<Item> items = itemDAO.findItemsRSS(channelId);
+            IList<Item> items = itemDAO.FindItemsRSS(channelId);
 
             foreach (Item item in items)
             {

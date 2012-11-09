@@ -15,7 +15,7 @@ namespace rpcwc.bo
 
         public IList<Item> findAllBulletinsActive()
         {
-            IList<Item> bulletins = itemDAO.findAllActive(RPCConstants.Channels.BULLETIN);
+            IList<Item> bulletins = itemDAO.FindAllActive(RPCConstants.Channel.BULLETIN);
 
             /*((List<Item>)bulletins).Sort
                    (delegate(Item item1,
@@ -30,7 +30,7 @@ namespace rpcwc.bo
 
         public IList<Item> findRecentBulletinsActive()
         {
-            List<Item> bulletins = (List<Item>) itemDAO.findAllActive(RPCConstants.Channels.BULLETIN);
+            List<Item> bulletins = (List<Item>) itemDAO.FindAllActive(RPCConstants.Channel.BULLETIN);
 
             bulletins.Sort();
             bulletins.Reverse();
