@@ -64,6 +64,11 @@ namespace rpcwc.web
 
             if (entry.Enclosure != null && entry.Enclosure.Uri != null)
             {
+                HtmlGenericControl audio = new HtmlGenericControl("audio");
+                audio.Attributes.Add("controls", "controls");
+                audio.Attributes.Add("src", entry.Enclosure.Uri);
+                audio.Attributes.Add("type", "audio/mp3");
+                
                 WebControl musicPlayer = new WebControl(HtmlTextWriterTag.Embed);
                 musicPlayer.ID = "musicPlayer_" + entry.id;
                 musicPlayer.Style.Add(HtmlTextWriterStyle.Width, "400px");
@@ -72,7 +77,10 @@ namespace rpcwc.web
                 musicPlayer.Attributes.Add("src", "http://www.google.com/reader/ui/3523697345-audio-player.swf");
                 musicPlayer.Attributes.Add("flashvars", "audioUrl=" + entry.Enclosure.Uri);
                 musicPlayer.Attributes.Add("pluginspage", "http://www.macromedia.com/go/getflashplayer");
-                contentsControl.Controls.Add(musicPlayer);
+
+                audio.Controls.Add(musicPlayer);
+
+                contentsControl.Controls.Add(audio);
             }
 
 
