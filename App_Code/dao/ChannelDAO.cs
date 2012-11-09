@@ -3,10 +3,11 @@
 /// Summary description for ChannelDAO
 /// </summary>
 using rpcwc.vo;
+using rpcwc.bo;
 namespace rpcwc.dao
 {
     public interface ChannelDAO
     {
-        Channel findChannel(int channelId);
+        Channel FindChannel(RPCConstants.Channel channel);
     }
 }
