@@ -7,6 +7,7 @@ using System.Data;
 using System.Collections;
 using rpcwc.dao;
 using rpcwc.vo;
+using rpcwc.bo;
 
 /// <summary>
 /// Summary description for ChannelDAOSQL
@@ -43,10 +44,10 @@ namespace rpcwc.dao.sql
             }
         }
 
-        public Channel findChannel(int channelId)
+        public Channel FindChannel(RPCConstants.Channel channel)
         {
             IDictionary parameterMap = new Hashtable(1);
-            parameterMap.Add("@channelId", channelId);
+            parameterMap.Add("@channelId", (byte) channel);
 
             return findChannelQuery.QueryForObject<Channel>(parameterMap);
         }

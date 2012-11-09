@@ -17,6 +17,7 @@ using Spring.Data.Objects.Generic;
 using rpcwc.dao;
 using rpcwc.vo;
 using System.Collections.Generic;
+using rpcwc.bo;
 
 /// <summary>
 /// Summary description for ItemDAOSQL
@@ -113,37 +114,37 @@ namespace rpcwc.dao.sql
             }
         }
 
-        public IList<Item> findItemsRSS(int channelId)
+        public IList<Item> FindItemsRSS(RPCConstants.Channel channel)
         {
-            if (channelId == 6)
-                return findItemsPrayerRSS(channelId);
+            if (channel == RPCConstants.Channel.PRAYER)
+                return FindItemsPrayerRSS(channel);
 
             IDictionary parameterMap = new Hashtable(1);
-            parameterMap.Add("@channelId", channelId);
+            parameterMap.Add("@channelId", (byte) channel);
 
             return findItemRSSQuery.QueryByNamedParam<Item>(parameterMap);
         }
 
-        public IList<Item> findItemsPrayerRSS(int channelId)
+        public IList<Item> FindItemsPrayerRSS(RPCConstants.Channel channel)
         {
             IDictionary parameterMap = new Hashtable(1);
-            parameterMap.Add("@channelId", channelId);
+            parameterMap.Add("@channelId", (byte)channel);
 
             return findItemPrayerRSSQuery.QueryByNamedParam<Item>(parameterMap);
         }
 
-        public IList<Item> findAllActive(int channelId)
+        public IList<Item> FindAllActive(RPCConstants.Channel channel)
         {
             IDictionary parameterMap = new Hashtable(1);
-            parameterMap.Add("@channelId", channelId);
+            parameterMap.Add("@channelId", (byte)channel);
 
             return findAllActiveQuery.QueryByNamedParam<Item>(parameterMap);
         }
 
-        public IList<Item> findItemsPodcast(int channelId)
+        public IList<Item> FindItemsPodcast(RPCConstants.Channel channel)
         {
             IDictionary parameterMap = new Hashtable(1);
-            parameterMap.Add("@channelId", channelId);
+            parameterMap.Add("@channelId", (byte)channel);
             IList<Item> episodes = findItemPodcastQuery.QueryByNamedParam<Item>(parameterMap);
 
             foreach (Item episode in episodes)
