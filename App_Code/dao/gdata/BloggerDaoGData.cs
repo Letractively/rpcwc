@@ -96,7 +96,15 @@ namespace rpcwc.dao.GData
             // Collect all results
             foreach (IAsyncResult result in entryAsyncResultList)
             {
-                entryList.Add(mapEntryDelegate.EndInvoke(result));
+                BlogEntry entry = mapEntryDelegate.EndInvoke(result);
+                if (entry != null)
+                {
+                    entryList.Add(entry);
+                }
+                else
+                {
+                    Console.Error.WriteLine("blog entry is null");
+                }
             }
 
             return entryList;
@@ -120,9 +128,9 @@ namespace rpcwc.dao.GData
             //blogEntry.Links = new List<Link>();
             foreach (AtomLink link in entry.Links)
             {
-                if (link.Type.Equals("audio/mpeg"))
+                if ((link.Type != null && link.Type.Equals("audio/mpeg")) || (link.AbsoluteUri.EndsWith(".mp3"))) 
                     blogEntry.Enclosure = mapLink(link);
-                else if (link.Rel.Equals("replies") && link.Type.Equals("text/html"))
+                else if (link.Rel.Equals("replies") && link.Type != null && link.Type.Equals("text/html"))
                     blogEntry.CommentsLink = mapLink(link);
                 //blogEntry.Links.Add(mapLink(link));
             }
