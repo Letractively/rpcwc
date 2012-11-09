@@ -28,7 +28,7 @@ namespace rpcwc.web
         {
             context.Response.ContentType = "text/xml";
 
-            context.Response.Write(podcastManager.getFeed(4));
+            context.Response.Write(podcastManager.getFeed(RPCConstants.Channel.SERMON_AUDIO));
 
         }
 

@@ -24,7 +24,7 @@ namespace rpcwc.web
         {
             context.Response.ContentType = "text/xml";
 
-            context.Response.Write(rssManager.getFeed(6));
+            context.Response.Write(rssManager.getFeed(RPCConstants.Channel.PRAYER));
         }
 
         #endregion
