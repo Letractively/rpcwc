@@ -31,6 +31,27 @@
     <property name="SermonSeriesList">
       <list>
         <object type="rpcwc.vo.Blog.SermonSeries">
+          <property name="Label" value="Fall 2012" />
+          <property name="ImageUrl" value="images/sermon/sermononmountfall2012.jpg" />
+          <property name="Caption" value="On the Mount With the Messiah: Fall 2012" />
+          <property name="Width" value="195" />
+          <property name="Height" value="147" />
+        </object>
+        <object type="rpcwc.vo.Blog.SermonSeries">
+            <property name="Label" value="Summer 2012" />
+            <property name="ImageUrl" value="images/sermon/Summer 2012 Fruit.jpg" />
+            <property name="Caption" value="Fruit Of The Vine: Summer 2012" />
+            <property name="Width" value="195" />
+            <property name="Height" value="147" />
+        </object>
+        <object type="rpcwc.vo.Blog.SermonSeries">
+          <property name="Label" value="Song of Songs" />
+          <property name="ImageUrl" value="images/sermon/songofsongs2012.jpg" />
+          <property name="Caption" value="Song of Songs: The Awakening of Love" />
+          <property name="Width" value="195" />
+          <property name="Height" value="147" />
+        </object>
+        <object type="rpcwc.vo.Blog.SermonSeries">
           <property name="Label" value="Hebrews 2011" />
           <property name="ImageUrl" value="images/sermon/hebrews2011.jpg" />
           <property name="Caption" value="Hebrews: Fixing Our Eyes on Jesus" />
