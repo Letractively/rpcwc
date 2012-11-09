@@ -26,7 +26,40 @@
   <object name="ControlRotationList" type="System.Collections.Generic.Dictionary&lt;System.String,System.Collections.Generic.List&lt;System.Web.UI.Control>>">
     <constructor-arg name="dictionary" >
       <dictionary key-type="System.String" value-type="System.Collections.Generic.List&lt;System.Web.UI.Control>">
-        <entry key="readings"> <!-- Spring 2011 -->
+        <entry key="readings">
+          <!-- Fall 2012 -->
+          <list element-type="System.Web.UI.Control">
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="Why Do We Pray?" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/8478" />
+              <property name="ImageUrl" value="~/images/readings/9781596384149.jpg" />
+              <property name="Width" value="80" />
+              <property name="Height" value="122" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="Give Them Grace" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/7531" />
+              <property name="ImageUrl" value="~/images/readings/9781433520099.jpg" />
+              <property name="Width" value="80" />
+              <property name="Height" value="122" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="Affirming the Apostles' Creed" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5783" />
+              <property name="ImageUrl" value="~/images/readings/9781433502101.jpg" />
+              <property name="Width" value="80" />
+              <property name="Height" value="122" />
+            </object>
+            <object type="System.Web.UI.WebControls.HyperLink">
+              <property name="Text" value="CHOP Ministry Manual" />
+              <property name="NavigateUrl" value="http://www.wtsbooks.com/product-exec/product_id/5447" />
+              <property name="ImageUrl" value="~/images/readings/9780822310730.jpg" />
+              <property name="Width" value="80" />
+              <property name="Height" value="122" />
+            </object>
+          </list>
+        </entry>
+        <entry key="readingsSpring2011"> <!-- Spring 2011 -->
           <list element-type="System.Web.UI.Control">
             <object type="System.Web.UI.WebControls.HyperLink">
               <property name="Text" value="Face to Face: Praying the Scriptures for Intimate Worship" />
