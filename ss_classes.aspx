@@ -16,37 +16,30 @@
                 <strong>Teacher</strong>
             </td>
         </tr>
+
+
         <tr>
             <td valign="top">
-                Age 2&ndash;3
+                Age 2&amp;3
             </td>
             <td valign="top">
                 Lower Level of Church Building
             </td>
+        </tr>
+        <tr>
             <td valign="top">
-                Joel Comanda and Terese Judkins
+                Ages 4&ndash;Kindergarten
+            </td>
+            <td valign="top">
+                Lower Level of Church Building
             </td>
         </tr>
         <tr>
             <td valign="top">
-                Age 4&ndash;Kindergarten
-            </td>
-            <td valign="top">
-                Basement of Church Building
-            </td>
-            <td valign="top">
-                Sarah Brown and Livi Verrillo
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">
-                Grades 1&ndash;4
+                1st&ndash;5th grades
             </td>
             <td valign="top">
                 Ministry House, 2nd Floor
-            </td>
-            <td valign="top">
-                Linda Gale
             </td>
         </tr>
         <tr>
@@ -56,44 +49,41 @@
             <td valign="top">
                 Ministry House, 3rd floor
             </td>
-            <td valign="top">
-                Shawn and Meg Carada
-            </td>
         </tr>
         <tr>
         <td>&nbsp;</td>
         </tr>
         <tr>
             <td valign="top">
-                Adult&mdash;Christianity Explored
+                Adult&mdash;Affirming the Apostles’ Creed
             </td>
             <td valign="top">
-                Conference Room
+                Church Building, Bullock Library
             </td>
             <td valign="top">
-                Verrillos, Jansens
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">
-                Adult&mdash;On Being Presbyterian
-            </td>
-            <td valign="top">
-                Bullock Library 
-            </td>
-            <td valign="top">
-                
+                Glenn Seeger, Dwayne Edwards
             </td>
         </tr>
         <tr>
             <td valign="top">
-                Adult&mdash;Evangeliving
+                Adult&mdash;<abbr title="Community Houses of Prayer">CHOP</abbr>
             </td>
             <td valign="top">
-                Ministry House
+                Ministry House, 2nd floor
             </td>
             <td valign="top">
                 Stan Gale
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                Adult&mdash;Covenant Keepers
+            </td>
+            <td valign="top">
+                Church Building, Conference Room
+            </td>
+            <td valign="top">
+                Fathers rotate
             </td>
         </tr>
     </table>

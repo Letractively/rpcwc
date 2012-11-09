@@ -14,7 +14,9 @@
     <p>
         Frank Ells
         <br />
-        Bill Judkins</p>
+        Bill Judkins
+        <br />
+        Glenn Seeger</p>
     <h3>
         DEACONS</h3>
     <p>

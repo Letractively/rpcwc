@@ -7,8 +7,15 @@
             Small Group Study Forms</p>
     </h4>
     <p>
-        Cluster groups will be studying the book <i>Making Sanity Out of Vanity: Christian Realism
-            in the Book of Ecclesiastes.</i> <a href="http://www.epbooks.us/making-sanity-vanity-p-2274.html">
-                Click here for description.</a>
+    Cluster groups are the small group ministry of RPC where we gather for fellowship, study and prayer.
+    All members of RPC are encouraged to be part of a Cluster, where they are known and encouraged in the faith and able to encourage others.
+    For those who want to feel more connected to fellow believers in the church, Clusters are the place. 
+    </p>
+    <p>
+     The study this year will be on the book of Romans, where the gospel is taught in its basics, breadth and impact. 
+     We will be following a study guide found <a href="http://www.newlifeglenside.com/files/wbs/Romans1-25.pdf">here</a>
+    </p>
+    <p>
+    Sign up for a Cluster <a href="~/sg_registration.aspx">online</a> or by emailing <a href="mailto:pastor@rpcwc.org">pastor@rpcwc.org</a>.  Groups start the week of Sept. 16th.
     </p>
 </asp:Content>

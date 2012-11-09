@@ -22,11 +22,11 @@
             </td>
             <td width="190" valign="top">
                 <p>
-                    <a href="sermon.aspx?label=Hebrews 2011" runat="server">
-                        <img src="~/images/sermon/hebrews2011.jpg" width="190" height="143" border="0" alt="Hebrews: Fixing Our Eyes on Jesus"
+                    <a href="sermon.aspx?label=Summer 2012" runat="server">
+                        <img src="~/images/sermon/sermononmountfall2012.jpg" width="190" height="143" border="0" alt="On the Mount With the Messiah: Fall 2012"
                             style="padding-top: 9px; padding-bottom: 10px;" runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a href="sermon.aspx?label=Minor Prophets 2010" runat="server">Current Sermon Series</a></strong></p>
+                    <strong><a href="sermon.aspx?label=Fall 2012" runat="server">Current Sermon Series</a></strong></p>
             </td>
         </tr>
         <tr>
@@ -57,6 +57,11 @@
                             runat="server" /></a></p>
                 <p style="text-align: center;">
                     <strong><a id="A3" href="godsgoodnews.aspx" runat="server">The Message of Life</a></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                Check out this year's Vacation Bible School: <a href="vbs.aspx">Rocky Point Lighthouse</a>
             </td>
         </tr>
     </table>

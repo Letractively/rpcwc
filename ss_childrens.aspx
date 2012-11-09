@@ -5,9 +5,9 @@
     <h4>
         Student Classes</h4>
     <p>
-        <strong>Grades 5&ndash;Sr High School</strong><br />
+        <strong>Junior&ndash;Senior High School</strong><br />
         <strong>Third floor of 314</strong><br />
-        Shawn and Meg Carada
+        Mark Bonnette and Mark McCaffrey
     </p>
     <p>
         Every Sunday morning children from Grades 5 through Senior High meet together to
@@ -34,10 +34,10 @@
         Besides studying God's Word, we also play games, sing, do scripture memory and have
         friendly competitions in class</p>
     <p>
-        <strong>Ages 4&ndash;Kindergarten</strong>
+        <strong>Ages 5&ndash;6</strong>
         <br />
-        <strong>Basement of Church Building</strong><br />
-        Sarah Brown and Livi Verrillo
+        <strong>Lower Level of Church Building</strong><br />
+        Sarah Brown
     </p>
     <p>
         We will be learning many Bible truths this year. Truths such as God takes care of
@@ -45,10 +45,10 @@
         Him and many, many more. We look forward to using Bible stories, songs and scripture
         memory and games to help us remember all that we learn.</p>
     <p>
-        <strong>Bible Story Hour&mdash;Ages 2&ndash;3</strong>
+        <strong>Ages 2&ndash;4</strong>
         <br />
-        <strong>Basement of Church Building</strong><br />
-        Joel Comanda and Terese Judkins</p>
+        <strong>Lower Level of Church Building</strong><br />
+        Lindsay Gale and Margie Comanda</p>
     <p>
         In the Children's Bible Story Hour, we study the Bible with an eye towards the needs
         and abilities of the toddler age group. Lessons are taken from the David C. Cooke

@@ -8,20 +8,19 @@
     <h3>
         Men's Monthly Breakfast</h3>
     <p>
-    keep the description but change the book (with link) to e by John Calvin. 
-     
-        We will meet the second Saturday of each month from 9 to 10:00 am for a light breakfast
-        and discussion of <a href="http://www.wtsbooks.com/product-exec/product_id/1701/"
-            rel="External" target="_blank">Golden Booklet of the True Christian Life</a> by John Calvin.</p>
+            We will meet the second Saturday of each month from 9:00 to 10:00 am for a light breakfast
+        and discussion of a small book enetitle <a href="http://www.ailbe.org/bookstore/devotions/item/3347-if-men-will-pray"
+            rel="External" target="_blank">If Men Will Pray</a> based on 1 Timothy 2:1-8, a passage that speaks pointedly to males.
+    I think this study has the potential to have great impact in the lives of men and those they influence. </p>
     <h3>
         Men's Annual Retreat</h3>
     <p>
 
-        The RPC men hold an annual weekend retreat for fellowship, recreation and instruction.&nbsp;
-        The conference will be held at <a id="A1" href="http://www.hcbible.com/"
-            runat="server">Harvey Cedars Bible Conference</a> on Long Beach Island, NJ during October 21&ndash;23, 2011.
-            The title of this year's retreat is "Teaching Men to Apologize" from 1 Peter 3:15.
-       We will view and discuss the DVD by Tim Keller on his book, The Reason for God.
+        This year's men's retreat will be held at <a href="http://www.blackrockretreat.com/" rel="External" target="_blank">Black Rock Retreat</a> on Friday, October 12th and Saturday, October 13th.
+        It will start Friday evening (no dinner) and close with dinner together on Saturday, returning for Sunday worship at RPC.
+        The theme of this year's retreat will be from Ephesians 4:1, "A Man's First Call."  The emphasis will be on our call to Christ transforming and directing all other hats men wear,
+        looking to serve and honor Christ in them.  This year's retreat will be HALF the distance - HALF the time - HALF the cost!
+        </p>
     <h3>
         Account-a-buddies.</h3>
     <p>
