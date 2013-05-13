@@ -53,15 +53,6 @@ namespace rpcwc.web
             textControl.Controls.Add(new LiteralControl(entry.Content));
             contentsControl.Controls.Add(textControl);
 
-            if (entry.Enclosure == null || entry.Enclosure.Uri == null)
-            {
-                String filename = "c:\\inetpub\\wwwroot\\rpcwc\\" + entry.PubDate.AddDays(-2).ToString("yyyy.MM.dd") + ".mp3";
-                if (File.Exists(filename))
-                {
-                    entry.Enclosure.Uri = filename;
-                }
-            }
-
             if (entry.Enclosure != null && entry.Enclosure.Uri != null)
             {
                 HtmlGenericControl audio = new HtmlGenericControl("audio");
