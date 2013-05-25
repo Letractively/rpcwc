@@ -22,11 +22,16 @@
     <p>
         Sean Cliggett
         <br />
+        David Jansen
+        <br />
         Joe Myshko
         <br />
         Stanley Perli
         <br />
-        Andrew Root</p>
+        Ray Rishty
+        <br />
+        Andrew Root
+    </p>
     <br />
     <p>Leadership Training materials are available <a href="~/leadershiptraining.aspx" runat="server">here</a>.</p>
 </asp:Content>

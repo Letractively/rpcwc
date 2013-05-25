@@ -52,11 +52,11 @@
             </td>
             <td width="190" valign="top">
                 <p>
-                    <a id="A2" href="godsgoodnews.aspx" runat="server">
-                        <img id="Img2" src="~/images/ggncover.jpg" width="190" height="147" border="0" alt="The Message of Life"
+                    <a id="A2" href="vbs.aspx" runat="server">
+                        <img id="Img2" src="~/images/HayDay.jpg" width="190" height="162" border="0" alt="VBS Registration"
                             runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a id="A3" href="godsgoodnews.aspx" runat="server">The Message of Life</a></strong></p>
+                    <strong><a id="A3" href="vbs.aspx" runat="server">VBS Registration</a></strong></p>
             </td>
         </tr>
     </table>
