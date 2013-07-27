@@ -13,7 +13,7 @@
                 <p>
                     <a href="~/letterpastor.aspx" runat="server">
                         <img src="~/images/welcome2.jpg" width="190" height="162" border="0" alt="Visitor Information"
-                            runat="server" /></a></p>
+                            style="padding-top: 9px; padding-bottom: 10px;" runat="server" /></a></p>
                 <p style="text-align: center;">
                     <strong><a href="letterpastor.aspx" runat="server">Visitor Information</a></strong></p>
             </td>
@@ -52,11 +52,11 @@
             </td>
             <td width="190" valign="top">
                 <p>
-                    <a id="A2" href="vbs.aspx" runat="server">
-                        <img id="Img2" src="~/images/HayDay.jpg" width="190" height="162" border="0" alt="VBS Registration"
-                            runat="server" /></a></p>
+                    <a id="A2" href="godsgoodnews.aspx" runat="server">
+                        <img id="Img2" src="~/images/ggncover.jpg" width="190" height="162" border="0" alt="The Message of Life"
+                            style="padding-top: 9px; padding-bottom: 3px;" runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a id="A3" href="vbs.aspx" runat="server">VBS Registration</a></strong></p>
+                    <strong><a id="A3" href="godsgoodnews.aspx" runat="server">The Message of Life</a></strong></p>
             </td>
         </tr>
     </table>
