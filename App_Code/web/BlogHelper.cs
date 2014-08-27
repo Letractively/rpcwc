@@ -88,11 +88,12 @@ namespace rpcwc.web
             Panel authorAndDate = new Panel();
             authorAndDate.Style.Add("float", "left");
             WebControl postedBy = new WebControl(HtmlTextWriterTag.I);
-            postedBy.Controls.Add(new LiteralControl("posted by "));
+            //postedBy.Controls.Add(new LiteralControl("posted by "));
+            postedBy.Controls.Add(new LiteralControl("posted at "));
             authorAndDate.Controls.Add(postedBy);
             StringBuilder authorAndDateString = new StringBuilder();
-            authorAndDateString.Append(entry.Author);
-            authorAndDateString.Append(" @ ");
+            //authorAndDateString.Append(entry.Author);
+            //authorAndDateString.Append(" @ ");
             authorAndDateString.Append(entry.PubDate.ToString("%h:mm tt"));
             authorAndDateString.Append(".");
             authorAndDate.Controls.Add(new LiteralControl(authorAndDateString.ToString()));

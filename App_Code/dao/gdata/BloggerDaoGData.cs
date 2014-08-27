@@ -135,7 +135,7 @@ namespace rpcwc.dao.GData
                 //blogEntry.Links.Add(mapLink(link));
             }
             blogEntry.Permalink = entry.SelfUri.Content;
-            blogEntry.id = PermalinkRegex.Match(blogEntry.Permalink).Groups["postid"].Value;
+            blogEntry.id = entry.Id.AbsoluteUri;
             blogEntry.Categories = new List<String>();
             foreach (AtomCategory category in entry.Categories)
             {

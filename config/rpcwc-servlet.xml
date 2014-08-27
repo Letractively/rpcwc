@@ -31,9 +31,9 @@
     <property name="SermonSeriesList">
       <list>
         <object type="rpcwc.vo.Blog.SermonSeries">
-          <property name="Label" value="Fall 2013" />
-          <property name="ImageUrl" value="images/sermon/fall2013.jpg" />
-          <property name="Caption" value="The Thessalonian Letters: Making Last Things First" />
+          <property name="Label" value="Summer 2014" />
+          <property name="ImageUrl" value="images/sermon/summer2014.png" />
+          <property name="Caption" value="The Disciples' Prayer" />
           <property name="Width" value="190" />
           <property name="Height" value="147" />
         </object>

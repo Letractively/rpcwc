@@ -5,13 +5,8 @@
     <h4>
         Sunday Services</h4>
     <p>
-        <strong>9:30 AM</strong>
-        <br />
-        Christian Education Hour</p>
-    <p>
         <strong>10:30 AM</strong><br />
-        Fellowship Gathering</p>
-    <p>
-        <strong>11:00 AM</strong><br />
         Worship Service</p>
+    <br />
+    <em>Note that there will be no Christian Education Hour in the summer; CE hour will resume in September.</em>
 </asp:Content>

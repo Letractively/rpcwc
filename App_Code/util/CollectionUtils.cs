@@ -26,7 +26,9 @@ public static class CollectionUtils
 
         foreach (TValue obj in collection)
         {
-            map.Add(mapKeyCreator.createKey(obj), obj);
+            TKey key = mapKeyCreator.createKey(obj);
+
+            map.Add(key, obj);
         }
 
         return map;

@@ -15,7 +15,7 @@
     <p>
         <a href="~/worship.aspx" runat="server">Worship at RPC Study Paper</a></p>
     <p style="font-style: italic;">
-        Sundays at 11:00 a.m.</p>
+        Sundays at 10:30 a.m.</p>
     <h3>
         Christian Education Hour
     </h3>
@@ -24,13 +24,13 @@
         their walk with Christ and service to Him as His disciples. All curriculum is Bible-based
         and age-specific.</p>
     <p style="font-style: italic;">
-        Sundays at 9:30 a.m.</p>
+        Sundays at 9:00 a.m.</p>
     <h3>
         <p>
             CHILDREN'S WORSHIP</p>
     </h3>
     <p>
-        Children ages 2-5 gather at 11:00 a.m., while children first through fifth grades
+        Children ages 2-5 gather at 10:30 a.m., while children first through fifth grades
         stay with their parents in the main worship service and are dismissed before the
         sermon for age appropriate lessons and activities. The older group meets once a
         month for training in worship using a specially prepared children’s bulletin.
@@ -59,7 +59,7 @@
         roles, men meet monthly for breakfast, study, prayer and mutual encouragement. MIC
         also includes an annual men’s retreat and service projects.</p>
     <p style="font-style: italic;">
-        Second Saturday of each month 9:00 a.m.&nbsp;10:30 a.m</p>
+        Second Saturday of each month 9:00 a.m.&ndash;10:30 a.m</p>
     <h3>
         RPC SUPPER CLUBS
     </h3>
@@ -68,15 +68,6 @@
         are assigned and re-formed on an annual basis.</p>
     <p style="font-style: italic;">
         Second Sunday of each month.</p>
-    <h3>
-        COVENANT KEEPERS
-    </h3>
-    <p>
-        A group for parents with children at home to provide direction and mutual support
-        in carrying out the covenant responsibility of raising our children in the nurture
-        and admonition of the Lord. Meets monthly in a home for dinner, study and prayer.</p>
-    <p style="font-style: italic;">
-        First Friday of the month at 6:00 p.m.</p>
     <h3>
         MINISTRY AT WENTWORTH HOME
     </h3>
