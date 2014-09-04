@@ -22,11 +22,11 @@
             </td>
             <td width="190" valign="top">
                 <p>
-                    <a href="sermon.aspx?label=Summer 2014" runat="server">
-                        <img src="~/images/sermon/summer2014_tall.png" width="190" height="162" border="0" alt="The Disciples' Prayer"
+                    <a href="sermon.aspx?label=Fall 2014" runat="server">
+                        <img src="~/images/sermon/fall2014_tall.png" width="190" height="162" border="0" alt="Jesus in Judges"
                             style="padding-top: 9px; padding-bottom: 10px;" runat="server" /></a></p>
                 <p style="text-align: center;">
-                    <strong><a href="sermon.aspx?label=Summer 2014" runat="server">Current Sermon Series</a></strong></p>
+                    <strong><a href="sermon.aspx?label=Fall 2014" runat="server">Current Sermon Series</a></strong></p>
             </td>
         </tr>
         <tr>
