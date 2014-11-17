@@ -30,26 +30,6 @@
             </td>
         </tr>
         <tr>
-            <td valign="top">
-                <p style="padding-bottom: 0em;">
-                    <asp:Calendar ID="SmallCalendarControl" DayNameFormat="Shortest" BorderColor="#CCCCFF"
-                        BorderWidth="1px" Font-Names="Verdana" Font-Size="8pt" ForeColor="#336699" Height="162px"
-                        Width="190px" ShowGridLines="True" OnDayRender="SetBold" OnVisibleMonthChanged="VisibleMonthChanged"
-                        OnSelectionChanged="DisplayCalendar" runat="server">
-                        <SelectedDayStyle BackColor="#B7D87D" ForeColor="White" Font-Bold="True" />
-                        <SelectorStyle BackColor="#FFFFFF" ForeColor="#B7D87D" />
-                        <OtherMonthDayStyle ForeColor="#6699CC" />
-                        <NextPrevStyle Font-Size="9pt" ForeColor="#CCCCFF" />
-                        <DayHeaderStyle BackColor="#B7D87D" ForeColor="#FFFFFF" Font-Bold="True" Height="1px" />
-                        <TitleStyle BackColor="#446A7D" Font-Bold="False" Font-Size="9pt" ForeColor="#FFFFFF" />
-                    </asp:Calendar>
-                </p>
-                <p style="padding-top: 1em; text-align: center;">
-                    <strong><a id="A4" href="~/calendar.aspx" runat="server">Church Calendar</a></strong></p>
-            </td>
-            <td width="10">
-                &nbsp;
-            </td>
             <td width="190" valign="top">
                 <p>
                     <a id="A2" href="godsgoodnews.aspx" runat="server">
@@ -57,6 +37,17 @@
                             style="padding-top: 9px; padding-bottom: 3px;" runat="server" /></a></p>
                 <p style="text-align: center;">
                     <strong><a id="A3" href="godsgoodnews.aspx" runat="server">The Message of Life</a></strong></p>
+            </td>
+            <td width="10">
+                &nbsp;
+            </td>
+            <td width="190" valign="top">
+                <p>
+                    <a id="A1" href="storyhour.aspx" runat="server">
+                        <img id="Img1" src="~/images/storyhour.png" width="190" height="162" border="0" alt="Children's Story Hour"
+                            style="padding-top: 9px; padding-bottom: 3px;" runat="server" /></a></p>
+                <p style="text-align: center;">
+                    <strong><a id="A4" href="storyhour.aspx" runat="server">Children's Story Hour</a></strong></p>
             </td>
         </tr>
     </table>
