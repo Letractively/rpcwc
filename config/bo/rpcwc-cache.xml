@@ -7,10 +7,6 @@
     <property name="BloggerDao" ref="BloggerDao" />
     <property name="RefreshInterval" value="01:00:00" />
   </object>
-  <object id="CalendarCache" type="rpcwc.bo.cache.CalendarCache">
-    <property name="CalendarDao" ref="CalendarDAO" />
-    <property name="RefreshInterval" value="01:00:00" />
-  </object>
   <object id="RecommendedReadingsCache" type="rpcwc.bo.cache.RecommendedReadingsCache">
     <property name="RefreshInterval" value="7.00:00:00" />
     <property name="ControlRotationList" ref="ControlRotationList" />

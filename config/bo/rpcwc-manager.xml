@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects xmlns="http://www.springframework.net">
   <import resource="rpcwc-cache.xml" />
-  <object id="CalendarManager" type="rpcwc.bo.CalendarManager">
-    <property name="calendarDAO" ref="CalendarDAO" />
-    <property name="CalendarCache" ref="CalendarCache" />
-  </object>
   <object id="PodcastManager" type="rpcwc.bo.PodcastManager">
     <property name="channelDAO" ref="ChannelDAO" />
     <property name="BlogManager" ref="BlogManager" />
@@ -27,7 +23,6 @@
     <property name="CacheList" >
       <list element-type="rpcwc.bo.cache.AbstractCache">
         <ref object="BlogCache" />
-        <ref object="CalendarCache" />
         <ref object="RecommendedReadingsCache" />
         <ref object="DirectoryCache" />
         <ref object="PhotoCache" />

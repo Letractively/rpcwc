@@ -2,7 +2,6 @@
 <objects xmlns="http://www.springframework.net"
          xmlns:db="http://www.springframework.net/database">
   <import resource="services/ESVServiceDAO-context.xml" />
-  <import resource="services/CalendarDAOGData-context.xml" />
   <import resource="sql/ChannelDAOSQL-context.xml" />
   <import resource="sql/DirectoryDAOSQL-context.xml" />
   <import resource="sql/DirectoryPersonDAOSQL-context.xml" />
@@ -13,8 +12,7 @@
   <import resource="gdata/BloggerDaoGData-context.xml" />
   <import resource="gdata/PhotoDaoGData-context.xml" />
   <import resource="gdata/GDataDaoHelper-context.xml" />
-  <alias name="CalendarDAOGData" alias="CalendarDAO" />
-
+  
   <alias name="ChannelDAOSQL" alias="ChannelDAO" />
   <alias name="DirectoryDAOSQL" alias="DirectoryDAO" />
   <alias name="DirectoryPersonDaoSql" alias="DirectoryPersonDao" />

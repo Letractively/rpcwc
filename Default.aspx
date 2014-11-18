@@ -44,7 +44,7 @@
             <td width="190" valign="top">
                 <p>
                     <a id="A1" href="storyhour.aspx" runat="server">
-                        <img id="Img1" src="~/images/storyhour.png" width="190" height="162" border="0" alt="Children's Story Hour"
+                        <img id="Img1" src="~/images/storyhour_sm.png" width="190" height="162" border="0" alt="Children's Story Hour"
                             style="padding-top: 9px; padding-bottom: 3px;" runat="server" /></a></p>
                 <p style="text-align: center;">
                     <strong><a id="A4" href="storyhour.aspx" runat="server">Children's Story Hour</a></strong></p>
